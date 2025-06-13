@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | Pelayanan KPPN</title>
+  <link rel="icon" href="LogoKemenkeu.png" type="image/png" />
+
+  <!-- MDBootstrap CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <script src="firebase.js"></script>
+  <style>
+    .gradient-custom-2 {
+      background: linear-gradient(rgb(8, 89, 188));
+    }
+
+    @media (min-width: 768px) {
+      .gradient-form {
+        height: 100vh !important;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .gradient-custom-2 {
+        border-top-right-radius: .3rem;
+        border-bottom-right-radius: .3rem;
+      }
+    }
+
+    .nav-link {
+      color: white !important;
+    }
+
+    .navbar-toggler .fas {
+      color: white;
+    }
+
+    .navbar-toggler:focus .fas,
+    .navbar-toggler:active .fas,
+    .navbar-toggler.collapsed .fas {
+      color: rgb(8, 89, 188);
+    }
+
+    .btn-wider {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .btn-tall {
+      padding-top: 16px;
+      padding-bottom: 16px;
+      font-size: 1.1rem;
+    }
+
+    #message {
+      text-align: center;
+      margin-top: -10px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    .navbar-nav .nav-link {
+      transition: color 0.3s, background-color 0.3s;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:active,
+    .nav-touch {
+      background-color: #0d6efd;
+      color: white !important;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body style="background-color: #0d68be;">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="logo.png" alt="Logo KPPN" height="40">
+    </a>
+    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div style="font-family: 'Noto Serif', serif;" class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="https://www.kemenkeu.go.id" target="_blank">Portal Kemenkeu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://servicedesk.kemenkeu.go.id" target="_blank">ServiceDesk</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://hai.kemenkeu.go.id" target="_blank">Hai Kemenkeu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://djpb.kemenkeu.go.id/kppn/majene/id/layanan/layanan-pengaduan.html" target="_blank">Pengaduan 059</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.wise.kemenkeu.go.id" target="_blank">Wise Kemenkeu</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!-- End Navbar -->
+
+  <!-- Login Section -->
+  <section class="h-100 gradient-form">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
+
+                  <div class="text-center">
+                    <img src="logo1.svg"
+                      style="width: 205px;" alt="logo">
+                    <h5 style="font-family: 'Noto Serif', serif;" class="mt-1 mb-4 pb-1">Sistem Informasi Format Laporan</h5>
+                  </div>
+
+                  <form>
+                    <p style="font-family: 'Noto Serif', serif;">Please Create to your account</p>
+
+                    <div style="font-family: 'Noto Serif', serif;" data-mdb-input-init class="form-outline mb-4">
+                      <input type="email" id="email" name="email" class="form-control"
+                        placeholder="email address" required />
+                      <label class="form-label" for="email">Email</label>
+                    </div>
+                    
+                    <div style="font-family: 'Noto Serif', serif;" data-mdb-input-init class="form-outline mb-4">
+                      <input type="text" id="username" name="username" class="form-control"
+                        placeholder="Masukkan username" required />
+                      <label class="form-label" for="username">userName</label>
+                    </div>
+                    <div style="font-family: 'Noto Serif', serif;" data-mdb-input-init class="form-outline mb-4">
+                      <input type="text" id="alamat" name="alamat" class="form-control"
+                        placeholder="alamat" required />
+                      <label class="form-label" for="alamat">Alamat</label>
+                    </div>
+                    <div style="font-family: 'Noto Serif', serif;" data-mdb-input-init class="form-outline mb-4">
+                      <input type="password" id="password" name="password" class="form-control" placeholder="Password"
+                        required />
+                      <label class="form-label" for="password">Password</label>
+                    </div>
+
+
+                    <div style="font-family: 'Noto Serif', serif;" class="text-center pt-1 mb-5 pb-1">
+                    <button id="registerBtn" type="submit" class="btn btn-primary gradient-custom-2 fa-lg mb-2 btn-wider btn-tall">Sign Up</button>
+                    <!-- <p id="registerMessage" class="mt-2"></p> -->
+                    </div>
+
+                    
+
+                    <div style="font-family: 'Noto Serif', serif;" class="d-flex align-items-center justify-content-center pb-4">
+                      <p class="mb-0 me-2">Already have an account?</p>
+                      <a href="index.html" class="btn btn-primary">Login Here</a>
+                    </div>
+                  </form>
+
+                </div>
+              </div>
+              <div class="col-lg-6 d-flex align-items-center gradient-custom-2" style="background-image: url('logoi.jpg'); background-size: cover; background-position: center;">
+                <!-- <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                  <h4 style="font-family: 'Noto Serif', serif;" class="mb-4">We are more than just a company</h4>
+                  <p style="font-family: 'Noto Serif', serif;" class="small mb-0">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MDBootstrap JS -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"></script>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+  import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyAoLpjcMKE3MTfEIzBlNDwK7zSVu6xqfxQ",
+    authDomain: "kppnmajene-059.firebaseapp.com",
+    projectId: "kppnmajene-059",
+    storageBucket: "kppnmajene-059.appspot.com",
+    messagingSenderId: "546221480890",
+    appId: "1:546221480890:web:93a2127b46557acc6d5b83",
+    measurementId: "G-1LWFGCZKYE"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+
+  document.getElementById('registerBtn').addEventListener('click', async (e) => {
+    e.preventDefault(); // Cegah form reload
+
+    const email = document.getElementById('email').value;
+    const username = document.getElementById('username').value;
+    const alamat = document.getElementById('alamat').value;
+    const password = document.getElementById('password').value;
+
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      await setDoc(doc(db, "users", userCredential.user.uid), {
+        email, username, alamat
+      });
+      alert('Registrasi berhasil!');
+      window.location.href = 'index.html';
+    } catch (error) {
+      alert('Registrasi gagal ( Email Sudah Didaftarkan! atau periksa password harus minimal 6 karakter huruf ) ');
+    }
+  });
+</script>
+
+</body>
+
+</html>

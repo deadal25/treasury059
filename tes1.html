@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Rekomendasi Rencana Aksi</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+    }
+    th {
+      background-color: #3b6ea5;
+      color: white;
+    }
+    .input-group {
+      margin-bottom: 10px;
+    }
+    .input-group label {
+      display: inline-block;
+      width: 100px;
+    }
+    .input-group input {
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Rekomendasi Rencana Aksi</h2>
+
+  <div class="input-group">
+    <label for="aksiInput">Aksi:</label>
+    <input type="text" id="aksiInput" placeholder="Masukkan deskripsi aksi">
+  </div>
+
+  <div class="input-group">
+    <label for="periodeInput">Periode:</label>
+    <input type="text" id="periodeInput" placeholder="Masukkan periode">
+  </div>
+
+  <div class="input-group">
+    <label for="penanggungInput">Penanggung Jawab:</label>
+    <input type="text" id="penanggungInput" placeholder="Kosongkan kalau 'Seksi PDMS'">
+  </div>
+
+  <button onclick="tambahEntri()">Tambah Entri</button>
+
+  <table id="tabelRekomendasi">
+    <thead>
+      <tr>
+        <th style="width: 50%;">Rekomendasi Rencana Aksi</th>
+        <th style="width: 15%;">Penanggung Jawab</th>
+        <th style="width: 35%;">Periode</th>
+      </tr>
+    </thead>
+    <tbody id="tbodyRekomendasi">
+      <!-- Entri akan ditambahkan di sini -->
+    </tbody>
+  </table>
+
+  <script>
+    let nomorEntri = 1;
+
+    function tambahEntri() {
+      const aksiInput = document.getElementById('aksiInput');
+      const periodeInput = document.getElementById('periodeInput');
+      const penanggungInput = document.getElementById('penanggungInput');
+
+      const deskripsi = aksiInput.value.trim();
+      const periode = periodeInput.value.trim();
+      const penanggung = penanggungInput.value.trim() || 'Seksi PDMS';  // default kalau kosong
+
+      if (deskripsi === '' || periode === '') {
+        alert('Silakan masukkan deskripsi aksi dan periode.');
+        return;
+      }
+
+      const tbody = document.getElementById('tbodyRekomendasi');
+      const tr = document.createElement('tr');
+
+      const tdAksi = document.createElement('td');
+      tdAksi.textContent = `${nomorEntri}. ${deskripsi}`;
+
+      const tdPenanggungJawab = document.createElement('td');
+      tdPenanggungJawab.textContent = penanggung;
+
+      const tdPeriode = document.createElement('td');
+      tdPeriode.textContent = periode;
+
+      tr.appendChild(tdAksi);
+      tr.appendChild(tdPenanggungJawab);
+      tr.appendChild(tdPeriode);
+
+      tbody.appendChild(tr);
+
+      aksiInput.value = '';
+      periodeInput.value = '';
+      penanggungInput.value = '';
+      nomorEntri++;
+    }
+  </script>
+
+</body>
+</html>

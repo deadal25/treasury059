@@ -1,0 +1,673 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pelayanan KPPN Majene</title>
+    <link rel="icon" href="LogoKemenkeu.png" type="image/png">
+    <!-- <meta name="description" content="Sufee Admin - HTML5 Admin Template"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="vendors/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="vendors/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script>
+    function navigatePage() {
+        var selectElement = document.getElementById("pageSelect");
+        var selectedValue = selectElement.value;
+
+        const pages = {
+            "1a-CP": "tw4tabelnomor1.html",
+            "1b-N": "tw4tabelnomor2.html",
+            "2a-N": "tw4tabelnomor3.html",
+            "2b-N": "tw4tabelnomor4.html",
+            "3a-CP": "tw4tabelnomor5.html",
+            "3b-N": "tw4tabelnomor6.html",
+            "4a-CP": "tw4tabelnomor7.html",
+            "4b-N": "tw4tabelnomor8.html",
+            "5a-N": "tw4tabelnomor9.html",
+            "6a-N": "tw4tabelnomor10.html",
+            "6b-N": "tw4tabelnomor11.html",
+            "6c-N": "tw4tabelnomor12.html",
+            "7a-CP": "tw4tabelnomor13.html",
+            "7b-N": "tw4tabelnomor14.html",
+            "7c-N": "tw4tabelnomor15.html"
+           
+        };
+
+        if (selectedValue in pages) {
+            window.location.href = pages[selectedValue];
+        }
+    }
+</script>
+
+<body>
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu"
+                    aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="tw4tabelnomor5.html"><img src="logo.png" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="tw4tabelnomor5.html"><img src="logo2.png" alt="Logo"></a>
+            </div>
+
+            <div id="main-menu" class="w-full">
+                <script src="https://cdn.tailwindcss.com"></script>
+                <ul class="flex flex-col space-y-2 p-4" style="background-color: #272c33;">
+                    <li>
+                        <a href="dashboard.html" class="flex items-center text-white hover:text-blue-400">
+                            <i class="fa fa-dashboard mr-2"></i>Dashboard
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="ppt-basic.html" class="flex items-center text-white hover:text-blue-400">
+                            <i class="fa fa-table mr-2"></i>New PPT Data
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="ppt-data.html" class="flex items-center text-white hover:text-blue-400">
+                            <i class="fa fa-table mr-2"></i>PPT Data
+                        </a>
+                    </li>
+     -->
+                    <!-- Triwulan 1 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan1')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 1
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan1" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="tables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <!-- Triwulan 2 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan2')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 2
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan2" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="tw2tables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw2tables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw2ppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <!-- Triwulan 3 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan3')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 3
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan3" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="tw3tables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw3tables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw3ppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <!-- Triwulan 4 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan4')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 4
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan4" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="tw4tables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw4tables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw4ppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan5')">
+                            <i class="fa fa-calendar mr-2"></i>Tahunan
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan5" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="yeartables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="yeartables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="yearppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data 
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                </ul>
+            </div>
+        </nav>
+    </aside><!-- /#left-panel -->
+    <script>
+        function toggleSubMenu(id) {
+            const menus = document.querySelectorAll('.absolute');
+            menus.forEach(menu => {
+                if(menu.id !== id) {
+                    menu.classList.add('hidden');
+                }
+            });
+            const selectedMenu = document.getElementById(id);
+            selectedMenu.classList.toggle('hidden');
+        }
+    </script>
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+                
+
+                <div class="col-sm-12">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="admin.jpg" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="profile.html"><i class="fa fa-user"></i> My Profile</a>
+
+                            <a class="nav-link" href="settings.html"><i class="fa fa-cog"></i> Settings</a>
+
+                            <a class="nav-link" id="logout" href="index.html" onclick="logout()"><i
+                                    class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Table</a></li>
+                            <li class="active">Data table</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content mt-3">
+            <div class="animated fadeIn">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong class="card-title">RAW DATA IKU KEMENKEU</strong>
+                                <!-- <label for="pageSelect">Pilih kategori:</label> -->
+                                <select id="pageSelect" onchange="navigatePage()">
+                                    <option value="" disabled selected>-- Pilih --</option>
+                                    <option value="1a-CP">Indeks Kualitas Nilai IKPA K/L</option>
+                                    <option value="1b-N">Indeks Kualitas LK Kuasa BUN KPPN</option>
+                                    <option value="2a-N">Indeks kepuasan terhadap layanan KPPN</option>
+                                    <option value="2b-N">Tingkat implementasi penajaman tugas Financial Advisory
+                                    </option>
+                                    <option value="3a-CP">Indeks kinerja penyaluran Dana Transfer ke Daerah pada KPPN
+                                    </option>
+                                    <option value="3b-N">Indeks Digitalisasi Pengelolaan Keuangan</option>
+                                    <option value="4a-CP">Persentase akurasi perencanaan kas</option>
+                                    <option value="4b-N">Indeks kualitas penyelesaian SP2D </option>
+                                    <option value="5a-N">Indeks Kualitas LPJ Bendahara Satker K/L</option>
+                                    <option value="6a-N">Tingkat kualitas kinerja organisasi</option>
+                                    <option value="6b-N">Nilai kualitas pengelolaan SDM</option>
+                                    <option value="6c-N">Nilai Evaluasi Pelaksanaan Tugas Kepatuhan Internal</option>
+                                    <option value="7a-CP">Indeks kualitas pengelolaan keuangan KPPN</option>
+                                    <option value="7b-N">Persentase Kualitas Pengelolaan BMN dan Pengadaan</option>
+                                    <option value="7c-N">Nilai Kinerja TIK KPPN</option>
+                                </select>
+
+                                <body>
+
+                                    <div id="3a-CP" class="content">
+                                        <br>
+                                        <h3><b>Indeks kinerja penyaluran Dana Transfer ke Daerah pada KPPN</b></h3>
+
+                                        <label for="tw4syarat">Syarat (%) :</label>
+                                        <input type="number" id="tw4syarat" oninput="tw4updateCapaian5()" step="0.01" min="0">
+                                        <label for="tw4proyeksi">Proyeksi (%) :</label>
+                                        <input type="number" id="tw4proyeksi" oninput="tw4updateCapaian5()" step="0.01"
+                                            min="0">
+                                        <label for="tw4akurasi">Akurasi (%) :</label>
+                                        <input type="number" id="tw4akurasi" oninput="tw4updateCapaian5()" step="0.01"
+                                            min="0">
+                                        <label for="tw4monev">Monev (%) :</label>
+                                        <input type="number" id="tw4monev" oninput="tw4updateCapaian5()" step="0.01" min="0">
+                                        <label for="tw4lkuakpa">LK-UAKPA (%) :</label>
+                                        <input type="number" id="tw4lkuakpa" oninput="tw4updateCapaian5()" step="0.01"
+                                            min="0">
+                                        <label for="tw4realisasi">Realisasi (%) :</label>
+                                        <input type="number" id="tw4realisasi" oninput="tw4updateCapaian5()" step="0.01"
+                                            min="0">
+
+                                            <label for="tw4formula5">Masukkan formula:</label>
+                                            <textarea id="tw4inputFormula5" class="form-control" rows="3"
+                                                placeholder="Masukkan teks formula...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
+                                                oninput="tw4updateFormula5()"></textarea>
+
+                                        <label for="tw4keterangan5">Masukkan Keterangan:</label>
+                                        <textarea id="tw4inputArea5" class="form-control" rows="3"
+                                            placeholder="Masukkan teks keterangan...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
+                                            oninput="tw4updateKeterangan5()"></textarea>
+
+                                            <script>
+                                                function tw4updateFormula5() {
+                                                    let inputFormula5 = document.getElementById("tw4inputFormula5").value;
+                                                    document.getElementById("tw4formula5").innerHTML = inputFormula5.replace(/\n/g, "<br>");
+    
+                                                }
+                                            </script>
+
+                                        <script>
+                                            function tw4updateKeterangan5() {
+                                                let inputText5 = document.getElementById("tw4inputArea5").value;
+                                                document.getElementById("tw4keterangan5").innerHTML = inputText5.replace(/\n/g, "<br>");
+
+                                            }
+                                        </script>
+
+
+                                        <div style="text-align: right; margin-bottom: 10px;">
+                                            <button onclick="tw4submitData5()" class="btn-simpan">
+                                                <img src="savedata.png" alt="save"> Simpan </button>
+                                        </div>
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <th rowspan="1" class="hal2">No</th>
+                                                    <th colspan="2" class="hal2">Uraian IKU</th>
+                                                    <th rowspan="1" width="200px" class="hal2">DATA YANG DIPERLUKAN</th>
+                                                    <th colspan="3" class="hal2">DATA</th>
+                                                    <th rowspan="1" class="hal2">FORMULA</th>
+                                                    <th rowspan="1" class="hal2">KETERANGAN</th>
+                                                </tr>
+                                            </tbody>
+                                            <tbody>
+                                                <tr>
+                                                    <td rowspan="9" valign="top">5</td>
+                                                    <td rowspan="9" valign="top"> 3a-CP </td>
+                                                    <td rowspan="9" valign="top" class="left-align">Indeks kinerja penyaluran Dana Transfer ke Daerah pada KPPN</td>
+                                                    <td><b>Komponen</b></td>
+                                                    <td><b>Bobot</b></td>
+                                                    <td ><b>Nilai</b></td>
+                                                    <td><b>Total</b></td>
+                                                    <td><b>Formula</b></td>
+                                                    <td>Keterangan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Syarat </td>
+                                                    <td>15%</td>
+                                                    <td  id="tw4syaratValue">14,50</td>
+                                                    <td  id="tw4syaratScore">14,50</td>
+                                                    <td rowspan="8" valign="top" class="left-align" id="tw4formula5">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <td rowspan="8" valign="top" class="left-align" id="tw4keterangan5">
+                                                        Hasil Penilaian dari Kantor Pusat (Nota Dinas Direktorat
+                                                        Pelaksanaan Anggaran nomor ND-35/PB.2/2025 tanggal
+                                                        10 Januari 2025)
+
+                                                        Tolong selalu enter agar tidak terlalu panjang</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Proyeksi</td>
+                                                    <td>15%</td>
+                                                    <td  id="tw4proyeksiValue">15,00</td>
+                                                    <td  id="tw4proyeksiScore">15,00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Akurasi</td>
+                                                    <td>20%</td>
+                                                    <td  id="tw4akurasiValue">20,00</td>
+                                                    <td  id="tw4akurasiScore">20,00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Monev</td>
+                                                    <td>10%</td>
+                                                    <td id="tw4monevValue">10,00</td>
+                                                    <td id="tw4monevScore">10,00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">LK-UAKPA</td>
+                                                    <td>20%</td>
+                                                    <td  id="tw4lkuakpaValue">20,00</td>
+                                                    <td  id="tw4lkuakpaScore">20,00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Realisasi</td>
+                                                    <td>20%</td>
+                                                    <td  id="tw4realisasiValue">20,00</td>
+                                                    <td  id="tw4realisasiScore">20,00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>Nilai Capaian</b></td>
+                                                    <td colspan="3" id="tw4totalCapaian5"> <b>135,39</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>Indeks Capaian</b></td>
+                                                    <td colspan="3" id="tw4totalIndeksCp5"> <b>135,39</b></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <script>
+                                            function tw4updateCapaian5() {
+                                                let tw4syarat = parseFloat(document.getElementById("tw4syarat").value) || 0;
+                                                let tw4proyeksi = parseFloat(document.getElementById("tw4proyeksi").value) || 0;
+                                                let tw4akurasi = parseFloat(document.getElementById("tw4akurasi").value) || 0;
+                                                let tw4monev = parseFloat(document.getElementById("tw4monev").value) || 0;
+                                                let tw4lkuakpa = parseFloat(document.getElementById("tw4lkuakpa").value) || 0;
+                                                let tw4realisasi = parseFloat(document.getElementById("tw4realisasi").value) || 0;
+
+                                                let tw4syaratScore = (tw4syarat * 15) / 100;
+                                                let tw4proyeksiScore = (tw4proyeksi * 15) / 100;
+                                                let tw4akurasiScore = (tw4akurasi * 20) / 100;
+                                                let tw4monevScore = (tw4monev * 10) / 100;
+                                                let tw4lkuakpaScore = (tw4lkuakpa * 20) / 100;
+                                                let tw4realisasiScore = (tw4realisasi * 20) / 100;
+
+                                                let tw4totalCapaian5 = tw4syaratScore + tw4proyeksiScore + tw4akurasiScore + tw4monevScore + tw4lkuakpaScore + tw4realisasiScore;
+
+                                                let tw4totalIndeksCp5 = getIndeksIKI5(tw4totalCapaian5); 
+
+                                                document.getElementById("tw4syaratValue").innerText = tw4syarat ;
+                                                document.getElementById("tw4proyeksiValue").innerText = tw4proyeksi ;
+                                                document.getElementById("tw4akurasiValue").innerText = tw4akurasi ;
+                                                document.getElementById("tw4monevValue").innerText = tw4monev ;
+                                                document.getElementById("tw4lkuakpaValue").innerText = tw4lkuakpa ;
+                                                document.getElementById("tw4realisasiValue").innerText = tw4realisasi ;
+
+                                                document.getElementById("tw4syaratScore").innerText = tw4syaratScore.toFixed(2);
+                                                document.getElementById("tw4proyeksiScore").innerText = tw4proyeksiScore.toFixed(2);
+                                                document.getElementById("tw4akurasiScore").innerText = tw4akurasiScore.toFixed(2);
+                                                document.getElementById("tw4monevScore").innerText = tw4monevScore.toFixed(2);
+                                                document.getElementById("tw4lkuakpaScore").innerText = tw4lkuakpaScore.toFixed(2);
+                                                document.getElementById("tw4realisasiScore").innerText = tw4realisasiScore.toFixed(2);
+
+                                                document.getElementById("tw4totalCapaian5").innerText = tw4totalCapaian5.toFixed(2);
+                                                document.getElementById("tw4totalIndeksCp5").innerText = tw4totalIndeksCp5;
+                                                
+                                                function getIndeksIKI5(capaian) {
+                                                if (capaian > 97.5) return 5;
+                                                if (capaian <= 97.5 && capaian > 95) return 4.75;
+                                                if (capaian <= 95 && capaian > 92.5) return 4.5;
+                                                if (capaian <= 92.5 && capaian > 90) return 4;
+                                                if (capaian <= 90 && capaian > 85) return 3.5;
+                                                if (capaian <= 85 && capaian > 70) return 3;
+                                                if (capaian <= 70 && capaian > 60) return 2.5;
+                                                if (capaian <= 60 && capaian > 40) return 2;
+                                                if (capaian <= 40 && capaian > 20) return 1.5;
+                                                if (capaian <= 20) return 1;
+                                               
+                                            }
+                                            
+                                            }
+
+                                        </script>
+                                        <script type="module">
+                                            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+                                            import { getAuth } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+                                            import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+
+                                            const firebaseConfig = {
+                                            apiKey: "AIzaSyAoLpjcMKE3MTfEIzBlNDwK7zSVu6xqfxQ",
+                                            authDomain: "kppnmajene-059.firebaseapp.com",
+                                            projectId: "kppnmajene-059",
+                                            storageBucket: "kppnmajene-059.appspot.com",
+                                            databaseURL: "https://kppnmajene-059-default-rtdb.firebaseio.com/",
+                                            messagingSenderId: "546221480890",
+                                            appId: "1:546221480890:web:93a2127b46557acc6d5b83",
+                                            measurementId: "G-1LWFGCZKYE"
+                                            };
+
+                                            const app = initializeApp(firebaseConfig);
+                                            const auth = getAuth(app);
+                                            const database = getDatabase(app);
+                                            // triwulan = "triwulan1", tabel = "tabel1"
+                                            function tw4submitData5(triwulan = "triwulan4", tabel = "tabel5") {
+                                            const user = auth.currentUser;
+                                            if (!user) {
+                                                alert("Silakan login terlebih dahulu!");
+                                                return;
+                                            }
+
+                                            const data = {
+                                                tw4syaratValue: document.getElementById("tw4syaratValue")?.innerText || "",
+                                                tw4proyeksiValue: document.getElementById("tw4proyeksiValue")?.innerText || "",
+                                                tw4akurasiValue: document.getElementById("tw4akurasiValue")?.innerText || "",
+                                                tw4monevValue: document.getElementById("tw4monevValue")?.innerText || "",
+                                                tw4lkuakpaValue: document.getElementById("tw4lkuakpaValue")?.innerText || "",
+                                                tw4realisasiValue: document.getElementById("tw4realisasiValue")?.innerText || "",
+                                                tw4syaratScore: document.getElementById("tw4syaratScore")?.innerText || "",
+                                                tw4proyeksiScore: document.getElementById("tw4proyeksiScore")?.innerText || "",
+                                                tw4akurasiScore: document.getElementById("tw4akurasiScore")?.innerText || "",
+                                                tw4monevScore: document.getElementById("tw4monevScore")?.innerText || "",
+                                                tw4lkuakpaScore: document.getElementById("tw4lkuakpaScore")?.innerText || "",
+                                                tw4realisasiScore: document.getElementById("tw4realisasiScore")?.innerText || "",
+                                                tw4totalCapaian5: document.getElementById("tw4totalCapaian5")?.innerText || "",
+                                                tw4totalIndeksCp5: document.getElementById("tw4totalIndeksCp5")?.innerText || "",
+                                                // totalPersentase2: document.getElementById("totalPersentase2")?.innerText || "",
+                                                
+                                                tw4formula5: document.getElementById("tw4formula5")?.innerText || "",
+                                                tw4keterangan5: document.getElementById("tw4keterangan5")?.innerText || "",
+                                                
+                                                timestamp: new Date().toISOString()
+                                            };
+
+                                            // pakai set() bukan push()
+                                            const dataRef = ref(database, `ikpaData/${user.uid}/${triwulan}/${tabel}`);
+
+                                            set(dataRef, data)
+                                                .then(() => alert(`Data berhasil disimpan ke ${triwulan}/${tabel} dan memperbarui data lama!`))
+                                                .catch((error) => alert("Gagal menyimpan data: " + error.message));
+                                            // set(ref(database, "ikpaData/" + user.uid ), data)
+                                            //     .then(() => alert("Data berhasil disimpan dan data lama terupdate di Firebase!"))
+                                            //     .catch((error) => alert("Gagal menyimpan data: " + error.message));
+                                            }
+
+                                            window.tw4submitData5 = tw4submitData5;
+                                        </script>
+                                        <!-- <script>
+                                            function tw4submitData5() {
+                                                let tw4syaratValue = document.getElementById("tw4syaratValue").innerText;
+                                                let tw4proyeksiValue = document.getElementById("tw4proyeksiValue").innerText;
+                                                let tw4akurasiValue = document.getElementById("tw4akurasiValue").innerText;
+                                                let tw4monevValue = document.getElementById("tw4monevValue").innerText;
+                                                let tw4lkuakpaValue = document.getElementById("tw4lkuakpaValue").innerText;
+                                                let tw4realisasiValue = document.getElementById("tw4realisasiValue").innerText;
+                                                let tw4syaratScore = document.getElementById("tw4syaratScore").innerText;
+                                                let tw4proyeksiScore = document.getElementById("tw4proyeksiScore").innerText;
+                                                let tw4akurasiScore = document.getElementById("tw4akurasiScore").innerText;
+                                                let tw4monevScore = document.getElementById("tw4monevScore").innerText;
+                                                let tw4lkuakpaScore = document.getElementById("tw4lkuakpaScore").innerText;
+                                                let tw4realisasiScore = document.getElementById("tw4realisasiScore").innerText;
+                                                let tw4totalCapaian5 = document.getElementById("tw4totalCapaian5").innerText;
+                                                let tw4totalIndeksCp5 = document.getElementById("tw4totalIndeksCp5").innerText;
+
+                                                let tw4formula5hasil = document.getElementById("tw4formula5").innerText;
+                                                let tw4keterangan5hasil = document.getElementById("tw4keterangan5").innerText;
+
+                                                // Cek apakah ada data lama di localStorage
+                                                let storedData = localStorage.getItem("indeks_data");
+                                                let data = storedData ? JSON.parse(storedData) : {};
+
+                                                // Update hanya bagian halaman 5
+                                                data.tw4syaratValue = tw4syaratValue;
+                                                data.tw4proyeksiValue = tw4proyeksiValue;
+                                                data.tw4akurasiValue = tw4akurasiValue;
+                                                data.tw4monevValue = tw4monevValue;
+                                                data.tw4lkuakpaValue = tw4lkuakpaValue;
+                                                data.tw4realisasiValue = tw4realisasiValue;
+                                                data.tw4syaratScore = tw4syaratScore;
+                                                data.tw4proyeksiScore = tw4proyeksiScore;
+                                                data.tw4akurasiScore = tw4akurasiScore;
+                                                data.tw4monevScore = tw4monevScore;
+                                                data.tw4lkuakpaScore = tw4lkuakpaScore;
+                                                data.tw4realisasiScore = tw4realisasiScore;
+                                                data.tw4totalCapaian5 = tw4totalCapaian5;
+                                                data.tw4totalIndeksCp5 = tw4totalIndeksCp5;
+                                                data.tw4keterangan5 = tw4keterangan5hasil;
+                                                data.tw4formula5 = tw4formula5hasil;
+                                                // Simpan kembali ke localStorage
+                                                localStorage.setItem("indeks_data", JSON.stringify(data));
+
+                                                alert("Data dari tw4 Indeks kinerja penyaluran Dana Transfer ke Daerah pada KPPNberhasil disimpan!");
+                                            }
+                                        </script> -->
+                                        <!-- <button onclick="tw4submitData5()">Simpan Data Halaman 8</button> -->
+                                    </div>
+
+                                </body>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div><!-- .animated -->
+        </div><!-- .content -->
+
+
+    </div><!-- /#right-panel -->
+
+    <!-- Right Panel -->
+
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="vendors/jszip/dist/jszip.min.js"></script>
+    <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <script src="assets/js/init-scripts/data-table/datatables-init.js"></script>
+
+
+</body>
+
+</html>

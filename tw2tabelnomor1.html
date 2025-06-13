@@ -1,0 +1,742 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pelayanan KPPN Majene</title>
+    <link rel="icon" href="LogoKemenkeu.png" type="image/png">
+    <!-- <meta name="description" content="Sufee Admin - HTML5 Admin Template"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="vendors/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="vendors/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script>
+    function navigatePage() {
+        var selectElement = document.getElementById("pageSelect");
+        var selectedValue = selectElement.value;
+
+        const pages = {
+            "1a-CP": "tw2tabelnomor1.html",
+            "1b-N": "tw2tabelnomor2.html",
+            "2a-N": "tw2tabelnomor3.html",
+            "2b-N": "tw2tabelnomor4.html",
+            "3a-CP": "tw2tabelnomor5.html",
+            "3b-N": "tw2tabelnomor6.html",
+            "4a-CP": "tw2tabelnomor7.html",
+            "4b-N": "tw2tabelnomor8.html",
+            "5a-N": "tw2tabelnomor9.html",
+            "6a-N": "tw2tabelnomor10.html",
+            "6b-N": "tw2tabelnomor11.html",
+            "6c-N": "tw2tabelnomor12.html",
+            "7a-CP": "tw2tabelnomor13.html",
+            "7b-N": "tw2tabelnomor14.html",
+            "7c-N": "tw2tabelnomor15.html"
+
+        };
+
+        if (selectedValue in pages) {
+            window.location.href = pages[selectedValue];
+        }
+    }
+</script>
+
+<body>
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu"
+                    aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="tw2tabelnomor1.html"><img src="logo.png" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="tw2tabelnomor1.html"><img src="logo2.png" alt="Logo"></a>
+            </div>
+
+            <div id="main-menu" class="w-full">
+                <script src="https://cdn.tailwindcss.com"></script>
+                <ul class="flex flex-col space-y-2 p-4" style="background-color: #272c33;">
+                    <li>
+                        <a href="dashboard.html" class="flex items-center text-white hover:text-blue-400">
+                            <i class="fa fa-dashboard mr-2"></i>Dashboard
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="ppt-basic.html" class="flex items-center text-white hover:text-blue-400">
+                            <i class="fa fa-table mr-2"></i>New PPT Data
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="ppt-data.html" class="flex items-center text-white hover:text-blue-400">
+                            <i class="fa fa-table mr-2"></i>PPT Data
+                        </a>
+                    </li>
+     -->
+                    <!-- Triwulan 1 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan1')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 1
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan1" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="tables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <!-- Triwulan 2 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan2')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 2
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan2" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="tw2tables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw2tables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw2ppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <!-- Triwulan 3 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan3')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 3
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan3" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="tw3tables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw3tables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw3ppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <!-- Triwulan 4 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan4')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 4
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan4" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="tw4tables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw4tables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw4ppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan5')">
+                            <i class="fa fa-calendar mr-2"></i>Tahunan
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan5" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="yeartables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="yeartables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="yearppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data 
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                </ul>
+            </div>
+        </nav>
+    </aside><!-- /#left-panel -->
+    <script>
+        function toggleSubMenu(id) {
+            const menus = document.querySelectorAll('.absolute');
+            menus.forEach(menu => {
+                if(menu.id !== id) {
+                    menu.classList.add('hidden');
+                }
+            });
+            const selectedMenu = document.getElementById(id);
+            selectedMenu.classList.toggle('hidden');
+        }
+    </script>
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+                
+
+                <div class="col-sm-12">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="admin.jpg" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="profile.html"><i class="fa fa-user"></i> My Profile</a>
+
+                            <a class="nav-link" href="settings.html"><i class="fa fa-cog"></i> Settings</a>
+
+                            <a class="nav-link" id="logout" href="index.html" onclick="logout()"><i
+                                    class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Table</a></li>
+                            <li class="active">Data table</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content mt-3">
+            <div class="animated fadeIn">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong class="card-title">RAW DATA IKU KEMENKEU</strong>
+                                <!-- <label for="pageSelect">Pilih kategori:</label> -->
+                                <select id="pageSelect" onchange="navigatePage()">
+                                    <option value="" disabled selected>-- Pilih --</option>
+                                    <option value="1a-CP">Indeks Kualitas Nilai IKPA K/L</option>
+                                    <option value="1b-N">Indeks Kualitas LK Kuasa BUN KPPN</option>
+                                    <option value="2a-N">Indeks kepuasan terhadap layanan KPPN</option>
+                                    <option value="2b-N">Tingkat implementasi penajaman tugas Financial Advisory
+                                    </option>
+                                    <option value="3a-CP">Indeks kinerja penyaluran Dana Transfer ke Daerah pada KPPN
+                                    </option>
+                                    <option value="3b-N">Indeks Digitalisasi Pengelolaan Keuangan</option>
+                                    <option value="4a-CP">Persentase akurasi perencanaan kas</option>
+                                    <option value="4b-N">Indeks kualitas penyelesaian SP2D </option>
+                                    <option value="5a-N">Indeks Kualitas LPJ Bendahara Satker K/L</option>
+                                    <option value="6a-N">Tingkat kualitas kinerja organisasi</option>
+                                    <option value="6b-N">Nilai kualitas pengelolaan SDM</option>
+                                    <option value="6c-N">Nilai Evaluasi Pelaksanaan Tugas Kepatuhan Internal</option>
+                                    <option value="7a-CP">Indeks kualitas pengelolaan keuangan KPPN</option>
+                                    <option value="7b-N">Persentase Kualitas Pengelolaan BMN dan Pengadaan</option>
+                                    <option value="7c-N">Nilai Kinerja TIK KPPN</option>
+                                </select>
+
+                                <body>
+
+                                    <div id="1a-CP" class="content">
+                                        <br>
+                                        <h3><b>Indeks Kualitas Nilai IKPA K/L</b></h3>
+                                        <label for="tw2rd">Revisi DIPA (%) :</label>
+                                        <input type="number" id="tw2rd" oninput="updateCapaian1()" step="0.01" min="0">
+                                        <label for="tw2dh">Deviasi Hal. III DIPA (%) :</label>
+                                        <input type="number" id="tw2dh" oninput="updateCapaian1()" step="0.01" min="0">
+                                        <label for="tw2pa">Penyerapan Anggaran (%) :</label>
+                                        <input type="number" id="tw2pa" oninput="updateCapaian1()" step="0.01" min="0">
+                                        <label for="tw2bk">Belanja Kontraktual (%) :</label>
+                                        <input type="number" id="tw2bk" oninput="updateCapaian1()" step="0.01" min="0">
+                                        <label for="tw2pt">Penyelesaian Tagihan (%) :</label>
+                                        <input type="number" id="tw2pt" oninput="updateCapaian1()" step="0.01" min="0">
+                                        <label for="tw2put">Pengelolaan UP dan TUP (%) :</label>
+                                        <input type="number" id="tw2put" oninput="updateCapaian1()" step="0.01" min="0">
+                                        <label for="tw2co">Capaian Output (%) :</label>
+                                        <input type="number" id="tw2co" oninput="updateCapaian1()" step="0.01" min="0">
+                                        <label for="tw2ds">Dispensasi SPM (%) :</label>
+                                        <input type="number" id="tw2ds" oninput="updateCapaian1()" step="0.01" min="0">
+                                        <label for="tw2jumlahsatker1">Nilai Jumlah Satker dengan predikat Minimal Baik (%)
+                                            :</label>
+                                        <input type="number" id="tw2jumlahsatker1" oninput="updateCapaian1()" step="0.01"
+                                            min="0">
+
+                                        <label for="tw2formula1">Masukkan Formula: </label>
+                                        <textarea id="tw2inputFormula1" class="form-control" rows="3" placeholder="Masukkan teks Formula...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
+                                            oninput="tw2updateFormula1()"></textarea>
+
+                                        <label for="tw2keterangan1">Masukkan Keterangan: </label>
+                                        <textarea id="tw2inputArea1" class="form-control" rows="3"
+                                            placeholder="Masukkan teks keterangan...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
+                                    
+                                            oninput="tw2updateKeterangan1()"></textarea>
+
+                                        <script>
+                                            function tw2updateFormula1() {
+                                                let inputFormula1 = document.getElementById("tw2inputFormula1").value;
+                                                document.getElementById("tw2formula1").innerHTML = inputFormula1.replace(/\n/g, "<br>");
+
+                                            }
+                                        </script>
+
+                                        <script>
+                                            function tw2updateKeterangan1() {
+                                                let inputText = document.getElementById("tw2inputArea1").value;
+                                                let keteranganCell = document.getElementById("tw2keterangan1");
+                                                let totalNilaiSpan = document.getElementById("tw2totalNilaiSpan1");
+
+                                                // Menampilkan teks yang diinput dengan paragraf sesuai format
+                                                keteranganCell.innerHTML = inputText.replace(/\n/g, "<br>") +
+                                                    "<span id='tw2totalNilaiSpan1'>" + "</span><br>";
+                                            }
+                                        </script>
+
+
+                                        <div style="text-align: right; margin-bottom: 10px;">
+                                            <button onclick="tw2submitData1()" class="btn-simpan">
+                                                <img src="savedata.png" alt="save"> Simpan </button>
+                                        </div>
+                                        <table>
+
+                                            <tbody>
+                                                <tr>
+                                                    <th rowspan="1" class="hal2">No</th>
+                                                    <th colspan="2" class="hal2">Uraian IKU</th>
+                                                    <th rowspan="1" width="180px" class="hal2">DATA YANG DIPERLUKAN</th>
+                                                    <th colspan="3" class="hal2">DATA</th>
+                                                    <th rowspan="1" class="hal2">Formula</th>
+                                                    <th rowspan="1" class="hal2">KETERANGAN</th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="font-size" class="hal2">1</th>
+                                                    <th colspan="2" class="font-size" class="hal2">2</th>
+                                                    <th class="font-size" class="hal2">3</th>
+                                                    <th class="font-size" class="hal2">4</th>
+                                                    <th class="font-size" class="hal2">5</th>
+                                                    <th class="font-size" class="hal2">6</th>
+                                                    <th class="font-size" class="hal2">7</th>
+                                                    <th class="font-size" class="hal2">8</th>
+                                                </tr>
+                                            </tbody>
+                                            <tbody>
+                                                <tr>
+                                                    <td rowspan="13" valign="top">1</td>
+                                                    <td rowspan="13" valign="top"> 1a-CP </td>
+                                                    <td rowspan="13" valign="top" class="left-align">Indeks Kualitas
+                                                        Nilai IKPA K/L</td>
+                                                    <td><b>Komponen</b></td>
+                                                    <td><b>Bobot</b></td>
+                                                    <td><b>Nilai</b></td>
+                                                    <td><b>Akhir</b></td>
+                                                    <td><b>Formula</b></td>
+                                                    <td>Keterangan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align"><b>Nilai Ikpa sebagai BUN</b></td>
+                                                    <td><b>70%</b></td>
+                                                    <td id="tw2totalCapaian1"><b> 122,23%</b></td>
+                                                    <td id="tw2nilaiIkpa1Score"><b>48,89</b></td>
+                                                    <td rowspan="12" valign="top" class="left-align" id="tw2formula1">
+                                                        Tolong selalu enter agar tidak terlalu panjang
+                                                    </td>
+                                                    <td rowspan="12" valign="top" class="left-align" id="tw2keterangan1">
+                                                        Tolong selalu enter agar tidak terlalu panjang
+                                                        Hasil penilaian
+                                                        IKPA tingkat Nasional sebagai BUN pada Aplikasi OMSPAN = <span
+                                                            id="tw2totalNilaiSpan1">95.16</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Revisi DIPA</td>
+                                                    <td>10%</td>
+                                                    <td id="tw2rdScore">48,89</td>
+                                                    <td id="tw2rdValue"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Deviasi Hal. III DIPA</td>
+                                                    <td>15%</td>
+                                                    <td id="tw2dhScore">56,5</td>
+                                                    <td id="tw2dhValue"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Penyerapan Anggaran</td>
+                                                    <td>20%</td>
+                                                    <td id="tw2paScore">56,5</td>
+                                                    <td id="tw2paValue"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Belanja Kontraktual</td>
+                                                    <td>10%</td>
+                                                    <td id="tw2bkScore">56,5</td>
+                                                    <td id="tw2bkValue"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Penyelesaian Tagihan</td>
+                                                    <td>10%</td>
+                                                    <td id="tw2ptScore">56,5</td>
+                                                    <td id="tw2ptValue"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Pengelolaan UP dan TUP</td>
+                                                    <td>10%</td>
+                                                    <td id="tw2putScore">56,5</td>
+                                                    <td id="tw2putValue"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Capaian Output</td>
+                                                    <td>25%</td>
+                                                    <td id="tw2coScore">56,5</td>
+                                                    <td id="tw2coValue"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Dispensasi SPM</td>
+                                                    <td>0%</td>
+                                                    <td id="tw2dsScore">56,5</td>
+                                                    <td id="tw2dsValue"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align"><b>Nilai Jumlah Satker dengan Predikat
+                                                            Minimal Baik</b></td>
+                                                    <td><b>30%</b></td>
+                                                    <td id="tw2jumlahsatker1Value"><b>0%</b></td>
+                                                    <td id="tw2jumlahsatker1Score"><b>56,5</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>Nilai Capaian</b></td>
+                                                    <td colspan="3" align="right" id="tw2totalCapaian1all"><b>95,16</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>Indeks Capaian</b></td>
+                                                    <td colspan="3" align="right" id="tw2Nilaislide1a"><b>95,16</b></td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                        <script>
+                                            function updateCapaian1() {
+                                                let tw2rd = parseFloat(document.getElementById("tw2rd").value) || 0;
+                                                let tw2dh = parseFloat(document.getElementById("tw2dh").value) || 0;
+                                                let tw2pa = parseFloat(document.getElementById("tw2pa").value) || 0;
+                                                let tw2bk = parseFloat(document.getElementById("tw2bk").value) || 0;
+                                                let tw2pt = parseFloat(document.getElementById("tw2pt").value) || 0;
+                                                let tw2put = parseFloat(document.getElementById("tw2put").value) || 0;
+                                                let tw2co = parseFloat(document.getElementById("tw2co").value) || 0;
+                                                let tw2ds = parseFloat(document.getElementById("tw2ds").value) || 0;
+                                                let tw2jumlahsatker1 = parseFloat(document.getElementById("tw2jumlahsatker1").value) || 0;
+
+                                                let tw2rdScore = (tw2rd * 10) / 100;
+                                                let tw2dhScore = (tw2dh * 15) / 100;
+                                                let tw2paScore = (tw2pa * 20) / 100;
+                                                let tw2bkScore = (tw2bk * 10) / 100;
+                                                let tw2ptScore = (tw2pt * 10) / 100;
+                                                let tw2putScore = (tw2put * 10) / 100;
+                                                let tw2coScore = (tw2co * 25) / 100;
+                                                let tw2dsScore = (tw2ds * 0) / 100;
+                                                let tw2jumlahsatker1Score = (tw2jumlahsatker1 * 30) / 100;
+
+                                                let tw2totalCapaian1 = tw2rdScore + tw2dhScore + tw2paScore + tw2bkScore + tw2ptScore + tw2putScore + tw2coScore + tw2dsScore;
+
+                                                let tw2nilaiIkpa1Score = (tw2totalCapaian1 * 70) / 100;
+
+                                                let tw2totalCapaian1all = tw2nilaiIkpa1Score + tw2jumlahsatker1Score;
+                                                let tw2totalNilaiSpan1 = tw2totalCapaian1all;
+                                                let tw2Nilaislide1a = getIndeksIKI1(tw2totalCapaian1all);
+
+                                                // let nilaitotalslide1 = (totalCapaian1all >=  100) ? 120 : totalCapaian1all.toFixed(2);
+                                                // document.getElementById("tw2rdValue").innerText = tw2rd + "%";
+                                                // document.getElementById("tw2dhValue").innerText = tw2dh + "%";
+                                                // document.getElementById("paValue").innerText = pa + "%";
+                                                // document.getElementById("tw2bkValue").innerText = tw2bk + "%";
+                                                // document.getElementById("ptValue").innerText = pt + "%";
+                                                // document.getElementById("putValue").innerText = put + "%";
+                                                // document.getElementById("coValue").innerText = co + "%";
+                                                document.getElementById("tw2jumlahsatker1Value").innerText = tw2jumlahsatker1;
+
+                                                document.getElementById("tw2rdScore").innerText = tw2rdScore.toFixed(2);
+                                                document.getElementById("tw2dhScore").innerText = tw2dhScore.toFixed(2);
+                                                document.getElementById("tw2paScore").innerText = tw2paScore.toFixed(2);
+                                                document.getElementById("tw2bkScore").innerText = tw2bkScore.toFixed(2);
+                                                document.getElementById("tw2ptScore").innerText = tw2ptScore.toFixed(2);
+                                                document.getElementById("tw2putScore").innerText = tw2putScore.toFixed(2);
+                                                document.getElementById("tw2coScore").innerText = tw2coScore.toFixed(2);
+                                                document.getElementById("tw2dsScore").innerText = tw2dsScore.toFixed(2);
+                                                document.getElementById("tw2jumlahsatker1Score").innerText = tw2jumlahsatker1Score.toFixed(2);
+
+
+                                                document.getElementById("tw2totalCapaian1").innerText = tw2totalCapaian1.toFixed(2);
+                                                document.getElementById("tw2totalCapaian1all").innerText = tw2totalCapaian1all.toFixed(2);
+                                                // document.getElementById("tw2nilaitotalslide1").innerText = nilaitotalslide1.toFixed(2);
+                                                document.getElementById("tw2totalNilaiSpan1").innerText = tw2totalNilaiSpan1.toFixed(2);
+                                                document.getElementById("tw2nilaiIkpa1Score").innerText = tw2nilaiIkpa1Score.toFixed(2);
+                                                document.getElementById("tw2Nilaislide1a").innerText = tw2Nilaislide1a;
+
+                                            }
+
+
+                                            function getIndeksIKI1(capaian) {
+                                                if (capaian >= 100) return 4;
+                                                if (capaian >= 95 && capaian < 100) return 3.75;
+                                                if (capaian >= 90 && capaian < 95) return 3.5;
+                                                if (capaian >= 85 && capaian < 90) return 3.25;
+                                                if (capaian >= 79 && capaian < 85) return 3;
+                                                if (capaian >= 70 && capaian < 79) return 2.75;
+                                                return 2.5;
+                                            }
+
+                                        </script>
+
+                                        <script type="module">
+                                            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+                                            import { getAuth } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+                                            import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+
+                                            const firebaseConfig = {
+                                            apiKey: "AIzaSyAoLpjcMKE3MTfEIzBlNDwK7zSVu6xqfxQ",
+                                            authDomain: "kppnmajene-059.firebaseapp.com",
+                                            projectId: "kppnmajene-059",
+                                            storageBucket: "kppnmajene-059.appspot.com",
+                                            databaseURL: "https://kppnmajene-059-default-rtdb.firebaseio.com/",
+                                            messagingSenderId: "546221480890",
+                                            appId: "1:546221480890:web:93a2127b46557acc6d5b83",
+                                            measurementId: "G-1LWFGCZKYE"
+                                            };
+
+                                            const app = initializeApp(firebaseConfig);
+                                            const auth = getAuth(app);
+                                            const database = getDatabase(app);
+                                            // triwulan = "triwulan1", tabel = "tabel1"
+                                            function tw2submitData1(triwulan = "triwulan2", tabel = "tabel1") {
+                                            const user = auth.currentUser;
+                                            if (!user) {
+                                                alert("Silakan login terlebih dahulu!");
+                                                return;
+                                            }
+
+                                            const data = {
+                                                tw2rdScore: document.getElementById("tw2rdScore")?.innerText || "",
+                                                tw2dhScore: document.getElementById("tw2dhScore")?.innerText || "",
+                                                tw2paScore: document.getElementById("tw2paScore")?.innerText || "",
+                                                tw2bkScore: document.getElementById("tw2bkScore")?.innerText || "",
+                                                tw2ptScore: document.getElementById("tw2ptScore")?.innerText || "",
+                                                tw2putScore: document.getElementById("tw2putScore")?.innerText || "",
+                                                tw2coScore: document.getElementById("tw2coScore")?.innerText || "",
+                                                tw2dsScore: document.getElementById("tw2dsScore")?.innerText || "",
+                                                tw2jumlahsatker1Value: document.getElementById("tw2jumlahsatker1Value")?.innerText || "",
+                                                tw2jumlahsatker1Score: document.getElementById("tw2jumlahsatker1Score")?.innerText || "",
+                                                tw2totalCapaian1: document.getElementById("tw2totalCapaian1")?.innerText || "",
+                                                tw2nilaiIkpa1Score: document.getElementById("tw2nilaiIkpa1Score")?.innerText || "",
+                                                tw2formula1: document.getElementById("tw2formula1")?.innerText || "",
+                                                tw2keterangan1: document.getElementById("tw2keterangan1")?.innerText || "",
+                                                tw2totalCapaian1all: document.getElementById("tw2totalCapaian1all")?.innerText || "",
+                                                tw2Nilaislide1a: document.getElementById("tw2Nilaislide1a")?.innerText || "",
+                                                timestamp: new Date().toISOString()
+                                            };
+
+                                            // pakai set() bukan push()
+                                            const dataRef = ref(database, `ikpaData/${user.uid}/${triwulan}/${tabel}`);
+
+                                            set(dataRef, data)
+                                                .then(() => alert(`Data berhasil disimpan ke ${triwulan}/${tabel} dan memperbarui data lama!`))
+                                                .catch((error) => alert("Gagal menyimpan data: " + error.message));
+                                            // set(ref(database, "ikpaData/" + user.uid ), data)
+                                            //     .then(() => alert("Data berhasil disimpan dan data lama terupdate di Firebase!"))
+                                            //     .catch((error) => alert("Gagal menyimpan data: " + error.message));
+                                            }
+
+                                            window.tw2submitData1 = tw2submitData1;
+                                        </script>
+                                        <!-- <script>
+                                            function tw2submitData1() {
+                                                let tw2rdScore = document.getElementById("tw2rdScore").innerText;
+                                                let tw2dhScore = document.getElementById("tw2dhScore").innerText;
+                                                let tw2paScore = document.getElementById("tw2paScore").innerText;
+                                                let tw2bkScore = document.getElementById("tw2bkScore").innerText;
+                                                let tw2ptScore = document.getElementById("tw2ptScore").innerText;
+                                                let tw2putScore = document.getElementById("tw2putScore").innerText;
+                                                let tw2coScore = document.getElementById("tw2coScore").innerText;
+                                                let tw2dsScore = document.getElementById("tw2dsScore").innerText;
+                                                let tw2jumlahsatker1Value = document.getElementById("tw2jumlahsatker1Value").innerText;
+                                                let tw2jumlahsatker1Score = document.getElementById("tw2jumlahsatker1Score").innerText;
+                                                let tw2totalCapaian1 = document.getElementById("tw2totalCapaian1").innerText;
+                                                let tw2totalNilaiSpan1 = document.getElementById("tw2totalNilaiSpan1").innerText;
+                                                let tw2nilaiIkpa1Score = document.getElementById("tw2nilaiIkpa1Score").innerText;
+                                                let tw2totalCapaian1all = document.getElementById("tw2totalCapaian1all").innerText;
+                                                let tw2Nilaislide1a = document.getElementById("tw2Nilaislide1a").innerText;
+                                                let tw2keterangan1hasil = document.getElementById("tw2keterangan1").innerText;
+                                                let tw2formula1hasil = document.getElementById("tw2formula1").innerText;
+                                                // let nilaitotalslide1 = document.getElementById("nilaitotalslide1").innerText;
+
+
+                                                // Cek apakah ada data lama di localStorage
+                                                let storedData = localStorage.getItem("indeks_data");
+                                                let data = storedData ? JSON.parse(storedData) : {};
+
+                                                data.tw2rdScore = tw2rdScore;
+                                                data.tw2dhScore = tw2dhScore;
+                                                data.tw2paScore = tw2paScore;
+                                                data.tw2bkScore = tw2bkScore;
+                                                data.tw2ptScore = tw2ptScore;
+                                                data.tw2putScore = tw2putScore;
+                                                data.tw2coScore = tw2coScore;
+                                                data.tw2dsScore = tw2dsScore;
+                                                data.tw2jumlahsatker1Value = tw2jumlahsatker1Value;
+                                                data.tw2jumlahsatker1Score = tw2jumlahsatker1Score;
+                                                data.tw2totalCapaian1 = tw2totalCapaian1;
+                                                data.tw2totalCapaian1all = tw2totalCapaian1all;
+                                                data.tw2totalNilaiSpan1 = tw2totalNilaiSpan1;
+                                                data.tw2nilaiIkpa1Score = tw2nilaiIkpa1Score;
+                                                data.tw2Nilaislide1a = tw2Nilaislide1a;
+                                                data.tw2keterangan1 = tw2keterangan1hasil;
+                                                data.tw2formula1 = tw2formula1hasil;
+                                                // data.nilaitotalslide1 =nilaitotalslide1;
+
+                                                // Simpan kembali ke localStorage
+                                                localStorage.setItem("indeks_data", JSON.stringify(data));
+
+                                                alert("Data tw2 dari Indeks Kualitas Nilai IKPA K/L berhasil disimpan!");
+                                            }
+                                        </script> -->
+
+
+                                        <!-- <button class="btn-simpan" align-items="center" onclick="tw2submitData1()">
+                                            <img src="C:\Users\USER\Videos\login-project\images\savedata.png" alt="Save Icon">Simpan Data Halaman 1</button> -->
+                                    </div>
+
+                                </body>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div><!-- .animated -->
+        </div><!-- .content -->
+
+
+    </div><!-- /#right-panel -->
+
+    <!-- Right Panel -->
+
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="vendors/jszip/dist/jszip.min.js"></script>
+    <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <script src="assets/js/init-scripts/data-table/datatables-init.js"></script>
+
+
+</body>
+
+</html>

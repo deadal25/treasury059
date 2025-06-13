@@ -1,0 +1,628 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pelayanan KPPN Majene</title>
+    <link rel="icon" href="LogoKemenkeu.png" type="image/png">
+    <!-- <meta name="description" content="Sufee Admin - HTML5 Admin Template"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="vendors/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="vendors/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script>
+    function navigatePage() {
+        var selectElement = document.getElementById("pageSelect");
+        var selectedValue = selectElement.value;
+
+        const pages = {
+            "1a-CP": "tw2tabelnomor1.html",
+            "1b-N": "tw2tabelnomor2.html",
+            "2a-N": "tw2tabelnomor3.html",
+            "2b-N": "tw2tabelnomor4.html",
+            "3a-CP": "tw2tabelnomor5.html",
+            "3b-N": "tw2tabelnomor6.html",
+            "4a-CP": "tw2tabelnomor7.html",
+            "4b-N": "tw2tabelnomor8.html",
+            "5a-N": "tw2tabelnomor9.html",
+            "6a-N": "tw2tabelnomor10.html",
+            "6b-N": "tw2tabelnomor11.html",
+            "6c-N": "tw2tabelnomor12.html",
+            "7a-CP": "tw2tabelnomor13.html",
+            "7b-N": "tw2tabelnomor14.html",
+            "7c-N": "tw2tabelnomor15.html"
+           
+        };
+
+        if (selectedValue in pages) {
+            window.location.href = pages[selectedValue];
+        }
+    }
+</script>
+
+<body>
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu"
+                    aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="tw2tabelnomor6.html"><img src="logo.png" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="tw2tabelnomor6.html"><img src="logo2.png" alt="Logo"></a>
+            </div>
+
+            <div id="main-menu" class="w-full">
+                <script src="https://cdn.tailwindcss.com"></script>
+                <ul class="flex flex-col space-y-2 p-4" style="background-color: #272c33;">
+                    <li>
+                        <a href="dashboard.html" class="flex items-center text-white hover:text-blue-400">
+                            <i class="fa fa-dashboard mr-2"></i>Dashboard
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="ppt-basic.html" class="flex items-center text-white hover:text-blue-400">
+                            <i class="fa fa-table mr-2"></i>New PPT Data
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="ppt-data.html" class="flex items-center text-white hover:text-blue-400">
+                            <i class="fa fa-table mr-2"></i>PPT Data
+                        </a>
+                    </li>
+     -->
+                    <!-- Triwulan 1 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan1')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 1
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan1" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="tables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <!-- Triwulan 2 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan2')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 2
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan2" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="tw2tables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw2tables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw2ppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <!-- Triwulan 3 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan3')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 3
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan3" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="tw3tables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw3tables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw3ppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <!-- Triwulan 4 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan4')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 4
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan4" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="tw4tables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw4tables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw4ppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan5')">
+                            <i class="fa fa-calendar mr-2"></i>Tahunan
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan5" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="yeartables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="yeartables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="yearppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data 
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                </ul>
+            </div>
+        </nav>
+    </aside><!-- /#left-panel -->
+    <script>
+        function toggleSubMenu(id) {
+            const menus = document.querySelectorAll('.absolute');
+            menus.forEach(menu => {
+                if(menu.id !== id) {
+                    menu.classList.add('hidden');
+                }
+            });
+            const selectedMenu = document.getElementById(id);
+            selectedMenu.classList.toggle('hidden');
+        }
+    </script>
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+               
+
+                <div class="col-sm-12">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="admin.jpg" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="profile.html"><i class="fa fa-user"></i> My Profile</a>
+
+                            <a class="nav-link" href="settings.html"><i class="fa fa-cog"></i> Settings</a>
+
+                            <a class="nav-link" id="logout" href="index.html" onclick="logout()"><i
+                                    class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Table</a></li>
+                            <li class="active">Data table</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content mt-3">
+            <div class="animated fadeIn">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong class="card-title">RAW DATA IKU KEMENKEU</strong>
+                                <!-- <label for="tw2pageSelect">Pilih kategori:</label> -->
+                                <select id="pageSelect" onchange="navigatePage()">
+                                    <option value="" disabled selected>-- Pilih --</option>
+                                    <option value="1a-CP">Indeks Kualitas Nilai IKPA K/L</option>
+                                    <option value="1b-N">Indeks Kualitas LK Kuasa BUN KPPN</option>
+                                    <option value="2a-N">Indeks kepuasan terhadap layanan KPPN</option>
+                                    <option value="2b-N">Tingkat implementasi penajaman tugas Financial Advisory
+                                    </option>
+                                    <option value="3a-CP">Indeks kinerja penyaluran Dana Transfer ke Daerah pada KPPN
+                                    </option>
+                                    <option value="3b-N">Indeks Digitalisasi Pengelolaan Keuangan</option>
+                                    <option value="4a-CP">Persentase akurasi perencanaan kas</option>
+                                    <option value="4b-N">Indeks kualitas penyelesaian SP2D </option>
+                                    <option value="5a-N">Indeks Kualitas LPJ Bendahara Satker K/L</option>
+                                    <option value="6a-N">Tingkat kualitas kinerja organisasi</option>
+                                    <option value="6b-N">Nilai kualitas pengelolaan SDM</option>
+                                    <option value="6c-N">Nilai Evaluasi Pelaksanaan Tugas Kepatuhan Internal</option>
+                                    <option value="7a-CP">Indeks kualitas pengelolaan keuangan KPPN</option>
+                                    <option value="7b-N">Persentase Kualitas Pengelolaan BMN dan Pengadaan</option>
+                                    <option value="7c-N">Nilai Kinerja TIK KPPN</option>
+                                </select>
+
+                                <body>
+
+                                    <div id="3b-N" class="content">
+                                        <br>
+                                        <h3><b>Indeks Digitalisasi Pengelolaan Keuangan KPPN </b></h3>
+
+                                        <label for="tw2indigipay">Implementasi Digipay :</label>
+                                        <input type="number" id="tw2indigipay" oninput="tw2updateCapaian6()" step="0.01"
+                                            min="0">
+
+                                        <label for="tw2incms">Implementasi CMS :</label>
+                                        <input type="number" id="tw2incms" oninput="tw2updateCapaian6()" step="0.01" min="0">
+
+                                        <label for="tw2inkkp">Implementasi KKP :</label>
+                                        <input type="number" id="tw2inkkp" oninput="tw2updateCapaian6()" step="0.01" min="0">
+
+                                        <label for="tw2formula6">Masukkan Formula:</label>
+                                        <textarea id="tw2inputFormula6" class="form-control" rows="3"
+                                            placeholder="Masukkan teks formula...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
+                                            oninput="tw2updateFormula6()"></textarea>
+
+                                        <label for="tw2keterangan6">Masukkan Keterangan:</label>
+                                        <textarea id="tw2inputArea6" class="form-control" rows="3"
+                                            placeholder="Masukkan teks keterangan...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
+                                            oninput="tw2updateKeterangan6()"></textarea>
+
+                                        <script>
+                                            function tw2updateFormula6() {
+                                                let inputFormula6 = document.getElementById("tw2inputFormula6").value;
+                                                document.getElementById("tw2formula6").innerHTML = inputFormula6.replace(/\n/g, "<br>");
+
+                                            }
+                                        </script>
+                                        <script>
+                                            function tw2updateKeterangan6() {
+                                                let inputText6 = document.getElementById("tw2inputArea6").value;
+                                                document.getElementById("tw2keterangan6").innerHTML = inputText6.replace(/\n/g, "<br>");
+
+                                            }
+                                        </script>
+
+
+                                        <div style="text-align: right; margin-bottom: 10px;">
+                                            <button onclick="tw2submitData6()" class="btn-simpan">
+                                                <img src="savedata.png" alt="save"> Simpan </button>
+                                        </div>
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <th rowspan="1" class="hal2">No</th>
+                                                    <th colspan="2" class="hal2">Uraian IKU</th>
+                                                    <th rowspan="1" width="200px" class="hal2">DATA YANG DIPERLUKAN</th>
+                                                    <th colspan="3" class="hal2">DATA</th>
+                                                    <th rowspan="1" class="hal2">FORMULA</th>
+                                                    <th rowspan="1" class="hal2">KETERANGAN</th>
+                                                </tr>
+                                            </tbody>
+                                            <tbody>
+                                                <tr>
+                                                    <td rowspan="5" valign="top">6</td>
+                                                    <td rowspan="5" valign="top"> 3b-N </td>
+                                                    <td rowspan="5" valign="top" class="left-align">Indeks Digitalisasi Pengelolaan Keuangan</td>
+                                                    <td><b>Komponen</b></td>
+                                                    <td><b>Bobot</b></td>
+                                                    <td><b>Nilai</b></td>
+                                                    <td><b>Total</b></td>
+                                                    <td><b>Formula</b></td>
+                                                    <td>Keterangan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Implementasi Digipay </td>
+                                                    <td >33%</td>
+                                                    <td id="tw2indigipayvalue">5</td>
+                                                    <td id="tw2indeksindigipay">5</td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="tw2formula6">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="tw2keterangan6">IKU
+                                                        terdiri dari 3 komponen yaitu:
+                                                        A. Implementasi Digipay
+                                                        B. Implementasi CMS
+                                                        C. Implementasi KKP
+
+                                                        Tolong selalu enter agar tidak terlalu panjang </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Implementasi CMS</td>
+                                                        <td >33%</td>
+                                                    <td id="tw2incmsvalue">5</td>
+                                                    <td id="tw2indeksincms">55</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Implementasi KKP</td>
+                                                    <td >33%</td>
+                                                    <td id="tw2inkkpvalue">5</td>
+                                                    <td id="tw2indeksinkkp">5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>Nilai Capaian</b></td>
+                                                    <td colspan="3" id="tw2indeksTotal6"> <b>5</b></td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                        <script>
+                                            function tw2updateCapaian6() {
+                                                let tw2indigipay = parseFloat(document.getElementById("tw2indigipay").value) || 0;
+                                                let tw2incms = parseFloat(document.getElementById("tw2incms").value) || 0;
+                                                let tw2inkkp = parseFloat(document.getElementById("tw2inkkp").value) || 0;
+
+                                                let tw2indeksindigipay = (tw2indigipay * 100/3*100)/100/100;
+                                                let tw2indeksincms = (tw2incms * 100/3*100) /100/100;
+                                                let tw2indeksinkkp = (tw2inkkp * 100/3*100) /100/100;
+                                                let tw2indeksTotal6 = tw2indeksindigipay + tw2indeksincms +tw2indeksinkkp;
+
+                                                // let totalCapaian6 = indigipayScore + incmsScore + inkkp;
+                                                // let indeksIKI = getIndeksIKI(totalCapaian);
+                                                // let indeksindigipay = getIndeksindigipay(indigipay);
+                                                // let indeksincms = getIndeksincms(incms);
+                                                // let indeksinkkp = getIndeksinkkp(inkkp);
+                                                // let indeksTotal6 = (indeksindigipay + indeksincms + indeksinkkp) / 3;
+
+                                                document.getElementById("tw2indigipayvalue").innerText = tw2indigipay;
+                                                document.getElementById("tw2incmsvalue").innerText = tw2incms ;
+                                                document.getElementById("tw2inkkpvalue").innerText = tw2inkkp ;
+
+                                                document.getElementById("tw2indeksindigipay").innerText = tw2indeksindigipay.toFixed(2);
+                                                document.getElementById("tw2indeksincms").innerText = tw2indeksincms.toFixed(2);
+                                                document.getElementById("tw2indeksinkkp").innerText = tw2indeksinkkp.toFixed(2);
+
+                                                document.getElementById("tw2indeksTotal6").innerText = tw2indeksTotal6.toFixed(0);
+                                            }
+
+                                           
+
+                                            // function getIndeksindigipay(indigipay) {
+                                            //     if (indigipay < 30) return 1;
+                                            //     if (indigipay >= 30 && indigipay < 50) return 2;
+                                            //     if (indigipay >= 50 && indigipay < 70) return 3;
+                                            //     if (indigipay >= 70 && indigipay < 100) return 4;
+                                            //     return 5;
+                                            // }
+
+                                            // function getIndeksincms(incms) {
+                                            //     if (incms <= 40) return 1;
+                                            //     if (incms > 40 && incms <= 70) return 2;
+                                            //     if (incms > 70 && incms <= 85) return 3;
+                                            //     if (incms > 85 && incms <= 100) return 4;
+                                            //     return 5;
+                                            // }
+
+                                            // function getIndeksinkkp(inkkp) {
+                                            //     if (inkkp < 30) return 1;
+                                            //     if (inkkp >= 30 && inkkp < 40) return 2;
+                                            //     if (inkkp >= 40 && inkkp < 50) return 3;
+                                            //     if (inkkp >= 50 && inkkp <= 70) return 4;
+                                            //     return 5;
+                                            // }
+
+
+                                        </script>
+                                        <script type="module">
+                                            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+                                            import { getAuth } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+                                            import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+
+                                            const firebaseConfig = {
+                                            apiKey: "AIzaSyAoLpjcMKE3MTfEIzBlNDwK7zSVu6xqfxQ",
+                                            authDomain: "kppnmajene-059.firebaseapp.com",
+                                            projectId: "kppnmajene-059",
+                                            storageBucket: "kppnmajene-059.appspot.com",
+                                            databaseURL: "https://kppnmajene-059-default-rtdb.firebaseio.com/",
+                                            messagingSenderId: "546221480890",
+                                            appId: "1:546221480890:web:93a2127b46557acc6d5b83",
+                                            measurementId: "G-1LWFGCZKYE"
+                                            };
+
+                                            const app = initializeApp(firebaseConfig);
+                                            const auth = getAuth(app);
+                                            const database = getDatabase(app);
+                                            // triwulan = "triwulan1", tabel = "tabel1"
+                                            function tw2submitData6(triwulan = "triwulan2", tabel = "tabel6") {
+                                            const user = auth.currentUser;
+                                            if (!user) {
+                                                alert("Silakan login terlebih dahulu!");
+                                                return;
+                                            }
+
+                                            const data = {
+                                                tw2indigipayvalue: document.getElementById("tw2indigipayvalue")?.innerText || "",
+                                                tw2incmsvalue: document.getElementById("tw2incmsvalue")?.innerText || "",
+                                                tw2inkkpvalue: document.getElementById("tw2inkkpvalue")?.innerText || "",
+                                                tw2indeksindigipay: document.getElementById("tw2indeksindigipay")?.innerText || "",
+                                                tw2indeksincms: document.getElementById("tw2indeksincms")?.innerText || "",
+                                                tw2indeksinkkp: document.getElementById("tw2indeksinkkp")?.innerText || "",
+                                                tw2indeksTotal6: document.getElementById("tw2indeksTotal6")?.innerText || "",        
+                                            
+                                                tw2formula6: document.getElementById("tw2formula6")?.innerText || "",
+                                                tw2keterangan6: document.getElementById("tw2keterangan6")?.innerText || "",
+                                                
+                                                timestamp: new Date().toISOString()
+                                            };
+
+                                            // pakai set() bukan push()
+                                            const dataRef = ref(database, `ikpaData/${user.uid}/${triwulan}/${tabel}`);
+
+                                            set(dataRef, data)
+                                                .then(() => alert(`Data berhasil disimpan ke ${triwulan}/${tabel} dan memperbarui data lama!`))
+                                                .catch((error) => alert("Gagal menyimpan data: " + error.message));
+                                            // set(ref(database, "ikpaData/" + user.uid ), data)
+                                            //     .then(() => alert("Data berhasil disimpan dan data lama terupdate di Firebase!"))
+                                            //     .catch((error) => alert("Gagal menyimpan data: " + error.message));
+                                            }
+
+                                            window.tw2submitData6 = tw2submitData6;
+                                        </script>
+
+                                        <!-- <script>
+                                            function tw2submitData6() {
+                                                let tw2indigipay = document.getElementById("tw2indigipayvalue").innerText;
+                                                let tw2incms = document.getElementById("tw2incmsvalue").innerText;
+                                                let tw2inkkp = document.getElementById("tw2inkkpvalue").innerText;
+                                                let tw2indeksindigipay = document.getElementById("tw2indeksindigipay").innerText;
+                                                let tw2indeksincms = document.getElementById("tw2indeksincms").innerText;
+                                                let tw2indeksinkkp = document.getElementById("tw2indeksinkkp").innerText;
+                                                let tw2indeksTotal6 = document.getElementById("tw2indeksTotal6").innerText;
+
+                                                let tw2formula6hasil = document.getElementById("tw2formula6").innerText;
+                                                let tw2keterangan6hasil = document.getElementById("tw2keterangan6").innerText;
+
+                                                // Cek apakah ada data lama di localStorage
+                                                let storedData = localStorage.getItem("indeks_data");
+                                                let data = storedData ? JSON.parse(storedData) : {};
+
+                                                // Update hanya bagian halaman 6
+                                                data.tw2indigipay = tw2indigipay;
+                                                data.tw2incms = tw2incms;
+                                                data.tw2inkkp = tw2inkkp;
+                                                data.tw2indeksindigipay = tw2indeksindigipay;
+                                                data.tw2indeksincms = tw2indeksincms;
+                                                data.tw2indeksinkkp = tw2indeksinkkp;
+                                                data.tw2indeksTotal6 = tw2indeksTotal6;
+                                                data.tw2formula6 = tw2formula6hasil;
+                                                data.tw2keterangan6 = tw2keterangan6hasil;
+
+                                                // Simpan kembali ke localStorage
+                                                localStorage.setItem("indeks_data", JSON.stringify(data));
+
+                                                alert("Data dari tw2 Indeks Digitalisasi Pengelolaan Keuangan KPPN  berhasil disimpan!");
+                                            }
+                                        </script> -->
+                                        <!-- <button onclick="tw2submitData6()">Simpan Data Halaman 6</button> -->
+
+                                    </div>
+
+                                </body>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div><!-- .animated -->
+        </div><!-- .content -->
+
+
+    </div><!-- /#right-panel -->
+
+    <!-- Right Panel -->
+
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="vendors/jszip/dist/jszip.min.js"></script>
+    <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <script src="assets/js/init-scripts/data-table/datatables-init.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,938 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pelayanan KPPN Majene</title>
+    <link rel="icon" href="LogoKemenkeu.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="vendors/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="vendors/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+
+<script>
+    function navigatePage() {
+        const selectElement = document.getElementById("pageSelect");
+        const selectedValue = selectElement.value;
+
+        const pages = {
+            "slide1": "slide1.html",
+            "slide2": "slide2.html",
+            "slide3": "slide3.html",
+            "slide4": "slide4.html",
+            "slide5": "slide5.html",
+            "slide6": "slide6.html",
+            "slide7": "slide7.html",
+            "slide8": "slide8.html",
+            "slide9": "slide9.html",
+            "slide10": "slide10.html",
+            "slide11": "slide11.html",
+            "slide12": "slide12.html",
+            "slide13": "slide13.html",
+            "slide14": "slide14.html",
+            "slide15": "slide15.html"
+            
+        };
+
+        if (selectedValue && pages[selectedValue]) {
+            window.location.href = pages[selectedValue];
+        } else {
+            alert("Silakan pilih kategori terlebih dahulu.");
+            window.location.href = "ppt-basic.html";
+        }
+    }
+</script>
+
+<body>
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu"
+                    aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#"><img src="logo.png" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="#"><img src="logo2.png" alt="Logo"></a>
+            </div>
+
+            <div id="main-menu" class="w-full">
+                <script src="https://cdn.tailwindcss.com"></script>
+                <ul class="flex flex-col space-y-2 p-4" style="background-color: #272c33;">
+                    <li>
+                        <a href="dashboard.html" class="flex items-center text-white hover:text-blue-400">
+                            <i class="fa fa-dashboard mr-2"></i>Dashboard
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="ppt-basic.html" class="flex items-center text-white hover:text-blue-400">
+                            <i class="fa fa-table mr-2"></i>New PPT Data
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="ppt-data.html" class="flex items-center text-white hover:text-blue-400">
+                            <i class="fa fa-table mr-2"></i>PPT Data
+                        </a>
+                    </li>
+     -->
+                    <!-- Triwulan 1 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan1')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 1
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan1" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="tables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <!-- Triwulan 2 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan2')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 2
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan2" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="tw2tables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw2tables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw2ppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <!-- Triwulan 3 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan3')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 3
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan3" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="tw3tables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw3tables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw3ppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <!-- Triwulan 4 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan4')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 4
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan4" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="tw4tables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw4tables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw4ppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan5')">
+                            <i class="fa fa-calendar mr-2"></i>Tahunan
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan5" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="yeartables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="yeartables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="yearppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data 
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                </ul>
+            </div>
+        </nav>
+    </aside><!-- /#left-panel -->
+    <script>
+        function toggleSubMenu(id) {
+            const menus = document.querySelectorAll('.absolute');
+            menus.forEach(menu => {
+                if(menu.id !== id) {
+                    menu.classList.add('hidden');
+                }
+            });
+            const selectedMenu = document.getElementById(id);
+            selectedMenu.classList.toggle('hidden');
+        }
+    </script>
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+                
+
+                <div class="col-sm-12">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="admin.jpg" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="profile.html"><i class="fa fa-user"></i> My Profile</a>
+
+                            <a class="nav-link" href="settings.html"><i class="fa fa-cog"></i> Settings</a>
+
+                            <a class="nav-link" id="logout" href="index.html" onclick="logout()"><i
+                                    class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                        <!-- <script>
+                            function logout() {
+                                // Hapus session storage atau local storage jika ada
+                                sessionStorage.clear();
+                                // localStorage.clear();
+                        
+                                // Arahkan ke halaman login
+                                window.location.href = "login.html";
+                            }
+                        </script> -->
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Table</a></li>
+                            <li class="active">Data table</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content mt-3">
+            <div class="animated fadeIn">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong class="card-title">PPT DATA IKU KEMENKEU</strong>
+                                <!-- <label for="pageSelect">Pilih kategori:</label> -->
+                                <select id="pageSelect" onchange="navigatePage()">
+                                    <option value="" disabled selected>-- Pilih --</option>
+                                    <option value="slide1">1a-CP Indeks Kualitas Nilai IKPA K/L</option>
+                                    <option value="slide2">1b-N Indeks kualitas LK Kuasa BUN KPPN</option>
+                                    <option value="slide3">2a-N Indeks kepuasan terhadap layanan KPPN</option>
+                                    <option value="slide4">2b-N Tingkat Implementasi Penajaman Tugas Financial Advisory</option>
+                                    <option value="slide5">3a-CP Indeks Kinerja Penyaluran Dana Transfer ke Daerah pada KPPN</option>
+                                    <option value="slide6">3b-N Indeks Digitalisasi Pengelolaan Keuangan</option>
+                                    <option value="slide7">4a-CP Persentase akurasi perencanaan kas</option>
+                                    <option value="slide8">4b-N Indeks kualitas penyelesaian SP2D</option>
+                                    <option value="slide9">5a-N Indeks kualitas Laporan Pertanggungjawaban Bendahara K/L</option>
+                                    <option value="slide10">6a-N Tingkat Kualitas Pengelolaan Kinerja Organisasi</option>
+                                    <option value="slide11">6b-N Nilai Kualitas Pengelolaan SDM</option>
+                                    <option value="slide12">6c-N Nilai hasil evaluasi pelaksanaan tugas kepatuhan internal</option>
+                                    <option value="slide13">7a-CP Indeks Kualitas Pengelolaan Keuangan KPPN</option>
+                                    <option value="slide14">7b-N Indeks Kualitas Pengelolaan BMN dan Pengadaan</option>
+                                    <option value="slide15">7c-N Nilai Kinerja TIK KPPN</option>
+                                    
+                                </select>
+
+                                <body>
+
+                                </body>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div><!-- .animated -->
+        </div><!-- .content -->
+        <div class="card-body">
+            <div class="max-w-[1200px] mx-auto mt-2 p-4 bg-white border border-[#ffffff]">
+
+                <table class="w-full border border-black border-collapse text-[10px] md:text-xs">
+                    <thead>
+                        <tr>
+                            <th rowspan="2"
+                                class="bg-[#3b6ea5] text-white font-bold border border-black px-2 py-1 text-left"
+                                style="width: 10%">
+                                KPPN Majene
+                            </th>
+                            <th colspan="9"
+                                class="bg-[#3b6ea5] text-white font-bold border border-black px-2 py-1 text-left">
+                                Perbendaharaan Negara yang optimal
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="9"
+                                class="bg-[#3b6ea5] text-white font-bold border border-black px-2 py-1 text-left">
+                                1a-CP Nilai kinerja pelaksanaan anggaran K/L
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                style="width: 7%">
+                                T/R
+                            </th>
+                            <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                style="width: 7%">
+                                Q1
+                            </th>
+                            <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                style="width: 7%">
+                                Q2
+                            </th>
+                            <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                style="width: 7%">
+                                Sm.I
+                            </th>
+                            <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                style="width: 7%">
+                                Q3
+                            </th>
+                            <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                style="width: 7%">
+                                s.d. Q3
+                            </th>
+                            <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                style="width: 7%">
+                                Q4
+                            </th>
+                            <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                style="width: 7%">
+                                Y
+                            </th>
+                            <th class="bg-[#c75a56] text-white font-bold border border-black px-2 py-1 text-center"
+                                style="width: 10%">
+                                Pol/ K P
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-[#f4d9d7] border border-black">
+                            <td class="border border-black px-2 py-1">Target</td>
+                            <td class="border border-black px-2 py-1 text-center">90</td>
+                            <td class="border border-black px-2 py-1 text-center">90</ td>
+                            <td class="border border-black px-2 py-1 text-center">90</td>
+                            <td class="border border-black px-2 py-1 text-center">90</td>
+                            <td class="border border-black px-2 py-1 text-center">90</td>
+                            <td class="border border-black px-2 py-1 text-center">90</td>
+                            <td class="border border-black px-2 py-1 text-center">90</td>
+                            <td class="border border-black px-2 py-1 text-center align-middle" rowspan="3">
+                                Max/TLK
+                            </td>
+                        </tr>
+                        <tr class="bg-[#f4d9d7] border border-black">
+                            <td class="border border-black px-2 py-1">Realisasi</td>
+                            <td class="border border-black px-2 py-1 text-center">98.37</td>
+                            <td class="border border-black px-2 py-1 text-center">96.39</td>
+                            <td class="border border-black px-2 py-1 text-center">96.39</td>
+                            <td class="border border-black px-2 py-1 text-center">95,25</td>
+                            <td class="border border-black px-2 py-1 text-center">95,25</td>
+                            <td class="border border-black px-2 py-1 text-center" id="totalCapaian1">95,16*</td>
+                            <td class="border border-black px-2 py-1 text-center" id="totalCapaian2">95,16*</td>
+
+                        </tr>
+                        <tr class="bg-[#f4d9d7] border border-black font-bold">
+                            <td class="border border-black px-2 py-1 font-bold">Capaian</td>
+                            <td class="border border-black px-2 py-1 text-center font-bold">109,3%
+                            </td>
+                            <td class="border border-black px-2 py-1 text-center font-bold">107.10%
+                            </td>
+                            <td class="border border-black px-2 py-1 text-center font-bold">107.10%
+                            </td>
+                            <td class="border border-black px-2 py-1 text-center font-bold">105,83%
+                            </td>
+                            <td class="border border-black px-2 py-1 text-center font-bold">105,83%
+                            </td>
+                            <td class="border border-black px-2 py-1 text-center font-bold">105,73%
+                            </td>
+                            <td class="border border-black px-2 py-1 text-center font-bold">105,73%
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="flex flex-col md:flex-row gap-2 md:gap-4">
+                    <div class="flex-1 flex flex-col space-y-2">
+                        <div class="bg-[#f79443] text-white font-bold px-2 py-1 text-[11px] md:text-sm">
+                            Isu Utama dan Implikasi <span class="italic font-normal">(Apa yang
+                                Terjadi dan Implikasinya?)</span>
+                        </div>
+                        <div class="bg-[#fce9d0] p-2 text-[10px] md:text-xs leading-tight">
+                            <p class="font-bold mb-1">Isu Utama</p>
+                            <p class="mb-2">
+                                Nilai 3 indikator kinerja pelaksanaan anggaran belum optimal yaitu
+                                Deviasi Halaman III DIPA,
+                                Penyerapan anggaran, &amp; Capaian Output.
+                            </p>
+                            <p class="font-bold mb-1">Implikasi</p>
+                            <p class="mb-2">Nilai IKPA TW IV 2024 belum maksimal</p>
+                            <p class="font-bold mb-1">Penjelasan capaian:</p>
+                            <p class="mb-1 italic text-[9px] md:text-[10px]">*Data Monev PA <span class="not-italic">Cut
+                                    Off</span> 23 Januari 2025</p>
+                            <table
+                                class="w-full border border-black border-collapse text-[8px] md:text-[10px] bg-[#e6f0f6]">
+                                <thead>
+                                    <tr>
+                                        <th class="border border-black px-1 py-0.5">Revisi DIPA</th>
+                                        <th class="border border-black px-1 py-0.5">Deviasi Halaman
+                                            III DIPA</th>
+                                        <th class="border border-black px-1 py-0.5">Penyerapan
+                                            Anggaran</th>
+                                        <th class="border border-black px -1 py-0.5">Belanja
+                                            Kontraktual</th>
+                                        <th class="border border-black px-1 py-0.5">Penyelesaian
+                                            Tagihan</th>
+                                        <th class="border border-black px-1 py-0.5">Pengelolaan UP
+                                            dan TUP</th>
+                                        <th class="border border-black px-1 py-0.5">Capaian Output
+                                        </th>
+                                        <th class="border border-black px-1 py-0.5">Nilai Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="border border-black px-1 py-0.5 text-center">
+                                            99,06</td>
+                                        <td class="border border-black px-1 py-0.5 text-center">
+                                            84,95</td>
+                                        <td class="border border-black px-1 py-0.5 text-center">
+                                            95,13</td>
+                                        <td class="border border-black px-1 py-0.5 text-center">
+                                            89,32</td>
+                                        <td class="border border-black px-1 py-0.5 text-center">
+                                            98,95</td>
+                                        <td class="border border-black px-1 py-0.5 text-center">
+                                            97,47</td>
+                                        <td class="border border-black px-1 py-0.5 text-center">
+                                            99,66</td>
+                                        <td class="border border-black px-1 py-0.5 text-center" rowspan="3"
+                                            id="totalCapaian3">
+                                            95,16</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-black px-1 py-0.5 text-center">10
+                                        </td>
+                                        <td class="border border-black px-1 py-0.5 text-center">15
+                                        </td>
+                                        <td class="border border-black px-1 py-0.5 text-center">20
+                                        </td>
+                                        <td class="border border-black px-1 py-0.5 text-center">10
+                                        </td>
+                                        <td class="border border-black px-1 py-0.5 text-center">10
+                                        </td>
+                                        <td class="border border-black px-1 py-0.5 text-center">10
+                                        </td>
+                                        <td class="border border-black px-1 py-0.5 text-center">25
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-black px-1 py-0.5 text-center">9,91
+                                        </td>
+                                        <td class="border border-black px-1 py-0.5 text-center">
+                                            12,74</td>
+                                        <td class="border border-black px-1 py-0.5 text-center">
+                                            19,03</td>
+                                        <td class="border border-black px-1 py-0.5 text-center">8,93
+                                        </td>
+                                        <td class="border border-black px-1 py-0.5 text-center">9,90
+                                        </td>
+                                        <td class="border border-black px-1 py-0.5 text-center">9,75
+                                        </td>
+                                        <td class="border border-black px-1 py-0.5 text-center">
+                                            24,92</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div>
+                            <table
+                                class="w-full border border-black border-collapse text-[10px] md:text-xs bg-[#d9d9e6]">
+                                <thead>
+                                    <tr>
+                                        <th colspan="1"
+                                            class="bg-[#3b6ea5] text-white font-bold border border-black px-2 py-1 text-left">
+                                            Akar Masalah (Mengapa hal tersebut terjadi?)
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="border border-black px-2 py-1 text-[10px] md:text-xs leading-tight">
+                                            <p class="font-bold mb-1">
+                                                Penjelasan Deviasi Hal III:
+                                                <span class="font-normal">
+                                                    Nilai deviasi Hal III DIPA di bulan Desember
+                                                    2024 dikecualikan di
+                                                    perhitungan IKPA, sehingga secara otomatis telah
+                                                    dilakukan cutoff penilaian
+                                                    di bulan November 2024. Deviasi di November 2024
+                                                    per jenis belanja adalah
+                                                    sebagai berikut : Belanja Pegawai (+68,63),
+                                                    Belanja Barang (-60,81), Belanja
+                                                    Modal (-60,31), dan dan Belanja Bansos (0,00).
+                                                    Deviasi belanja pegawai
+                                                    dikarenakan penambahan pembayaran belanja gaji
+                                                    dan tukin yang dimungkinkan
+                                                    karena mutasi pindah.
+                                                </span>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 flex flex-col space-y-2">
+                        <div class="bg-[#fbbd7a] text-white font-bold px-2 py-1 text-[11px] md:text-sm">
+                            Tindakan yang Telah Dilaksanakan
+                        </div>
+                        <div class="bg-[#fce9d0] p-2 text-[10px] md:text-xs leading-tight">
+                            <ol class="list-decimal list-inside space-y-1">
+                                <li>
+                                    Melaksanakan monev IKPA dan pembinaan satker bulan Desember:
+                                    ST-291/KPN.2602/2024 Tgl:
+                                    27/12/24, November: ST-253/KPN.2602/2024 Tgl: 25/11/2024, dan
+                                    Oktober: ST-216/KPN.2602/2024
+                                    Tgl: 23/10/24, ST-253/KPN.2602/2024 Tgl: 22/10/2024;
+                                </li>
+                                <li>
+                                    Melaksanakan Sosialisasi Langkah-langkah Akhir Tahun 2024 sesuai
+                                    Undangan No:
+                                    UND-87/KPN.2602/2024; Tgl: 1/10/2024;
+                                </li>
+                                <li>
+                                    Menyampaikan reminder dan monitoring Deviasi Halaman III DIPA
+                                    secara rutin melalui WA Group,
+                                    serta reminder pemutakhiran Hal III DIPA triwulanan;
+                                </li>
+                                <li>Memberikan himbauan secara rutin bagi satker yang memiliki IKPA
+                                    rendah;</li>
+                                <li>
+                                    Menyampaikan reminder pengajuan SPM yang telah ditetapkan
+                                    RPD-nya di bulan berkenaan melalui
+                                    WA Group setiap menjelang akhir bulan;
+                                </li>
+                                <li>
+                                    Menyampaikan reminder dan asistensi pelaporan data Capaian
+                                    Output secara rutin tiap bulan
+                                    dan pemutakhiran target Capaian Output triwulanan.
+                                </li>
+                            </ol>
+                        </div>
+
+                        <table class="w-full border border-black border-collapse text-[10px] md:text-xs bg-[#d9d9e6]">
+                            <thead>
+                                <tr>
+                                    <th class="bg-[#3b6ea5] text-white font-bold border border-black px-2 py-1 text-left"
+                                        style="width: 50%">
+                                        Rekomendasi Rencana Aksi
+                                    </th>
+                                    <th class="bg-[#5a8ac6] text-white font-bold border border-black px-2 py-1 text-left"
+                                        style="width: 35%">
+                                        Periode
+                                    </th>
+                                    <th class="bg-[#5a8ac6] text-white font-bold border border-black px-2 py-1 text-center"
+                                        style="width: 15%">
+                                        Penanggung jawab
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-black px-2 py-1 leading-tight">
+                                        <ol class="list-decimal list-inside space-y-1">
+                                            <li>Melakukan monev dan pembinaan yang lebih intensif
+                                                kepada satker dengan capaian
+                                                IKPA rendah.</li>
+                                            <li>Melakukan monitoring secara rutin terhadap satker
+                                                dengan potensi capaian IKPA
+                                                rendah;</li>
+                                        </ol>
+                                    </td>
+                                    <td class="border border-black px-2 py-1 leading-tight">
+                                        15 Januari, 12 Februari, dan 12 Maret 2025
+                                    </td>
+                                    <td class="border border-black px-2 py-1 text-center" rowspan="3">
+                                        Seksi PDMS
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black px-2 py-1 leading-tight">
+                                        Monitoring Laporan capaian output Satker dengan lebih
+                                        intensif.
+                                    </td>
+                                    <td class="border border-black px-2 py-1 leading-tight">
+                                        13 Januari, 3 Februari, dan 3 Maret 2025
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-black px-2 py-1 leading-tight">
+                                        Melaksanakan sosialisasi Langkah-langkah Strategis Awal
+                                        Tahun Anggaran 2025.
+                                    </td>
+                                    <td class="border border-black px-2 py-1 leading-tight">
+                                        3 Februari 2025
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-[1200px] mx-auto mt-2 p-4 bg-white border border-[#ffffff]">
+                <!-- Header Section -->
+                <h1 class="bg-[#0069b4] text-white text-xl sm:text-2xl font-normal px-4 py-2 mb-2 max-w-[900px]">
+                    Nilai Kinerja Pelaksanaan Anggaran K/L
+                </h1>
+                <!-- Deskripsi -->
+                <p class="bg-[#d9e6f2] text-[14px] leading-tight px-4 py-2 mb-6 max-w-[900px]">
+                    IKU memiliki periode pelaporan triwulanan. Aktivitas IKU memerlukan koordinasi
+                    yang intensif dengan satker.
+                    Risiko pada IKU ini adalah “Pengisian/Pelaporan Data Capaian Output
+                    terlambat dan/atau tidak sesuai ketentuan”. IKU ini pada awal tahun memiliki
+                    level dampak minor (2), dan
+                    level kemungkinan jarang terjadi (2), sehingga besaran risiko adalah (6). Pada
+                    Triwulan
+                    IV, IKU ini memiliki level hampir tidak terjadi (1) sehingga besaran risiko
+                    turun menjadi (5).
+                </p>
+
+
+                <!-- Preview Konten (Optional) -->
+                <div class="flex flex-col lg:flex-row gap-6">
+                    <!-- KINERJA Section -->
+                    <section class="bg-[#d9e6f2] p-4 flex-1 max-w-[900px]">
+                        <h2
+                            class="bg-[#0069b4] text-white text-xl sm:text-2xl font-normal inline-block px-6 py-2 mb-4 rounded-r-[12px]">
+                            KINERJA
+                        </h2>
+                        <!-- Tabel Kinerja -->
+                        <table class="w-full border-collapse border border-[#0069b4] text-[14px] mb-4">
+                            <thead>
+                                <tr class="bg-[#0069b4] text-white text-center">
+                                    <th class="border border-[#0069b4] px-2 py-1 min-w-[70px]">
+                                        Target</th>
+                                    <th class="border border-[#0069b4] px-2 py-1 min-w-[50px]">Q1
+                                    </th>
+                                    <th class="border border-[#0069b4] px-2 py-1 min-w-[50px]">Q2
+                                    </th>
+                                    <th class="border border-[#0069b4] px-2 py-1 min-w-[50px]">Q3
+                                    </th>
+                                    <th class="border border-[#0069b4] px-2 py-1 min-w-[50px]">Q4
+                                    </th>
+                                    <th class="border border-[#0069b4] px-2 py-1 min-w-[50px]">Y
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-[#cbd6e6] text-center">
+                                    <td class="border border-[#0069b4] px-2 py-1 text-left">Target
+                                    </td>
+                                    <td class="border border-[#0069b4] px-2 py-1">90</td>
+                                    <td class="border border-[#0069b4] px-2 py-1">90</td>
+                                    <td class="border border-[#0069b4] px-2 py-1">90</td>
+                                    <td class="border border-[#0069b4] px-2 py-1">90</td>
+                                    <td class="border border-[#0069b4] px-2 py-1">90</td>
+                                </tr>
+                                <tr class="bg-[#cbd6e6] text-center">
+                                    <td class="border border-[#0069b4] px-2 py-1 text-left">
+                                        Realisasi</td>
+                                    <td class="border border-[#0069b4] px-2 py-1">96,84</td>
+                                    <td class="border border-[#0069b4] px-2 py-1">96.39</td>
+                                    <td class="border border-[#0069b4] px-2 py-1">95,25</td>
+                                    <td class="border border-[#0069b4] px-2 py-1" id="totalCapaian4">95,16*</td>
+                                    <td class="border border-[#0069b4] px-2 py-1" id="totalCapaian5">95,16*</td>
+                                </tr>
+                                <tr class="bg-[#cbd6e6] text-center font-bold">
+                                    <td class="border border-[#0069b4] px-2 py-1 text-left">Indeks
+                                        Capaian</td>
+                                    <td class="border border-[#0069b4] px-2 py-1">109,3%</td>
+                                    <td class="border border-[#0069b4] px-2 py-1">107,10%</td>
+                                    <td class="border border-[#0069b4] px-2 py-1">105,83%</td>
+                                    <td class="border border-[#0069b4] px-2 py-1">105,73%</td>
+                                    <td class="border border-[#0069b4] px-2 py-1">105,73%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- List Keterangan -->
+                        <ol class="list-decimal list-inside text-[13px] leading-tight space-y-1">
+                            <li>
+                                <span class="font-bold">Hal yang menjadi <i>critical point</i>
+                                    pencapaian IKI ini
+                                    diantaranya:</span>
+                                <br />
+                                Nilai 3 indikator kinerja pelaksanaan anggaran belum optimal yaitu
+                                Deviasi Halaman III DIPA,
+                                Penyerapan anggaran, &amp; Capaian Output.
+                            </li>
+                            <li>
+                                <span class="font-bold">
+                                    Untuk menjaga ketercapaian IKI, sampai dengan Triwulan IV 2024
+                                    telah dilakukan beberapa hal
+                                    yaitu:
+                                </span>
+                                <ol class="list-decimal list-inside ml-5 mt-1 space-y-1 text-[13px]">
+                                    <li>
+                                        Melaksanakan monev IKPA dan pembinaan satker bulan Desember:
+                                        ST-291/KPN.2602/2024, Tgl:
+                                        27/12/24; November: ST-253/KPN.2602/2024, Tgl: 25/11/2024;
+                                        dan Oktober:
+                                        ST-216/KPN.2602/2024, Tgl: 23/10/24; ST-253/KPN.2602/2024,
+                                        Tgl: 22/10/2024.
+                                    </li>
+                                    <li>
+                                        Melaksanakan Sosialisasi Langkah-langkah Akhir Tahun 2024
+                                        sesuai Undangan No:
+                                        UND-87/KPN.2602/2024, Tgl: 1/10/2024.
+                                    </li>
+                                    <li>
+                                        Menyampaikan reminder dan monitoring Deviasi Halaman III
+                                        DIPA secara rutin melalui WA
+                                        Group, serta reminder pemutakhiran Hal III DIPA triwulanan.
+                                    </li>
+                                    <li>
+                                        Memberikan himbauan secara rutin bagi satker yang memiliki
+                                        IKPA rendah.
+                                    </li>
+                                    <li>
+                                        Menyampaikan reminder pengajuan SPM yang telah ditetapkan
+                                        RPD-nya di bulan berkenaan
+                                        melalui WA Group setiap menjelang akhir bulan.
+                                    </li>
+                                    <li>
+                                        Menyampaikan reminder dan asistensi pelaporan data Capaian
+                                        Output secara rutin tiap
+                                        bulan dan pemutakhiran target Capaian Output triwulanan.
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </section>
+                    <!-- RISIKO Section -->
+                    <section
+                        class="flex flex-col items-center flex-1 max-w-[300px] border-l-2 border-dashed border-black px-4">
+                        <h2
+                            class="bg-[#7a6ba8] text-white text-xl sm:text-2xl font-normal inline-block px-6 py-2 mb-4 rounded-r-[12px] w-full max-w-[280px]">
+                            RISIKO
+                        </h2>
+                        <!-- Risiko Chart Container -->
+                        <div class="bg-[#f1dfdb] p-2 mb-6 max-w-[280px] w-full">
+                            <img alt="Risk chart graph showing Pengisian/Pelaporan Data Capaian Output terlambat dan/atau tidak sesuai ketentuan"
+                                class="w-full h-auto" height="280"
+                                src="https://storage.googleapis.com/a1aa/image/cc68b19c-3b3c-407e-1a0f-d0afc397ce35.jpg"
+                                width="280" />
+                        </div>
+                        <!-- Status IRU Chart -->
+                        <div class="max-w-[280px] w-full">
+                            <img alt="Status IRU chart with color blocks green, yellow, red" class="w-full h-auto"
+                                height="180"
+                                src="https://storage.googleapis.com/a1aa/image/87fed11f-81dc-429c-d28f-4ab2c8dd36c8.jpg"
+                                width="280" />
+                        </div>
+                    </section>
+                    <!-- RENCANA AKSI & MITIGASI RISIKO Section -->
+                    <section class="flex-1 max-w-[400px] border-l-2 border-dashed border-black bg-[#f1dfdb] p-4">
+                        <h2
+                            class="bg-[#009b3a] text-white text-xl sm:text-2xl font-normal inline-block px-6 py-2 mb-4 rounded-r-[6px]">
+                            RENCANA AKSI &amp; MITIGASI RISIKO
+                        </h2>
+                        <table class="w-full border-collapse border border-black text-[14px]">
+                            <thead>
+                                <tr class="bg-[#009b3a] text-white text-center font-semibold">
+                                    <th class="border border-black px-2 py-2 min-w-[120px]">Rencana
+                                        Aksi</th>
+                                    <th class="border border-black px-2 py-2 min-w-[90px]">Periode
+                                    </th>
+                                    <th class="border border-black px-2 py-2 min-w-[60px]">UIC</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="align-top border border-black">
+                                    <td class="border border-black px-2 py-2 text-[13px] leading-tight">
+                                        1. Melakukan monev dan pembinaan yang lebih intensif kepada
+                                        satker dengan capaian IKPA
+                                        rendah.
+                                        <br />
+                                        2. Melakukan monitoring secara rutin terhadap satker dengan
+                                        potensi capaian IKPA rendah.
+                                    </td>
+                                    <td class="border border-black px-2 py-2 text-center align-top">
+                                        15 Januari, 12 Februari, dan 12 Maret 2025
+                                    </td>
+                                    <td class="border border-black px-2 py-2 text-center align-top" rowspan="4">
+                                        Seksi PDMS
+                                    </td>
+                                </tr>
+                                <tr class="align-top border border-black">
+                                    <td class="border border-black px-2 py-2 text-[13px] leading-tight">
+                                        3. Monitoring Laporan capaian output Satker dengan lebih
+                                        intensif.
+                                    </td>
+                                    <td class="border border-black px-2 py-2 text-center align-top">
+                                        13 Januari, 3 Februari, dan 3 Maret 2025
+                                    </td>
+                                </tr>
+                                <tr class="align-top border border-black">
+                                    <td class="border border-black px-2 py-2 text-[13px] leading-tight">
+                                    </td>
+                                    <td class="border border-black px-2 py-2"></td>
+                                </tr>
+                                <tr class="align-top border border-black">
+                                    <td class="border border-black px-2 py-2 text-[13px] leading-tight">
+                                        4. Melaksanakan sosialisasi Langkah-langkah Strategis Awal
+                                        Tahun Anggaran 2025.
+                                    </td>
+                                    <td class="border border-black px-2 py-2 text-center align-top">
+                                        3 Februari 2025
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+
+    </div><!-- /#right-panel -->
+
+    <!-- Right Panel -->
+
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="vendors/jszip/dist/jszip.min.js"></script>
+    <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+    <script src="assets/js/init-scripts/data-table/datatables-init.js"></script>
+
+
+</body>
+
+</html>

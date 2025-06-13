@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Pelayanan KPPN</title>
+  <link rel="icon" href="LogoKemenkeu.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo-text">Pelayanan KPPN</div>
+      <ul class="nav-links">
+        <li><a href="https://www.kemenkeu.go.id" target="_blank">Portal</a></li>
+        <li><a href="https://servicedesk.kemenkeu.go.id" target="_blank">ServiceDesk</a></li>
+        <li><a href="https://hai.kemenkeu.go.id" target="_blank">Hai</a></li>
+        <li><a href="https://djpb.kemenkeu.go.id/kppn/majene/id/layanan/layanan-pengaduan.html" target="_blank">Pengaduan</a></li>
+        <li><a href="https://www.wise.kemenkeu.go.id" target="_blank">Wise</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="form-container">
+    <div class="login-card">
+      <div class="logo">
+        <img src="logo.png" alt="KPPN Majene">
+      </div>
+      <h2>Login Pelayanan</h2>
+      <form id="loginForm">
+        <div class="input-group">
+          <i class="far fa-user"></i>
+          <input type="text" id="userName" placeholder="Email" required>
+        </div>
+        <div class="input-group">
+          <i class="fas fa-key"></i>
+          <input type="password" id="pwd" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <p id="message"></p>
+      </form>
+      <div class="form-footer">
+        <a href="#">Forgot Password?</a> | <a href="#">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

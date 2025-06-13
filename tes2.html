@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download PPT with Image</title>
+    <!-- Memuat pustaka PptxGenJS -->
+    <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.14.0/dist/pptxgen.min.js"></script>
+</head>
+<body>
+
+    <h2>Download PPT with Image</h2>
+    <button id="downloadPPT11" onclick="downloadPPT11()">Download PPT</button>
+
+    <script>
+        function downloadPPT11() {
+            // Membuat objek PPTX
+            let pptx = new PptxGenJS();
+
+            // Menambahkan slide baru
+            let slide = pptx.addSlide();
+
+            // Menambahkan gambar ke slide (gunakan URL atau path file lokal)
+            slide.addImage({
+                path: 'assets/1.png', // Ganti dengan path gambar yang sesuai
+                x: 1, // Posisi X (dalam inci)
+                y: 1, // Posisi Y (dalam inci)
+                w: 6, // Lebar gambar (dalam inci)
+                h: 4  // Tinggi gambar (dalam inci)
+            });
+
+            // Menyimpan dan mengunduh PPT
+            pptx.save('Presentation_with_Image');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,1684 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pelayanan KPPN Majene</title>
+    <link rel="icon" href="LogoKemenkeu.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+
+    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="vendors/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="vendors/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu"
+                    aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="tables-data.html"><img src="logo.png" alt="Logo"></a>
+                <a class="navbar-brand hidden" href="tables-data.html"><img src="logo2.png" alt="Logo"></a>
+            </div>
+
+            <div id="main-menu" class="w-full">
+                <script src="https://cdn.tailwindcss.com"></script>
+                <ul class="flex flex-col space-y-2 p-4" style="background-color: #272c33;">
+                    <li>
+                        <a href="dashboard.html" class="flex items-center text-white hover:text-blue-400">
+                            <i class="fa fa-dashboard mr-2"></i>Dashboard
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="ppt-basic.html" class="flex items-center text-white hover:text-blue-400">
+                            <i class="fa fa-table mr-2"></i>New PPT Data
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="ppt-data.html" class="flex items-center text-white hover:text-blue-400">
+                            <i class="fa fa-table mr-2"></i>PPT Data
+                        </a>
+                    </li>
+     -->
+                    <!-- Triwulan 1 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan1')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 1
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan1" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="tables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <!-- Triwulan 2 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan2')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 2
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan2" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="tw2tables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw2tables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw2ppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <!-- Triwulan 3 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan3')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 3
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan3" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="tw3tables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw3tables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw3ppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <!-- Triwulan 4 -->
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan4')">
+                            <i class="fa fa-calendar mr-2"></i>Triwulan 4
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan4" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="tw4tables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw4tables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tw4ppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="relative group">
+                        <button class="flex items-center text-white hover:text-blue-400 focus:outline-none" onclick="toggleSubMenu('triwulan5')">
+                            <i class="fa fa-calendar mr-2"></i>Tahunan
+                            <svg class="ml-1 w-4 h-4 fill-current text-white group-hover:text-blue-400" viewBox="0 0 20 20">
+                                <path d="M5.25 6.75L10 11.5l4.75-4.75z" />
+                            </svg>
+                        </button>
+                        <ul id="triwulan5" class="absolute left-0 mt-2 w-48 border border-gray-700 rounded shadow-lg bg-gray-800 opacity-0 group-hover:opacity-100 transition duration-200 z-10 hidden">
+                            <li>
+                                <a href="yeartables-basic.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>New Data
+                                </a>
+                            </li>
+                            <li>
+                                <a href="yeartables-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>Raw Data 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="yearppt-data.html" class="flex items-center px-4 py-2 hover:bg-gray-700 text-sm text-white">
+                                    <i class="fa fa-table mr-2"></i>PPT Data 
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+    
+                </ul>
+            </div>
+        </nav>
+    </aside><!-- /#left-panel -->
+    <script>
+        function toggleSubMenu(id) {
+            const menus = document.querySelectorAll('.absolute');
+            menus.forEach(menu => {
+                if(menu.id !== id) {
+                    menu.classList.add('hidden');
+                }
+            });
+            const selectedMenu = document.getElementById(id);
+            selectedMenu.classList.toggle('hidden');
+        }
+    </script>
+
+    <!-- Left Panel -->
+
+    <!-- Right Panel -->
+
+    <div id="right-panel" class="right-panel">
+
+        <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+                
+
+                <div class="col-sm-12">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="admin.jpg" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+                            <a class="nav-link" href="profile.html"><i class="fa fa-user"></i> My Profile</a>
+
+                            <a class="nav-link" href="settings.html"><i class="fa fa-cog"></i> Settings</a>
+
+                            <a class="nav-link" id="logout" href="index.html" onclick="logout()"><i
+                                    class="fa fa-power-off"></i> Logout</a>
+                        </div>
+                        <!-- <script>
+                            function logout() {
+                                // Hapus session storage atau local storage jika ada
+                                sessionStorage.clear();
+                                // localStorage.clear();
+                        
+                                // Arahkan ke halaman login
+                                window.location.href = "login.html";
+                            }
+                        </script> -->
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Table</a></li>
+                            <li class="active">Data table</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content mt-3">
+            <div class="animated fadeIn">
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <!-- <strong class="card-title">RAW DATA IKU KEMENKEU</strong> -->
+                                <div style="text-align: right; ">
+                                    <button class="btn-simpan flex items-center gap-2 px-3 py-1 rounded bg-blue-600 text-white hover:bg-blue-700 transition-all" onclick="downloadWord()" style="display: inline-flex; align-items: center;">
+                                        <img src="word.png" alt="download" style="width: 35px; height: 35px;">
+                                        <span>Download</span>
+                                    </button>
+
+                                    <script>
+                                        function downloadWord() {
+                                            var content = document.getElementById("tabel-kpi").innerHTML;
+                                            var preHtml = `
+                                            <html xmlns:o='urn:schemas-microsoft-com:office:office' 
+                                                  xmlns:w='urn:schemas-microsoft-com:office:word' 
+                                                  xmlns='http://www.w3.org/TR/REC-html40'>
+                                            <head><meta charset='utf-8'>
+                                            <title>Dokumen KPI</title>
+                                            <style>
+                                                /* Layout Halaman Landscape */
+                                                @page Section1 { 
+                                                    size: 841.95pt 595.35pt; /* Ukuran A4 Landscape */
+                                                    margin: 1in; 
+                                                }
+                                                div.Section1 { 
+                                                    page: Section1; 
+                                                }
+                                                body { font-family: Arial, sans-serif; }
+                                                table { width: 100%; border-collapse: collapse; }
+                                                th, td { border: 1px solid black; padding: 2px; text-align: center; }
+                                                th { background-color: #f2f2f2; }
+                                                td.left-align {
+                                                text-align: left;
+                                                text-align: top;
+                                                }
+                                            </style>
+                                            </head><body>
+                                            <div class="Section1">`;  // Section1 digunakan untuk memastikan landscape
+
+                                            var postHtml = `</div></body></html>`;
+
+                                            var blob = new Blob(['\ufeff' + preHtml + content + postHtml], { type: 'application/msword' });
+                                            var url = URL.createObjectURL(blob);
+                                            var link = document.createElement("a");
+                                            link.href = url;
+                                            link.download = "RAW_DATA_IKU_TW_I.doc";
+                                            document.body.appendChild(link);
+                                            link.click();
+                                            document.body.removeChild(link);
+                                        }
+                                    </script>
+                                </div>
+                                <div class="card-body" id="tabel-kpi">
+                                    <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+
+                                        <h2 align="center">RAW DATA IKU KEMENKEU THREE TRIWULAN I TAHUN 2025<br>
+                                            KPPN MAJENE </h2>
+                                        <!-- <table> -->
+                                        <tbody>
+                                            <tr>
+                                                <th rowspan="1" class="hal2">No</th>
+                                                <th colspan="2" class="hal2">Uraian IKU</th>
+                                                <th rowspan="1" width="200px" class="hal2">DATA YANG DIPERLUKAN</th>
+                                                <th colspan="3" class="hal2">DATA</th>
+                                                <th rowspan="1" class="hal2">FORMULA</th>
+                                                <th rowspan="1" class="hal2">KETERANGAN</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="font-size" class="hal2">1</th>
+                                                <th colspan="2" class="font-size" class="hal2">2</th>
+                                                <th class="font-size" class="hal2">3</th>
+                                                <th class="font-size" class="hal2">4</th>
+                                                <th class="font-size" class="hal2">5</th>
+                                                <th class="font-size" class="hal2">6</th>
+                                                <th class="font-size" class="hal2">7</th>
+                                                <th class="font-size" class="hal2">8</th>
+                                            </tr>
+                                        </tbody>
+                                        <tbody valign="top">
+                                            <tr>
+                                                <td rowspan="13" valign="top">1</td>
+                                                <td rowspan="13" valign="top"> 1a-CP </td>
+                                                <td rowspan="13" valign="top" class="left-align">Indeks Kualitas Nilai IKPA K/L</td>
+                                                <td><b>Komponen</b></td>
+                                                <td><b>Bobot</b></td>
+                                                <td><b>Nilai</b></td>
+                                                <td><b>Akhir</b></td>
+                                                <td>Formula</td>
+                                                <td>Keterangan</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align"><b>Nilai Ikpa sebagai BUN</b></td>
+                                                <td><b>70%</b></td>
+                                                <td id="totalCapaian1"><b> 122,23%</b></td>
+                                                <td id="nilaiIkpa1Score"><b>48,89</b></td>
+                                                <td rowspan="12" valign="top" class="left-align" id="formula1">a
+                                                </td>
+                                                <td rowspan="12" valign="top" class="left-align" id="keterangan1">
+                                                    Hasil penilaian
+                                                    IKPA tingkat Nasional sebagai BUN pada Aplikasi OMSPAN = <span
+                                                        id="totalNilaiSpan1">95.16</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Revisi DIPA</td>
+                                                <td>10%</td>
+                                                <td id="rdScore">48,89</td>
+                                                <td id="rdValue"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Deviasi Hal. III DIPA</td>
+                                                <td>15%</td>
+                                                <td id="dhScore">56,5</td>
+                                                <td id="dhValue"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Penyerapan Anggaran</td>
+                                                <td>20%</td>
+                                                <td id="paScore">56,5</td>
+                                                <td id="paValue"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Belanja Kontraktual</td>
+                                                <td>10%</td>
+                                                <td id="bkScore">56,5</td>
+                                                <td id="bkValue"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Penyelesaian Tagihan</td>
+                                                <td>10%</td>
+                                                <td id="ptScore">56,5</td>
+                                                <td id="ptValue"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Pengelolaan UP dan TUP</td>
+                                                <td>10%</td>
+                                                <td id="putScore">56,5</td>
+                                                <td id="putValue"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Capaian Output</td>
+                                                <td>25%</td>
+                                                <td id="coScore">56,5</td>
+                                                <td id="coValue"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Dispensasi SPM</td>
+                                                <td>0%</td>
+                                                <td id="dsScore">56,5</td>
+                                                <td id="dsValue"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align"><b>Nilai Jumlah Satker dengan Predikat
+                                                        Minimal Baik</b></td>
+                                                <td><b>30%</b></td>
+                                                <td id="jumlahsatker1Value"><b>0%</b></td>
+                                                <td id="jumlahsatker1Score"><b>56,5</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Nilai Capaian</b></td>
+                                                <td colspan="3" align="right" id="totalCapaian1all"><b>95,16</b>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Indeks Capaian</b></td>
+                                                <td colspan="3" align="right" id="Nilaislide1a"><b>95,16</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="6" valign="top">2</td>
+                                                <td rowspan="6" valign="top" width="50px"> 1b-N </td>
+                                                <td rowspan="6" valign="top" class="left-align">Indeks Kualitas LK Kuasa BUN KPPN</td>
+                                                <td><b>Komponen</b></td>
+                                                <td><b>Bobot</b></td>
+                                                <td><b>Nilai</b></td>
+                                                <td><b>Total</b></td>
+                                                <td>Formula</td>
+                                                <td>Keterangan</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Indeks Kualitas Analisis Data SPAN</td>
+                                                    <td><b>50%</b></td>
+                                                    <td id="PersentaseAhasil"><b></b></td>
+                                                <td id="PersentaseAValue"><b>0</b></td>
+                                                <td rowspan="5" valign="top" class="left-align" id="formula2"></td>
+                                                <td rowspan="5" valign="top" class="left-align" id="keterangan2">A.
+                                                    bebas
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Ketepatan Waktu pengiriman KK analisis tepat waktu dilakukan bulanan</td>
+                                                    <td>50%</td>
+                                                    <td id="PersentaseBValue"><b>0</b></td>
+                                                    <td id="PersentaseBhasil"><b>0</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Penyelesaian matriks tindak lanjut</td>
+                                                    <td>50%</td>
+                                                    <td id="PersentaseCValue"><b>0</b></td>
+                                                    <td id="PersentaseChasil"><b>0</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Indeks penilaian kualitas LKBUN KPPN yang dilakukan oleh Kanwil DJPb</td>
+                                                    <td><b>50%</b></td>
+                                                    <td id="PersentaseDValue"><b>0</b></td>
+                                                    <td id="PersentaseDhasil"><b>0</b></td>
+                                            </tr>
+                                            <tr>
+                                                
+                                                <td><b>Nilai Capaian</b></td>
+                                                <td colspan="3" id="totalPersentase2"><b>5</b></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan="5" valign="top">3</td>
+                                                <td rowspan="5" valign="top" width="50px"> 2a-N </td>
+                                                <td rowspan="5" valign="top" class="left-align">Indeks kepuasan terhadap layanan KPPN</td>
+                                                <td><b>Komponen</b></td>
+                                                <td colspan="3"><b>Nilai</b></td>
+                                                <td>Formula</td>
+                                                <td>Keterangan</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Indeks kepuasan layanan</td>
+                                                    <td><b>33%</b></td>
+                                                    <td id="ikplValue3a">4,91</td>
+                                                    <td id="ikplHasil3a">4,91</td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="formula3"></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="keterangan3">
+                                                        bebas
+                                                    
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Indeks Efektivitas Edukasi dan Komunikasi</td>
+                                                    <td><b>33%</b></td>
+                                                    <td id="ikplValue3b">4,91</td>
+                                                    <td id="ikplHasil3b">4,91</td>
+                                            </tr>
+                                            <tr><td class="left-align">Indeks layanan HAI CSO</td>
+                                                <td><b>33%</b></td>
+                                                <td id="ikplValue3c">4,91</td>
+                                                <td id="ikplHasil3c">4,91</td></tr>
+                                            <tr>
+                                                <td><b>Nilai Capaian</b></td>
+                                                <td colspan="3" id="hasil3abc"><b>5</b></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan="5" valign="top">4</td>
+                                                <td rowspan="5" valign="top"> 2b-N </td>
+                                                <td rowspan="5" valign="top" class="left-align">Tingkat implementasi penajaman tugas
+                                                    <i>Financial Advisory</i>
+                                                </td>
+                                                <td><b>Komponen</b></td>
+                                                <td><b>Bobot</b></td>
+                                                <td><b>Nilai</b></td>
+                                                <td ><b>Total</b></td>
+                                                <td>Formula</td>
+                                                <td>Keterangan</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Implementasi Central
+                                                    Government Advisory </td>
+                                                <td><b>50%</b></td>
+                                                <td  id="valueCG">50,00</td>
+                                                <td  id="nilaiCG">50,00</td>
+                                                <td rowspan="4" valign="top" class="left-align" id="formula4"></td>
+                                                <td rowspan="4" valign="top" class="left-align" id="keterangan4">
+                                                    FORMULA = (Nilai rata2 CG x 50%) + (Nilai rata2 LG x 30%)
+                                                    + (Implementasi SM x 20%)
+
+                                                    *Formula bagi KPPN yang tidak melakukan penyaluran TKD
+                                                    (tidak melakukan LG)
+                                                    =((Nilai rata2 CG x 50%) + (Implementasi SM x 20%)):70 x
+                                                    100
+
+                                                     </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Implementasi Local
+                                                    Government </td>
+                                                <td><b>30%</b></td>
+                                                <td id="valueLG">30,00</td>
+                                                <td  id="nilaiLG">30,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Implementasi Special
+                                                    Mission Advisory </td>
+                                                <td><b>20%</b></td>
+                                                <td  id="valueSM">20,00</td>
+                                                <td  id="nilaiSM">20,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Nilai Capaian</b></td>
+                                                <td colspan="3" id="totalNilai4"><b>100</b></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan="9" valign="top">5</td>
+                                                <td rowspan="9" valign="top"> 3a-CP </td>
+                                                <td rowspan="9" valign="top" class="left-align">Indeks kinerja penyaluran Dana Transfer ke Daerah pada KPPN</td>
+                                                <td><b>Komponen</b></td>
+                                                <td><b>Bobot</b></td>
+                                                <td ><b>Nilai</b></td>
+                                                <td><b>Total</b></td>
+                                                <td>Formula</td>
+                                                <td>Keterangan</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Syarat </td>
+                                                <td><b>15%</b></td>
+                                                <td  id="syaratValue">14,50</td>
+                                                <td  id="syaratScore">14,50</td>
+                                                <td rowspan="8" valign="top" class="left-align" id="formula5"></td>
+                                                <td rowspan="8" valign="top" class="left-align" id="keterangan5">
+                                                    Hasil Penilaian dari Kantor Pusat (Nota Dinas Direktorat
+                                                    Pelaksanaan Anggaran nomor ND-35/PB.2/2025 tanggal
+                                                    10 Januari 2025) </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Proyeksi</td>
+                                                <td><b>15%</b></td>
+                                                <td  id="proyeksiValue">15,00</td>
+                                                <td  id="proyeksiScore">15,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Akurasi</td>
+                                                <td><b>20%</b></td>
+                                                <td  id="akurasiValue">20,00</td>
+                                                <td  id="akurasiScore">20,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Monev</td>
+                                                <td><b>10%</b></td>
+                                                <td id="monevValue">10,00</td>
+                                                <td id="monevScore">10,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">LK-UAKPA</td>
+                                                <td><b>20%</b></td>
+                                                <td  id="lkuakpaValue">20,00</td>
+                                                <td  id="lkuakpaScore">20,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Realisasi</td>
+                                                <td><b>20%</b></td>
+                                                <td  id="realisasiValue">20,00</td>
+                                                <td  id="realisasiScore">20,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Nilai Capaian</b></td>
+                                                <td colspan="3" id="totalCapaian5"> <b>135,39</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Indeks Capaian</b></td>
+                                                <td colspan="3" id="totalIndeksCp5"> <b>135,39</b></td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="5" valign="top">6</td>
+                                                <td rowspan="5" valign="top"> 3b-N </td>
+                                                <td rowspan="5" valign="top" class="left-align">Indeks Digitalisasi Pengelolaan Keuangan</td>
+                                                <td><b>Komponen</b></td>
+                                                <td><b>Bobot</b></td>
+                                                <td><b>Nilai</b></td>
+                                                <td><b>Total</b></td>
+                                                <td>Formula</td>
+                                                <td>Keterangan</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Implementasi Digipay </td>
+                                                <td><b>33%</b></td>
+                                                <td id="indigipayvalue">5</td>
+                                                <td id="indeksindigipay">5</td>
+                                                <td rowspan="4" valign="top" class="left-align" id="formula6"></td>
+                                                <td rowspan="4" valign="top" class="left-align" id="keterangan6">IKU
+                                                    terdiri dari 3 komponen yaitu:
+                                                    A. Implementasi Digipay
+                                                    B. Implementasi CMS
+                                                    C. Implementasi KKP </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Implementasi CMS</td>
+                                                    <td ><b>33%</b></td>
+                                                <td id="incmsvalue">5</td>
+                                                <td id="indeksincms">55</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Implementasi KKP</td>
+                                                <td ><b>33%</b></td>
+                                                <td id="inkkpvalue">5</td>
+                                                <td id="indeksinkkp">5</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Nilai Capaian</b></td>
+                                                <td colspan="3" id="indeksTotal6"> <b>5</b></td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td rowspan="5" valign="top">7</td>
+                                                <td rowspan="5" valign="top">4a-CP</td>
+                                                <td rowspan="5" valign="top" class="left-align">Persentase akurasi perencanaan kas</td>
+                                                <td><b>Komponen</b></td>
+                                                <td><b>Bobot</b></td>
+                                                <td ><b>Nilai</b></td>
+                                                <td ><b>Total</b></td>
+                                                <td>Formula</td>
+                                                <td>Keterangan</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Rata - Rata Deviasi Unit
+                                                    RPD harian KPPN per
+                                                    periode </td>
+                                                <td><b>20%</b></td>
+                                                <td  id="deviasiUnit7">0</td>
+                                                <td id="valueDeviasiUnit7">0</td>
+                                                <td rowspan="4" valign="top" class="left-align" id="formula7"></td>
+                                                <td rowspan="4" valign="top" class="left-align" id="keterangan7">
+                                                    (100% - ((Rata - Rata Deviasi Unit RPD harian KPPN per
+                                                    periode*0,2) + ((Rata - Rata Deviasi Nilai RPD harian KPPN
+                                                    per periode*0,8))) - (Rasio Dispensasi RPD harian KPPN per
+                                                    periode)) </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Rata - Rata Deviasi Nilai
+                                                    RPD harian KPPN per
+                                                    periode </td>
+                                                <td><b>80%</b></td>
+                                                <td id="deviasiNilai7">0</td>
+                                                <td id="valueDeviasiNilai7">0</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Rasio Dispensasi RPD
+                                                    harian KPPN per periode </td>
+                                                <td></td>
+                                                <td id="dispensasi7">0</td>
+                                                <td id="valueDispensasiNilai7">0</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Nilai Capaian</b></td>
+                                                <td colspan="3" id="hasil7">0</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan="5" valign="top">8</td>
+                                                <td rowspan="5" valign="top"> 4b-N </td>
+                                                <td rowspan="5" valign="top" class="left-align">Indeks kualitas penyelesaian SP2D</td>
+                                                <td><b>Komponen</b></td>
+                                                <td><b>Bobot</b></td>
+                                                <td ><b>Nilai</b></td>
+                                                <td ><b>Total</b></td>
+                                                <td>Formula</td>
+                                                <td>Keterangan</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Penyelesaian SP2D secara tepat waktu </td>
+                                                <td><b>33%</b></td>
+                                                <td id="valueindeksA8">5,00</td>
+                                                <td id="indeksA8">5,00</td>
+                                                <td rowspan="4" valign="top" class="left-align" id="formula8"></td>
+                                                <td rowspan="4" valign="top" class="left-align" id="keterangan8">
+                                                    (Indeks Penyelesaian SP2D secara tepat waktu + Indeks
+                                                    Efektivitas Penyaluran dana SP2D yang akurat + Indeks
+                                                    Efektivitas kecepatan penyelesaian retur SP2D) / 3 </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Efektivitas Penyaluran dana SP2D yang akurat </td>
+                                                <td><b>33%</b></td>
+                                                <td id="valueindeksB8">5,00</td>
+                                                <td id="indeksB8">5,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Efektivitas kecepatan penyelesaian retur SP2D </td>
+                                                <td><b>33%</b></td>
+                                                <td id="valueindeksC8">5,00</td>
+                                                <td id="indeksC8">5,00</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Nilai Capaian</b></td>
+                                                <td colspan="3" id="indeksTotal8">5</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan="4" valign="top">9</td>
+                                                <td rowspan="4" valign="top"> 5a-N </td>
+                                                <td rowspan="4" valign="top" class="left-align">Indeks Kualitas LPJ Bendahara Satker K/L</td>
+                                                <td><b>Komponen</b></td>
+                                                <td><b>Bobot</b></td>
+                                                <td><b>Nilai</b></td>
+                                                <td><b>Total</b></td>
+                                                <td>Formula</td>
+                                                <td>Keterangan</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Indeks Penyampaian LPJ</td>
+                                                    <td><b>50%</b></td>
+                                                    <td id="valueindeksSept">4</td>
+                                                <td id="indeksSept">4</td>
+                                                <td rowspan="3" valign="top" class="left-align" id="formula9"></td>
+                                                <td rowspan="3" valign="top" class="left-align" id="keterangan9">
+                                                    Seluruh bebas </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Indeks Validasi LPJ</td>
+                                                    <td><b>50%</b></td>
+                                                    <td id="valueindeksOkt">4</td>
+                                                <td id="indeksOkt">4</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Nilai Capaian</b></td>
+                                                <td colspan="3" id="indeksTotal9"><b>4</b></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan="4" valign="top">10</td>
+                                                <td rowspan="4" valign="top"> 6a-N </td>
+                                                <td rowspan="4" valign="top" class="left-align">Tingkat kualitas kinerja organisasi</td>
+                                                <td><b>Komponen</b></td>
+                                                <td><b>Bobot</b></td>
+                                                <td ><b>Nilai</b></td>
+                                                <td ><b>Total</b></td>
+                                                <td >Formula</td>
+                                                <td>Keterangan</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">indeks capaian komponen nilai LHPS </td>
+                                                <td><b>50%</b></td>
+                                                <td  id="valuenilaiLHPS1">54,16%</td>
+                                                <td  id="nilaiLHPS1">54,16%</td>
+                                                <td rowspan="3" valign="top" class="left-align" id="formula10"></td>
+                                                <td rowspan="3" valign="top" class="left-align" id="keterangan10">
+                                                isi bebas</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Nilai SFO</td>
+                                                <td><b>50%</b></td>
+                                                <td  id="valuenilaiLHPS2">52,98</td>
+                                                <td  id="nilaiLHPS2">52,98</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Nilai Capaian</b></td>
+                                                <td colspan="3" id="totalIKU10"><b>108,26%</b></td>
+                                                <!-- <td></td> -->
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="4" valign="top">11</td>
+                                                <td rowspan="4" valign="top"> 6b-N </td>
+                                                <td rowspan="4" valign="top" class="left-align">Nilai kualitas pengelolaan SDM</td>
+                                                <td><b>Komponen</b></td>
+                                                <td><b>Bobot</b></td>
+                                                <td ><b>Nilai</b></td>
+                                                <td ><b>Total</b></td>
+                                                <td >Formula</td>
+                                                <td>Keterangan</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Implementasi Learning Organization </td>
+                                                <td><b>60%</b></td>
+                                                <td id="valuenilaiLO">58,1%</td>
+                                                <td id="nilaiLO">58,1%</td>
+                                                <td rowspan="2" valign="top" class="left-align" id="formula11"></td>
+                                                <td rowspan="2" valign="top" class="left-align" id="keterangan11">
+                                                    bebas</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Tingkat Penguatan Budaya dan Bintal
+                                                    Pejabat Administrator/Pejabat Fungsional Setara
+                                                    Di Lingkungan Kementerian Keuangan
+                                                </td>
+                                                <td><b>40%</b></td>
+                                                <td id="valuenilaiPK">58,50</td>
+                                                <td id="nilaiPK">58,50</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Nilai Capaian</b></td>
+                                                <td colspan="3" id="totalNilai11"><b>116,60</b></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan="3" valign="top">12</td>
+                                                <td rowspan="3" valign="top"> 6c-N </td>
+                                                <td rowspan="3" valign="top" class="left-align">Nilai Evaluasi Pelaksanaan Tugas Kepatuhan Internal</td>
+                                                <td><b>Komponen</b></td>
+                                                <td><b>Bobot</b></td>
+                                                <td ><b>Nilai</b></td>
+                                                <td ><b>Total</b></td>
+                                                <td >Formula</td>
+                                                <td>Keterangan</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Hasil Penilaian pelaksanaan tugas KI pada KPPN</td>
+                                                <td><b>100%</b></td>
+                                                <td id="valuenilaiMR">34,48</td>
+                                                <td id="nilaiMR">34,48</td>
+                                                <td rowspan="2" valign="top" class="left-align" id="formula12"></td>
+                                                <td rowspan="2" valign="top" class="left-align" id="keterangan12">
+                                                    bebas
+                                                </td>
+                                            </tr>
+                                    
+                                            <tr>
+                                                <td><b>Nilai Capaian</b></td>
+                                                <td colspan="3" id="totalrealisasi12d"><b>99,48</b></td>
+                                                
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan="4" valign="top">13</td>
+                                                <td rowspan="4" valign="top"> 7a-CP </td>
+                                                <td rowspan="4" valign="top" class="left-align">Indeks kualitas pengelolaan keuangan KPPN</td>
+                                                <td><b>Komponen</b></td>
+                                                <td><b>Bobot</b></td>
+                                                <td><b>Nilai</b></td>
+                                                <td><b>Total</b></td>
+                                                <td>Formula</td>
+                                                <td>Keterangan</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">IKPA</td>
+                                                <td><b>60%</b></td>
+                                                <td id="valuenilaiNKA">47,94</td>
+                                                <td id="nilaiNKA">47,94</td>
+                                                <td rowspan="3" valign="top" class="left-align" id="formula13"></td>
+                                                <td rowspan="3" valign="top" class="left-align" id="keterangan13">
+                                                    bebas</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">LK UAKPA UAKPB </td>
+                                                <td><b>40%</b></td>
+                                                <td id="valuenilaiLK">43</td>
+                                                <td id="nilaiLK">43</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Nilai Capaian</b></td>
+                                                <td colspan="3" id="totalNilai13"><b>90,76</b></td>
+                                                <!-- <td></td> -->
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan="5" valign="top">14</td>
+                                                <td rowspan="5" valign="top"> 7b-N </td>
+                                                <td rowspan="5" valign="top" class="left-align">Persentase Kualitas Pengelolaan BMN dan Pengadaan</td>
+                                                <td><b>Komponen</b></td>
+                                                <td><b>Bobot</b></td>
+                                                <td><b>Nilai</b></td>
+                                                <td><b>Total</b></td>
+                                                <td>Formula</td>
+                                                <td>Keterangan</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Indeks Pengelolaan Aset </td>
+                                                <td><b>60%</b></td>
+                                                <td  id="valuenilaiAset">66</td>
+                                                <td  id="nilaiAset">66</td>
+                                                <td rowspan="4" valign="top" class="left-align" id="formula14">
+                                                <td rowspan="4" valign="top" class="left-align" id="keterangan14">
+                                                    bebas </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Indeks Tata Kelola
+                                                    Pengadaan</td>
+                                                <td><b>20%</b></td>
+                                                <td  id="valuenilaiPengadaan">48</td>
+                                                <td  id="nilaiPengadaan">48</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Penggunaan Produk Dalam Negeri</td>
+                                                <td><b>20%</b></td>
+                                                <td  id="valuenilaiProduk">48</td>
+                                                <td  id="nilaiProduk">48</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Nilai Capaian</b></td>
+                                                <td colspan="3" id="indeksCapaian15"><b>120</b></td>
+                                                <!-- <td></td> -->
+                                            </tr>
+
+                                            <tr>
+                                                <td rowspan="6" valign="top">15</td>
+                                                <td rowspan="6" valign="top"> 7c-N </td>
+                                                <td rowspan="6" valign="top" class="left-align">Nilai Kinerja TIK KPPN</td>
+                                                <td><b>Komponen</b></td>
+                                                <td><b>Bobot</b></td>
+                                                <td><b>Nilai</b></td>
+                                                <td><b>Total</b></td>
+                                                <td>Formula</td>
+                                                <td>Keterangan</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">SK OKI </td>
+                                                <td><b>15%</b></td>
+                                                <td  id="valuehasilskoki">66</td>
+                                                <td  id="nilaiskoki">66</td>
+                                                <td rowspan="5" valign="top" class="left-align" id="formula15">
+                                                <td rowspan="5" valign="top" class="left-align" id="keterangan15">
+                                                    bebas </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Sosialisasi</td>
+                                                <td><b>35%</b></td>
+                                                <td  id="valuehasilsosialisasi">48</td>
+                                                <td  id="nilaisosialisasi">48</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Publikasi</td>
+                                                <td><b>15%</b></td>
+                                                <td  id="valuehasilpublikasi">48</td>
+                                                <td  id="nilaipublikasi">48</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Penguatan Keamanan Perangkat TIK</td>
+                                                <td><b>35%</b></td>
+                                                <td  id="valuehasilpkpt">48</td>
+                                                <td  id="nilaipkpt">48</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Nilai Capaian</b></td>
+                                                <td colspan="3" id="totalnilai16"><b>120</b></td>
+                                                <!-- <td></td> -->
+                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                    <script type="module">
+                                        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+                                        import { getAuth, onAuthStateChanged, signInAnonymously } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+                                        import { getDatabase, ref, get, set } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+
+                                        const firebaseConfig = {
+                                            apiKey: "AIzaSyAoLpjcMKE3MTfEIzBlNDwK7zSVu6xqfxQ",
+                                            authDomain: "kppnmajene-059.firebaseapp.com",
+                                            projectId: "kppnmajene-059",
+                                            storageBucket: "kppnmajene-059.appspot.com",
+                                            databaseURL: "https://kppnmajene-059-default-rtdb.firebaseio.com/",
+                                            messagingSenderId: "546221480890",
+                                            appId: "1:546221480890:web:93a2127b46557acc6d5b83",
+                                            measurementId: "G-1LWFGCZKYE"
+                                        };
+
+                                        const app = initializeApp(firebaseConfig);
+                                        const auth = getAuth(app);
+                                        const database = getDatabase(app);
+
+                                        // Otentikasi anonim untuk demo, kamu bisa ganti sesuai kebutuhan
+                                        signInAnonymously(auth).catch(console.error);
+
+                                        // Saat user login, load data dari Firebase
+                                        onAuthStateChanged(auth, user => {
+                                            if (user) {
+                                            loadDataIKPA(user.uid);
+                                            loadDataIKPA2(user.uid); 
+                                            loadDataIKPA3(user.uid);
+                                            loadDataIKPA4(user.uid);
+                                            loadDataIKPA5(user.uid);
+                                            loadDataIKPA6(user.uid); 
+                                            loadDataIKPA7(user.uid); 
+                                            loadDataIKPA8(user.uid); 
+                                            loadDataIKPA9(user.uid); 
+                                            loadDataIKPA10(user.uid); 
+                                            loadDataIKPA11(user.uid); 
+                                            loadDataIKPA12(user.uid); 
+                                            loadDataIKPA13(user.uid); 
+                                            loadDataIKPA14(user.uid); 
+                                            loadDataIKPA15(user.uid); 
+                                            } else {
+                                            console.log("User belum login");
+                                            }
+                                        });
+
+                                        function loadDataIKPA(uid) {
+                                            // const dbRef = ref(database, "ikpaData/" + uid);
+                                            // const dbRef = ref(database, `ikpaData/${uid}`);
+                                            const dbRef = ref(database, `ikpaData/${uid}/triwulan1/tabel1`);
+                                            get(dbRef).then(snapshot => {
+                                            if (snapshot.exists()) {
+                                                const data = snapshot.val();
+                                                // Set data ke masing-masing elemen tabel
+                                                const fields = [
+                                                "rdScore", "dhScore", "paScore", "bkScore", "ptScore", "putScore",
+                                                "coScore", "dsScore", "jumlahsatker1Value", "jumlahsatker1Score",
+                                                "totalCapaian1", "nilaiIkpa1Score", "formula1", "keterangan1",
+                                                "totalCapaian1all", "Nilaislide1a"
+                                                ];
+                                                fields.forEach(id => {
+                                                const el = document.getElementById(id);
+                                                if (el && data[id] !== undefined) {
+                                                    el.innerText = data[id];
+                                                }
+                                                });
+                                            } else {
+                                                console.log("Data IKPA belum tersedia di Firebase.");
+                                            }
+                                            }).catch(error => {
+                                            console.error("Gagal mengambil data:", error);
+                                            });
+                                        }
+                                        function loadDataIKPA2(uid) {
+                                        const dbRef = ref(database, `ikpaData/${uid}/triwulan1/tabel2`);
+                                        get(dbRef).then(snapshot => {
+                                            if (snapshot.exists()) {
+                                                const data = snapshot.val();
+                                                const fields = [
+                                                    "PersentaseAValue", "PersentaseBValue", "PersentaseCValue", "PersentaseDValue",
+                                                    "PersentaseBhasil", "PersentaseChasil", "PersentaseDhasil", "totalPersentase2",
+                                                    "formula2", "keterangan2"
+                                                ];
+                                                fields.forEach(id => {
+                                                    const el = document.getElementById(id);
+                                                    if (el && data[id] !== undefined) {
+                                                        el.innerText = data[id];
+                                                    }
+                                                });
+                                            } else {
+                                                console.log("Data IKPA Tabel 2 belum tersedia di Firebase.");
+                                            }
+                                        }).catch(error => {
+                                            console.error("Gagal mengambil data Tabel 2:", error);
+                                        });
+                                    }
+                                    function loadDataIKPA3(uid) {
+                                        const dbRef = ref(database, `ikpaData/${uid}/triwulan1/tabel3`);
+                                        get(dbRef).then(snapshot => {
+                                            if (snapshot.exists()) {
+                                                const data = snapshot.val();
+                                                const fields = [
+                                                    "ikplValue3a", "ikplValue3b", "ikplValue3c", "ikplHasil3a",
+                                                    "ikplHasil3b", "ikplHasil3c", "hasil3abc",
+                                                    "formula3", "keterangan3"
+                                                ];
+                                               
+                                                fields.forEach(id => {
+                                                    const el = document.getElementById(id);
+                                                    if (el && data[id] !== undefined) {
+                                                        el.innerText = data[id];
+                                                    }
+                                                });
+                                            } else {
+                                                console.log("Data IKPA Tabel 3 belum tersedia di Firebase.");
+                                            }
+                                        }).catch(error => {
+                                            console.error("Gagal mengambil data Tabel 3:", error);
+                                        });
+                                    }
+                                    function loadDataIKPA4(uid) {
+                                        const dbRef = ref(database, `ikpaData/${uid}/triwulan1/tabel4`);
+                                        get(dbRef).then(snapshot => {
+                                            if (snapshot.exists()) {
+                                                const data = snapshot.val();
+                                                const fields = [
+                                                    "nilaiCG", "nilaiLG", "nilaiSM", "valueCG",
+                                                    "valueLG", "valueSM", "totalNilai4",
+                                                    "formula4", "keterangan4"
+                                                ];
+                                               
+                                                fields.forEach(id => {
+                                                    const el = document.getElementById(id);
+                                                    if (el && data[id] !== undefined) {
+                                                        el.innerText = data[id];
+                                                    }
+                                                });
+                                            } else {
+                                                console.log("Data IKPA Tabel 4 belum tersedia di Firebase.");
+                                            }
+                                        }).catch(error => {
+                                            console.error("Gagal mengambil data Tabel 4:", error);
+                                        });
+                                    }
+
+                                    function loadDataIKPA5(uid) {
+                                        const dbRef = ref(database, `ikpaData/${uid}/triwulan1/tabel5`);
+                                        get(dbRef).then(snapshot => {
+                                            if (snapshot.exists()) {
+                                                const data = snapshot.val();
+                                                const fields = [
+                                                    "syaratValue", "proyeksiValue", "akurasiValue", "monevValue",
+                                                    "lkuakpaValue", "realisasiValue", "totalCapaian5",
+                                                    "monevScore", "proyeksiScore", "akurasiScore", "syaratScore",
+                                                    "lkuakpaScore", "realisasiScore", "totalIndeksCp5",
+                                                    "formula5", "keterangan5"
+                                                ];
+                                               
+                                               
+                                                fields.forEach(id => {
+                                                    const el = document.getElementById(id);
+                                                    if (el && data[id] !== undefined) {
+                                                        el.innerText = data[id];
+                                                    }
+                                                });
+                                            } else {
+                                                console.log("Data IKPA Tabel 5 belum tersedia di Firebase.");
+                                            }
+                                        }).catch(error => {
+                                            console.error("Gagal mengambil data Tabel 5:", error);
+                                        });
+                                    }
+
+                                    function loadDataIKPA6(uid) {
+                                        const dbRef = ref(database, `ikpaData/${uid}/triwulan1/tabel6`);
+                                        get(dbRef).then(snapshot => {
+                                            if (snapshot.exists()) {
+                                                const data = snapshot.val();
+                                                const fields = [
+                                                    "indigipayvalue", "incmsvalue", "inkkpvalue", "indeksindigipay",
+                                                    "indeksincms", "indeksinkkp", "indeksTotal6", 
+                                                    "formula6", "keterangan6"
+                                                ];
+                                                
+                                                fields.forEach(id => {
+                                                    const el = document.getElementById(id);
+                                                    if (el && data[id] !== undefined) {
+                                                        el.innerText = data[id];
+                                                    }
+                                                });
+                                            } else {
+                                                console.log("Data IKPA Tabel 6 belum tersedia di Firebase.");
+                                            }
+                                        }).catch(error => {
+                                            console.error("Gagal mengambil data Tabel 6:", error);
+                                        });
+                                    }
+
+                                    function loadDataIKPA7(uid) {
+                                        const dbRef = ref(database, `ikpaData/${uid}/triwulan1/tabel7`);
+                                        get(dbRef).then(snapshot => {
+                                            if (snapshot.exists()) {
+                                                const data = snapshot.val();
+                                                const fields = [
+                                                    "deviasiUnit7", "deviasiNilai7", "dispensasi7", "valueDeviasiUnit7",
+                                                    "valueDeviasiNilai7", "valueDispensasiNilai7", "hasil7", 
+                                                    "formula7", "keterangan7"
+                                                ];
+                                               
+                                                fields.forEach(id => {
+                                                    const el = document.getElementById(id);
+                                                    if (el && data[id] !== undefined) {
+                                                        el.innerText = data[id];
+                                                    }
+                                                });
+                                            } else {
+                                                console.log("Data IKPA Tabel 7 belum tersedia di Firebase.");
+                                            }
+                                        }).catch(error => {
+                                            console.error("Gagal mengambil data Tabel 7:", error);
+                                        });
+                                    }
+                                    function loadDataIKPA8(uid) {
+                                        const dbRef = ref(database, `ikpaData/${uid}/triwulan1/tabel8`);
+                                        get(dbRef).then(snapshot => {
+                                            if (snapshot.exists()) {
+                                                const data = snapshot.val();
+                                                const fields = [
+                                                    "valueindeksA8", "valueindeksB8", "valueindeksC8", "indeksA8",
+                                                    "indeksB8", "indeksC8", "indeksTotal8", 
+                                                    "formula8", "keterangan8"
+                                                ];
+                                                 
+                                                fields.forEach(id => {
+                                                    const el = document.getElementById(id);
+                                                    if (el && data[id] !== undefined) {
+                                                        el.innerText = data[id];
+                                                    }
+                                                });
+                                            } else {
+                                                console.log("Data IKPA Tabel 8 belum tersedia di Firebase.");
+                                            }
+                                        }).catch(error => {
+                                            console.error("Gagal mengambil data Tabel 8:", error);
+                                        });
+                                    }
+
+                                    function loadDataIKPA9(uid) {
+                                        const dbRef = ref(database, `ikpaData/${uid}/triwulan1/tabel9`);
+                                        get(dbRef).then(snapshot => {
+                                            if (snapshot.exists()) {
+                                                const data = snapshot.val();
+                                                const fields = [
+                                                    "valueindeksSept", "valueindeksOkt", "indeksSept", "indeksOkt",
+                                                    "indeksTotal9", 
+                                                    "formula9", "keterangan9"
+                                                ];
+                                               
+                                                fields.forEach(id => {
+                                                    const el = document.getElementById(id);
+                                                    if (el && data[id] !== undefined) {
+                                                        el.innerText = data[id];
+                                                    }
+                                                });
+                                            } else {
+                                                console.log("Data IKPA Tabel 9 belum tersedia di Firebase.");
+                                            }
+                                        }).catch(error => {
+                                            console.error("Gagal mengambil data Tabel 9:", error);
+                                        });
+                                    }
+
+                                    function loadDataIKPA10(uid) {
+                                        const dbRef = ref(database, `ikpaData/${uid}/triwulan1/tabel10`);
+                                        get(dbRef).then(snapshot => {
+                                            if (snapshot.exists()) {
+                                                const data = snapshot.val();
+                                                const fields = [
+                                                    "valuenilaiLHPS1", "valuenilaiLHPS2", "nilaiLHPS1", "nilaiLHPS2",
+                                                    "totalIKU10", 
+                                                    "formula10", "keterangan10"
+                                                ];
+                                               
+                                                fields.forEach(id => {
+                                                    const el = document.getElementById(id);
+                                                    if (el && data[id] !== undefined) {
+                                                        el.innerText = data[id];
+                                                    }
+                                                });
+                                            } else {
+                                                console.log("Data IKPA Tabel 10 belum tersedia di Firebase.");
+                                            }
+                                        }).catch(error => {
+                                            console.error("Gagal mengambil data Tabel 10:", error);
+                                        });
+                                    }
+                                    function loadDataIKPA11(uid) {
+                                        const dbRef = ref(database, `ikpaData/${uid}/triwulan1/tabel11`);
+                                        get(dbRef).then(snapshot => {
+                                            if (snapshot.exists()) {
+                                                const data = snapshot.val();
+                                                const fields = [
+                                                    "valuenilaiLO", "valuenilaiPK", "nilaiLO", "nilaiPK",
+                                                    "totalNilai11", 
+                                                    "formula11", "keterangan11"
+                                                ];
+                                               
+                                                fields.forEach(id => {
+                                                    const el = document.getElementById(id);
+                                                    if (el && data[id] !== undefined) {
+                                                        el.innerText = data[id];
+                                                    }
+                                                });
+                                            } else {
+                                                console.log("Data IKPA Tabel 11 belum tersedia di Firebase.");
+                                            }
+                                        }).catch(error => {
+                                            console.error("Gagal mengambil data Tabel 11:", error);
+                                        });
+                                    }
+
+                                    function loadDataIKPA12(uid) {
+                                        const dbRef = ref(database, `ikpaData/${uid}/triwulan1/tabel12`);
+                                        get(dbRef).then(snapshot => {
+                                            if (snapshot.exists()) {
+                                                const data = snapshot.val();
+                                                const fields = [
+                                                    "valuenilaiMR", "nilaiMR", "inputrealisasi12a", "inputrealisasi12b","inputrealisasi12c",
+                                                    "totalrealisasi12d",
+                                                    "formula12", "keterangan12"
+                                                ];
+                                               
+                                                fields.forEach(id => {
+                                                    const el = document.getElementById(id);
+                                                    if (el && data[id] !== undefined) {
+                                                        el.innerText = data[id];
+                                                    }
+                                                });
+                                            } else {
+                                                console.log("Data IKPA Tabel 12 belum tersedia di Firebase.");
+                                            }
+                                        }).catch(error => {
+                                            console.error("Gagal mengambil data Tabel 12:", error);
+                                        });
+                                    }
+
+                                    function loadDataIKPA13(uid) {
+                                        const dbRef = ref(database, `ikpaData/${uid}/triwulan1/tabel13`);
+                                        get(dbRef).then(snapshot => {
+                                            if (snapshot.exists()) {
+                                                const data = snapshot.val();
+                                                const fields = [
+                                                    "valuenilaiNKA", "nilaiNKA", "nilaiLK", "valuenilaiLK",
+                                                    "totalNilai13",
+                                                    "formula13", "keterangan13"
+                                                ];
+                                               
+                                                fields.forEach(id => {
+                                                    const el = document.getElementById(id);
+                                                    if (el && data[id] !== undefined) {
+                                                        el.innerText = data[id];
+                                                    }
+                                                });
+                                            } else {
+                                                console.log("Data IKPA Tabel 13 belum tersedia di Firebase.");
+                                            }
+                                        }).catch(error => {
+                                            console.error("Gagal mengambil data Tabel 13:", error);
+                                        });
+                                    }
+
+                                    function loadDataIKPA14(uid) {
+                                        const dbRef = ref(database, `ikpaData/${uid}/triwulan1/tabel14`);
+                                        get(dbRef).then(snapshot => {
+                                            if (snapshot.exists()) {
+                                                const data = snapshot.val();
+                                                const fields = [
+                                                    "valuenilaiAset", "valuenilaiPengadaan", "valuenilaiProduk", "nilaiAset",
+                                                    "indeksCapaian15","nilaiPengadaan","nilaiProduk",
+                                                    "formula14", "keterangan14"
+                                                ];
+                                               
+                                                fields.forEach(id => {
+                                                    const el = document.getElementById(id);
+                                                    if (el && data[id] !== undefined) {
+                                                        el.innerText = data[id];
+                                                    }
+                                                });
+                                            } else {
+                                                console.log("Data IKPA Tabel 14 belum tersedia di Firebase.");
+                                            }
+                                        }).catch(error => {
+                                            console.error("Gagal mengambil data Tabel 14:", error);
+                                        });
+                                    }
+                                    function loadDataIKPA15(uid) {
+                                        const dbRef = ref(database, `ikpaData/${uid}/triwulan1/tabel15`);
+                                        get(dbRef).then(snapshot => {
+                                            if (snapshot.exists()) {
+                                                const data = snapshot.val();
+                                                const fields = [
+                                                    "valuehasilskoki", "valuehasilpublikasi", "valuehasilsosialisasi", "valuehasilpkpt",
+                                                    "nilaiskoki","nilaisosialisasi","nilaipublikasi","nilaipkpt","totalnilai16",
+                                                    "formula15", "keterangan15"
+                                                ];
+                                               
+                                                fields.forEach(id => {
+                                                    const el = document.getElementById(id);
+                                                    if (el && data[id] !== undefined) {
+                                                        el.innerText = data[id];
+                                                    }
+                                                });
+                                            } else {
+                                                console.log("Data IKPA Tabel 15 belum tersedia di Firebase.");
+                                            }
+                                        }).catch(error => {
+                                            console.error("Gagal mengambil data Tabel 15:", error);
+                                        });
+                                    }
+
+                                    </script>
+                                    <!-- <script>
+                                        document.addEventListener("DOMContentLoaded", function () {
+                                            let data = localStorage.getItem("indeks_data");
+
+                                            if (data) {
+                                                let parsedData = JSON.parse(data);
+                                            
+                                                document.getElementById("valuehasil-skoki").innerText = parsedData.valuehasilskoki || "-";
+                                                document.getElementById("valuehasil-sosialisasi").innerText = parsedData.valuehasilsosialisasi || "-";
+                                                document.getElementById("valuehasil-publikasi").innerText = parsedData.valuehasilpublikasi || "-";
+                                                document.getElementById("valuehasil-pkpt").innerText = parsedData.valuehasilpkpt || "-";
+                                                document.getElementById("hasil-skoki").innerText = parsedData.skoki || "-";
+                                                document.getElementById("hasil-sosialisasi").innerText = parsedData.sosialisasi || "-";
+                                                document.getElementById("hasil-pkpt").innerText = parsedData.pkpt || "-";
+                                                document.getElementById("hasil-publikasi").innerText = parsedData.publikasi || "-";
+                                                document.getElementById("totalnilai16").innerText = parsedData.totalnilai16 || "-";
+                                                document.getElementById("formula16").innerText = parsedData.formula16 || "-";
+                                                document.getElementById("keterangan16").innerText = parsedData.keterangan16 || "-";
+
+                                                document.getElementById("valuehasil-aset").innerText = parsedData.valueaset|| "-";
+                                                document.getElementById("valuehasil-pengadaan").innerText = parsedData.valuepengadaan|| "-";
+                                                document.getElementById("valuehasil-produk").innerText = parsedData.valueproduk|| "-";
+                                                document.getElementById("hasil-aset").innerText= parsedData.aset|| "-";
+                                                document.getElementById("hasil-pengadaan").innerText = parsedData.pengadaan|| "-";
+                                                document.getElementById("hasil-produk").innerText= parsedData.produk|| "-";
+                                                document.getElementById("keterangan15").innerText = parsedData.keterangan15 || "-";
+                                                document.getElementById("formula15").innerText = parsedData.formula15 || "-";
+                                                document.getElementById("indeks-iku15").innerText = parsedData.indeks || "-";
+
+                                                document.getElementById("valuenilaiNKA").innerText = parsedData.valuenilaiNKA|| "-";
+                                                document.getElementById("nilaiNKA").innerText  = parsedData.Ikpa|| "-";
+                                                document.getElementById("nilaiLK").innerText = parsedData.LKfix|| "-";
+                                                document.getElementById("valuenilaiLK").innerText= parsedData.valuenilaiLK|| "-";
+                                                document.getElementById("totalNilai13").innerText= parsedData.Nilai13|| "-";
+                                                document.getElementById("keterangan13").innerText= parsedData.keterangan13|| "-";
+                                                document.getElementById("formula13").innerText= parsedData.formula13|| "-";
+
+                                                document.getElementById("valuenilaiMR").innerText= parsedData.valuenilaiMR|| "-";
+                                                document.getElementById("nilaiMR").innerText= parsedData.nilaiMR|| "-";
+                                                document.getElementById("totalrealisasi12d").innerText= parsedData.totalrealisasi12d|| "-";
+                                                document.getElementById("keterangan12").innerText = parsedData.keterangan12 || "-";
+                                                document.getElementById("formula12").innerText = parsedData.formula12 || "-";
+
+                                                document.getElementById("valuenilaiLO").innerText= parsedData.valuenilaiLO|| "-";
+                                                document.getElementById("valuenilaiPK").innerText= parsedData.valuenilaiPK|| "-";
+                                                document.getElementById("nilaiLO").innerText= parsedData.nilaiLO|| "-";
+                                                document.getElementById("nilaiPK").innerText= parsedData.nilaiPK|| "-";
+                                                document.getElementById("totalNilai11").innerText= parsedData.totalNilai11|| "-";
+                                                document.getElementById("keterangan11").innerText = parsedData.keterangan11 || "-";
+                                                document.getElementById("formula11").innerText = parsedData.formula11 || "-";
+
+                                                document.getElementById("valuenilaiLHPS1").innerText = parsedData.valuenilaiLHPS1 || "-";
+                                                document.getElementById("valuenilaiLHPS2").innerText = parsedData.valuenilaiLHPS2 || "-";
+                                                document.getElementById("nilaiLHPS1").innerText = parsedData.nilaiTab1 || "-";
+                                                document.getElementById("nilaiLHPS2").innerText = parsedData.nilaiTab2 || "-";
+                                                document.getElementById("totalIKU10").innerText = parsedData.totalIKU10 || "-";
+                                                document.getElementById("keterangan10").innerText = parsedData.keterangan10 || "-";
+                                                document.getElementById("formula10").innerText = parsedData.formula10 || "-";
+                                                
+                                                document.getElementById("valueindeksSept").innerText= parsedData.VindeksSept || "-";
+                                                document.getElementById("valueindeksOkt").innerText= parsedData.VindeksOkt || "-";
+                                                document.getElementById("indeksSept").innerText= parsedData.indeksSept || "-";
+                                                document.getElementById("indeksOkt").innerText= parsedData.indeksOkt || "-";
+                                                document.getElementById("indeksTotal9").innerText= parsedData.indeksTotal9 || "-";
+                                                document.getElementById("keterangan9").innerText = parsedData.keterangan9 || "-";
+                                                document.getElementById("formula9").innerText = parsedData.formula9 || "-";
+
+                                                document.getElementById("valueindeksA8").innerText= parsedData.valueindeksA8 || "-";
+                                                document.getElementById("valueindeksB8").innerText= parsedData.valueindeksB8 || "-";
+                                                document.getElementById("valueindeksC8").innerText= parsedData.valueindeksC8 || "-";
+                                                document.getElementById("indeksA8").innerText= parsedData.indeksA8 || "-";
+                                                document.getElementById("indeksB8").innerText= parsedData.indeksB8 || "-";
+                                                document.getElementById("indeksC8").innerText= parsedData.indeksC8 || "-";
+                                                document.getElementById("indeksTotal8").innerText= parsedData.indeksTotal8 || "-";
+                                                document.getElementById("keterangan8").innerText = parsedData.keterangan8 || "-";
+                                                document.getElementById("formula8").innerText = parsedData.formula8 || "-";
+
+                                                document.getElementById("deviasiUnit7").innerText= parsedData.deviasiUnit7 || "-";
+                                                document.getElementById("deviasiNilai7").innerText= parsedData.deviasiNilai7 || "-";
+                                                document.getElementById("dispensasi7").innerText= parsedData.dispensasi7 || "-";
+                                                document.getElementById("valueDeviasiUnit7").innerText= parsedData.valueDeviasiUnit7 || "-";
+                                                document.getElementById("valueDeviasiNilai7").innerText= parsedData.valueDeviasiNilai7 || "-";
+                                                document.getElementById("valueDispensasiNilai7").innerText= parsedData.valueDispensasiNilai7 || "-";
+                                                document.getElementById("hasil7").innerText= parsedData.hasil7 || "-";
+                                                document.getElementById("keterangan7").innerText = parsedData.keterangan7 || "-";
+                                                document.getElementById("formula7").innerText = parsedData.formula7 || "-";
+
+                                                document.getElementById("indigipayvalue").innerText= parsedData.indigipay || "-";
+                                                document.getElementById("incmsvalue").innerText= parsedData.incms || "-";
+                                                document.getElementById("inkkpvalue").innerText= parsedData.inkkp || "-";
+                                                document.getElementById("indeksindigipay").innerText= parsedData.indeksindigipay || "-";
+                                                document.getElementById("indeksincms").innerText= parsedData.indeksincms || "-";
+                                                document.getElementById("indeksinkkp").innerText= parsedData.indeksinkkp || "-";
+                                                document.getElementById("indeksTotal6").innerText= parsedData.indeksTotal6 || "-";
+                                                document.getElementById("keterangan6").innerText = parsedData.keterangan6 || "-";
+                                                document.getElementById("formula6").innerText = parsedData.formula6 || "-";
+
+                                                document.getElementById("syaratValue").innerText= parsedData.syaratValue || "-";
+                                                document.getElementById("proyeksiValue").innerText= parsedData.proyeksiValue || "-";
+                                                document.getElementById("akurasiValue").innerText= parsedData.akurasiValue || "-";
+                                                document.getElementById("monevValue").innerText= parsedData.monevValue || "-";
+                                                document.getElementById("lkuakpaValue").innerText= parsedData.lkuakpaValue || "-";
+                                                document.getElementById("realisasiValue").innerText= parsedData.realisasiValue || "-";
+                                                document.getElementById("syaratScore").innerText= parsedData.syaratScore || "-";
+                                                document.getElementById("proyeksiScore").innerText= parsedData.proyeksiScore || "-";
+                                                document.getElementById("akurasiScore").innerText= parsedData.akurasiScore || "-";
+                                                document.getElementById("monevScore").innerText= parsedData.monevScore || "-";
+                                                document.getElementById("lkuakpaScore").innerText= parsedData.lkuakpaScore || "-";
+                                                document.getElementById("realisasiScore").innerText= parsedData.realisasiScore || "-";
+                                                document.getElementById("totalCapaian5").innerText= parsedData.totalCapaian5 || "-";
+                                                document.getElementById("totalIndeksCp5").innerText= parsedData.totalIndeksCp5 || "-";
+                                                document.getElementById("keterangan5").innerText = parsedData.keterangan5 || "-";
+                                                document.getElementById("formula5").innerText = parsedData.formula5 || "-";
+
+                                                document.getElementById("nilaiCG").innerText= parsedData.nilaiTertimbangCG || "-";
+                                                document.getElementById("nilaiLG").innerText= parsedData.nilaiTertimbangLG || "-";
+                                                document.getElementById("nilaiSM").innerText= parsedData.nilaiTertimbangSM || "-";
+                                                document.getElementById("valueCG").innerText= parsedData.valueCG || "-";
+                                                document.getElementById("valueLG").innerText= parsedData.valueLG || "-";
+                                                document.getElementById("valueSM").innerText= parsedData.valueSM || "-";
+                                                document.getElementById("totalNilai4").innerText= parsedData.totalNilai4 || "-";
+                                                document.getElementById("keterangan4").innerText = parsedData.keterangan4 || "-";
+                                                document.getElementById("formula4").innerText = parsedData.formula4 || "-";
+
+                                                document.getElementById("ikplValue3a").innerText = parsedData.ikpl3a || "-";
+                                                document.getElementById("ikplValue3b").innerText = parsedData.ikpl3b || "-";
+                                                document.getElementById("ikplValue3c").innerText = parsedData.ikpl3c || "-";
+                                                document.getElementById("ikplHasil3a").innerText = parsedData.ikplHasil3a || "-";
+                                                document.getElementById("ikplHasil3b").innerText = parsedData.ikplHasil3b || "-";
+                                                document.getElementById("ikplHasil3c").innerText = parsedData.ikplHasil3c || "-";
+                                                document.getElementById("hasil3abc").innerText = parsedData.hasil3abc || "-";
+                                                document.getElementById("keterangan3").innerText = parsedData.keterangan3 || "-";
+                                                document.getElementById("formula3").innerText = parsedData.formula3 || "-";
+
+                                                document.getElementById("PersentaseAValue").innerText= parsedData.PersentaseAValue || "-";
+                                                document.getElementById("PersentaseBValue").innerText= parsedData.PersentaseBValue || "-";
+                                                document.getElementById("PersentaseCValue").innerText= parsedData.PersentaseCValue || "-";
+                                                document.getElementById("PersentaseDValue").innerText= parsedData.PersentaseDValue || "-";
+                                                
+                                                document.getElementById("PersentaseBhasil").innerText= parsedData.PersentaseBhasil || "-";
+                                                document.getElementById("PersentaseChasil").innerText= parsedData.PersentaseChasil || "-";
+                                                document.getElementById("PersentaseDhasil").innerText= parsedData.PersentaseDhasil || "-";
+                                                document.getElementById("totalPersentase2").innerText= parsedData.totalPersentase2 || "-";
+                                                document.getElementById("keterangan2").innerText = parsedData.keterangan2 || "-";
+                                                document.getElementById("formula2").innerText = parsedData.formula2 || "-";
+
+                                                document.getElementById("rdScore").innerText= parsedData.rdScore || "-";
+                                                document.getElementById("dhScore").innerText= parsedData.dhScore || "-";
+                                                document.getElementById("paScore").innerText= parsedData.paScore || "-";
+                                                document.getElementById("bkScore").innerText= parsedData.bkScore || "-";
+                                                document.getElementById("ptScore").innerText= parsedData.ptScore || "-";
+                                                document.getElementById("putScore").innerText= parsedData.putScore || "-";
+                                                document.getElementById("coScore").innerText= parsedData.coScore || "-";
+                                                document.getElementById("dsScore").innerText= parsedData.dsScore || "-";
+                                                document.getElementById("jumlahsatker1Value").innerText= parsedData.jumlahsatker1Value || "-";
+                                                document.getElementById("jumlahsatker1Score").innerText= parsedData.jumlahsatker1Score || "-";
+                                                document.getElementById("totalCapaian1").innerText= parsedData.totalCapaian1 || "-";
+                                                document.getElementById("totalCapaian1all").innerText= parsedData.totalCapaian1all || "-";
+                                                document.getElementById("totalNilaiSpan1").innerText= parsedData.totalNilaiSpan1 || "-";
+                                                document.getElementById("nilaiIkpa1Score").innerText= parsedData.nilaiIkpa1Score || "-";
+                                                document.getElementById("Nilaislide1a").innerText= parsedData.Nilaislide1a || "-";
+                                                document.getElementById("formula1").innerText = parsedData.formula1 || "-";
+                                                document.getElementById("keterangan1").innerText = parsedData.keterangan1 || "-";
+
+                                                
+
+                                                
+                                                
+
+
+                                            } else {
+                                                alert("Tidak ada data tersimpan!");
+                                            }
+                                        });
+                                    </script> -->
+                                     
+                                    
+                                    <!-- <script>
+                                        function submitData3() {
+                                            let ikpl3a = document.getElementById("ikplValue3a").innerText;
+                                            let ikpl3b = document.getElementById("ikplValue3b").innerText;
+                                            let ikpl3c = document.getElementById("ikplValue3c").innerText;
+                                            let ikplHasil3a = document.getElementById("ikplHasil3a").innerText;
+                                            let ikplHasil3b = document.getElementById("ikplHasil3b").innerText;
+                                            let ikplHasil3c = document.getElementById("ikplHasil3c").innerText;
+                                            let hasil3abc = document.getElementById("hasil3abc").innerText;
+
+                                            let formula3hasil = document.getElementById("formula3").innerText;
+                                            let keterangan3hasil = document.getElementById("keterangan3").innerText;
+
+                                            // Cek apakah ada data lama di localStorage
+                                            let storedData = localStorage.getItem("indeks_data");
+                                            let data = storedData ? JSON.parse(storedData) : {};
+
+                                            // Update hanya bagian halaman 3
+                                            data.ikpl3a = ikpl3a;
+                                            data.ikpl3b = ikpl3b;
+                                            data.ikpl3c = ikpl3c;
+                                            data.ikplHasil3a = ikplHasil3a;
+                                            data.ikplHasil3b = ikplHasil3b;
+                                            data.ikplHasil3c = ikplHasil3c;
+
+                                            data.formula3 = formula3hasil;
+                                            data.keterangan3 = keterangan3hasil;
+                                            // Simpan kembali ke localStorage
+                                            localStorage.setItem("indeks_data", JSON.stringify(data));
+
+                                            alert("Data dari Indeks kepuasan satker terhadap layanan KPPN berhasil disimpan!");
+                                        }
+                                    </script> -->
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div><!-- .animated -->
+            </div><!-- .content -->
+
+
+        </div><!-- /#right-panel -->
+
+        <!-- Right Panel -->
+
+
+        <script src="vendors/jquery/dist/jquery.min.js"></script>
+        <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
+        <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="assets/js/main.js"></script>
+
+
+        <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+        <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+        <script src="vendors/jszip/dist/jszip.min.js"></script>
+        <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
+        <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+        <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="vendors/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+        <script src="assets/js/init-scripts/data-table/datatables-init.js"></script>
+
+
+</body>
+
+</html>
