@@ -447,13 +447,13 @@
                                                 // let VinputC8 = parseFloat(document.getElementById("inputC8").value) || 0;
 
                                                 function getIndeksIKI9(value) {
-    if (value > 98.5) return 4;
-    else if (value > 97) return 3.5;
-    else if (value > 95) return 3;
-    else if (value > 92.5) return 2.5;
-    else if (value > 90) return 2;
-    else return 1;
-}
+                                                    if (value > 98.5) return 4;
+                                                    else if (value > 97) return 3.5;
+                                                    else if (value > 95) return 3;
+                                                    else if (value > 92.5) return 2.5;
+                                                    else if (value > 90) return 2;
+                                                    else return 1;
+                                                }
 
 
                                                 let indeksSept = (ipLPJ * 0.5);
@@ -470,7 +470,7 @@
                                                 document.getElementById("indeksOkt").innerText = indeksOkt.toFixed(2);
                                                 // document.getElementById("indeksC8").innerText = indeksC8.toFixed(2);
 
-                                                document.getElementById("indeksTotal9").innerText = indeksIKI9.toFixed(0);
+                                                document.getElementById("indeksTotal9").innerText = indeksTotal9.toFixed(0);
                                             }
                                             // function getIndeksIKI9(value) {
                                             //     if (value <= 100 && value > 98.5 ) return 4;

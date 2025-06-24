@@ -339,19 +339,47 @@
                                     <div id="6b-N" class="content">
                                         <br>
                                         <h3><b>Nilai kualitas pengelolaan SDM</b> </h3>
-                                        <label for="tw2triwulan">Pilih Triwulan:</label>
+                                        <!-- <label for="tw2triwulan">Pilih Triwulan:</label>
                                         <select id="tw2triwulan" onchange="tw2hitungNilai13()">
                                             <option value="30">Triwulan 1</option>
                                             <option value="50">Triwulan 2</option>
                                             <option value="70">Triwulan 3</option>
                                             <option value="90">Triwulan 4</option>
-                                        </select>
-
+                                        </select> -->
+<!-- 
                                         <label for="tw2learning">Indeks Capaian Learning Organization:</label>
-                                        <input type="number" id="tw2learning" value="0" oninput="tw2hitungNilai11()">
+                                        <input type="number" id="tw2learning" value="0" oninput="tw2hitungNilai11()"> -->
 
-                                        <label for="tw2pelaksanaan">Indeks Capaian Pelaksanaan Kebintalan:</label>
-                                        <input type="number" id="tw2pelaksanaan" value="0" oninput="tw2hitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen Pengorganisasian dan Penyebarluasan:</label>
+                                        <input type="number" id="tw2vkompA" min="0" oninput="tw2hitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen Rencana Aksi Pembelajaran:</label>
+                                        <input type="number" id="tw2vkompB" min="0" oninput="tw2hitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen IDP:</label>
+                                        <input type="number" id="tw2vkompC" min="0" oninput="tw2hitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen Evaluasi Pembelajaran:</label>
+                                        <input type="number" id="tw2vkompD" min="0" oninput="tw2hitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen Hard Competency Pegawai:</label>
+                                        <input type="number" id="tw2vkompE" min="0" oninput="tw2hitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen Structured Learning:</label>
+                                        <input type="number" id="tw2vkompF" min="0" oninput="tw2hitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen Learning From Experience:</label>
+                                        <input type="number" id="tw2vkompG" min="0" oninput="tw2hitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen Pemenuhan Jam Pembelajaran:</label>
+                                        <input type="number" id="tw2vkompH" min="0" oninput="tw2hitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen Organizational Performance:</label>
+                                        <input type="number" id="tw2vkompI" min="0" oninput="tw2hitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen Leaders as teacher:</label>
+                                        <input type="number" id="tw2vkompJ" min="0" oninput="tw2hitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen Leaders as role model:</label>
+                                        <input type="number" id="tw2vkompK" min="0" oninput="tw2hitungNilai11()">
+                                        <label>Masukkan Jumlah Peserta yang hadir:</label>
+                                        <input type="number" id="tw2vpeserta11a" min="0" oninput="tw2hitungNilai11()">
+                                        <label>Masukkan Jumlah Peserta yang seharusnya:</label>
+                                        <input type="number" id="tw2vpeserta11b" min="0" oninput="tw2hitungNilai11()">
+                                        <label>Jumlah Kegiatan yang telah dilaksanakan:</label>
+                                        <input type="number" id="tw2vkegiatan11a" min="0" oninput="tw2hitungNilai11()">
+
+                                       
 
                                         <label for="tw2formula11">Masukkan Formula:</label>
                                         <textarea id="tw2inputFormula11" class="form-control" rows="3"
@@ -396,66 +424,224 @@
                                             </tbody>
                                             <tbody>
                                                 <tr>
-                                                    <td rowspan="4" valign="top">11</td>
-                                                    <td rowspan="4" valign="top"> 6b-N </td>
-                                                    <td rowspan="4" valign="top" class="left-align">Nilai kualitas pengelolaan SDM</td>
+                                                    <td rowspan="24" valign="top">11</td>
+                                                    <td rowspan="24" valign="top"> 6b-N </td>
+                                                    <td rowspan="24" valign="top" class="left-align">Nilai kualitas pengelolaan SDM</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td ><b>Nilai</b></td>
                                                     <td ><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td ><b>Formula</b></td>
                                                     <td>Keterangan</td>
                                                 </tr>
+                                                
                                                 <tr>
-                                                    <td class="left-align">Implementasi Learning Organization </td>
-                                                    <td>60%</td>
-                                                    <td id="tw2valuenilaiLO">58,1%</td>
-                                                    <td id="tw2nilaiLO">58,1%</td>
-                                                    <td rowspan="2" valign="top" class="left-align" id="tw2formula11">Tolong selalu enter agar tidak terlalu panjang</td>
-                                                    <td rowspan="2" valign="top" class="left-align" id="tw2keterangan11">
-                                                        Capaian = (50% x Indeks Capaian Implementasi LO) + (50%
-                                                        x Indeks Capaian Pelaksanaan Kebintalan) 
-                                                        Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <td class="left-align" colspan="4"><b>Implementasi Learning Organization</b></td>
+                                                    <td rowspan="23" valign="top" class="left-align" id="tw2formula11"></td>
+                                                    <td rowspan="23" valign="top" class="left-align" id="tw2keterangan11">
+                                                        </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Tingkat Penguatan Budaya dan Bintal
-                                                        Pejabat Administrator/Pejabat Fungsional Setara
-                                                        Di Lingkungan Kementerian Keuangan
-                                                    </td>
-                                                    <td>40%</td>
-                                                    <td id="tw2valuenilaiPK">58,50</td>
-                                                    <td id="tw2nilaiPK">58,50</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="tw2totalNilai11"><b>116,60</b></td>
+                                                    <td class="left-align">Subkomponen Pengorganisasian dan Penyebarluasan</td>
+                                                    <td id="tw2valuekomponenA"></td>
                                                     <td></td>
                                                     <td></td>
                                                 </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Rencana Aksi Pembelajaran</td>
+                                                    <td id="tw2valuekomponenB"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen IDP</td>
+                                                    <td id="tw2valuekomponenC"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Evaluasi Pembelajaran</td>
+                                                    <td id="tw2valuekomponenD"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Hard Competency Pegawai</td>
+                                                    <td id="tw2valuekomponenE"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Structured Learning</td>
+                                                    <td id="tw2valuekomponenF"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Learning From Experience</td>
+                                                    <td id="tw2valuekomponenG"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Pemenuhan Jam Pembelajaran</td>
+                                                    <td id="tw2valuekomponenH"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Organizational Performance</td>
+                                                    <td id="tw2valuekomponenI"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Leaders as teacher</td>
+                                                    <td id="tw2valuekomponenJ"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Leaders as role model</td>
+                                                    <td id="tw2valuekomponenK"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align"><b>Total Capaian LO</b></td>
+                                                    
+                                                    <td id="tw2nilaiLO"></td>
+                                                    <td id="tw2valuenilaiLO"></td>
+                                                    <td ></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Tingkat Penguatan Budaya dan Bintal Pejabat Administrator/Pejabat Fungsional Setara di Lingkungan Kementerian Keuangan</b></td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>A. Tingkat kualitas pelaksanaan kegiatan/program kebintalan</b></td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Jumlah Peserta yang hadir</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="tw2valuepeserta11a"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Jumlah Peserta yang seharusnya</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="tw2valuepeserta11b"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align"><b>Total Komponen A</b></td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="tw2valuekompA11"></td>
+                                                    <td id="tw2indekskompA11"></td>
+                                                    <td ></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>B. Tingkat Sinergi Antar Generasi</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Jumlah Kegiatan yang telah dilaksanakan</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="tw2valuekegiatan11a"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" ><b>Total Komponen B</b></td>
+                                                    <td id="tw2valuekompB11"></td>
+                                                    <td id="tw2indekskompB11"></td>
+                                                    <td ></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Capaian Bintal</b></td>
+                                                    
+                                                    <td id="tw2valuenilaiPK"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                    <td id="tw2totalNilai11a"><b></b></td>
+                                                    <td id="tw2totalNilai11"><b></b></td>
+                                                </tr>
+                                                
                                             </tbody>
                                         </table>
 
                                         <script>
                                             function tw2hitungNilai11() {
-                                                let tw2targetLO = parseFloat(document.getElementById('tw2triwulan').value);
-                                                let tw2nilaiLearning = parseFloat(document.getElementById('tw2learning').value);
-                                                let tw2nilaiPelaksanaan = parseFloat(document.getElementById('tw2pelaksanaan').value);
+                                                // let tw2targetLO = parseFloat(document.getElementById('tw2triwulan').value);
+                                                // let tw2nilaiLearning = parseFloat(document.getElementById('tw2learning').value);
+                                                // let tw2nilaiPelaksanaan = parseFloat(document.getElementById('tw2pelaksanaan').value);
+                                                let tw2vkompA = parseFloat(document.getElementById('tw2vkompA').value);
+                                                let tw2vkompB = parseFloat(document.getElementById('tw2vkompB').value);
+                                                let tw2vkompC = parseFloat(document.getElementById('tw2vkompC').value);
+                                                let tw2vkompD = parseFloat(document.getElementById('tw2vkompD').value);
+                                                let tw2vkompE = parseFloat(document.getElementById('tw2vkompE').value);
+                                                let tw2vkompF = parseFloat(document.getElementById('tw2vkompF').value);
+                                                let tw2vkompG = parseFloat(document.getElementById('tw2vkompG').value);
+                                                let tw2vkompH = parseFloat(document.getElementById('tw2vkompH').value);
+                                                let tw2vkompI = parseFloat(document.getElementById('tw2vkompI').value);
+                                                let tw2vkompJ = parseFloat(document.getElementById('tw2vkompJ').value);
+                                                let tw2vkompK = parseFloat(document.getElementById('tw2vkompK').value);
+                                                let tw2vpeserta11a = parseFloat(document.getElementById('tw2vpeserta11a').value);
+                                                let tw2vpeserta11b = parseFloat(document.getElementById('tw2vpeserta11b').value);
+                                                let tw2vkegiatan11a = parseFloat(document.getElementById('tw2vkegiatan11a').value);
 
-                                                let tw2vnilaiLO = ((tw2nilaiLearning / tw2targetLO) * 100) ;
-                                                let tw2ValuenilaiLO = (tw2vnilaiLO > 100) ? 120 : tw2vnilaiLO;
+                                                let tw2targetLO = 50;
+                                                let tw2vnilaiLO = (((tw2vkompA + tw2vkompB + tw2vkompC + tw2vkompD + tw2vkompE + tw2vkompF + tw2vkompG + tw2vkompH + tw2vkompI + tw2vkompJ + tw2vkompK ) / 11)) ;
+                                                let tw2vnilaiLOAll = (tw2vnilaiLO /tw2targetLO) * 100;
+                                                let tw2ValuenilaiLO = (tw2vnilaiLOAll > tw2targetLO) ? 120 : tw2vnilaiLOAll;
 
-                                                let tw2nilaiLO = (tw2ValuenilaiLO * 0.6)
-                                                let tw2nilaiPK = (tw2nilaiPelaksanaan * 0.4);
-                                                let tw2totalNilai11 = tw2nilaiLO + tw2nilaiPK;
+                                                let tw2valuekompA11 = (tw2vpeserta11a / tw2vpeserta11b) * 100 ; 
+                                                let tw2indekskompA11 = (tw2valuekompA11 >= 75) ? 120 : tw2valuekompA11;
+                                                // let tw2nilaiLO = (tw2ValuenilaiLO * 0.6)
+                                                let tw2valuekompB11 = hitungNilaiKegiatan(tw2vkegiatan11a);
+                                                let tw2indekskompB11 = tw2valuekompB11;
+                                                let tw2valuenilaiPK = ((0.5 * tw2indekskompA11)+(0.5 * tw2indekskompB11));
+                                                let tw2totalNilai11 = ((0.6 * tw2ValuenilaiLO) + (0.4 * tw2valuenilaiPK));
+                                                let tw2totalNilai11a = tw2totalNilai11;
 
-                                                document.getElementById('tw2valuenilaiLO').innerText = tw2ValuenilaiLO.toFixed(2);
-                                                document.getElementById('tw2valuenilaiPK').innerText = tw2nilaiPelaksanaan.toFixed(2);
-                                                document.getElementById('tw2nilaiLO').innerText = tw2nilaiLO.toFixed(2);
-                                                document.getElementById('tw2nilaiPK').innerText = tw2nilaiPK.toFixed(2);
-                                                document.getElementById('tw2totalNilai11').innerText = tw2totalNilai11.toFixed(0);
+                                                document.getElementById('tw2valuekomponenA').innerText = tw2vkompA;
+                                                document.getElementById('tw2valuekomponenB').innerText = tw2vkompB;
+                                                document.getElementById('tw2valuekomponenC').innerText = tw2vkompC;
+                                                document.getElementById('tw2valuekomponenD').innerText = tw2vkompD;
+                                                document.getElementById('tw2valuekomponenE').innerText = tw2vkompE;
+                                                document.getElementById('tw2valuekomponenF').innerText = tw2vkompF;
+                                                document.getElementById('tw2valuekomponenG').innerText = tw2vkompG;
+                                                document.getElementById('tw2valuekomponenH').innerText = tw2vkompH;
+                                                document.getElementById('tw2valuekomponenI').innerText = tw2vkompI;
+                                                document.getElementById('tw2valuekomponenJ').innerText = tw2vkompJ;
+                                                document.getElementById('tw2valuekomponenK').innerText = tw2vkompK;
+                                                document.getElementById('tw2valuepeserta11a').innerText = tw2vpeserta11a;
+                                                document.getElementById('tw2valuepeserta11b').innerText = tw2vpeserta11b;
+                                                document.getElementById('tw2valuekegiatan11a').innerText = tw2vkegiatan11a;
+                                                
+                                                document.getElementById('tw2nilaiLO').innerText = tw2vnilaiLO.toFixed(2);
+                                                document.getElementById('tw2valuenilaiLO').innerText = tw2ValuenilaiLO;
+                                                document.getElementById('tw2valuekompA11').innerText = tw2valuekompA11.toFixed(2);
+                                                document.getElementById('tw2indekskompA11').innerText = tw2indekskompA11;
+                                                document.getElementById('tw2valuekompB11').innerText = tw2valuekompB11;
+                                                document.getElementById('tw2indekskompB11').innerText = tw2indekskompB11;
+                                                document.getElementById('tw2valuenilaiPK').innerText = tw2valuenilaiPK;
+                                                document.getElementById('tw2totalNilai11').innerText = tw2totalNilai11;
+                                                document.getElementById('tw2totalNilai11a').innerText = tw2totalNilai11a;
+                                                // document.getElementById('tw2nilaiPK').innerText = tw2nilaiPK.toFixed(2);
                                             }
 
                                             tw2hitungNilai11();
+
+                                            function hitungNilaiKegiatan(jumlahKegiatan) {
+                                                return (jumlahKegiatan >= 2) ? 120 : 100;
+                                            }
+
                                         </script>
                                         <script type="module">
                                             import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
@@ -485,14 +671,30 @@
                                             }
 
                                             const data = {
-                                                tw2valuenilaiLO: document.getElementById("tw2valuenilaiLO")?.innerText || "",
-                                                tw2valuenilaiPK: document.getElementById("tw2valuenilaiPK")?.innerText || "",
-                                                tw2nilaiLO: document.getElementById("tw2nilaiLO")?.innerText || "",
-                                                tw2nilaiPK: document.getElementById("tw2nilaiPK")?.innerText || "",
-                                                tw2totalNilai11: document.getElementById("tw2totalNilai11")?.innerText || "",
-                                                // indeksC8: document.getElementById("indeksC8")?.innerText || "",
-                                                // indeksTotal8: document.getElementById("indeksTotal8")?.innerText || "",        
-                                            
+                                                tw2valuekomponenA: document.getElementById('tw2valuekomponenA').innerText || "",
+                                                tw2valuekomponenB: document.getElementById('tw2valuekomponenB').innerText || "",
+                                                tw2valuekomponenC: document.getElementById('tw2valuekomponenC').innerText || "",
+                                                tw2valuekomponenD: document.getElementById('tw2valuekomponenD').innerText || "",
+                                                tw2valuekomponenE: document.getElementById('tw2valuekomponenE').innerText || "",
+                                                tw2valuekomponenF: document.getElementById('tw2valuekomponenF').innerText || "",
+                                                tw2valuekomponenG: document.getElementById('tw2valuekomponenG').innerText || "",
+                                                tw2valuekomponenH: document.getElementById('tw2valuekomponenH').innerText || "",
+                                                tw2valuekomponenI: document.getElementById('tw2valuekomponenI').innerText || "",
+                                                tw2valuekomponenJ: document.getElementById('tw2valuekomponenJ').innerText || "",
+                                                tw2valuekomponenK: document.getElementById('tw2valuekomponenK').innerText || "",
+                                                tw2valuepeserta11a:document.getElementById('tw2valuepeserta11a').innerText || "",
+                                                tw2valuepeserta11b: document.getElementById('tw2valuepeserta11b').innerText || "",
+                                                tw2valuekegiatan11a:document.getElementById('tw2valuekegiatan11a').innerText || "",
+                                                tw2nilaiLO: document.getElementById('tw2nilaiLO').innerText || "",
+                                                tw2valuenilaiLO: document.getElementById('tw2valuenilaiLO').innerText || "",
+                                                tw2valuekompA11:  document.getElementById('tw2valuekompA11').innerText || "",
+                                                tw2indekskompA11: document.getElementById('tw2indekskompA11').innerText || "",
+                                                tw2valuekompB11: document.getElementById('tw2valuekompB11').innerText || "",
+                                                tw2indekskompB11: document.getElementById('tw2indekskompB11').innerText || "",
+                                                tw2valuenilaiPK: document.getElementById('tw2valuenilaiPK').innerText || "",
+                                                tw2totalNilai11: document.getElementById('tw2totalNilai11').innerText || "",
+                                                tw2totalNilai11a: document.getElementById('tw2totalNilai11a').innerText || "",
+
                                                 tw2formula11: document.getElementById("tw2formula11")?.innerText || "",
                                                 tw2keterangan11: document.getElementById("tw2keterangan11")?.innerText || "",
                                                 

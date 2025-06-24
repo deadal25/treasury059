@@ -340,11 +340,11 @@
                                     <div id="7c-N" class="content">
                                         <br>
                                         <h3><b>Nilai Kinerja TIK KPPN</b></h3>
-                                        <label for="tw2skoki">SK OKI:</label>
-                                        <input type="number" id="tw2skoki" value="0" oninput="tw2hitung16()">
+                                        <label for="tw2nda">NDA:</label>
+                                        <input type="number" id="tw2nda" value="0" oninput="tw2hitung16()">
 
-                                        <label for="tw2sosialisasi">Sosialisasi:</label>
-                                        <input type="number" id="tw2sosialisasi" value="0" oninput="tw2hitung16()">
+                                        <label for="tw2keterlibatan">Keterlibatan:</label>
+                                        <input type="number" id="tw2keterlibatan" value="0" oninput="tw2hitung16()">
 
                                         <label for="tw2publikasi">Publikasi:</label>
                                         <input type="number" id="tw2publikasi" value="0" oninput="tw2hitung16()">
@@ -400,74 +400,83 @@
                                                     <td rowspan="6" valign="top"> 7c-N </td>
                                                     <td rowspan="6" valign="top" class="left-align">Nilai Kinerja TIK KPPN</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td><b>Nilai</b></td>
                                                     <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td>Formula</td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">SK OKI </td>
-                                                    <td>15%</td>
-                                                    <td  id="tw2valuehasilskoki">66</td>
-                                                    <td  id="tw2nilaiskoki">66</td>
-                                                    <td rowspan="5" valign="top" class="left-align" id="tw2formula15">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <td class="left-align">NDA </td>
+                                                    <!-- <td>15%</td> -->
+                                                    <td  id="tw2valuehasilnda"></td>
+                                                    <!-- <td  id="tw2nilainda"></td> -->
+                                                     <td></td>
+                                                    <td></td>
+                                                    <td rowspan="5" valign="top" class="left-align" id="tw2formula15"></td>
                                                     <td rowspan="5" valign="top" class="left-align" id="tw2keterangan15">
-                                                        Tolong selalu enter agar tidak terlalu panjang
-                                                        Hasil Penilaian IPA dan ITKP
-                                                        Nota Dinas Sekretaris Ditjen Perbendaharaan nomor ND
-                                                        276/PB.1/2026 tanggal 17 Januari 2026
                                                         </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Sosialisasi</td>
-                                                    <td>35%</td>
-                                                    <td  id="tw2valuehasilsosialisasi">48</td>
-                                                    <td  id="tw2nilaisosialisasi">48</td>
+                                                    <td class="left-align">keterlibatan</td>
+                                                    <!-- <td>35%</td> -->
+                                                    <td  id="tw2valuehasilketerlibatan"></td>
+                                                    <td></td>
+                                                    <!-- <td  id="tw2nilaiketerlibatan"></td> -->
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Publikasi</td>
-                                                    <td>15%</td>
-                                                    <td  id="tw2valuehasilpublikasi">48</td>
-                                                    <td  id="tw2nilaipublikasi">48</td>
+                                                    <!-- <td>15%</td> -->
+                                                    <td  id="tw2valuehasilpublikasi"></td>
+                                                    <td></td>
+                                                    <!-- <td  id="tw2nilaipublikasi"></td> -->
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Penguatan Keamanan Perangkat TIK</td>
-                                                    <td>35%</td>
-                                                    <td  id="tw2valuehasilpkpt">48</td>
-                                                    <td  id="tw2nilaipkpt">48</td>
+                                                    <!-- <td>35%</td> -->
+                                                    <td  id="tw2valuehasilpkpt"></td>
+                                                    <!-- <td  id="tw2nilaipkpt"></td> -->
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="tw2totalnilai16"><b>120</b></td>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                    <td id="tw2totalnilai16"><b></b></td>
+                                                     <td id="tw2totalnilai16a"><b></b></td>
                                                     <!-- <td></td> -->
                                                 </tr>
                                             </tbody>
                                         </table>
                                         <script>
                                             function tw2hitung16() {
-                                                let tw2skoki = parseFloat(document.getElementById("tw2skoki").value) || 0;
-                                                let tw2sosialisasi = parseFloat(document.getElementById("tw2sosialisasi").value) || 0;
+                                                let tw2nda = parseFloat(document.getElementById("tw2nda").value) || 0;
+                                                let tw2keterlibatan = parseFloat(document.getElementById("tw2keterlibatan").value) || 0;
                                                 let tw2publikasi = parseFloat(document.getElementById("tw2publikasi").value) || 0;
                                                 let tw2pkpt = parseFloat(document.getElementById("tw2pkpt").value) || 0;
 
 
-                                                let tw2nilaiskoki = 0.15 * tw2skoki;
-                                                let tw2nilaisosialisasi = 0.35 * tw2sosialisasi;
-                                                let tw2nilaipublikasi = 0.15 * tw2publikasi;
-                                                let tw2nilaipkpt = 0.35 * tw2pkpt;
-                                                let tw2total16 = tw2nilaiskoki + tw2nilaisosialisasi + tw2nilaipublikasi + tw2nilaipkpt;
+                                                // let tw2nilainda = 0.10 * tw2nda;
+                                                // let tw2nilaiketerlibatan = 0.40 * tw2keterlibatan;
+                                                // let tw2nilaipublikasi = 0.15 * tw2publikasi;
+                                                // let tw2nilaipkpt = 0.35 * tw2pkpt;
+                                                // let tw2total16 = tw2nilainda + tw2nilaiketerlibatan + tw2nilaipublikasi + tw2nilaipkpt;
+                                                // let tw2total16a =tw2total16;
                                                 // let indeksCapaian16 = (tw2total16 > 100) ? 120 : tw2total16.toFixed(2);
+                                                let tw2total16 = tw2nda + tw2keterlibatan + tw2publikasi + tw2pkpt;
+                                                let tw2total16a =tw2total16;
 
-                                                document.getElementById("tw2valuehasilskoki").innerText = tw2skoki.toFixed(0);
-                                                document.getElementById("tw2valuehasilsosialisasi").innerText = tw2sosialisasi.toFixed(0);
-                                                document.getElementById("tw2valuehasilpublikasi").innerText = tw2publikasi.toFixed(0);
-                                                document.getElementById("tw2valuehasilpkpt").innerText = tw2pkpt.toFixed(0);
-                                                document.getElementById("tw2nilaiskoki").innerText = tw2nilaiskoki.toFixed(2);
-                                                document.getElementById("tw2nilaisosialisasi").innerText = tw2nilaisosialisasi.toFixed(2);
-                                                document.getElementById("tw2nilaipublikasi").innerText = tw2nilaipublikasi.toFixed(2);
-                                                document.getElementById("tw2nilaipkpt").innerText = tw2nilaipkpt.toFixed(2);
-                                                document.getElementById("tw2totalnilai16").innerText = tw2total16.toFixed(0);
+                                                document.getElementById("tw2valuehasilnda").innerText = tw2nda;
+                                                document.getElementById("tw2valuehasilketerlibatan").innerText = tw2keterlibatan;
+                                                document.getElementById("tw2valuehasilpublikasi").innerText = tw2publikasi;
+                                                document.getElementById("tw2valuehasilpkpt").innerText = tw2pkpt;
+                                                // document.getElementById("tw2nilainda").innerText = tw2nilainda.toFixed(2);
+                                                // document.getElementById("tw2nilaiketerlibatan").innerText = tw2nilaiketerlibatan.toFixed(2);
+                                                // document.getElementById("tw2nilaipublikasi").innerText = tw2nilaipublikasi.toFixed(2);
+                                                // document.getElementById("tw2nilaipkpt").innerText = tw2nilaipkpt.toFixed(2);
+                                                document.getElementById("tw2totalnilai16").innerText = tw2total16;
+                                                document.getElementById("tw2totalnilai16a").innerText = tw2total16a;
                                             }
 
                                             tw2hitung16();
@@ -500,15 +509,16 @@
                                             }
 
                                             const data = {
-                                                tw2valuehasilskoki: document.getElementById("tw2valuehasilskoki")?.innerText || "",
-                                                tw2valuehasilsosialisasi: document.getElementById("tw2valuehasilsosialisasi")?.innerText || "",
+                                                tw2valuehasilnda: document.getElementById("tw2valuehasilnda")?.innerText || "",
+                                                tw2valuehasilketerlibatan: document.getElementById("tw2valuehasilketerlibatan")?.innerText || "",
                                                 tw2valuehasilpublikasi: document.getElementById("tw2valuehasilpublikasi")?.innerText || "",
                                                 tw2valuehasilpkpt: document.getElementById("tw2valuehasilpkpt")?.innerText || "",
-                                                tw2nilaiskoki: document.getElementById("tw2nilaiskoki")?.innerText || "",
-                                                tw2nilaisosialisasi: document.getElementById("tw2nilaisosialisasi")?.innerText || "",
-                                                tw2nilaipublikasi: document.getElementById("tw2nilaipublikasi")?.innerText || "",   
-                                                tw2nilaipkpt: document.getElementById("tw2nilaipkpt")?.innerText || "",
+                                                // tw2nilainda: document.getElementById("tw2nilainda")?.innerText || "",
+                                                // tw2nilaiketerlibatan: document.getElementById("tw2nilaiketerlibatan")?.innerText || "",
+                                                // tw2nilaipublikasi: document.getElementById("tw2nilaipublikasi")?.innerText || "",   
+                                                // tw2nilaipkpt: document.getElementById("tw2nilaipkpt")?.innerText || "",
                                                 tw2totalnilai16: document.getElementById("tw2totalnilai16")?.innerText || "",
+                                                tw2totalnilai16a: document.getElementById("tw2totalnilai16a")?.innerText || "",
                                                 // nilaipublikasi: document.getElementById("nilaipublikasi")?.innerText || "",        
                                             
                                                 tw2formula15: document.getElementById("tw2formula15")?.innerText || "",
@@ -532,12 +542,12 @@
                                         </script>
                                         <!-- <script>
                                             function tw2submitData15() {
-                                                let tw2valuehasilskoki = document.getElementById("tw2valuehasilskoki").innerText;
-                                                let tw2valuehasilsosialisasi = document.getElementById("tw2valuehasilsosialisasi").innerText;
+                                                let tw2valuehasilnda = document.getElementById("tw2valuehasilnda").innerText;
+                                                let tw2valuehasilketerlibatan = document.getElementById("tw2valuehasilketerlibatan").innerText;
                                                 let tw2valuehasilpublikasi = document.getElementById("tw2valuehasilpublikasi").innerText;
                                                 let tw2valuehasilpkpt = document.getElementById("tw2valuehasilpkpt").innerText;
-                                                let tw2nilaiskoki = document.getElementById("tw2nilaiskoki").innerText;
-                                                let tw2nilaisosialisasi = document.getElementById("tw2nilaisosialisasi").innerText;
+                                                let tw2nilainda = document.getElementById("tw2nilainda").innerText;
+                                                let tw2nilaiketerlibatan = document.getElementById("tw2nilaiketerlibatan").innerText;
                                                 let tw2nilaipublikasi = document.getElementById("tw2nilaipublikasi").innerText;
                                                 let tw2nilaipkpt = document.getElementById("tw2nilaipkpt").innerText;
                                                 let tw2totalnilai16 = document.getElementById("tw2totalnilai16").innerText;
@@ -549,12 +559,12 @@
                                                 let data = storedData ? JSON.parse(storedData) : {};
 
                                                 // Update hanya bagian halaman 16
-                                                data.tw2valuehasilskoki = tw2valuehasilskoki;
-                                                data.tw2valuehasilsosialisasi = tw2valuehasilsosialisasi;
+                                                data.tw2valuehasilnda = tw2valuehasilnda;
+                                                data.tw2valuehasilketerlibatan = tw2valuehasilketerlibatan;
                                                 data.tw2valuehasilpublikasi = tw2valuehasilpublikasi;
                                                 data.tw2valuehasilpkpt = tw2valuehasilpkpt;
-                                                data.tw2skoki = tw2nilaiskoki;
-                                                data.tw2sosialisasi = tw2nilaisosialisasi;
+                                                data.tw2nda = tw2nilainda;
+                                                data.tw2keterlibatan = tw2nilaiketerlibatan;
                                                 data.tw2publikasi = tw2nilaipublikasi;
                                                 data.tw2pkpt = tw2nilaipkpt;
                                                 data.tw2keterangan15 = tw2keterangan15hasil;

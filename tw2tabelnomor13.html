@@ -344,11 +344,21 @@
                                         <!-- <label for="smart">Nilai SMART:</label>
                                         <input type="number" id="smart" value="0" oninput="tw2hitungNilai13()"> -->
 
-                                        <label for="tw2ikpa">Nilai IKPA:</label>
-                                        <input type="number" id="tw2ikpa" value="0" oninput="tw2cekIKPA()">
+                                        <!-- <label for="tw2ikpa">Nilai IKPA:</label>
+                                        <input type="number" id="tw2ikpa" value="0" oninput="tw2cekIKPA()"> -->
 
+                                        <label for="tw2vikpa13a">Masukkan Nilai IKPA: </label>
+                                        <input type="number" id="tw2vikpa13a" min="0" value="0"oninput="tw2hitungNilai13()">
+                                        <!-- <label for="tw2vlhps10b">LPJ Bendahara yang seharusnya disampaikan ke KPPN lingkup Kanwil DJPb: </label>
+                                        <input type="number" id="tw2vlhps10b" min="0" value="0"oninput="tw2hitungNilai13()"> -->
+
+                                        <label for="tw2vikpa13b">Masukkan Nilai Indeks Ketepatan Waktu LK Audited: </label>
+                                        <input type="number" id="tw2vikpa13b" min="0"  value="0"oninput="tw2hitungNilai13()">
+                                        <label for="tw2vikpa13c">Masukkan Nilai Kepatuhan Pelaksanaan Anggaran: </label>
+                                        <input type="number" id="tw2vikpa13c" min="0"  value="0"oninput="tw2hitungNilai13()">
+<!-- 
                                         <label for="tw2lk">Nilai LK UAKPA UAKPB:</label>
-                                        <input type="number" id="tw2lk" value="0" oninput="tw2hitungNilai13()">
+                                        <input type="number" id="tw2lk" value="0" oninput="tw2hitungNilai13()"> -->
 
                                         <!-- <label for="tw2tg">Target:</label>
                                         <input type="number" id="tw2tg" value="83" oninput="tw2hitungNilai13()"> -->
@@ -398,82 +408,106 @@
                                             </tbody>
                                             <tbody>
                                                 <tr>
-                                                    <td rowspan="4" valign="top">13</td>
-                                                    <td rowspan="4" valign="top"> 7a-CP </td>
-                                                    <td rowspan="4" valign="top" class="left-align">Indeks kualitas pengelolaan keuangan KPPN</td>
+                                                    <td rowspan="9" valign="top">13</td>
+                                                    <td rowspan="9" valign="top"> 7a-CP </td>
+                                                    <td rowspan="9" valign="top" class="left-align">Indeks kualitas pengelolaan keuangan KPPN</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td><b>Nilai</b></td>
                                                     <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td>Formula</td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
+                                                    <td class="left-align" colspan="4"><b>IKPA</b></td>
+                                                    <td rowspan="8" valign="top" class="left-align" id="tw2formula13"></td>
+                                                    <td rowspan="8" valign="top" class="left-align" id="tw2keterangan13"></td>
+                                                
+                                                </tr>
+                                                <tr>
                                                     <td class="left-align">IKPA</td>
-                                                    <td>60%</td>
-                                                    <td id="tw2valuenilaiNKA">47,94</td>
-                                                    <td id="tw2nilaiNKA">47,94</td>
-                                                    <td rowspan="3" valign="top" class="left-align" id="tw2formula13">Formula: (60% x IKKPA) + (40% x LK tingkat UAPPA-W dan
-                                                        UAPPB-W) Tolong selalu enter agar tidak terlalu panjang</td>
-                                                    <td rowspan="3" valign="top" class="left-align" id="tw2keterangan13">
-                                                        Tolong selalu enter agar tidak terlalu panjang
-                                                        Formula: (60% x IKKPA) + (40% x LK tingkat UAPPA-W dan
-                                                        UAPPB-W)
-                                                        a.IKKPA
-                                                        Nilai capaian berasal dari nilai SMART sebesar 80,37, nilai
-                                                        IKPA sebesar 68,6
-                                                        NKA =30%*Nilai SMART + 30%*Nilai IKKPA
-                                                        = 30%*80,37 + 30%*68,6*= 74,4
-                                                        (NKA < 80 dikonversi menjadi 79,9) b. LK UAKPA UAKPB Nilai LK
-                                                            UAKPA UAKPB=91=91/83=107,06 Capaian IKU Persentase Kualitas
-                                                            Pengelolaan Keuangan KPPN=60%*79,9 + 40%*107,06=90,76</td>
+                                                    <td id="tw2valueikpa13a"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Nilai IKPA</b></td>
+                                                    <td id="tw2valuenilaiNKA"></td>
+                                                    <td></td>
+                                                    <!-- <td id="tw2valueindeks9a"></td> -->
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">LK UAKPA UAKPB </td>
-                                                    <td>40%</td>
-                                                    <td id="tw2valuenilaiLK">43</td>
-                                                    <td id="tw2nilaiLK">43</td>
+                                                    <td class="left-align" colspan="4"><b>LK UAKPA UAKPB</b></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="tw2totalNilai13"><b>90,76</b></td>
-                                                    <!-- <td></td> -->
+                                                    <td class="left-align">Indeks Ketepatan Waktu LK Audited</td>
+                                                    <td id="tw2valueikpa13b"></td>
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
+                                                <tr>
+                                                    <td class="left-align">Kepatuhan Pelaksanaan Anggaran</td>
+                                                    <td id="tw2valueikpa13c"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Nilai UAKPA UAKPB</b></td>
+                                                    <td id="tw2valuenilaiLK"></td>
+                                                    <!-- <td id="tw2indeksB8"></td> -->
+                                                    <td></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                     <td id="tw2totalNilai13"><b></b></td>
+                                                    <td id="tw2totalNilai13a"><b></b></td>
+                                                </tr>
+                                                
                                             </tbody>
                                         </table>
 
                                         <script>
-                                            function tw2cekIKPA() {
-                                                let tw2ikpaInput = document.getElementById('tw2ikpa');
-                                                let tw2ikpaValue = parseFloat(tw2ikpaInput.value) || 0;
-
-                                                // Jika nilai IKPA > 98, set otomatis ke 120, jika tidak gunakan nilai aslinya
-                                                let tw2valuenilaiNKA = (tw2ikpaValue >= 98) ? 120 : tw2ikpaValue.toFixed(2);
-
-                                                // Hitung Nilai IKPA (0.6 * tw2valuenilaiNKA)
-                                                let tw2nilaiIkpa = (0.6 * tw2valuenilaiNKA).toFixed(2);
-
-                                                // Update tampilan
-                                                document.getElementById('tw2valuenilaiNKA').innerText = tw2valuenilaiNKA;
-                                                document.getElementById('tw2nilaiNKA').innerText = tw2nilaiIkpa;
-                                            }
-
                                             function tw2hitungNilai13() {
-                                                let tw2ikpa = parseFloat(document.getElementById('tw2ikpa').value) || 0;
-                                                let tw2lk = parseFloat(document.getElementById('tw2lk').value) || 0;
+                                                // let tw2ikpa = parseFloat(document.getElementById('tw2ikpa').value) || 0;
+                                                let tw2vikpa13a = parseFloat(document.getElementById("tw2vikpa13a").value) || 0;
+                                                let tw2vikpa13b = parseFloat(document.getElementById("tw2vikpa13b").value) || 0;
+                                                let tw2vikpa13c = parseFloat(document.getElementById("tw2vikpa13c").value) || 0;
+                                                // let tw2lk = parseFloat(document.getElementById('tw2lk').value) || 0;
 
-                                                let tw2valuenilaiNKA = (tw2ikpa > 98) ? 120 : tw2ikpa.toFixed(2);
-                                                let tw2nilaiIkpa = (0.6 * tw2valuenilaiNKA).toFixed(2);
-                                                let tw2nilaiLKfix = (0.4 * tw2lk).toFixed(2);
-                                                let tw2totalNilai13 = (parseFloat(tw2nilaiIkpa) + parseFloat(tw2nilaiLKfix));
+                                                let tw2valuenilaiNKA = getIndeksIKI13a(tw2vikpa13a);
 
-                                                // Update tampilan
+                                                let tw2valuenilaiLK = (tw2vikpa13b + tw2vikpa13c) / 2;
+
+                                                let tw2totalNilai13 = ((0.6 *tw2valuenilaiNKA) + (0.4 *tw2valuenilaiLK ));                                            // let tw2nilaiIkpa = (0.6 * tw2valuenilaiNKA).toFixed(2);
+                                                let tw2totalNilai13a = tw2totalNilai13;
+                                                document.getElementById('tw2valueikpa13a').innerText = tw2vikpa13a;
+                                                document.getElementById('tw2valueikpa13b').innerText = tw2vikpa13b;
+                                                document.getElementById('tw2valueikpa13c').innerText = tw2vikpa13c;
                                                 document.getElementById('tw2valuenilaiNKA').innerText = tw2valuenilaiNKA;
-                                                document.getElementById('tw2nilaiNKA').innerText = tw2nilaiIkpa;
-                                                document.getElementById('tw2valuenilaiLK').innerText = tw2lk.toFixed(0);
-                                                document.getElementById('tw2nilaiLK').innerText = tw2nilaiLKfix;
-                                                document.getElementById('tw2totalNilai13').innerText = tw2totalNilai13.toFixed(0);
+                                                document.getElementById('tw2valuenilaiLK').innerText = tw2valuenilaiLK.toFixed(0);
+                                               
+                                                document.getElementById('tw2totalNilai13').innerText = tw2totalNilai13.toFixed(2);
+                                                document.getElementById('tw2totalNilai13a').innerText = tw2totalNilai13a.toFixed(2);
                                             }
+
+                                            function getIndeksIKI13a(realisasiIKPA) {
+                                                if (realisasiIKPA >= 98) {
+                                                    return 120;
+                                                } else if (realisasiIKPA > 95.5 && realisasiIKPA < 98) {
+                                                    return 100 + ((realisasiIKPA - 95.5) / 0.125);
+                                                } else if (realisasiIKPA === 95.5) {
+                                                    return 100;
+                                                } else if (realisasiIKPA > 85 && realisasiIKPA < 95.5) {
+                                                    return 80 + ((realisasiIKPA - 85) / 0.525);
+                                                } else if (realisasiIKPA === 85) {
+                                                    return 80;
+                                                } else {
+                                                    return 79.9;
+                                                }
+                                            }
+
                                         </script>
 
                                         <script type="module">
@@ -504,11 +538,13 @@
                                             }
 
                                             const data = {
+                                                tw2valueikpa13a: document.getElementById("tw2valueikpa13a")?.innerText || "",
+                                                tw2valueikpa13b: document.getElementById("tw2valueikpa13b")?.innerText || "",
+                                                tw2valueikpa13c: document.getElementById("tw2valueikpa13c")?.innerText || "",
                                                 tw2valuenilaiNKA: document.getElementById("tw2valuenilaiNKA")?.innerText || "",
-                                                tw2nilaiNKA: document.getElementById("tw2nilaiNKA")?.innerText || "",
-                                                tw2nilaiLK: document.getElementById("tw2nilaiLK")?.innerText || "",
                                                 tw2valuenilaiLK: document.getElementById("tw2valuenilaiLK")?.innerText || "",
                                                 tw2totalNilai13: document.getElementById("tw2totalNilai13")?.innerText || "",
+                                                tw2totalNilai13a: document.getElementById("tw2totalNilai13a")?.innerText || "",
                                                 // totalrealisasi12d: document.getElementById("totalrealisasi12d")?.value || "",
                                                 // indeksTotal8: document.getElementById("indeksTotal8")?.innerText || "",        
                                             

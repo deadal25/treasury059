@@ -347,8 +347,8 @@
                                         <input type="number" id="tw2persentaseB" oninput="tw2updateNilai2()" min="0" max="100">
                                         <label for="tw2persentaseC">Penyelesaian matriks tindak lanjut:</label>
                                         <input type="number" id="tw2persentaseC" oninput="tw2updateNilai2()" min="0" max="100">
-                                        <label for="tw2persentaseD">Indeks penilaian kualitas LKBUN KPPN yang dilakukan oleh Kanwil DJPb:</label>
-                                        <input type="number" id="tw2persentaseD" oninput="tw2updateNilai2()" min="0" max="100">
+                                        <!-- <label for="tw2persentaseD">Indeks penilaian kualitas LKBUN KPPN yang dilakukan oleh Kanwil DJPb:</label>
+                                        <input type="number" id="tw2persentaseD" oninput="tw2updateNilai2()" min="0" max="100"> -->
 
                                         <label for="tw2formula2">Masukkan Formula:</label>
                                         <textarea id="tw2inputFormula2" class="form-control" rows="3"
@@ -397,65 +397,48 @@
                                             </tbody>
                                             <tbody>
                                                 <tr>
-                                                    <td rowspan="6" valign="top">2</td>
-                                                    <td rowspan="6" valign="top" width="50px"> 1b-N </td>
-                                                    <td rowspan="6" valign="top" class="left-align">Indeks Kualitas LK Kuasa BUN KPPN</td>
+                                                    <td rowspan="5" valign="top">2</td>
+                                                    <td rowspan="5" valign="top" width="50px"> 1b-N </td>
+                                                    <td rowspan="5" valign="top" class="left-align">Indeks Kualitas LK Kuasa BUN KPPN</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td><b>Nilai</b></td>
                                                     <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td>Formula</td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Indeks Kualitas Analisis Data SPAN</td>
-                                                        <td><b>50%</b></td>
-                                                        <td id="tw2PersentaseAhasil"><b>0</b></td>
-                                                    <td id="tw2PersentaseAValue"><b>0</b></td>
-                                                    <td rowspan="5" valign="top" class="left-align" id="tw2formula2"> Tolong selalu enter agar tidak terlalu panjang</td>
-                                                    <td rowspan="5" valign="top" class="left-align" id="tw2keterangan2">Tolong selalu enter agar tidak terlalu panjang
-                                                        A.
-                                                        Indeks kualitas pelaksanaan Rekonsilias tingkat UAKPA
-                                                        diperoleh dari persentase jumlah satker aktif yang diterbitkan
-                                                        SHR (Surat Hasil Rekonsiliasi) tepat waktu dibandingkan
-                                                        jumlah satker aktif yang wajib rekonsiliasi.
-                                                        September: 64/64*100 = 99,4
-                                                        Oktober : 64/64*100 = 100
-                                                        November: 64/64*100 = 100
-                                                        100 = Indeks 5 (91-100%)
-
-                                                        B. Indeks penilaian kualitas LKBUN KPPN yang dilakukan
-                                                        oleh Kanwil DJPb
-                                                        Kualitas LKBUN KPPN ( Rekonsiliasi, To do List, Tutup
-                                                        Permanen)
-                                                        September: 64/64*100 = 99,4
-                                                        Oktober : 64/64*100 = 100
-                                                        November: 64/64*100 = 100
-                                                        100 = Indeks 5 (91-100%)
+                                                    <td class="left-align" colspan="4"><b>Indeks Kualitas Analisis Data SPAN</b></td>
+                                                    
+                                                    <td rowspan="4" valign="top" class="left-align" id="tw2formula2"></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="tw2keterangan2">
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Ketepatan Waktu pengiriman KK analisis tepat waktu dilakukan bulanan</td>
-                                                        <td>50%</td>
+                                                        <!-- <td>50%</td> -->
                                                         <td id="tw2PersentaseBValue"><b>0</b></td>
                                                         <td id="tw2PersentaseBhasil"><b>0</b></td>
+                                                        <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Penyelesaian matriks tindak lanjut</td>
-                                                        <td>50%</td>
+                                                        <!-- <td>50%</td> -->
                                                         <td id="tw2PersentaseCValue"><b>0</b></td>
                                                         <td id="tw2PersentaseChasil"><b>0</b></td>
+                                                        <td></td>
                                                 </tr>
-                                                <tr>
+                                                <!-- <tr>
                                                     <td class="left-align">Indeks penilaian kualitas LKBUN KPPN yang dilakukan oleh Kanwil DJPb</td>
                                                         <td><b>50%</b></td>
                                                         <td id="tw2PersentaseDValue"><b>0</b></td>
                                                         <td id="tw2PersentaseDhasil"><b>0</b></td>
-                                                </tr>
+                                                </tr> -->
                                                 <tr>
                                                     
                                                     <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="tw2totalPersentase2"><b>5</b></td>
+                                                    <td colspan="2" id="tw2totalPersentase2"><b></b></td>
+                                                    <td id="tw2indekscapaian2" style="text-align: center; vertical-align: middle;"><b></b></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -464,28 +447,31 @@
                                                 // let persentaseA = parseFloat(document.getElementById("persentaseA").value) || 0;
                                                 let tw2persentaseB = parseFloat(document.getElementById("tw2persentaseB").value) || 0;
                                                 let tw2persentaseC = parseFloat(document.getElementById("tw2persentaseC").value) || 0;
-                                                let tw2persentaseD = parseFloat(document.getElementById("tw2persentaseD").value) || 0;
+                                                // let tw2persentaseD = parseFloat(document.getElementById("tw2persentaseD").value) || 0;
 
                                                 // let PersentaseAhasil = (persentaseA * 50) / 100;
-                                                let tw2PersentaseBhasil = (tw2persentaseB * 50) / 100;
-                                                let tw2PersentaseChasil = (tw2persentaseC * 50) / 100;
-                                                let tw2PersentaseDhasil = (tw2persentaseD * 50) / 100;
+                                                let tw2PersentaseBhasil = tw2persentaseB;
+                                                let tw2PersentaseChasil = tw2persentaseC;
+                                                // let tw2PersentaseDhasil = (tw2persentaseD * 50) / 100;
 
-                                                let tw2PersentaseAValue = tw2PersentaseBhasil + tw2PersentaseChasil;
-                                                let tw2totalPersentase2 = tw2PersentaseAValue +tw2PersentaseDhasil;
+                                                 let tw2totalPersentase2 = (tw2PersentaseBhasil + tw2PersentaseChasil)/2;
+                                                // let tw2totalPersentase2 = tw2PersentaseAValue;
+                                                // let tw2PersentaseAValue = (tw2PersentaseBhasil + tw2PersentaseChasil)/2;
+                                                // let tw2totalPersentase2 = tw2PersentaseAValue;
 
                                                 
                                                 document.getElementById("tw2PersentaseBValue").innerText = tw2persentaseB;
                                                 document.getElementById("tw2PersentaseCValue").innerText = tw2persentaseC;
-                                                document.getElementById("tw2PersentaseAValue").innerText = tw2PersentaseAValue;
-                                                document.getElementById("tw2PersentaseDValue").innerText = tw2persentaseD;
+                                                // document.getElementById("tw2PersentaseAValue").innerText = tw2PersentaseAValue;
+                                                // document.getElementById("tw2PersentaseDValue").innerText = tw2persentaseD;
                                                 // document.getElementById("PersentaseAhasil").innerText = PersentaseAhasil.toFixed(1);
-                                                document.getElementById("tw2PersentaseBhasil").innerText = tw2PersentaseBhasil.toFixed(1);
-                                                document.getElementById("tw2PersentaseChasil").innerText = tw2PersentaseChasil.toFixed(1);
-                                                document.getElementById("tw2PersentaseDhasil").innerText = tw2PersentaseDhasil.toFixed(1);
+                                                document.getElementById("tw2PersentaseBhasil").innerText = tw2PersentaseBhasil;
+                                                document.getElementById("tw2PersentaseChasil").innerText = tw2PersentaseChasil;
+                                                // document.getElementById("tw2PersentaseDhasil").innerText = tw2PersentaseDhasil.toFixed(1);
                                                 // document.getElementById("indeksA").innerText = indeksA;
                                                 // document.getElementById("indeksB").innerText = indeksB;
                                                 document.getElementById("tw2totalPersentase2").innerText = tw2totalPersentase2;
+                                                document.getElementById("tw2indekscapaian2").innerText = tw2totalPersentase2;
                                             }
 
                                         </script>
@@ -520,11 +506,12 @@
                                                 tw2PersentaseAValue: document.getElementById("tw2PersentaseAValue")?.innerText || "",
                                                 tw2PersentaseBValue: document.getElementById("tw2PersentaseBValue")?.innerText || "",
                                                 tw2PersentaseCValue: document.getElementById("tw2PersentaseCValue")?.innerText || "",
-                                                tw2PersentaseDValue: document.getElementById("tw2PersentaseDValue")?.innerText || "",
+                                                // tw2PersentaseDValue: document.getElementById("tw2PersentaseDValue")?.innerText || "",
                                                 tw2PersentaseBhasil: document.getElementById("tw2PersentaseBhasil")?.innerText || "",
                                                 tw2PersentaseChasil: document.getElementById("tw2PersentaseChasil")?.innerText || "",
-                                                tw2PersentaseDhasil: document.getElementById("tw2PersentaseDhasil")?.innerText || "",
+                                                // tw2PersentaseDhasil: document.getElementById("tw2PersentaseDhasil")?.innerText || "",
                                                 tw2totalPersentase2: document.getElementById("tw2totalPersentase2")?.innerText || "",
+                                                tw2indekscapaian2: document.getElementById("tw2indekscapaian2")?.innerText || "",
                                                 
                                                 tw2formula2: document.getElementById("tw2formula2")?.innerText || "",
                                                 tw2keterangan2: document.getElementById("tw2keterangan2")?.innerText || "",

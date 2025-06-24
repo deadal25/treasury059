@@ -400,47 +400,43 @@
                                                         <i>Financial Advisory</i>
                                                     </td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td><b>Nilai</b></td>
-                                                    <td ><b>Total</b></td>
+                                                    <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td>Formula</td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Implementasi Central
                                                         Government Advisory </td>
-                                                    <td>50%</td>
-                                                    <td  id="tw2valueCG">50,00</td>
-                                                    <td  id="tw2nilaiCG">50,00</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="tw2formula4">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <!-- <td>50%</td> -->
+                                                    <td  id="tw2valueCG"></td>
+                                                    <td  id="tw2nilaiCG"></td>
+                                                    <td></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="tw2formula4"></td>
                                                     <td rowspan="4" valign="top" class="left-align" id="tw2keterangan4">
-                                                        FORMULA = (Nilai rata2 CG x 50%) + (Nilai rata2 LG x 30%)
-                                                        + (Implementasi SM x 20%)
-
-                                                        *Formula bagi KPPN yang tidak melakukan penyaluran TKD
-                                                        (tidak melakukan LG)
-                                                        =((Nilai rata2 CG x 50%) + (Implementasi SM x 20%)):70 x
-                                                        100
-
-                                                        Tolong selalu enter agar tidak terlalu panjang </td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Implementasi Local
                                                         Government </td>
-                                                    <td>30%</td>
-                                                    <td id="tw2valueLG">30,00</td>
-                                                    <td  id="tw2nilaiLG">30,00</td>
+                                                    <!-- <td>30%</td> -->
+                                                    <td id="tw2valueLG"></td>
+                                                    <td  id="tw2nilaiLG"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Implementasi Special
                                                         Mission Advisory </td>
-                                                    <td>20%</td>
-                                                    <td  id="tw2valueSM">20,00</td>
-                                                    <td  id="tw2nilaiSM">20,00</td>
+                                                    <!-- <td>20%</td> -->
+                                                    <td  id="tw2valueSM"></td>
+                                                    <td  id="tw2nilaiSM"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="tw2totalNilai4"><b>100</b></td>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                     <td id="tw2totalNilai4a"><b></b></td>
+                                                    <td id="tw2totalNilai4"><b></b></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -457,6 +453,7 @@
                                                 let tw2nilaiTertimbangSM = (tw2nilaiSM * 20) / 100;
 
                                                 let tw2totalNilai4 = tw2nilaiTertimbangCG + tw2nilaiTertimbangLG + tw2nilaiTertimbangSM;
+                                                let tw2totalNilai4a = tw2totalNilai4;
 
                                                 document.getElementById('tw2valueCG').innerText = tw2nilaiCG.toFixed(0);
                                                 document.getElementById('tw2valueLG').innerText = tw2nilaiLG.toFixed(0);
@@ -466,6 +463,7 @@
                                                 document.getElementById('tw2nilaiLG').innerText = tw2nilaiTertimbangLG.toFixed(0);
                                                 document.getElementById('tw2nilaiSM').innerText = tw2nilaiTertimbangSM.toFixed(0);
                                                 document.getElementById('tw2totalNilai4').innerText = tw2totalNilai4.toFixed(0);
+                                                document.getElementById('tw2totalNilai4a').innerText = tw2totalNilai4a.toFixed(0);
                                                 // document.getElementById('hasilAkhir').innerText = totalNilai.toFixed(0);
                                             }
 
@@ -507,6 +505,7 @@
                                                 tw2valueLG: document.getElementById("tw2valueLG")?.innerText || "",
                                                 tw2valueSM: document.getElementById("tw2valueSM")?.innerText || "",
                                                 tw2totalNilai4: document.getElementById("tw2totalNilai4")?.innerText || "",
+                                                tw2totalNilai4a: document.getElementById("tw2totalNilai4a")?.innerText || "",
                                                 // totalPersentase2: document.getElementById("totalPersentase2")?.innerText || "",
                                                 
                                                 tw2formula4: document.getElementById("tw2formula4")?.innerText || "",

@@ -340,13 +340,23 @@
                                     <div id="6a-N" class="content">
                                         <br>
                                         <h3><b>Tingkat kualitas kinerja organisasi </b></h3>
-                                        <label for="tw2lhps1">Indeks Capaian komponen Nilai LHPS:</label>
+                                        <!-- <label for="tw2lhps1">Indeks Capaian komponen Nilai LHPS:</label>
                                         <input type="number" id="tw2lhps1" min="0" max="100" value="9.56"
-                                            oninput="tw2hitungNilai10()">
+                                            oninput="tw2hitungNilai10()"> -->
 
-                                        <label for="tw2lhps2">Nilai SFO:</label>
+                                         <label for="tw2vlhps10a">LPJ Bendahara yang disampaikan ke KPPN tepat waktu: </label>
+                                        <input type="number" id="tw2vlhps10a" min="0" value="0"oninput="tw2hitungNilai10()">
+                                        <label for="tw2vlhps10b">LPJ Bendahara yang seharusnya disampaikan ke KPPN lingkup Kanwil DJPb: </label>
+                                        <input type="number" id="tw2vlhps10b" min="0" value="0"oninput="tw2hitungNilai10()">
+
+                                        <label for="tw2vlhps10c">LPJ Bendahara yang diverifikasi dan divalidasi KPPN tepat waktu: </label>
+                                        <input type="number" id="tw2vlhps10c" min="0"  value="0"oninput="tw2hitungNilai10()">
+                                        <label for="tw2vlhps10d">LPJ Bendahara yang disampaikan ke KPPN lingkup Kanwil DJPb: </label>
+                                        <input type="number" id="tw2vlhps10d" min="0"  value="0"oninput="tw2hitungNilai10()">
+
+                                        <!-- <label for="tw2lhps2">Nilai SFO:</label>
                                         <input type="number" id="tw2lhps2" min="0" max="100" value="9.71"
-                                            oninput="tw2hitungNilai10()">
+                                            oninput="tw2hitungNilai10()"> -->
 
                                         <label for="tw2formula10">Masukkan Formula:</label>
                                         <textarea id="tw2inputFormula10" class="form-control" rows="3"
@@ -390,61 +400,93 @@
                                             </tbody>
                                             <tbody>
                                                 <tr>
-                                                    <td rowspan="4" valign="top">10</td>
-                                                    <td rowspan="4" valign="top"> 6a-N </td>
-                                                    <td rowspan="4" valign="top" class="left-align">Tingkat kualitas kinerja organisasi</td>
+                                                    <td rowspan="10" valign="top">10</td>
+                                                    <td rowspan="10" valign="top"> 6a-N </td>
+                                                    <td rowspan="10" valign="top" class="left-align">Tingkat kualitas kinerja organisasi</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td ><b>Nilai</b></td>
                                                     <td ><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td ><b>Formula</b></td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">indeks capaian komponen nilai LHPS </td>
-                                                    <td>50%</td>
-                                                    <td  id="tw2valuenilaiLHPS1">54,16%</td>
-                                                    <td  id="tw2nilaiLHPS1">54,16%</td>
-                                                    <td rowspan="3" valign="top" class="left-align" id="tw2formula10">Tolong selalu enter agar tidak terlalu panjang</td>
-                                                    <td rowspan="3" valign="top" class="left-align" id="tw2keterangan10">
-                                                        Triwulan IV = (50% x indeks capaian komponen SFO) + (50%
-                                                        x indeks capaian komponen nilai LHPS)
-                                                        Tolong selalu enter agar tidak terlalu panjang   
-                                                   
-                                                    </td>
+                                                    <td class="left-align" colspan="4"><b>Indeks Penyampaian LPJ</b></td>
+                                                   <td rowspan="9" valign="top" class="left-align" id="tw2formula10"></td>
+                                                    <td rowspan="9" valign="top" class="left-align" id="tw2keterangan10"> </td>
+                                                    
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Nilai SFO</td>
-                                                    <td>50%</td>
-                                                    <td  id="tw2valuenilaiLHPS2">52,98</td>
-                                                    <td  id="tw2nilaiLHPS2">52,98</td>
+                                                    <td class="left-align">indeks capaian komponen nilai LHPS</td>
+                                                    <td id="tw2valuelhps10a"></td>
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="tw2totalIKU10"><b>108,26%</b></td>
-                                                    <!-- <td></td> -->
+                                                    <td class="left-align">Target Nilai LHPS Semester II</td>
+                                                    <td id="tw2valuelhps10b"></td>
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total indeks capaian komponen nilai LHPS</b></td>
+                                                    <td id="tw2valuenilaiLHPS1"></td>
+                                                    <td></td>
+                                                    <!-- <td id="tw2valueindeks9a"></td> -->
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Nilai SFO</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">% Dokumen dukung yang diunggah pada periode triwulan I tahun 2025</td>
+                                                    <td id="tw2valuelhps10c"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Target Nilai SFO</td>
+                                                    <td id="tw2valuelhps10d"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Capaian SFO</b></td>
+                                                    <td id="tw2valuenilaiLHPS2"></td>
+                                                    <!-- <td id="tw2indeksB8"></td> -->
+                                                    <td></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                     <td id="tw2totalIKU10"><b></b></td>
+                                                    <td id="tw2totalIKU10a"><b></b></td>
+                                                </tr>
+                                               
                                             </tbody>
                                         </table>
                                         <script>
                                             function tw2hitungNilai10() {
-                                                let tw2lhps1 = parseFloat(document.getElementById('tw2lhps1').value) || 0;
-                                                let tw2lhps2 = parseFloat(document.getElementById('tw2lhps2').value) || 0;
-                                                let tw2target = 8.9;
+                                                
+                                                
+                                                
+                                                
+                                                let tw2vlhps10d = parseFloat(document.getElementById("tw2vlhps10d").value) || 0;
 
-                                                let tw2nilaiTertimbang1 = (tw2lhps1 * 50) / 100;
-                                                let tw2nilaiTertimbang2 = (tw2lhps2 * 50) / 100;
-                                                let tw2nilaiTab1 = (tw2lhps1 * 50) / 8.9;
-                                                let tw2nilaiTab2 = (tw2lhps2 * 50) / 8.9;
-                                                // let totalIKU10 = ((tw2nilaiTertimbang1 + tw2nilaiTertimbang2) / target) * 100;
-                                                let tw2totalIKU10 = (tw2nilaiTertimbang1 + tw2nilaiTertimbang2);
-                                                document.getElementById('tw2valuenilaiLHPS1').innerText = tw2lhps1.toFixed(2);
-                                                document.getElementById('tw2valuenilaiLHPS2').innerText = tw2lhps2.toFixed(2);
-                                                document.getElementById('tw2nilaiLHPS1').innerText = tw2nilaiTertimbang1.toFixed(2);
-                                                document.getElementById('tw2nilaiLHPS2').innerText = tw2nilaiTertimbang2.toFixed(2);
-                                                // document.getElementById('tw2nilaiLHPS1').innerText = tw2nilaiTab1.toFixed(2);
-                                                // document.getElementById('tw2nilaiLHPS2').innerText = tw2nilaiTab2.toFixed(2);
-                                                document.getElementById('tw2totalIKU10').innerText = tw2totalIKU10.toFixed(2);
+                                                let tw2valuenilaiLHPS1 = (tw2vlhps10a / tw2vlhps10b) * 100;
+                                                let tw2valuenilaiLHPS2 = (tw2vlhps10c / tw2vlhps10d) * 100;
+                                                let tw2totalIKU10 = (tw2valuenilaiLHPS1 + tw2valuenilaiLHPS2) / 2;
+                                                let tw2totalIKU10a =tw2totalIKU10;
+                                                
+                                                document.getElementById('tw2valuelhps10a').innerText = tw2vlhps10a;
+                                                document.getElementById('tw2valuelhps10b').innerText = tw2vlhps10b;
+                                                document.getElementById('tw2valuelhps10c').innerText = tw2vlhps10c;
+                                                document.getElementById('tw2valuelhps10d').innerText = tw2vlhps10d;
+
+                                                document.getElementById('tw2valuenilaiLHPS1').innerText = tw2valuenilaiLHPS1.toFixed(2) + "%";
+                                                document.getElementById('tw2valuenilaiLHPS2').innerText = tw2valuenilaiLHPS2.toFixed(2) + "%";
+                                                
+                                                document.getElementById('tw2totalIKU10a').innerText = tw2totalIKU10a.toFixed(2)+ "%";
+                                                document.getElementById('tw2totalIKU10').innerText = tw2totalIKU10.toFixed(2) + "%";
                                             }
 
                                             tw2hitungNilai10();
@@ -479,9 +521,12 @@
                                             const data = {
                                                 tw2valuenilaiLHPS1: document.getElementById("tw2valuenilaiLHPS1")?.innerText || "",
                                                 tw2valuenilaiLHPS2: document.getElementById("tw2valuenilaiLHPS2")?.innerText || "",
-                                                tw2nilaiLHPS1: document.getElementById("tw2nilaiLHPS1")?.innerText || "",
-                                                tw2nilaiLHPS2: document.getElementById("tw2nilaiLHPS2")?.innerText || "",
+                                                tw2valuelhps10a: document.getElementById("tw2valuelhps10a")?.innerText || "",
+                                                tw2valuelhps10b: document.getElementById("tw2valuelhps10b")?.innerText || "",
+                                                tw2valuelhps10c: document.getElementById("tw2valuelhps10c")?.innerText || "",
+                                                tw2valuelhps10d: document.getElementById("tw2valuelhps10d")?.innerText || "",
                                                 tw2totalIKU10: document.getElementById("tw2totalIKU10")?.innerText || "",
+                                                tw2totalIKU10a: document.getElementById("tw2totalIKU10a")?.innerText || "",
                                                 // indeksC8: document.getElementById("indeksC8")?.innerText || "",
                                                 // indeksTotal8: document.getElementById("indeksTotal8")?.innerText || "",        
                                             

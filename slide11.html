@@ -1405,7 +1405,7 @@
                                             }
 
                                             // Fungsi submit data untuk PPT2
-                                            function submitPPT11(triwulan = "triwulan1", pptdata = "pptdata11") {
+                                            function submitPPT11(pptdata = "pptdata11") {
                                                 const user = auth.currentUser;
                                                 if (!user) {
                                                     alert("Silakan login terlebih dahulu!");
@@ -1447,9 +1447,9 @@
                                                 data.timestamp = new Date().toISOString();
 
                                                 // Update ke database
-                                                const dataRef = ref(database, `ikpaData/${user.uid}/${triwulan}/${pptdata}`);
+                                                const dataRef = ref(database, `ikpaData/${user.uid}/${pptdata}`);
                                                 update(dataRef, data)
-                                                    .then(() => alert(`Data berhasil diperbarui di ${triwulan}/${pptdata}!`))
+                                                    .then(() => alert(`Data berhasil disimpan ke ${pptdata} dan memperbarui data!`))
                                                     .catch((error) => alert("Gagal memperbarui data: " + error.message));
                                             }
 

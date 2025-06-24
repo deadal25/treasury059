@@ -2875,7 +2875,7 @@
                                                                 text-left">Digipay Satu:</h5>
                                                             </td>
                                                             <td class="border border-black px-1 py-0.5 align-top
-                                                                text-center" id="tw4indigipayvalue">
+                                                                text-center" id="fslide6a">
                                                                 Penyampaian
                                                             </td>
                                                             <td class="border border-black px-1 py-0.5 align-top
@@ -2892,7 +2892,7 @@
                                                                 text-left">KKP:</h5>
                                                             </td>
                                                             <td class="border border-black px-1 py-0.5 align-top
-                                                                text-center" id="tw4inkkpvalue">
+                                                                text-center" id="fslide6b">
                                                                 Penyampaian
                                                             </td>
                                                             <td class="border border-black px-1 py-0.5 align-top
@@ -2909,7 +2909,7 @@
                                                                 text-left">CMS:</h5>
                                                             </td>
                                                             <td class="border border-black px-1 py-0.5 align-top
-                                                                text-center" id="tw4incmsvalue">
+                                                                text-center" id="fslide6c">
                                                                 Penyampaian
                                                             </td>
                                                             <td class="border border-black px-1 py-0.5 align-top
@@ -4699,18 +4699,17 @@
                                                         <tr>
                                                             <th
                                                                 class="border border-black px-1 py-0.5 leading-tight ">
-                                                                <div class="text-center">Nilai IKPA
+                                                                <div class="text-center">indeks Capaian Penyelesaian Rekomendasi
                                                                 </div>
                                                             </th>
                                                             <th
                                                                 class="border border-black px-1 py-0.5 leading-tight ">
-                                                                <div class="text-center">LK UAKPA & UAKPB
+                                                                <div class="text-center">Indeks capaian Komponen SFO
                                                                 </div>
                                                             </th>
                                                             <th
                                                                 class="border border-black px-1 py-0.5 leading-tight ">
-                                                                <div class="text-center">Persentase Kualitas
-                                                                    Pengelolaan Keuangan KPPN</div>
+                                                                <div class="text-center">Tingkat Kualitas Pengelolaan Kinerja</div>
                                                             </th>
 
                                                             <!-- <th
@@ -7444,13 +7443,13 @@
 
                                         try {
                                             const uid = user.uid;
-                                            const pptRef = ref(database, `ikpaData/${uid}/triwulan1/pptdata1`);
+                                            const pptRef = ref(database, `ikpaData/${uid}/pptdata1`);
                                             const tabelRef = ref(database, `ikpaData/${uid}/triwulan1/tabel1`);
                                             const tw2tabelRef = ref(database, `ikpaData/${uid}/triwulan2/tabel1`);
                                             const tw3tabelRef = ref(database, `ikpaData/${uid}/triwulan3/tabel1`);
                                             const tw4tabelRef = ref(database, `ikpaData/${uid}/triwulan4/tabel1`);
                                             const yeartabelRef = ref(database, `ikpaData/${uid}/year/tabel1`);
-                                            const rekomendasiRef = ref(database, `ikpaData/${uid}/triwulan1/pptdata1/rekomendasi`);
+                                            const rekomendasiRef = ref(database, `ikpaData/${uid}/pptdata1/rekomendasi`);
 
 
                                             const [pptSnap, tabelSnap,tw2tabelSnap,tw3tabelSnap,tw4tabelSnap,yeartabelSnap, rekomendasiSnap] = await Promise.all([
@@ -7598,8 +7597,8 @@
                                             const tw3tabelRef2 = ref(database, `ikpaData/${uid}/triwulan3/tabel2`);
                                             const tw4tabelRef2 = ref(database, `ikpaData/${uid}/triwulan4/tabel2`);
                                             const yeartabelRef2 = ref(database, `ikpaData/${uid}/year/tabel2`);
-                                            const pptRef2 = ref(database, `ikpaData/${uid}/triwulan1/pptdata2`);
-                                            const rekomendasiRef2 = ref(database, `ikpaData/${uid}/triwulan1/pptdata2/rekomendasi`);
+                                            const pptRef2 = ref(database, `ikpaData/${uid}/pptdata2`);
+                                            const rekomendasiRef2 = ref(database, `ikpaData/${uid}/pptdata2/rekomendasi`);
 
                                             const [tabelSnap2,tw2tabelSnap2,tw3tabelSnap2,tw4tabelSnap2,yeartabelSnap2, pptSnap2, rekomendasiSnap2] = await Promise.all([
                                                 get(tabelRef2),
@@ -7751,8 +7750,8 @@
                                             const tw3tabelRef3 = ref(database, `ikpaData/${uid}/triwulan3/tabel3`);
                                             const tw4tabelRef3 = ref(database, `ikpaData/${uid}/triwulan4/tabel3`);
                                             const yeartabelRef3 = ref(database, `ikpaData/${uid}/year/tabel3`);
-                                            const pptRef3 = ref(database, `ikpaData/${uid}/triwulan1/pptdata3`);
-                                            const rekomendasiRef3 = ref(database, `ikpaData/${uid}/triwulan1/pptdata3/rekomendasi`);
+                                            const pptRef3 = ref(database, `ikpaData/${uid}/pptdata3`);
+                                            const rekomendasiRef3 = ref(database, `ikpaData/${uid}/pptdata3/rekomendasi`);
 
                                             const [tabelSnap3,tw2tabelSnap3,tw3tabelSnap3,tw4tabelSnap3,yeartabelSnap3, pptSnap3, rekomendasiSnap3] = await Promise.all([
                                                 get(tabelRef3),
@@ -7895,8 +7894,8 @@
                                             const tw3tabelRef4 = ref(database, `ikpaData/${uid}/triwulan3/tabel4`);
                                             const tw4tabelRef4 = ref(database, `ikpaData/${uid}/triwulan4/tabel4`);
                                             const yeartabelRef4 = ref(database, `ikpaData/${uid}/year/tabel4`);
-                                            const pptRef4 = ref(database, `ikpaData/${uid}/triwulan1/pptdata4`);
-                                            const rekomendasiRef4 = ref(database, `ikpaData/${uid}/triwulan1/pptdata4/rekomendasi`);
+                                            const pptRef4 = ref(database, `ikpaData/${uid}/pptdata4`);
+                                            const rekomendasiRef4 = ref(database, `ikpaData/${uid}/pptdata4/rekomendasi`);
 
                                             const [tabelSnap4,tw2tabelSnap4,tw3tabelSnap4,tw4tabelSnap4,yeartabelSnap4, pptSnap4, rekomendasiSnap4] = await Promise.all([
                                                 get(tabelRef4),
@@ -8040,8 +8039,8 @@
                                             const tw3tabelRef5 = ref(database, `ikpaData/${uid}/triwulan3/tabel5`);
                                             const tw4tabelRef5 = ref(database, `ikpaData/${uid}/triwulan4/tabel5`);
                                             const yeartabelRef5 = ref(database, `ikpaData/${uid}/year/tabel5`);
-                                            const pptRef5 = ref(database, `ikpaData/${uid}/triwulan1/pptdata5`);
-                                            const rekomendasiRef5 = ref(database, `ikpaData/${uid}/triwulan1/pptdata5/rekomendasi`);
+                                            const pptRef5 = ref(database, `ikpaData/${uid}/pptdata5`);
+                                            const rekomendasiRef5 = ref(database, `ikpaData/${uid}/pptdata5/rekomendasi`);
 
                                             const [tabelSnap5,tw2tabelSnap5,tw3tabelSnap5,tw4tabelSnap5,yeartabelSnap5, pptSnap5, rekomendasiSnap5] = await Promise.all([
                                                 get(tabelRef5),
@@ -8196,8 +8195,8 @@
                                             const tw3tabelRef6 = ref(database, `ikpaData/${uid}/triwulan3/tabel6`);
                                             const tw4tabelRef6 = ref(database, `ikpaData/${uid}/triwulan4/tabel6`);
                                             const yeartabelRef6 = ref(database, `ikpaData/${uid}/year/tabel6`);
-                                            const pptRef6 = ref(database, `ikpaData/${uid}/triwulan1/pptdata6`);
-                                            const rekomendasiRef6 = ref(database, `ikpaData/${uid}/triwulan1/pptdata6/rekomendasi`);
+                                            const pptRef6 = ref(database, `ikpaData/${uid}/pptdata6`);
+                                            const rekomendasiRef6 = ref(database, `ikpaData/${uid}/pptdata6/rekomendasi`);
 
                                             const [tabelSnap6,tw2tabelSnap6,tw3tabelSnap6,tw4tabelSnap6,yeartabelSnap6, pptSnap6, rekomendasiSnap6] = await Promise.all([
                                                 get(tabelRef6),
@@ -8300,7 +8299,7 @@
                                                 "judul6", "subjudul6", "kode6", "isuutama6", "implikasi6", "penjelasanc6","totalrealisasi6a","tw2Nilaislide6a","sm1Nilaislide6a","tw2Nilaislide6aa","tw2nilaitotalslide6","sm1nilaitotalslide6","tw2nilaitotalslide6aa",
                                                 "sumberdata6", "akarmasalah6", "tindakan6", "tindakan6a", "subutama6", "critical6","totalrealisasi6b","totalrealisasi6c","tw3Nilaislide6a","sm3Nilaislide6a","tw3Nilaislide6aa","tw3nilaitotalslide6","sm3nilaitotalslide6","tw3nilaitotalslide6aa",
                                                 "subjudul6a", "keterangan6","Nilaislide6a","Nilaislide6aa","nilaitotalslide6","nilaitotalslide6aa","tw4Nilaislide6a","tw4Nilaislide6aa","tw4nilaitotalslide6","tw4nilaitotalslide6aa",
-                                                "tw4indigipayvalue", "tw4incmsvalue", "tw4inkkpvalue", "tw4indeksindigipay","yearNilaislide6a","yearNilaislide6aa","yearnilaitotalslide6","yearnilaitotalslide6aa",
+                                                "fslide6a", "fslide6c", "fslide6b", "tw4indeksindigipay","yearNilaislide6a","yearNilaislide6aa","yearnilaitotalslide6","yearnilaitotalslide6aa",
                                                     "tw4indeksincms", "tw4indeksinkkp", "indeksTotal6", "tw4indeksTotal6"
                                                     
                                             ];
@@ -8337,15 +8336,7 @@
                                                 hasilGambar12.appendChild(img12);
                                             }
 
-                                            // const tabelRef7 = ref(database, `ikpaData/${uid}/triwulan1/tabel7`);
-                                            // const pptRef7 = ref(database, `ikpaData/${uid}/triwulan1/pptdata7`);
-                                            // const rekomendasiRef7 = ref(database, `ikpaData/${uid}/triwulan1/pptdata7/rekomendasi`);
-
-                                            // const [tabelSnap7, pptSnap7, rekomendasiSnap7] = await Promise.all([
-                                            //     get(tabelRef7),
-                                            //     get(pptRef7),
-                                            //     get(rekomendasiRef7),
-                                            // ]);
+                                         
 
                                             // // Gabungkan data ppt7 dan tabel7 ke dalam cachedData
                                             // Object.assign(cachedData, pptSnap7.val() || {}, tabelSnap7.val() || {});
@@ -8354,8 +8345,8 @@
                                             const tw3tabelRef7 = ref(database, `ikpaData/${uid}/triwulan3/tabel7`);
                                             const tw4tabelRef7 = ref(database, `ikpaData/${uid}/triwulan4/tabel7`);
                                             const yeartabelRef7 = ref(database, `ikpaData/${uid}/year/tabel7`);
-                                            const pptRef7 = ref(database, `ikpaData/${uid}/triwulan1/pptdata7`);
-                                            const rekomendasiRef7 = ref(database, `ikpaData/${uid}/triwulan1/pptdata7/rekomendasi`);
+                                            const pptRef7 = ref(database, `ikpaData/${uid}/pptdata7`);
+                                            const rekomendasiRef7 = ref(database, `ikpaData/${uid}/pptdata7/rekomendasi`);
 
                                             const [tabelSnap7,tw2tabelSnap7,tw3tabelSnap7,tw4tabelSnap7,yeartabelSnap7, pptSnap7, rekomendasiSnap7] = await Promise.all([
                                                 get(tabelRef7),
@@ -8492,16 +8483,7 @@
                                                 img14.height = 280;
                                                 hasilGambar14.appendChild(img14);
                                             }
-                                            
-                                            // const tabelRef8 = ref(database, `ikpaData/${uid}/triwulan1/tabel8`);
-                                            // const pptRef8 = ref(database, `ikpaData/${uid}/triwulan1/pptdata8`);
-                                            // const rekomendasiRef8 = ref(database, `ikpaData/${uid}/triwulan1/pptdata8/rekomendasi`);
-
-                                            // const [tabelSnap8, pptSnap8, rekomendasiSnap8] = await Promise.all([
-                                            //     get(tabelRef8),
-                                            //     get(pptRef8),
-                                            //     get(rekomendasiRef8),
-                                            // ]);
+                                           
 
                                             // // Gabungkan data ppt8 dan tabel8 ke dalam cachedData
                                             // Object.assign(cachedData, pptSnap8.val() || {}, tabelSnap8.val() || {});
@@ -8510,8 +8492,8 @@
                                             const tw3tabelRef8 = ref(database, `ikpaData/${uid}/triwulan3/tabel8`);
                                             const tw4tabelRef8 = ref(database, `ikpaData/${uid}/triwulan4/tabel8`);
                                             const yeartabelRef8 = ref(database, `ikpaData/${uid}/year/tabel8`);
-                                            const pptRef8 = ref(database, `ikpaData/${uid}/triwulan1/pptdata8`);
-                                            const rekomendasiRef8 = ref(database, `ikpaData/${uid}/triwulan1/pptdata8/rekomendasi`);
+                                            const pptRef8 = ref(database, `ikpaData/${uid}/pptdata8`);
+                                            const rekomendasiRef8 = ref(database, `ikpaData/${uid}/pptdata8/rekomendasi`);
 
                                             const [tabelSnap8,tw2tabelSnap8,tw3tabelSnap8,tw4tabelSnap8,yeartabelSnap8, pptSnap8, rekomendasiSnap8] = await Promise.all([
                                                 get(tabelRef8),
@@ -8649,15 +8631,7 @@
                                                 hasilGambar16.appendChild(img16);
                                             }
 
-                                            // const tabelRef9 = ref(database, `ikpaData/${uid}/triwulan1/tabel9`);
-                                            // const pptRef9 = ref(database, `ikpaData/${uid}/triwulan1/pptdata9`);
-                                            // const rekomendasiRef9 = ref(database, `ikpaData/${uid}/triwulan1/pptdata9/rekomendasi`);
-
-                                            // const [tabelSnap9, pptSnap9, rekomendasiSnap9] = await Promise.all([
-                                            //     get(tabelRef9),
-                                            //     get(pptRef9),
-                                            //     get(rekomendasiRef9),
-                                            // ]);
+                                          
 
                                             // // Gabungkan data ppt9 dan tabel9 ke dalam cachedData
                                             // Object.assign(cachedData, pptSnap9.val() || {}, tabelSnap9.val() || {});
@@ -8666,8 +8640,8 @@
                                             const tw3tabelRef9 = ref(database, `ikpaData/${uid}/triwulan3/tabel9`);
                                             const tw4tabelRef9 = ref(database, `ikpaData/${uid}/triwulan4/tabel9`);
                                             const yeartabelRef9 = ref(database, `ikpaData/${uid}/year/tabel9`);
-                                            const pptRef9 = ref(database, `ikpaData/${uid}/triwulan1/pptdata9`);
-                                            const rekomendasiRef9 = ref(database, `ikpaData/${uid}/triwulan1/pptdata9/rekomendasi`);
+                                            const pptRef9 = ref(database, `ikpaData/${uid}/pptdata9`);
+                                            const rekomendasiRef9 = ref(database, `ikpaData/${uid}/pptdata9/rekomendasi`);
 
                                             const [tabelSnap9,tw2tabelSnap9,tw3tabelSnap9,tw4tabelSnap9,yeartabelSnap9, pptSnap9, rekomendasiSnap9] = await Promise.all([
                                                 get(tabelRef9),
@@ -8805,16 +8779,7 @@
                                                 hasilGambar18.appendChild(img18);
                                             }
 
-                                            // const tabelRef10 = ref(database, `ikpaData/${uid}/triwulan1/tabel10`);
-                                            // const pptRef10 = ref(database, `ikpaData/${uid}/triwulan1/pptdata10`);
-                                            // const rekomendasiRef10 = ref(database, `ikpaData/${uid}/triwulan1/pptdata10/rekomendasi`);
-
-                                            // const [tabelSnap10, pptSnap10, rekomendasiSnap10] = await Promise.all([
-                                            //     get(tabelRef10),
-                                            //     get(pptRef10),
-                                            //     get(rekomendasiRef10),
-                                            // ]);
-
+                                           
                                             // // Gabungkan data ppt10 dan tabel10 ke dalam cachedData
                                             // Object.assign(cachedData, pptSnap10.val() || {}, tabelSnap10.val() || {});
                                             const tabelRef10 = ref(database, `ikpaData/${uid}/triwulan1/tabel10`);
@@ -8822,8 +8787,8 @@
                                             const tw3tabelRef10 = ref(database, `ikpaData/${uid}/triwulan3/tabel10`);
                                             const tw4tabelRef10 = ref(database, `ikpaData/${uid}/triwulan4/tabel10`);
                                             const yeartabelRef10 = ref(database, `ikpaData/${uid}/year/tabel10`);
-                                            const pptRef10 = ref(database, `ikpaData/${uid}/triwulan1/pptdata10`);
-                                            const rekomendasiRef10 = ref(database, `ikpaData/${uid}/triwulan1/pptdata10/rekomendasi`);
+                                            const pptRef10 = ref(database, `ikpaData/${uid}/pptdata10`);
+                                            const rekomendasiRef10 = ref(database, `ikpaData/${uid}/pptdata10/rekomendasi`);
 
                                             const [tabelSnap10,tw2tabelSnap10,tw3tabelSnap10,tw4tabelSnap10,yeartabelSnap10, pptSnap10, rekomendasiSnap10] = await Promise.all([
                                                 get(tabelRef10),
@@ -8967,8 +8932,8 @@
                                             const tw3tabelRef11 = ref(database, `ikpaData/${uid}/triwulan3/tabel11`);
                                             const tw4tabelRef11 = ref(database, `ikpaData/${uid}/triwulan4/tabel11`);
                                             const yeartabelRef11 = ref(database, `ikpaData/${uid}/year/tabel11`);
-                                            const pptRef11 = ref(database, `ikpaData/${uid}/triwulan1/pptdata11`);
-                                            const rekomendasiRef11 = ref(database, `ikpaData/${uid}/triwulan1/pptdata11/rekomendasi`);
+                                            const pptRef11 = ref(database, `ikpaData/${uid}/pptdata11`);
+                                            const rekomendasiRef11 = ref(database, `ikpaData/${uid}/pptdata11/rekomendasi`);
 
                                             const [tabelSnap11,tw2tabelSnap11,tw3tabelSnap11,tw4tabelSnap11,yeartabelSnap11, pptSnap11, rekomendasiSnap11] = await Promise.all([
                                                 get(tabelRef11),
@@ -9123,8 +9088,8 @@
                                             const tw3tabelRef12 = ref(database, `ikpaData/${uid}/triwulan3/tabel12`);
                                             const tw4tabelRef12 = ref(database, `ikpaData/${uid}/triwulan4/tabel12`);
                                             const yeartabelRef12 = ref(database, `ikpaData/${uid}/year/tabel12`);
-                                            const pptRef12 = ref(database, `ikpaData/${uid}/triwulan1/pptdata12`);
-                                            const rekomendasiRef12 = ref(database, `ikpaData/${uid}/triwulan1/pptdata12/rekomendasi`);
+                                            const pptRef12 = ref(database, `ikpaData/${uid}/pptdata12`);
+                                            const rekomendasiRef12 = ref(database, `ikpaData/${uid}/pptdata12/rekomendasi`);
 
                                             const [tabelSnap12,tw2tabelSnap12,tw3tabelSnap12,tw4tabelSnap12,yeartabelSnap12, pptSnap12, rekomendasiSnap12] = await Promise.all([
                                                 get(tabelRef12),
@@ -9287,8 +9252,8 @@
                                             const tw3tabelRef13 = ref(database, `ikpaData/${uid}/triwulan3/tabel13`);
                                             const tw4tabelRef13 = ref(database, `ikpaData/${uid}/triwulan4/tabel13`);
                                             const yeartabelRef13 = ref(database, `ikpaData/${uid}/year/tabel13`);
-                                            const pptRef13 = ref(database, `ikpaData/${uid}/triwulan1/pptdata13`);
-                                            const rekomendasiRef13 = ref(database, `ikpaData/${uid}/triwulan1/pptdata13/rekomendasi`);
+                                            const pptRef13 = ref(database, `ikpaData/${uid}/pptdata13`);
+                                            const rekomendasiRef13 = ref(database, `ikpaData/${uid}/pptdata13/rekomendasi`);
 
                                             const [tabelSnap13,tw2tabelSnap13,tw3tabelSnap13,tw4tabelSnap13,yeartabelSnap13, pptSnap13, rekomendasiSnap13] = await Promise.all([
                                                 get(tabelRef13),
@@ -9444,8 +9409,8 @@
                                             const tw3tabelRef14 = ref(database, `ikpaData/${uid}/triwulan3/tabel14`);
                                             const tw4tabelRef14 = ref(database, `ikpaData/${uid}/triwulan4/tabel14`);
                                             const yeartabelRef14 = ref(database, `ikpaData/${uid}/year/tabel14`);
-                                            const pptRef14 = ref(database, `ikpaData/${uid}/triwulan1/pptdata14`);
-                                            const rekomendasiRef14 = ref(database, `ikpaData/${uid}/triwulan1/pptdata14/rekomendasi`);
+                                            const pptRef14 = ref(database, `ikpaData/${uid}/pptdata14`);
+                                            const rekomendasiRef14 = ref(database, `ikpaData/${uid}/pptdata14/rekomendasi`);
 
                                             const [tabelSnap14,tw2tabelSnap14,tw3tabelSnap14,tw4tabelSnap14,yeartabelSnap14, pptSnap14, rekomendasiSnap14] = await Promise.all([
                                                 get(tabelRef14),
@@ -9600,8 +9565,8 @@
                                             const tw3tabelRef15 = ref(database, `ikpaData/${uid}/triwulan3/tabel15`);
                                             const tw4tabelRef15 = ref(database, `ikpaData/${uid}/triwulan4/tabel15`);
                                             const yeartabelRef15 = ref(database, `ikpaData/${uid}/year/tabel15`);
-                                            const pptRef15 = ref(database, `ikpaData/${uid}/triwulan1/pptdata15`);
-                                            const rekomendasiRef15 = ref(database, `ikpaData/${uid}/triwulan1/pptdata15/rekomendasi`);
+                                            const pptRef15 = ref(database, `ikpaData/${uid}/pptdata15`);
+                                            const rekomendasiRef15 = ref(database, `ikpaData/${uid}/pptdata15/rekomendasi`);
 
                                             const [tabelSnap15,tw2tabelSnap15,tw3tabelSnap15,tw4tabelSnap15,yeartabelSnap15, pptSnap15, rekomendasiSnap15] = await Promise.all([
                                                 get(tabelRef15),
@@ -14275,18 +14240,18 @@
                                                 ],
                                                 [
                                                     { text: "Digipay Satu", options: { align:'left', valign: "top", fill: '#ffffff' } },
-                                                    { text:  `${cachedData.tw4indigipayvalue || "-"}`, options: { valign: "top", fill: '#ffffff' } },
+                                                    { text:  `${cachedData.fslide6a || "-"}`, options: { valign: "top", fill: '#ffffff' } },
                                                     { text:  `${cachedData.totalrealisasi6a || "-"}`, options: { valign: "top", fill: '#ffffff' } },
                                                     { text:  `${cachedData.tw4indeksindigipay || "-"}`, options: { valign: "top", fill: '#ffffff' } }
                                                 ],
                                                 [
                                                     { text: "KKP", options: { align:'left', valign: "top", fill: '#ffffff' } },
-                                                    { text:   `${cachedData.tw4inkkpvalue || "-"}`, options: { valign: "top", fill: '#ffffff' } },
+                                                    { text:   `${cachedData.fslide6b || "-"}`, options: { valign: "top", fill: '#ffffff' } },
                                                     { text:  `${cachedData.totalrealisasi6b || "-"}`, options: { valign: "top", fill: '#ffffff' } },
                                                     { text:  `${cachedData.tw4indeksinkkp || "-"}`, options: { valign: "top", fill: '#ffffff' } }
                                                 ],[
                                                     { text: "CMS", options: { align:'left', valign: "top", fill: '#ffffff' } },
-                                                    { text:   `${cachedData.tw4incmsvalue || "-"}`, options: { valign: "top", fill: '#ffffff' } },
+                                                    { text:   `${cachedData.fslide6c || "-"}`, options: { valign: "top", fill: '#ffffff' } },
                                                     { text:   `${cachedData.totalrealisasi6c || "-"}`, options: { valign: "top", fill: '#ffffff' } },
                                                     { text:  `${cachedData.tw4indeksincms || "-"}`, options: { valign: "top", fill: '#ffffff' } }
                                                 ],[
@@ -17397,9 +17362,9 @@
                                         slide18.addTable(
                                             [
                                                 [
-                                                    { text: "Indeks Capaian LO", options: { bold:true, color: "ffffff", valign: "top", align: "center", fill: '#4f81bd' } },
-                                                    { text: "Indeks Capaian Pelaksanaan Kebintalan", options: { bold:true, color: "ffffff", valign: "top", align: "center", fill: '#4f81bd' } },
-                                                    { text: "Nilai kualitas pengelolaan SDM", options: { bold:true, color: "ffffff", valign: "top", align: "center", fill: '#4f81bd' } },
+                                                    { text: "Indeks Capaian Penyelesaian Rekomendasi", options: { bold:true, color: "ffffff", valign: "top", align: "center", fill: '#4f81bd' } },
+                                                    { text: "Indeks capaian Komponen SFO", options: { bold:true, color: "ffffff", valign: "top", align: "center", fill: '#4f81bd' } },
+                                                    { text: "Tingkat Kualitas Pengelolaan Kinerja", options: { bold:true, color: "ffffff", valign: "top", align: "center", fill: '#4f81bd' } },
                                                     // { text: "Penguatan Keamanan Perangkat TIK\n(Bobot 35)", options: { bold:true, color: "ffffff", valign: "top", align: "center", fill: '#4f81bd' } },
                                                     // { text: "Indeks Capaian", options: { bold:true, color: "ffffff", valign: "top", align: "center", fill: '#4f81bd' } }
                                                 ],
@@ -19758,9 +19723,9 @@
                                                     // { text: totalrealisasi13+"\n"+"="+totalslide13d, options: { valign: "top", fill: '#d0d8e8' } }
                                                 ],
                                                 [
-                                                    { text: `${cachedData.totalrealisasi13 || "-"}`+"\n"+"="+`${cachedData.tw4valuenilaiNKA || "-"}`, options: { valign: "top", fill: '#e9edf4' } },
-                                                    { text: `${cachedData.totalrealisasi13a || "-"}`+"\n"+"="+`${cachedData.tw4valuenilaiLK || "-"}`, options: { valign: "top", fill: '#e9edf4' } },
-                                                    { text: `${cachedData.totalrealisasi13b || "-"}`+"\n"+"="+`${cachedData.tw4totalNilai13 || "-"}`, options: { valign: "top", fill: '#e9edf4' } }
+                                                    { text: `${cachedData.tw1totalrealisasi13 || "-"}`+"\n"+"="+`${cachedData.tw4valuenilaiNKA || "-"}`, options: { valign: "top", fill: '#e9edf4' } },
+                                                    { text: `${cachedData.tw1totalrealisasi13a || "-"}`+"\n"+"="+`${cachedData.tw4valuenilaiLK || "-"}`, options: { valign: "top", fill: '#e9edf4' } },
+                                                    { text: `${cachedData.tw1totalrealisasi13b || "-"}`+"\n"+"="+`${cachedData.tw4totalNilai13 || "-"}`, options: { valign: "top", fill: '#e9edf4' } }
                                                     // { text: totalslide13b, options: { valign: "middle", fill: '#e9edf4' } },
                                                     // { text: totalslide13c+"\n(Telah disusun middle kerja penguatan kemanan perangkat TIK)", options: { valign: "top", fill: '#d0d8e8' } },
                                                 ]

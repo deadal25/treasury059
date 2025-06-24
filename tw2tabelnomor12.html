@@ -344,17 +344,17 @@
                                         <!-- <label for="tw2manajemen_risiko">Hasil Penilaian pelaksanaan tugas KI pada KPPN:</label>
                                         <input type="number" id="tw2manajemen_risiko" value="0" oninput="tw2hitungNilai12()"> -->
 
-                                        <label for="tw2totalrealisasi12a">Masukkan Realisasi 1: </label>
+                                        <label for="tw2totalrealisasi12a">Penerapan MR: </label>
                                         <input type="number" id="tw2inputrealisasi12a" class="form-control"
-                                            placeholder="Masukkan Realisasi 1..." oninput="tw2hitungNilaislide12()">
+                                            placeholder="Masukkan Nilai Penerapan MR..." oninput="tw2hitungNilaislide12()">
 
-                                        <label for="tw2totalrealisasi12b">Masukkan Realisasi 2: </label>
+                                        <label for="tw2totalrealisasi12b">Pelaksanaan PPINE: </label>
                                         <input type="number" id="tw2inputrealisasi12b" class="form-control"
-                                            placeholder="Masukkan Realisasi 2..." oninput="tw2hitungNilaislide12()">
+                                            placeholder="Masukkan Nilai Pelaksanaan PPINE..." oninput="tw2hitungNilaislide12()">
 
-                                        <label for="tw2totalrealisasi12c">Masukkan Realisasi 3: </label>
+                                        <label for="tw2totalrealisasi12c">Masukkan Pengelolaan Pengaduan: </label>
                                         <input type="number" id="tw2inputrealisasi12c" class="form-control"
-                                            placeholder="Masukkan Realisasi 3..." oninput="tw2hitungNilaislide12()">
+                                            placeholder="Masukkan Nilai Pengelolaan Pengaduan..." oninput="tw2hitungNilaislide12()">
 
                                             
 
@@ -405,31 +405,55 @@
                                                 </tr>
                                             </tbody>
                                             <tr>
-                                                <td rowspan="3" valign="top">12</td>
-                                                <td rowspan="3" valign="top"> 6c-N </td>
-                                                <td rowspan="3" valign="top" class="left-align">Nilai Evaluasi Pelaksanaan Tugas Kepatuhan Internal</td>
+                                                <td rowspan="6" valign="top">12</td>
+                                                <td rowspan="6" valign="top"> 6c-N </td>
+                                                <td rowspan="6" valign="top" class="left-align">Nilai Evaluasi Pelaksanaan Tugas Kepatuhan Internal</td>
                                                 <td><b>Komponen</b></td>
-                                                <td><b>Bobot</b></td>
                                                 <td ><b>Nilai</b></td>
                                                 <td ><b>Total</b></td>
+                                                <td><b>Indeks Capaian</b></td>
                                                 <td >Formula</td>
                                                 <td>Keterangan</td>
                                             </tr>
                                             <tr>
-                                                <td class="left-align">Hasil Penilaian pelaksanaan tugas KI pada KPPN</td>
-                                                <td><b>100%</b></td>
+                                                <td class="left-align" colspan="4"><b>Hasil Penilaian pelaksanaan tugas KI pada KPPN</b></td>
+                                                <!-- <td><b>100%</b></td>
                                                 <td id="tw2valuenilaiMR">34,48</td>
-                                                <td id="tw2nilaiMR">34,48</td>
-                                                <td rowspan="2" valign="top" class="left-align" id="tw2formula12">Tolong selalu enter agar tidak terlalu panjang</td>
-                                                <td rowspan="2" valign="top" class="left-align" id="tw2keterangan12">
-                                                    Tolong selalu enter agar tidak terlalu panjang
+                                                <td id="tw2nilaiMR">34,48</td>-->
+                                                <td rowspan="5" valign="top" class="left-align" id="tw2formula12"></td> 
+                                                <td rowspan="5" valign="top" class="left-align" id="tw2keterangan12">
+                                                    
                                                 </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Penerapan MR</td>
+                                                <!-- <td><b>100%</b></td> -->
+                                                <td id="tw2valuenilaiMR"></td>
+                                                <!-- <td></td> -->
+                                                <td id="tw2nilaiMR"></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Pelaksanaan PPINE</td>
+                                                <!-- <td><b>100%</b></td> -->
+                                                <td id="tw2valuenilaiPPINE"></td>
+                                                <td id="tw2nilaiPPINE"></td>
+                                                <!-- <td id="tw2nilaiMR"></td> -->
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Pengelolaan Pengaduan</td>
+                                                <!-- <td><b>100%</b></td> -->
+                                                <td id="tw2valuenilaiPP"></td>
+                                                <td id="tw2nilaiPP"></td>
+                                                <!-- <td id="tw2nilaiMR"></td> -->
+                                                <td></td>
                                             </tr>
                                     
                                             <tr>
-                                                <td><b>Nilai Capaian</b></td>
-                                                <td colspan="3" id="tw2totalrealisasi12d"><b>99,48</b></td>
-                                                
+                                                <td  colspan="2" ><b>Nilai Capaian</b></td>
+                                                <td id="tw2totalrealisasi12d"><b></b></td>
+                                                <td id="tw2totalrealisasi12dd"><b></b></td>
                                             </tr>
                                         </table>
 
@@ -444,10 +468,17 @@
                                                 // document.getElementById('tw2totalrealisasi12a').innerText = a;
                                                 // document.getElementById('tw2totalrealisasi12b').innerText = b;
                                                 // document.getElementById('tw2totalrealisasi12c').innerText = c;
+                                                
                                                 let tw2total = tw2a + tw2b + tw2c;
-                                                document.getElementById('tw2valuenilaiMR').innerText = tw2total.toFixed(2);
-                                                document.getElementById('tw2nilaiMR').innerText = tw2total.toFixed(2);
+                                                let tw2totald =tw2total;
+                                                document.getElementById('tw2valuenilaiMR').innerText = tw2a.toFixed(2);
+                                                document.getElementById('tw2valuenilaiPPINE').innerText = tw2b.toFixed(2);
+                                                document.getElementById('tw2valuenilaiPP').innerText = tw2c.toFixed(2);
+                                                document.getElementById('tw2nilaiMR').innerText = tw2a.toFixed(2);
+                                                document.getElementById('tw2nilaiPPINE').innerText = tw2b.toFixed(2);
+                                                document.getElementById('tw2nilaiPP').innerText = tw2c.toFixed(2);
                                                 document.getElementById('tw2totalrealisasi12d').innerText = tw2total.toFixed(2);
+                                                document.getElementById('tw2totalrealisasi12dd').innerText = tw2totald.toFixed(2);
                                             }
                                         
                                             // function tw2hitungNilai12() {
@@ -498,11 +529,16 @@
 
                                             const data = {
                                                 tw2valuenilaiMR: document.getElementById("tw2valuenilaiMR")?.innerText || "",
+                                                tw2valuenilaiPPINE: document.getElementById("tw2valuenilaiPPINE")?.innerText || "",
+                                                tw2valuenilaiPP: document.getElementById("tw2valuenilaiPP")?.innerText || "",
                                                 tw2nilaiMR: document.getElementById("tw2nilaiMR")?.innerText || "",
+                                                tw2nilaiPPINE: document.getElementById("tw2nilaiPPINE")?.innerText || "",
+                                                tw2nilaiPP: document.getElementById("tw2nilaiPP")?.innerText || "",
                                                 tw2inputrealisasi12a: document.getElementById("tw2inputrealisasi12a")?.value || "",
                                                 tw2inputrealisasi12b: document.getElementById("tw2inputrealisasi12b")?.value || "",
                                                 tw2inputrealisasi12c: document.getElementById("tw2inputrealisasi12c")?.value || "",
                                                 tw2totalrealisasi12d: document.getElementById("tw2totalrealisasi12d")?.innerText || "",
+                                                tw2totalrealisasi12dd: document.getElementById("tw2totalrealisasi12dd")?.innerText || "",
                                                 // indeksTotal8: document.getElementById("indeksTotal8")?.innerText || "",        
                                             
                                                 tw2formula12: document.getElementById("tw2formula12")?.innerText || "",

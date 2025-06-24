@@ -340,13 +340,15 @@
                                         <br>
                                         <h3><b>Indeks Kualitas LPJ Bendahara Satker K/L</b></h3>
 
-                                        <label for="tw2sept">LPJ Tepat Waktu: </label>
-                                        <input type="number" id="tw2sept" min="1" max="100" value="0"
-                                            oninput="tw2hitungIndex9()">
+                                        <label for="tw2vlpj9a">LPJ Bendahara yang disampaikan ke KPPN tepat waktu: </label>
+                                        <input type="number" id="tw2vlpj9a" min="0" value="0"oninput="tw2hitungIndex9()">
+                                        <label for="tw2vlpj9b">LPJ Bendahara yang seharusnya disampaikan ke KPPN lingkup Kanwil DJPb: </label>
+                                        <input type="number" id="tw2vlpj9b" min="0" value="0"oninput="tw2hitungIndex9()">
 
-                                        <label for="tw2okt">LPJ Disampaikan ke KPPN: </label>
-                                        <input type="number" id="tw2okt" min="1" max="100" value="0"
-                                            oninput="tw2hitungIndex9()">
+                                        <label for="tw2vlpj9c">LPJ Bendahara yang diverifikasi dan divalidasi KPPN tepat waktu: </label>
+                                        <input type="number" id="tw2vlpj9c" min="0"  value="0"oninput="tw2hitungIndex9()">
+                                        <label for="tw2vlpj9d">LPJ Bendahara yang disampaikan ke KPPN lingkup Kanwil DJPb: </label>
+                                        <input type="number" id="tw2vlpj9d" min="0"  value="0"oninput="tw2hitungIndex9()">
 
                                             <label for="tw2formula9">Masukkan Formula:</label>
                                             <textarea id="tw2inputFormula9" class="form-control" rows="3"
@@ -391,118 +393,124 @@
                                             </tbody>
                                             <tbody>
                                                 <tr>
-                                                    <td rowspan="4" valign="top">9</td>
-                                                    <td rowspan="4" valign="top"> 5a-N </td>
-                                                    <td rowspan="4" valign="top" class="left-align">Indeks Kualitas LPJ Bendahara Satker K/L</td>
+                                                    <td rowspan="10" valign="top">9</td>
+                                                    <td rowspan="10" valign="top"> 5a-N </td>
+                                                    <td rowspan="10" valign="top" class="left-align">Indeks Kualitas LPJ Bendahara Satker K/L</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td><b>Nilai</b></td>
                                                     <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td>Formula</td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Indeks Penyampaian LPJ</td>
-                                                        <td><b>50%</b></td>
-                                                        <td id="tw2valueindeksSept">4</td>
-                                                    <td id="tw2indeksSept">4</td>
-                                                    <td rowspan="3" valign="top" class="left-align" id="tw2formula9">Tolong selalu enter agar tidak terlalu panjang</td>
-                                                    <td rowspan="3" valign="top" class="left-align" id="tw2keterangan9">
-                                                        Tolong selalu enter agar tidak terlalu panjang
-                                                        Seluruh LPJ telah disampaikan tepat waktu dan telah
-                                                        divalidasi Indeks kualitas LPJ Bendahara K/L sebagai berikut:
-
-                                                        Indeks 4: Jika memperoleh nilai 99,5% < x ≤ 90% LPJ Bendahara
-                                                            yang divalidasi KPPN tepat waktu Indeks 3,5: Jika memperoleh
-                                                            nilai 99% < x ≤ 99,5% LPJ Bendahara yang divalidasi KPPN
-                                                            tepat waktu Indeks 3: Jika memperoleh nilai 98,5% ≤ x ≤ 99%
-                                                            LPJ Bendahara yang divalidasi KPPN tepat waktu Indeks 2,5:
-                                                            Jika memperoleh nilai 95% < x < 98,5% LPJ Bendahara yang
-                                                            divalidasi KPPN tepat waktu Indeks 2: Jika memperoleh nilai
-                                                            90% < x ≤ 95% LPJ Bendahara yang divalidasi KPPN tepat waktu
-                                                            Indeks 1: Jika memperoleh nilai ≤ 90% LPJ Bendahara yang
-                                                            divalidasi KPPN tepat waktu September: LPJ pengeluaran 63
-                                                            dari 63 wajib LPJ LPJ Penerimaan 18 dari 18 wajib LPJ
-                                                            Oktober: LPJ pengeluaran 63 dari 63 wajib LPJ LPJ Penerimaan
-                                                            17 dari 17 wajib LPJ November: LPJ pengeluaran 63 dari 63
-                                                            wajib LPJ LPJ Penerimaan 17 dari 17 wajib LPJ </td>
+                                                    <td class="left-align" colspan="4"><b>Indeks Penyampaian LPJ</b></td>
+                                                    
+                                                    <td rowspan="9" valign="top" class="left-align" id="tw2formula9"></td>
+                                                    <td rowspan="9" valign="top" class="left-align" id="tw2keterangan9">
+                                                         </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Indeks Validasi LPJ</td>
-                                                        <td><b>50%</b></td>
-                                                        <td id="tw2valueindeksOkt">4</td>
-                                                    <td id="tw2indeksOkt">4</td>
+                                                    <td class="left-align">∑ LPJ Bendahara yang disampaikan ke KPPN tepat waktu</td>
+                                                    <td id="tw2valuelpj9a"></td>
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="tw2indeksTotal9"><b>4</b></td>
+                                                    <td class="left-align">∑ LPJ Bendahara yang seharusnya disampaikan ke KPPN lingkup Kanwil DJPb</td>
+                                                    <td id="tw2valuelpj9b"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Penyampaian LPJ</b></td>
+                                                    <td id="tw2valuetotal9a"></td>
+                                                    <!-- <td id="tw2indeksB8"></td> -->
+                                                    <td id="tw2valueindeks9a"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Indeks Validasi LPJ</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑ LPJ Bendahara yang diverifikasi dan divalidasi KPPN tepat waktu</td>
+                                                    <td id="tw2valuelpj9c"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑ LPJ Bendahara yang disampaikan ke KPPN lingkup Kanwil DJPb</td>
+                                                    <td id="tw2valuelpj9d"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Validasi LPJ</b></td>
+                                                    <td id="tw2valuetotal9b"></td>
+                                                    <!-- <td id="tw2indeksB8"></td> -->
+                                                    <td id="tw2valueindeks9b"></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td colspan="3"><b>Nilai Capaian</b></td>
+                                                     <!-- <td id="tw2indeksTotal9a"><b></b></td> -->
+                                                    <td id="tw2indeksTotal9"><b></b></td>
                                                 </tr>
                                             </tbody>
                                         </table>
 
                                         <script>
                                             function tw2hitungIndex9() {
-                                                let tw2ipLPJ = parseFloat(document.getElementById("tw2sept").value) || 0;
-                                                let tw2ivLPJ = parseFloat(document.getElementById("tw2okt").value) || 0;
-                                                // let VinputC8 = parseFloat(document.getElementById("inputC8").value) || 0;
-
-                                                function getIndeksIKI9(value) {
-                                                    if (value > 98.5) return 4;
-                                                    else if (value > 97) return 3.5;
-                                                    else if (value > 95) return 3;
-                                                    else if (value > 92.5) return 2.5;
-                                                    else if (value > 90) return 2;
-                                                    else return 1;
-                                                }
-
-
-                                                let tw2indeksSept = (tw2ipLPJ * 0.5);
-                                                let tw2indeksOkt = (tw2ivLPJ * 0.5);
-                                                // let tw2indeksC8 = (VinputC8 * 100/3*100) /100/100;
-                                                let tw2indeksTotal9 = tw2indeksSept + tw2indeksOkt;
-                                                let tw2indeksIKI9 = getIndeksIKI9(tw2indeksTotal9);
-
-                                                document.getElementById("tw2valueindeksSept").innerText = tw2ipLPJ;
-                                                document.getElementById("tw2valueindeksOkt").innerText = tw2ivLPJ ;
-                                                // document.getElementById("valueindeksC8").innerText = VinputC8 ;
-
-                                                document.getElementById("tw2indeksSept").innerText = tw2indeksSept.toFixed(2);
-                                                document.getElementById("tw2indeksOkt").innerText = tw2indeksOkt.toFixed(2);
-                                                // document.getElementById("tw2indeksC8").innerText = tw2indeksC8.toFixed(2);
-
-                                                document.getElementById("tw2indeksTotal9").innerText = tw2indeksIKI9.toFixed(0);
-                                            }
-                                            // function getIndeksIKI9(value) {
-                                            //     if (value <= 100 && value > 98.5 ) return 4;
-                                            //     else if (value <= 98.5 && value > 97) return 3.5;
-                                            //     else if (value <= 97 && value > 95) return 3;
-                                            //     else if (value <= 95 && value > 92.5) return 2.5;
-                                            //     else if (value <= 92.5 && value > 90) return 2;
-                                            //     else if (value <= 90) return 1;
+                                                let tw2vlpj9a = parseFloat(document.getElementById("tw2vlpj9a").value) || 0;
+                                                let tw2vlpj9b = parseFloat(document.getElementById("tw2vlpj9b").value) || 0;
+                                                let tw2vlpj9c = parseFloat(document.getElementById("tw2vlpj9c").value) || 0;
+                                                let tw2vlpj9d = parseFloat(document.getElementById("tw2vlpj9d").value) || 0;
                                                 
-                                            // }
+                                                let tw2valuetotal9a = (tw2vlpj9a / tw2vlpj9b) * 100;
+                                                let tw2valueindeks9a = getIndeksIKI9a(tw2valuetotal9a);
 
+                                                let tw2valuetotal9b = (tw2vlpj9c / tw2vlpj9d) * 100;
+                                                let tw2valueindeks9b = getIndeksIKI9b(tw2valuetotal9b);
 
-                                            // function hitungIndeks9() {
-                                            //     function getIndex9(value) {
-                                            //         if (value > 99.5 && value <= 90) return 4;
-                                            //         else if (value > 99 && value <= 99.5) return 3.5;
-                                            //         else if (value >= 98.5 && value <= 99) return 3;
-                                            //         else if (value > 95 && value < 98.5) return 2.5;
-                                            //         else if (value > 90 && value <= 95) return 2;
-                                            //         else return 1;
-                                            //     }
+                                                // let tw2indeksTotal9a = (tw2valuetotal9a + tw2valuetotal9b)/2;
+                                                let tw2indeksTotal9 = (tw2valueindeks9a + tw2valueindeks9b)/2;
 
-                                            //     let indeksSept = getIndex9(parseFloat(document.getElementById('sept').value));
-                                            //     let indeksOkt = getIndex9(parseFloat(document.getElementById('okt').value));
+                                                document.getElementById("tw2valuelpj9a").innerText = tw2vlpj9a;
+                                                document.getElementById("tw2valuelpj9b").innerText = tw2vlpj9b;
+                                                document.getElementById("tw2valuelpj9c").innerText = tw2vlpj9c;
+                                                document.getElementById("tw2valuelpj9d").innerText = tw2vlpj9d;
 
-                                            //     document.getElementById('indeksSept').innerText = indeksSept;
-                                            //     document.getElementById('indeksOkt').innerText = indeksOkt;
+                                                document.getElementById("tw2valuetotal9a").innerText = tw2valuetotal9a + "%" ;
+                                                document.getElementById("tw2valuetotal9b").innerText = tw2valuetotal9b + "%" ;
+                                                document.getElementById("tw2valueindeks9a").innerText = tw2valueindeks9a ;
+                                                document.getElementById("tw2valueindeks9b").innerText = tw2valueindeks9b ;
+                                                document.getElementById("tw2indeksTotal9").innerText = tw2indeksTotal9;
 
-                                            //     let indeksTotal9 = ((indeksSept + indeksOkt) / 2).toFixed(2);
-                                            //     document.getElementById('indeksTotal9').innerHTML = `<strong>${indeksTotal9}</strong>`;
-                                            // }
+                                                //  document.getElementById("tw2indeksTotal9a").innerText = tw2indeksTotal9a + "%";
+                                            }
+
+                                            function getIndeksIKI9a(value) {
+                                                if (value > 98.5 && value <= 100) return 4;
+                                                else if (value > 97 && value <= 98.5) return 3.5;
+                                                else if (value > 95 && value <= 97) return 3;
+                                                else if (value > 92.5 && value <= 95) return 2.5;
+                                                else if (value > 90 && value <= 92.5) return 2;
+                                                else if (value <= 90) return 1;
+                                                
+                                                return 1; // fallback (optional)
+                                            }
+
+                                            function getIndeksIKI9b(value) {
+                                                if (value > 99.5 && value <= 100) return 4;
+                                                else if (value > 99 && value <= 99.5) return 3.5;
+                                                else if (value > 98.5 && value <= 99) return 3;
+                                                else if (value > 95 && value <= 98.5) return 2.5;
+                                                else if (value > 90 && value <= 95) return 2;
+                                                else if (value <= 90) return 1;
+
+                                                return 1; // fallback nilai jika di luar jangkauan
+                                            }
                                         </script>
+
                                         <script type="module">
                                             import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
                                             import { getAuth } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
@@ -531,14 +539,16 @@
                                             }
 
                                             const data = {
-                                                tw2valueindeksSept: document.getElementById("tw2valueindeksSept")?.innerText || "",
-                                                tw2valueindeksOkt: document.getElementById("tw2valueindeksOkt")?.innerText || "",
-                                                tw2indeksSept: document.getElementById("tw2indeksSept")?.innerText || "",
-                                                tw2indeksOkt: document.getElementById("tw2indeksOkt")?.innerText || "",
-                                                tw2indeksTotal9: document.getElementById("tw2indeksTotal9")?.innerText || "",
-                                                // indeksC8: document.getElementById("indeksC8")?.innerText || "",
-                                                // indeksTotal8: document.getElementById("indeksTotal8")?.innerText || "",        
-                                            
+                                                tw2valuelpj9a: document.getElementById("tw2valuelpj9a").innerText || "", 
+                                                tw2valuelpj9b: document.getElementById("tw2valuelpj9b").innerText || "", 
+                                                tw2valuelpj9c: document.getElementById("tw2valuelpj9c").innerText || "", 
+                                                tw2valuelpj9d: document.getElementById("tw2valuelpj9d").innerText || "", 
+                                                tw2valuetotal9a: document.getElementById("tw2valuetotal9a").innerText || "", 
+                                                tw2valuetotal9b: document.getElementById("tw2valuetotal9b").innerText || "", 
+                                                tw2valueindeks9a: document.getElementById("tw2valueindeks9a").innerText || "", 
+                                                tw2valueindeks9b: document.getElementById("tw2valueindeks9b").innerText || "", 
+                                                tw2indeksTotal9: document.getElementById("tw2indeksTotal9").innerText || "", 
+
                                                 tw2formula9: document.getElementById("tw2formula9")?.innerText || "",
                                                 tw2keterangan9: document.getElementById("tw2keterangan9")?.innerText || "",
                                                 

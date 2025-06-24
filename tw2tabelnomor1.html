@@ -340,26 +340,30 @@
                                     <div id="1a-CP" class="content">
                                         <br>
                                         <h3><b>Indeks Kualitas Nilai IKPA K/L</b></h3>
-                                        <label for="tw2rd">Revisi DIPA (%) :</label>
+                                        <label for="tw2rd">Revisi (%) :</label>
                                         <input type="number" id="tw2rd" oninput="updateCapaian1()" step="0.01" min="0">
-                                        <label for="tw2dh">Deviasi Hal. III DIPA (%) :</label>
+                                        <label for="tw2dh">Halaman III DIPA (%) :</label>
                                         <input type="number" id="tw2dh" oninput="updateCapaian1()" step="0.01" min="0">
-                                        <label for="tw2pa">Penyerapan Anggaran (%) :</label>
+                                        <label for="tw2pa">Realisasi (%) :</label>
                                         <input type="number" id="tw2pa" oninput="updateCapaian1()" step="0.01" min="0">
-                                        <label for="tw2bk">Belanja Kontraktual (%) :</label>
+                                        <label for="tw2bk">Kontrak (%) :</label>
                                         <input type="number" id="tw2bk" oninput="updateCapaian1()" step="0.01" min="0">
-                                        <label for="tw2pt">Penyelesaian Tagihan (%) :</label>
+                                        <label for="tw2pt">Tagihan (%) :</label>
                                         <input type="number" id="tw2pt" oninput="updateCapaian1()" step="0.01" min="0">
                                         <label for="tw2put">Pengelolaan UP dan TUP (%) :</label>
                                         <input type="number" id="tw2put" oninput="updateCapaian1()" step="0.01" min="0">
+                                        <label for="tw2ds">Dispensasi (%) :</label>
+                                        <input type="number" id="tw2ds" oninput="updateCapaian1()" step="0.01" min="0">
                                         <label for="tw2co">Capaian Output (%) :</label>
                                         <input type="number" id="tw2co" oninput="updateCapaian1()" step="0.01" min="0">
-                                        <label for="tw2ds">Dispensasi SPM (%) :</label>
-                                        <input type="number" id="tw2ds" oninput="updateCapaian1()" step="0.01" min="0">
-                                        <label for="tw2jumlahsatker1">Nilai Jumlah Satker dengan predikat Minimal Baik (%)
+                                        <label for="pbaikco">Jumlah Satker dengan Predikat Baik :</label>
+                                        <input type="number" id="pbaikco" oninput="updateCapaian1()" step="0.01" min="0">
+                                        <label for="satkerds">Jumlah Satker KPPN :</label>
+                                        <input type="number" id="satkerds" oninput="updateCapaian1()" step="0.01" min="0">
+                                        <!-- <label for="tw2jumlahsatker1">Nilai Jumlah Satker dengan predikat Minimal Baik (%)
                                             :</label>
                                         <input type="number" id="tw2jumlahsatker1" oninput="updateCapaian1()" step="0.01"
-                                            min="0">
+                                            min="0"> -->
 
                                         <label for="tw2formula1">Masukkan Formula: </label>
                                         <textarea id="tw2inputFormula1" class="form-control" rows="3" placeholder="Masukkan teks Formula...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
@@ -420,95 +424,124 @@
                                             </tbody>
                                             <tbody>
                                                 <tr>
-                                                    <td rowspan="13" valign="top">1</td>
-                                                    <td rowspan="13" valign="top"> 1a-CP </td>
-                                                    <td rowspan="13" valign="top" class="left-align">Indeks Kualitas
+                                                    <td rowspan="16" valign="top">1</td>
+                                                    <td rowspan="16" valign="top"> 1a-CP </td>
+                                                    <td rowspan="16" valign="top" class="left-align">Indeks Kualitas
                                                         Nilai IKPA K/L</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td><b>Nilai</b></td>
-                                                    <td><b>Akhir</b></td>
+                                                    <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td><b>Formula</b></td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align"><b>Nilai Ikpa sebagai BUN</b></td>
-                                                    <td><b>70%</b></td>
-                                                    <td id="tw2totalCapaian1"><b> 122,23%</b></td>
-                                                    <td id="tw2nilaiIkpa1Score"><b>48,89</b></td>
-                                                    <td rowspan="12" valign="top" class="left-align" id="tw2formula1">
-                                                        Tolong selalu enter agar tidak terlalu panjang
+                                                    <td class="left-align" colspan="4"><b>Nilai Ikpa sebagai BUN</b></td>
+                                                    <td rowspan="15" valign="top" class="left-align" id="tw2formula1">
+                                                        
                                                     </td>
-                                                    <td rowspan="12" valign="top" class="left-align" id="tw2keterangan1">
-                                                        Tolong selalu enter agar tidak terlalu panjang
+                                                    <td rowspan="15" valign="top" class="left-align" id="tw2keterangan1">
                                                         Hasil penilaian
                                                         IKPA tingkat Nasional sebagai BUN pada Aplikasi OMSPAN = <span
                                                             id="tw2totalNilaiSpan1">95.16</span></td>
+                                                   
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Revisi DIPA</td>
-                                                    <td>10%</td>
-                                                    <td id="tw2rdScore">48,89</td>
+                                                    <td class="left-align">Revisi</td>
                                                     <td id="tw2rdValue"></td>
+                                                    <td id="tw2rdScore"></td>
+                                                    <td></td>
+                                                    <!-- <td>10%</td> -->
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Deviasi Hal. III DIPA</td>
-                                                    <td>15%</td>
-                                                    <td id="tw2dhScore">56,5</td>
+                                                    <td class="left-align">Halaman III DIPA</td>
+                                                    <!-- <td>15%</td> -->
                                                     <td id="tw2dhValue"></td>
+                                                    <td id="tw2dhScore"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Penyerapan Anggaran</td>
-                                                    <td>20%</td>
-                                                    <td id="tw2paScore">56,5</td>
+                                                    <td class="left-align">Realisasi</td>
+                                                    <!-- <td>20%</td> -->
                                                     <td id="tw2paValue"></td>
+                                                    <td id="tw2paScore"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Belanja Kontraktual</td>
-                                                    <td>10%</td>
-                                                    <td id="tw2bkScore">56,5</td>
+                                                    <td class="left-align">Kontrak</td>
+                                                    <!-- <td>10%</td> -->
                                                     <td id="tw2bkValue"></td>
+                                                    <td id="tw2bkScore"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Penyelesaian Tagihan</td>
-                                                    <td>10%</td>
-                                                    <td id="tw2ptScore">56,5</td>
+                                                    <td class="left-align">Tagihan</td>
+                                                    <!-- <td>10%</td> -->
                                                     <td id="tw2ptValue"></td>
+                                                    <td id="tw2ptScore"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Pengelolaan UP dan TUP</td>
-                                                    <td>10%</td>
-                                                    <td id="tw2putScore">56,5</td>
+                                                    <!-- <td>10%</td> -->
                                                     <td id="tw2putValue"></td>
+                                                    <td id="tw2putScore"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Dispensasi</td>
+                                                    <!-- <td>0%</td> -->
+                                                    <td id="tw2dsValue"></td>
+                                                    <td id="tw2dsScore"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Capaian Output</td>
-                                                    <td>25%</td>
-                                                    <td id="tw2coScore">56,5</td>
+                                                    <!-- <td>25%</td> -->
                                                     <td id="tw2coValue"></td>
+                                                    <td id="tw2coScore"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Dispensasi SPM</td>
-                                                    <td>0%</td>
-                                                    <td id="tw2dsScore">56,5</td>
-                                                    <td id="tw2dsValue"></td>
+                                                    <td class="left-align"><b>Total Nilai Ikpa sebagai BUN</b></td>
+                                                    <td><b>70%</b></td>
+                                                    <td id="tw2totalCapaian1"><b></b></td>
+                                                    <td id="tw2nilaiIkpa1Score"><b></b></td>
+                                                </tr>
+                                               <tr>
+                                                    <td class="left-align" colspan="4" style="white-space: nowrap; width: 100%;"><b>Nilai Jumlah Satker dengan Predikat Minimal Baik</b></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="left-align">Jumlah Satker dengan Predikat Minimal Baik</td>
+                                                    <!-- <td>25%</td> -->
+                                                    <td id="pbaikcoValue"></td>
+                                                    <td id="pbaikcoScore"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align"><b>Nilai Jumlah Satker dengan Predikat
+                                                    <td class="left-align">Jumlah satker KPPN</td>
+                                                    <!-- <td>0%</td> -->
+                                                    <td id="satkerdsValue"></td>
+                                                    <td id="satkerdsScore"></td>
+                                                    <td></td>
+                                                </tr>                    
+                                                <tr>
+                                                    <td class="left-align"><b>Total Nilai Jumlah Satker dengan Predikat
                                                             Minimal Baik</b></td>
                                                     <td><b>30%</b></td>
-                                                    <td id="tw2jumlahsatker1Value"><b>0%</b></td>
-                                                    <td id="tw2jumlahsatker1Score"><b>56,5</b></td>
+                                                    <td id="tw2jumlahsatker1Value"><b></b></td>
+                                                    <td id="tw2jumlahsatker1Score"><b></b></td>
                                                 </tr>
                                                 <tr>
                                                     <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" align="right" id="tw2totalCapaian1all"><b>95,16</b>
+                                                    <td colspan="3" align="right" id="tw2totalCapaian1all"><b></b>
                                                     </td>
                                                 </tr>
-                                                <tr>
+                                                <!-- <tr>
                                                     <td><b>Indeks Capaian</b></td>
                                                     <td colspan="3" align="right" id="tw2Nilaislide1a"><b>95,16</b></td>
-                                                </tr>
+                                                </tr> -->
 
                                             </tbody>
                                         </table>
@@ -522,7 +555,9 @@
                                                 let tw2put = parseFloat(document.getElementById("tw2put").value) || 0;
                                                 let tw2co = parseFloat(document.getElementById("tw2co").value) || 0;
                                                 let tw2ds = parseFloat(document.getElementById("tw2ds").value) || 0;
-                                                let tw2jumlahsatker1 = parseFloat(document.getElementById("tw2jumlahsatker1").value) || 0;
+                                                let pbaikco = parseFloat(document.getElementById("pbaikco").value) || 0;
+                                                let satkerds = parseFloat(document.getElementById("satkerds").value) || 0;
+                                                // let tw2jumlahsatker1 = parseFloat(document.getElementById("tw2jumlahsatker1").value) || 0;
 
                                                 let tw2rdScore = (tw2rd * 10) / 100;
                                                 let tw2dhScore = (tw2dh * 15) / 100;
@@ -532,6 +567,7 @@
                                                 let tw2putScore = (tw2put * 10) / 100;
                                                 let tw2coScore = (tw2co * 25) / 100;
                                                 let tw2dsScore = (tw2ds * 0) / 100;
+                                                let tw2jumlahsatker1 = (pbaikco / satkerds)*100 ;
                                                 let tw2jumlahsatker1Score = (tw2jumlahsatker1 * 30) / 100;
 
                                                 let tw2totalCapaian1 = tw2rdScore + tw2dhScore + tw2paScore + tw2bkScore + tw2ptScore + tw2putScore + tw2coScore + tw2dsScore;
@@ -552,6 +588,16 @@
                                                 // document.getElementById("coValue").innerText = co + "%";
                                                 document.getElementById("tw2jumlahsatker1Value").innerText = tw2jumlahsatker1;
 
+                                                document.getElementById("tw2rdValue").innerText = tw2rd.toFixed(2);
+                                                document.getElementById("tw2dhValue").innerText = tw2dh.toFixed(2);
+                                                document.getElementById("tw2paValue").innerText = tw2pa.toFixed(2);
+                                                document.getElementById("tw2bkValue").innerText = tw2bk.toFixed(2);
+                                                document.getElementById("tw2ptValue").innerText = tw2pt.toFixed(2);
+                                                document.getElementById("tw2putValue").innerText = tw2put.toFixed(2);
+                                                document.getElementById("tw2coValue").innerText = tw2co.toFixed(2);
+                                                document.getElementById("tw2dsValue").innerText = tw2ds.toFixed(2);
+                                                document.getElementById("pbaikcoValue").innerText = pbaikco.toFixed(2);
+                                                document.getElementById("satkerdsValue").innerText = satkerds.toFixed(2);
                                                 document.getElementById("tw2rdScore").innerText = tw2rdScore.toFixed(2);
                                                 document.getElementById("tw2dhScore").innerText = tw2dhScore.toFixed(2);
                                                 document.getElementById("tw2paScore").innerText = tw2paScore.toFixed(2);
@@ -560,6 +606,8 @@
                                                 document.getElementById("tw2putScore").innerText = tw2putScore.toFixed(2);
                                                 document.getElementById("tw2coScore").innerText = tw2coScore.toFixed(2);
                                                 document.getElementById("tw2dsScore").innerText = tw2dsScore.toFixed(2);
+                                                document.getElementById("pbaikcoScore").innerText = tw2jumlahsatker1.toFixed(2);
+                                                document.getElementById("satkerdsScore").innerText = tw2jumlahsatker1.toFixed(2);
                                                 document.getElementById("tw2jumlahsatker1Score").innerText = tw2jumlahsatker1Score.toFixed(2);
 
 
@@ -568,10 +616,9 @@
                                                 // document.getElementById("tw2nilaitotalslide1").innerText = nilaitotalslide1.toFixed(2);
                                                 document.getElementById("tw2totalNilaiSpan1").innerText = tw2totalNilaiSpan1.toFixed(2);
                                                 document.getElementById("tw2nilaiIkpa1Score").innerText = tw2nilaiIkpa1Score.toFixed(2);
-                                                document.getElementById("tw2Nilaislide1a").innerText = tw2Nilaislide1a;
+                                                tw2Nilaislide1a: getIndeksIKI1(parseFloat(document.getElementById("tw2totalCapaian1all")?.innerText) || 0);
 
                                             }
-
 
                                             function getIndeksIKI1(capaian) {
                                                 if (capaian >= 100) return 4;
@@ -582,6 +629,7 @@
                                                 if (capaian >= 70 && capaian < 79) return 2.75;
                                                 return 2.5;
                                             }
+                                            
 
                                         </script>
 
@@ -604,6 +652,17 @@
                                             const app = initializeApp(firebaseConfig);
                                             const auth = getAuth(app);
                                             const database = getDatabase(app);
+
+                                            function getIndeksIKI1(capaian) {
+                                                if (capaian >= 100) return 4;
+                                                if (capaian >= 95 && capaian < 100) return 3.75;
+                                                if (capaian >= 90 && capaian < 95) return 3.5;
+                                                if (capaian >= 85 && capaian < 90) return 3.25;
+                                                if (capaian >= 79 && capaian < 85) return 3;
+                                                if (capaian >= 70 && capaian < 79) return 2.75;
+                                                return 2.5;
+                                            }
+                                            
                                             // triwulan = "triwulan1", tabel = "tabel1"
                                             function tw2submitData1(triwulan = "triwulan2", tabel = "tabel1") {
                                             const user = auth.currentUser;
@@ -613,6 +672,16 @@
                                             }
 
                                             const data = {
+                                                tw2rdValue: document.getElementById("tw2rdValue")?.innerText || "",
+                                                tw2dhValue: document.getElementById("tw2dhValue")?.innerText || "",
+                                                tw2paValue: document.getElementById("tw2paValue")?.innerText || "",
+                                                tw2bkValue: document.getElementById("tw2bkValue")?.innerText || "",
+                                                tw2ptValue: document.getElementById("tw2ptValue")?.innerText || "",
+                                                tw2putValue: document.getElementById("tw2putValue")?.innerText || "",
+                                                tw2coValue: document.getElementById("tw2coValue")?.innerText || "",
+                                                tw2dsValue: document.getElementById("tw2dsValue")?.innerText || "",
+                                                pbaikcoValue: document.getElementById("pbaikcoValue")?.innerText || "",
+                                                satkerdsValue: document.getElementById("satkerdsValue")?.innerText || "",
                                                 tw2rdScore: document.getElementById("tw2rdScore")?.innerText || "",
                                                 tw2dhScore: document.getElementById("tw2dhScore")?.innerText || "",
                                                 tw2paScore: document.getElementById("tw2paScore")?.innerText || "",
@@ -621,6 +690,8 @@
                                                 tw2putScore: document.getElementById("tw2putScore")?.innerText || "",
                                                 tw2coScore: document.getElementById("tw2coScore")?.innerText || "",
                                                 tw2dsScore: document.getElementById("tw2dsScore")?.innerText || "",
+                                                pbaikcoScore: document.getElementById("pbaikcoScore")?.innerText || "",
+                                                satkerdsScore: document.getElementById("satkerdsScore")?.innerText || "",
                                                 tw2jumlahsatker1Value: document.getElementById("tw2jumlahsatker1Value")?.innerText || "",
                                                 tw2jumlahsatker1Score: document.getElementById("tw2jumlahsatker1Score")?.innerText || "",
                                                 tw2totalCapaian1: document.getElementById("tw2totalCapaian1")?.innerText || "",
@@ -628,18 +699,18 @@
                                                 tw2formula1: document.getElementById("tw2formula1")?.innerText || "",
                                                 tw2keterangan1: document.getElementById("tw2keterangan1")?.innerText || "",
                                                 tw2totalCapaian1all: document.getElementById("tw2totalCapaian1all")?.innerText || "",
-                                                tw2Nilaislide1a: document.getElementById("tw2Nilaislide1a")?.innerText || "",
+                                                tw2Nilaislide1a: getIndeksIKI1(parseFloat(document.getElementById("tw2totalCapaian1all")?.innerText) || 0),
                                                 timestamp: new Date().toISOString()
                                             };
 
-                                            // pakai set() bukan push()
+                                            // pakai set() bukan set()
                                             const dataRef = ref(database, `ikpaData/${user.uid}/${triwulan}/${tabel}`);
 
                                             set(dataRef, data)
                                                 .then(() => alert(`Data berhasil disimpan ke ${triwulan}/${tabel} dan memperbarui data lama!`))
                                                 .catch((error) => alert("Gagal menyimpan data: " + error.message));
                                             // set(ref(database, "ikpaData/" + user.uid ), data)
-                                            //     .then(() => alert("Data berhasil disimpan dan data lama terupdate di Firebase!"))
+                                            //     .then(() => alert("Data berhasil disimpan dan data lama terset di Firebase!"))
                                             //     .catch((error) => alert("Gagal menyimpan data: " + error.message));
                                             }
 
