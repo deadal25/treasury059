@@ -341,15 +341,25 @@
                                         <br>
                                         <h3><b>Indeks Digitalisasi Pengelolaan Keuangan KPPN </b></h3>
 
-                                        <label for="tw4indigipay">Implementasi Digipay :</label>
-                                        <input type="number" id="tw4indigipay" oninput="tw4updateCapaian6()" step="0.01"
-                                            min="0">
+                                         <label for="tw4jtindigipay">Jumlah Transaksi pada Aplikasi Digipay Satu per Triwulan:</label>
+                                        <input type="number" id="tw4jtindigipay" oninput="tw4updateCapaian6()" step="0.01" min="0">
+                                        <label for="tw4jsindigipay">Jumlah Satker UP Mitra KPPN:</label>
+                                        <input type="number" id="tw4jsindigipay" oninput="tw4updateCapaian6()" step="0.01" min="0">
 
-                                        <label for="tw4incms">Implementasi CMS :</label>
-                                        <input type="number" id="tw4incms" oninput="tw4updateCapaian6()" step="0.01" min="0">
+                                        <label for="tw4sybindigipay">Satker yang bertransaksi pada Aplikasi Digipay Satu:</label>
+                                        <input type="number" id="tw4sybindigipay" oninput="tw4updateCapaian6()" step="0.01" min="0">
+                                        <label for="tw4tsyindigipay">Target Satker yang bertransaksi pada Aplikasi Digipay Satu:</label>
+                                        <input type="number" id="tw4tsyindigipay" oninput="tw4updateCapaian6()" step="0.01" min="0">
 
-                                        <label for="tw4inkkp">Implementasi KKP :</label>
-                                        <input type="number" id="tw4inkkp" oninput="tw4updateCapaian6()" step="0.01" min="0">
+                                        <label for="tw4one">Jumlah (Transaksi Melalui CMS) s.d. Triwulan Berkenaan:</label>
+                                        <input type="number" id="tw4one" oninput="tw4updateCapaian6()" step="0.01" min="0">
+                                        <label for="tw4all">Jumlah ∑ (Transaksi Melalui CMS, Kartu Debit, Teller) s.d. Triwulan Berkenaan:</label>
+                                        <input type="number" id="tw4all" oninput="tw4updateCapaian6()" step="0.01" min="0">
+
+                                        <label for="tw4tkkp">∑ Transaksi KKP s.d. Triwulan ke-n:</label>
+                                        <input type="number" id="tw4tkkp" oninput="tw4updateCapaian6()" step="0.01" min="0">
+                                        <label for="tw4upkkp">n x ∑ Satker Lingkup KPPN yang mempunyai UP KKP:</label>
+                                        <input type="number" id="tw4upkkp" oninput="tw4updateCapaian6()" step="0.01" min="0">
 
                                         <label for="tw4formula6">Masukkan Formula:</label>
                                         <textarea id="tw4inputFormula6" class="form-control" rows="3"
@@ -394,104 +404,197 @@
                                             </tbody>
                                             <tbody>
                                                 <tr>
-                                                    <td rowspan="5" valign="top">6</td>
-                                                    <td rowspan="5" valign="top"> 3b-N </td>
-                                                    <td rowspan="5" valign="top" class="left-align">Indeks Digitalisasi Pengelolaan Keuangan</td>
+                                                    <td rowspan="20" valign="top">6</td>
+                                                    <td rowspan="20" valign="top"> 3b-N </td>
+                                                    <td rowspan="20" valign="top" class="left-align">Indeks Digitalisasi Pengelolaan Keuangan</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td><b>Nilai</b></td>
                                                     <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td><b>Formula</b></td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Implementasi Digipay </td>
-                                                    <td >33%</td>
-                                                    <td id="tw4indigipayvalue">5</td>
-                                                    <td id="tw4indeksindigipay">5</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="tw4formula6">Tolong selalu enter agar tidak terlalu panjang</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="tw4keterangan6">IKU
-                                                        terdiri dari 3 komponen yaitu:
-                                                        A. Implementasi Digipay
-                                                        B. Implementasi CMS
-                                                        C. Implementasi KKP
-
-                                                        Tolong selalu enter agar tidak terlalu panjang </td>
+                                                    <td class="left-align" colspan="4"><b>Implementasi Digipay</b></td>
+                                                    <td rowspan="19" valign="top" class="left-align" id="tw4formula6"></td>
+                                                    <td rowspan="19" valign="top" class="left-align" id="tw4keterangan6"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Implementasi CMS</td>
-                                                        <td >33%</td>
-                                                    <td id="tw4incmsvalue">5</td>
-                                                    <td id="tw4indeksincms">55</td>
+                                                    <td class="left-align" colspan="3"><b>Komponen A</b></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Implementasi KKP</td>
-                                                    <td >33%</td>
-                                                    <td id="tw4inkkpvalue">5</td>
-                                                    <td id="tw4indeksinkkp">5</td>
+                                                    <td class="left-align">Jumlah Transaksi pada Aplikasi Digipay Satu per Triwulan</td>
+                                                    <td id="tw4jtdigipayvalue"></td>
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="tw4indeksTotal6"> <b>5</b></td>
+                                                    <td class="left-align">Jumlah Satker UP Mitra KPPN</td>
+                                                    <td id="tw4jskppnvalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Komponen A</b></td>
+                                                    <td id="tw4komponenAvalue"></td>
+                                                    <td></td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="3"><b>Komponen B</b></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Satker yang bertransaksi pada Aplikasi Digipay Satu</td>
+                                                    <td id="tw4trsdigipayvalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Target Satker yang bertransaksi pada Aplikasi Digipay Satu</td>
+                                                    <td id="tw4tsatkervalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Komponen B</b></td>
+                                                    <td id="tw4komponenBvalue"></td>
+                                                    <td></td>  
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Implementasi Digipay</b></td>
+                                                    <td id="tw4indigipayvalue"></td>
+                                                    <td id="tw4indeksindigipay"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Implementasi CMS</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Jumlah (Transaksi Melalui CMS) s.d. Triwulan Berkenaan</td>
+                                                    <td id="tw4onetrsvalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Jumlah ∑ (Transaksi Melalui CMS, Kartu Debit, Teller) s.d. Triwulan Berkenaan</td>
+                                                    <td id="tw4alltrsvalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align"><b>Total Implementasi CMS</b></td>
+                                                    <td id="tw4incmsvalue"></td>
+                                                    <td id="tw4persenincms"></td>
+                                                    <td id="tw4indeksincms"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Implementasi KKP</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑ Transaksi KKP s.d. Triwulan ke-n</td>
+                                                    <td id="tw4trkkpvalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">n x ∑ Satker Lingkup KPPN yang mempunyai UP KKP</td>
+                                                    <td id="tw4upkkpvalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2" ><b>Total Implementasi KKP</b></td>
+                                                    <td id="tw4inkkpvalue"></td>
+                                                    <td id="tw4indeksinkkp"></td>
+                                                </tr> 
+                                                
+                                                <tr>
+                                                    <td colspan="3"><b>Nilai Capaian</b></td>
+                                                    <td id="tw4indeksTotal6"> <b></b></td>
                                                 </tr>
 
                                             </tbody>
                                         </table>
                                         <script>
                                             function tw4updateCapaian6() {
-                                                let tw4indigipay = parseFloat(document.getElementById("tw4indigipay").value) || 0;
-                                                let tw4incms = parseFloat(document.getElementById("tw4incms").value) || 0;
-                                                let tw4inkkp = parseFloat(document.getElementById("tw4inkkp").value) || 0;
+                                                let tw4jtindigipay = parseFloat(document.getElementById("tw4jtindigipay").value) || 0;
+                                                let tw4jsindigipay = parseFloat(document.getElementById("tw4jsindigipay").value) || 0;
 
-                                                let tw4indeksindigipay = (tw4indigipay * 100/3*100)/100/100;
-                                                let tw4indeksincms = (tw4incms * 100/3*100) /100/100;
-                                                let tw4indeksinkkp = (tw4inkkp * 100/3*100) /100/100;
-                                                let tw4indeksTotal6 = tw4indeksindigipay + tw4indeksincms +tw4indeksinkkp;
+                                                let tw4sybindigipay = parseFloat(document.getElementById("tw4sybindigipay").value) || 0;
+                                                let tw4tsyindigipay = parseFloat(document.getElementById("tw4tsyindigipay").value) || 0;
 
-                                                // let totalCapaian6 = indigipayScore + incmsScore + inkkp;
-                                                // let indeksIKI = getIndeksIKI(totalCapaian);
-                                                // let indeksindigipay = getIndeksindigipay(indigipay);
-                                                // let indeksincms = getIndeksincms(incms);
-                                                // let indeksinkkp = getIndeksinkkp(inkkp);
-                                                // let indeksTotal6 = (indeksindigipay + indeksincms + indeksinkkp) / 3;
+                                                let tw4one = parseFloat(document.getElementById("tw4one").value) || 0;
+                                                let tw4all = parseFloat(document.getElementById("tw4all").value) || 0;
 
-                                                document.getElementById("tw4indigipayvalue").innerText = tw4indigipay;
-                                                document.getElementById("tw4incmsvalue").innerText = tw4incms ;
-                                                document.getElementById("tw4inkkpvalue").innerText = tw4inkkp ;
+                                                let tw4tkkp = parseFloat(document.getElementById("tw4tkkp").value) || 0;
+                                                let tw4upkkp = parseFloat(document.getElementById("tw4upkkp").value) || 0;
+                                                
 
-                                                document.getElementById("tw4indeksindigipay").innerText = tw4indeksindigipay.toFixed(2);
-                                                document.getElementById("tw4indeksincms").innerText = tw4indeksincms.toFixed(2);
-                                                document.getElementById("tw4indeksinkkp").innerText = tw4indeksinkkp.toFixed(2);
+                                                let tw4komponenAvalue = (tw4jtindigipay / tw4jsindigipay ) * 100;
+                                                let tw4komponenBvalue = (tw4sybindigipay / tw4tsyindigipay ) * 100;
 
-                                                document.getElementById("tw4indeksTotal6").innerText = tw4indeksTotal6.toFixed(0);
+                                                let tw4indigipayvalue = (tw4komponenAvalue + tw4komponenBvalue ) / 2;
+                                                let tw4indeksindigipay = getIndeksIKI6a(tw4indigipayvalue);
+
+                                                let tw4incmsvalue = (tw4one / tw4all ) * 100;
+                                                let tw4targetpersenincms = 10 + 30 + 50 + 70 ;
+                                                let tw4persenincms = (tw4incmsvalue / tw4targetpersenincms) * 100 ;
+                                                let tw4indeksincms = getIndeksIKI6b(tw4persenincms);
+                                                let tw4inkkpvalue = (tw4tkkp / tw4upkkp ) * 100;
+                                                let tw4indeksinkkp = getIndeksIKI6c(tw4inkkpvalue);
+                                                let tw4indeksTotal6 = (tw4indeksindigipay + tw4indeksincms +tw4indeksinkkp)/3;
+
+                                                // document.getElementById("tw4indigipayvalue").innerText = tw4indigipay;
+                                                document.getElementById("tw4jtdigipayvalue").innerText = tw4jtindigipay;
+                                                document.getElementById("tw4jskppnvalue").innerText = tw4jsindigipay;
+                                                document.getElementById("tw4komponenAvalue").innerText = tw4komponenAvalue.toFixed(2) + "%";
+
+                                                document.getElementById("tw4tsatkervalue").innerText = tw4sybindigipay;
+                                                document.getElementById("tw4trsdigipayvalue").innerText = tw4tsyindigipay;
+                                                document.getElementById("tw4komponenBvalue").innerText = tw4komponenBvalue.toFixed(2) + "%";
+
+                                                document.getElementById("tw4indigipayvalue").innerText = tw4indigipayvalue.toFixed(2) + "%";
+                                                document.getElementById("tw4indeksindigipay").innerText = tw4indeksindigipay;
+
+                                                document.getElementById("tw4onetrsvalue").innerText = tw4one;
+                                                document.getElementById("tw4alltrsvalue").innerText = tw4all;
+                                                document.getElementById("tw4incmsvalue").innerText = tw4incmsvalue.toFixed(2) + "%";
+                                                document.getElementById("tw4persenincms").innerText = tw4persenincms.toFixed(2) + "%";
+                                                document.getElementById("tw4indeksincms").innerText = tw4indeksincms;
+
+                                                document.getElementById("tw4trkkpvalue").innerText = tw4tkkp;
+                                                document.getElementById("tw4upkkpvalue").innerText = tw4upkkp;
+                                                document.getElementById("tw4inkkpvalue").innerText = tw4inkkpvalue.toFixed(2) + "%";
+                                                document.getElementById("tw4indeksinkkp").innerText = tw4indeksinkkp;
+
+                                                
+                                                document.getElementById("tw4indeksTotal6").innerText = tw4indeksTotal6;
                                             }
 
-                                           
-
-                                            // function getIndeksindigipay(indigipay) {
-                                            //     if (indigipay < 30) return 1;
-                                            //     if (indigipay >= 30 && indigipay < 50) return 2;
-                                            //     if (indigipay >= 50 && indigipay < 70) return 3;
-                                            //     if (indigipay >= 70 && indigipay < 100) return 4;
-                                            //     return 5;
-                                            // }
-
-                                            // function getIndeksincms(incms) {
-                                            //     if (incms <= 40) return 1;
-                                            //     if (incms > 40 && incms <= 70) return 2;
-                                            //     if (incms > 70 && incms <= 85) return 3;
-                                            //     if (incms > 85 && incms <= 100) return 4;
-                                            //     return 5;
-                                            // }
-
-                                            // function getIndeksinkkp(inkkp) {
-                                            //     if (inkkp < 30) return 1;
-                                            //     if (inkkp >= 30 && inkkp < 40) return 2;
-                                            //     if (inkkp >= 40 && inkkp < 50) return 3;
-                                            //     if (inkkp >= 50 && inkkp <= 70) return 4;
-                                            //     return 5;
-                                            // }
-
+                                            function getIndeksIKI6a(capaian1) {
+                                                if (capaian1 > 85) return 5;
+                                                if (capaian1 > 60) return 4;
+                                                if (capaian1 > 40) return 3;
+                                                if (capaian1 > 15) return 2;
+                                                if (capaian1 <= 15) return 1;
+                                                
+                                                return 1; // fallback jika negatif
+                                            }
+                                            function getIndeksIKI6b(capaian2) {
+                                                if (capaian2 > 100) return 5;
+                                                if (capaian2 > 85) return 4;
+                                                if (capaian2 > 70) return 3;
+                                                if (capaian2 > 40) return 2;
+                                                return 1; // Untuk capaian1 <= 40
+                                            }
+                                            function getIndeksIKI6c(capaian3) {
+                                                if (capaian3 > 50) return 5;
+                                                if (capaian3 >= 40) return 4;
+                                                if (capaian3 >= 30) return 3;
+                                                if (capaian3 >= 20) return 2;
+                                                return 1; // Jika capaian3 < 20
+                                            }
 
                                         </script>
 
@@ -523,14 +626,25 @@
                                             }
 
                                             const data = {
-                                                tw4indigipayvalue: document.getElementById("tw4indigipayvalue")?.innerText || "",
-                                                tw4incmsvalue: document.getElementById("tw4incmsvalue")?.innerText || "",
-                                                tw4inkkpvalue: document.getElementById("tw4inkkpvalue")?.innerText || "",
-                                                tw4indeksindigipay: document.getElementById("tw4indeksindigipay")?.innerText || "",
-                                                tw4indeksincms: document.getElementById("tw4indeksincms")?.innerText || "",
-                                                tw4indeksinkkp: document.getElementById("tw4indeksinkkp")?.innerText || "",
-                                                tw4indeksTotal6: document.getElementById("tw4indeksTotal6")?.innerText || "",        
-                                            
+                                                tw4jtdigipayvalue: document.getElementById("tw4jtdigipayvalue").innerText || "",
+                                                tw4jskppnvalue: document.getElementById("tw4jskppnvalue").innerText || "",
+                                                tw4komponenAvalue: document.getElementById("tw4komponenAvalue").innerText || "",
+                                                tw4tsatkervalue:   document.getElementById("tw4tsatkervalue").innerText || "",
+                                                tw4trsdigipayvalue: document.getElementById("tw4trsdigipayvalue").innerText || "",
+                                                tw4komponenBvalue: document.getElementById("tw4komponenBvalue").innerText || "",
+                                                tw4indigipayvalue: document.getElementById("tw4indigipayvalue").innerText || "",
+                                                tw4indeksindigipay:document.getElementById("tw4indeksindigipay").innerText || "",
+                                                tw4onetrsvalue: document.getElementById("tw4onetrsvalue").innerText || "",
+                                                tw4alltrsvalue: document.getElementById("tw4alltrsvalue").innerText || "",
+                                                tw4incmsvalue: document.getElementById("tw4incmsvalue").innerText || "",
+                                                tw4persenincms: document.getElementById("tw4persenincms").innerText || "",
+                                                tw4indeksincms: document.getElementById("tw4indeksincms").innerText || "",
+                                                tw4trkkpvalue: document.getElementById("tw4trkkpvalue").innerText || "",
+                                                tw4upkkpvalue: document.getElementById("tw4upkkpvalue").innerText || "",
+                                                tw4inkkpvalue: document.getElementById("tw4inkkpvalue").innerText || "",
+                                                tw4indeksinkkp: document.getElementById("tw4indeksinkkp").innerText || "",
+                                                tw4indeksTotal6: document.getElementById("tw4indeksTotal6").innerText || "",
+
                                                 tw4formula6: document.getElementById("tw4formula6")?.innerText || "",
                                                 tw4keterangan6: document.getElementById("tw4keterangan6")?.innerText || "",
                                                 

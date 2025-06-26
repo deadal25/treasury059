@@ -341,15 +341,25 @@
                                         <br>
                                         <h3><b>Indeks Digitalisasi Pengelolaan Keuangan KPPN </b></h3>
 
-                                        <label for="yearindigipay">Implementasi Digipay :</label>
-                                        <input type="number" id="yearindigipay" oninput="yearupdateCapaian6()" step="0.01"
-                                            min="0">
+                                         <label for="yearjtindigipay">Jumlah Transaksi pada Aplikasi Digipay Satu per Triwulan:</label>
+                                        <input type="number" id="yearjtindigipay" oninput="yearupdateCapaian6()" step="0.01" min="0">
+                                        <label for="yearjsindigipay">Jumlah Satker UP Mitra KPPN:</label>
+                                        <input type="number" id="yearjsindigipay" oninput="yearupdateCapaian6()" step="0.01" min="0">
 
-                                        <label for="yearincms">Implementasi CMS :</label>
-                                        <input type="number" id="yearincms" oninput="yearupdateCapaian6()" step="0.01" min="0">
+                                        <label for="yearsybindigipay">Satker yang bertransaksi pada Aplikasi Digipay Satu:</label>
+                                        <input type="number" id="yearsybindigipay" oninput="yearupdateCapaian6()" step="0.01" min="0">
+                                        <label for="yeartsyindigipay">Target Satker yang bertransaksi pada Aplikasi Digipay Satu:</label>
+                                        <input type="number" id="yeartsyindigipay" oninput="yearupdateCapaian6()" step="0.01" min="0">
 
-                                        <label for="yearinkkp">Implementasi KKP :</label>
-                                        <input type="number" id="yearinkkp" oninput="yearupdateCapaian6()" step="0.01" min="0">
+                                        <label for="yearone">Jumlah (Transaksi Melalui CMS) s.d. Triwulan Berkenaan:</label>
+                                        <input type="number" id="yearone" oninput="yearupdateCapaian6()" step="0.01" min="0">
+                                        <label for="yearall">Jumlah ∑ (Transaksi Melalui CMS, Kartu Debit, Teller) s.d. Triwulan Berkenaan:</label>
+                                        <input type="number" id="yearall" oninput="yearupdateCapaian6()" step="0.01" min="0">
+
+                                        <label for="yeartkkp">∑ Transaksi KKP s.d. Triwulan ke-n:</label>
+                                        <input type="number" id="yeartkkp" oninput="yearupdateCapaian6()" step="0.01" min="0">
+                                        <label for="yearupkkp">n x ∑ Satker Lingkup KPPN yang mempunyai UP KKP:</label>
+                                        <input type="number" id="yearupkkp" oninput="yearupdateCapaian6()" step="0.01" min="0">
 
                                         <label for="yearformula6">Masukkan Formula:</label>
                                         <textarea id="yearinputFormula6" class="form-control" rows="3"
@@ -394,104 +404,197 @@
                                             </tbody>
                                             <tbody>
                                                 <tr>
-                                                    <td rowspan="5" valign="top">6</td>
-                                                    <td rowspan="5" valign="top"> 3b-N </td>
-                                                    <td rowspan="5" valign="top" class="left-align">Indeks Digitalisasi Pengelolaan Keuangan</td>
+                                                    <td rowspan="20" valign="top">6</td>
+                                                    <td rowspan="20" valign="top"> 3b-N </td>
+                                                    <td rowspan="20" valign="top" class="left-align">Indeks Digitalisasi Pengelolaan Keuangan</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td><b>Nilai</b></td>
                                                     <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td><b>Formula</b></td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Implementasi Digipay </td>
-                                                    <td >33%</td>
-                                                    <td id="yearindigipayvalue">5</td>
-                                                    <td id="yearindeksindigipay">5</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="yearformula6">Tolong selalu enter agar tidak terlalu panjang</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="yearketerangan6">IKU
-                                                        terdiri dari 3 komponen yaitu:
-                                                        A. Implementasi Digipay
-                                                        B. Implementasi CMS
-                                                        C. Implementasi KKP
-
-                                                        Tolong selalu enter agar tidak terlalu panjang </td>
+                                                    <td class="left-align" colspan="4"><b>Implementasi Digipay</b></td>
+                                                    <td rowspan="19" valign="top" class="left-align" id="yearformula6"></td>
+                                                    <td rowspan="19" valign="top" class="left-align" id="yearketerangan6"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Implementasi CMS</td>
-                                                        <td >33%</td>
-                                                    <td id="yearincmsvalue">5</td>
-                                                    <td id="yearindeksincms">55</td>
+                                                    <td class="left-align" colspan="3"><b>Komponen A</b></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Implementasi KKP</td>
-                                                    <td >33%</td>
-                                                    <td id="yearinkkpvalue">5</td>
-                                                    <td id="yearindeksinkkp">5</td>
+                                                    <td class="left-align">Jumlah Transaksi pada Aplikasi Digipay Satu per Triwulan</td>
+                                                    <td id="yearjtdigipayvalue"></td>
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="yearindeksTotal6"> <b>5</b></td>
+                                                    <td class="left-align">Jumlah Satker UP Mitra KPPN</td>
+                                                    <td id="yearjskppnvalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Komponen A</b></td>
+                                                    <td id="yearkomponenAvalue"></td>
+                                                    <td></td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="3"><b>Komponen B</b></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Satker yang bertransaksi pada Aplikasi Digipay Satu</td>
+                                                    <td id="yeartrsdigipayvalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Target Satker yang bertransaksi pada Aplikasi Digipay Satu</td>
+                                                    <td id="yeartsatkervalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Komponen B</b></td>
+                                                    <td id="yearkomponenBvalue"></td>
+                                                    <td></td>  
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Implementasi Digipay</b></td>
+                                                    <td id="yearindigipayvalue"></td>
+                                                    <td id="yearindeksindigipay"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Implementasi CMS</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Jumlah (Transaksi Melalui CMS) s.d. Triwulan Berkenaan</td>
+                                                    <td id="yearonetrsvalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Jumlah ∑ (Transaksi Melalui CMS, Kartu Debit, Teller) s.d. Triwulan Berkenaan</td>
+                                                    <td id="yearalltrsvalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align"><b>Total Implementasi CMS</b></td>
+                                                    <td id="yearincmsvalue"></td>
+                                                    <td id="yearpersenincms"></td>
+                                                    <td id="yearindeksincms"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Implementasi KKP</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑ Transaksi KKP s.d. Triwulan ke-n</td>
+                                                    <td id="yeartrkkpvalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">n x ∑ Satker Lingkup KPPN yang mempunyai UP KKP</td>
+                                                    <td id="yearupkkpvalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2" ><b>Total Implementasi KKP</b></td>
+                                                    <td id="yearinkkpvalue"></td>
+                                                    <td id="yearindeksinkkp"></td>
+                                                </tr> 
+                                                
+                                                <tr>
+                                                    <td colspan="3"><b>Nilai Capaian</b></td>
+                                                    <td id="yearindeksTotal6"> <b></b></td>
                                                 </tr>
 
                                             </tbody>
                                         </table>
                                         <script>
                                             function yearupdateCapaian6() {
-                                                let yearindigipay = parseFloat(document.getElementById("yearindigipay").value) || 0;
-                                                let yearincms = parseFloat(document.getElementById("yearincms").value) || 0;
-                                                let yearinkkp = parseFloat(document.getElementById("yearinkkp").value) || 0;
+                                                let yearjtindigipay = parseFloat(document.getElementById("yearjtindigipay").value) || 0;
+                                                let yearjsindigipay = parseFloat(document.getElementById("yearjsindigipay").value) || 0;
 
-                                                let yearindeksindigipay = (yearindigipay * 100/3*100)/100/100;
-                                                let yearindeksincms = (yearincms * 100/3*100) /100/100;
-                                                let yearindeksinkkp = (yearinkkp * 100/3*100) /100/100;
-                                                let yearindeksTotal6 = yearindeksindigipay + yearindeksincms +yearindeksinkkp;
+                                                let yearsybindigipay = parseFloat(document.getElementById("yearsybindigipay").value) || 0;
+                                                let yeartsyindigipay = parseFloat(document.getElementById("yeartsyindigipay").value) || 0;
 
-                                                // let totalCapaian6 = indigipayScore + incmsScore + inkkp;
-                                                // let indeksIKI = getIndeksIKI(totalCapaian);
-                                                // let indeksindigipay = getIndeksindigipay(indigipay);
-                                                // let indeksincms = getIndeksincms(incms);
-                                                // let indeksinkkp = getIndeksinkkp(inkkp);
-                                                // let indeksTotal6 = (indeksindigipay + indeksincms + indeksinkkp) / 3;
+                                                let yearone = parseFloat(document.getElementById("yearone").value) || 0;
+                                                let yearall = parseFloat(document.getElementById("yearall").value) || 0;
 
-                                                document.getElementById("yearindigipayvalue").innerText = yearindigipay;
-                                                document.getElementById("yearincmsvalue").innerText = yearincms ;
-                                                document.getElementById("yearinkkpvalue").innerText = yearinkkp ;
+                                                let yeartkkp = parseFloat(document.getElementById("yeartkkp").value) || 0;
+                                                let yearupkkp = parseFloat(document.getElementById("yearupkkp").value) || 0;
+                                                
 
-                                                document.getElementById("yearindeksindigipay").innerText = yearindeksindigipay.toFixed(2);
-                                                document.getElementById("yearindeksincms").innerText = yearindeksincms.toFixed(2);
-                                                document.getElementById("yearindeksinkkp").innerText = yearindeksinkkp.toFixed(2);
+                                                let yearkomponenAvalue = (yearjtindigipay / yearjsindigipay ) * 100;
+                                                let yearkomponenBvalue = (yearsybindigipay / yeartsyindigipay ) * 100;
 
-                                                document.getElementById("yearindeksTotal6").innerText = yearindeksTotal6.toFixed(0);
+                                                let yearindigipayvalue = (yearkomponenAvalue + yearkomponenBvalue ) / 2;
+                                                let yearindeksindigipay = getIndeksIKI6a(yearindigipayvalue);
+
+                                                let yearincmsvalue = (yearone / yearall ) * 100;
+                                                let yeartargetpersenincms = 10 + 30 + 50 + 70 ;
+                                                let yearpersenincms = (yearincmsvalue / yeartargetpersenincms) * 100 ;
+                                                let yearindeksincms = getIndeksIKI6b(yearpersenincms);
+                                                let yearinkkpvalue = (yeartkkp / yearupkkp ) * 100;
+                                                let yearindeksinkkp = getIndeksIKI6c(yearinkkpvalue);
+                                                let yearindeksTotal6 = (yearindeksindigipay + yearindeksincms +yearindeksinkkp)/3;
+
+                                                // document.getElementById("yearindigipayvalue").innerText = yearindigipay;
+                                                document.getElementById("yearjtdigipayvalue").innerText = yearjtindigipay;
+                                                document.getElementById("yearjskppnvalue").innerText = yearjsindigipay;
+                                                document.getElementById("yearkomponenAvalue").innerText = yearkomponenAvalue.toFixed(2) + "%";
+
+                                                document.getElementById("yeartsatkervalue").innerText = yearsybindigipay;
+                                                document.getElementById("yeartrsdigipayvalue").innerText = yeartsyindigipay;
+                                                document.getElementById("yearkomponenBvalue").innerText = yearkomponenBvalue.toFixed(2) + "%";
+
+                                                document.getElementById("yearindigipayvalue").innerText = yearindigipayvalue.toFixed(2) + "%";
+                                                document.getElementById("yearindeksindigipay").innerText = yearindeksindigipay;
+
+                                                document.getElementById("yearonetrsvalue").innerText = yearone;
+                                                document.getElementById("yearalltrsvalue").innerText = yearall;
+                                                document.getElementById("yearincmsvalue").innerText = yearincmsvalue.toFixed(2) + "%";
+                                                document.getElementById("yearpersenincms").innerText = yearpersenincms.toFixed(2) + "%";
+                                                document.getElementById("yearindeksincms").innerText = yearindeksincms;
+
+                                                document.getElementById("yeartrkkpvalue").innerText = yeartkkp;
+                                                document.getElementById("yearupkkpvalue").innerText = yearupkkp;
+                                                document.getElementById("yearinkkpvalue").innerText = yearinkkpvalue.toFixed(2) + "%";
+                                                document.getElementById("yearindeksinkkp").innerText = yearindeksinkkp;
+
+                                                
+                                                document.getElementById("yearindeksTotal6").innerText = yearindeksTotal6;
                                             }
 
-                                           
-
-                                            // function getIndeksindigipay(indigipay) {
-                                            //     if (indigipay < 30) return 1;
-                                            //     if (indigipay >= 30 && indigipay < 50) return 2;
-                                            //     if (indigipay >= 50 && indigipay < 70) return 3;
-                                            //     if (indigipay >= 70 && indigipay < 100) return 4;
-                                            //     return 5;
-                                            // }
-
-                                            // function getIndeksincms(incms) {
-                                            //     if (incms <= 40) return 1;
-                                            //     if (incms > 40 && incms <= 70) return 2;
-                                            //     if (incms > 70 && incms <= 85) return 3;
-                                            //     if (incms > 85 && incms <= 100) return 4;
-                                            //     return 5;
-                                            // }
-
-                                            // function getIndeksinkkp(inkkp) {
-                                            //     if (inkkp < 30) return 1;
-                                            //     if (inkkp >= 30 && inkkp < 40) return 2;
-                                            //     if (inkkp >= 40 && inkkp < 50) return 3;
-                                            //     if (inkkp >= 50 && inkkp <= 70) return 4;
-                                            //     return 5;
-                                            // }
-
+                                            function getIndeksIKI6a(capaian1) {
+                                                if (capaian1 > 85) return 5;
+                                                if (capaian1 > 60) return 4;
+                                                if (capaian1 > 40) return 3;
+                                                if (capaian1 > 15) return 2;
+                                                if (capaian1 <= 15) return 1;
+                                                
+                                                return 1; // fallback jika negatif
+                                            }
+                                            function getIndeksIKI6b(capaian2) {
+                                                if (capaian2 > 100) return 5;
+                                                if (capaian2 > 85) return 4;
+                                                if (capaian2 > 70) return 3;
+                                                if (capaian2 > 40) return 2;
+                                                return 1; // Untuk capaian1 <= 40
+                                            }
+                                            function getIndeksIKI6c(capaian3) {
+                                                if (capaian3 > 50) return 5;
+                                                if (capaian3 >= 40) return 4;
+                                                if (capaian3 >= 30) return 3;
+                                                if (capaian3 >= 20) return 2;
+                                                return 1; // Jika capaian3 < 20
+                                            }
 
                                         </script>
                                         <script type="module">
@@ -522,14 +625,25 @@
                                             }
 
                                             const data = {
-                                                yearindigipayvalue: document.getElementById("yearindigipayvalue")?.innerText || "",
-                                                yearincmsvalue: document.getElementById("yearincmsvalue")?.innerText || "",
-                                                yearinkkpvalue: document.getElementById("yearinkkpvalue")?.innerText || "",
-                                                yearindeksindigipay: document.getElementById("yearindeksindigipay")?.innerText || "",
-                                                yearindeksincms: document.getElementById("yearindeksincms")?.innerText || "",
-                                                yearindeksinkkp: document.getElementById("yearindeksinkkp")?.innerText || "",
-                                                yearindeksTotal6: document.getElementById("yearindeksTotal6")?.innerText || "",        
-                                            
+                                                yearjtdigipayvalue: document.getElementById("yearjtdigipayvalue").innerText || "",
+                                                yearjskppnvalue: document.getElementById("yearjskppnvalue").innerText || "",
+                                                yearkomponenAvalue: document.getElementById("yearkomponenAvalue").innerText || "",
+                                                yeartsatkervalue:   document.getElementById("yeartsatkervalue").innerText || "",
+                                                yeartrsdigipayvalue: document.getElementById("yeartrsdigipayvalue").innerText || "",
+                                                yearkomponenBvalue: document.getElementById("yearkomponenBvalue").innerText || "",
+                                                yearindigipayvalue: document.getElementById("yearindigipayvalue").innerText || "",
+                                                yearindeksindigipay:document.getElementById("yearindeksindigipay").innerText || "",
+                                                yearonetrsvalue: document.getElementById("yearonetrsvalue").innerText || "",
+                                                yearalltrsvalue: document.getElementById("yearalltrsvalue").innerText || "",
+                                                yearincmsvalue: document.getElementById("yearincmsvalue").innerText || "",
+                                                yearpersenincms: document.getElementById("yearpersenincms").innerText || "",
+                                                yearindeksincms: document.getElementById("yearindeksincms").innerText || "",
+                                                yeartrkkpvalue: document.getElementById("yeartrkkpvalue").innerText || "",
+                                                yearupkkpvalue: document.getElementById("yearupkkpvalue").innerText || "",
+                                                yearinkkpvalue: document.getElementById("yearinkkpvalue").innerText || "",
+                                                yearindeksinkkp: document.getElementById("yearindeksinkkp").innerText || "",
+                                                yearindeksTotal6: document.getElementById("yearindeksTotal6").innerText || "",
+
                                                 yearformula6: document.getElementById("yearformula6")?.innerText || "",
                                                 yearketerangan6: document.getElementById("yearketerangan6")?.innerText || "",
                                                 

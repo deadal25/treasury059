@@ -444,32 +444,24 @@
                                         </table>
                                         <script>                                                                                
                                             function tw2updateNilai2() {
-                                                // let persentaseA = parseFloat(document.getElementById("persentaseA").value) || 0;
+                                                
                                                 let tw2persentaseB = parseFloat(document.getElementById("tw2persentaseB").value) || 0;
                                                 let tw2persentaseC = parseFloat(document.getElementById("tw2persentaseC").value) || 0;
-                                                // let tw2persentaseD = parseFloat(document.getElementById("tw2persentaseD").value) || 0;
-
-                                                // let PersentaseAhasil = (persentaseA * 50) / 100;
+                                                
                                                 let tw2PersentaseBhasil = tw2persentaseB;
                                                 let tw2PersentaseChasil = tw2persentaseC;
-                                                // let tw2PersentaseDhasil = (tw2persentaseD * 50) / 100;
+                                            
 
-                                                 let tw2totalPersentase2 = (tw2PersentaseBhasil + tw2PersentaseChasil)/2;
-                                                // let tw2totalPersentase2 = tw2PersentaseAValue;
-                                                // let tw2PersentaseAValue = (tw2PersentaseBhasil + tw2PersentaseChasil)/2;
-                                                // let tw2totalPersentase2 = tw2PersentaseAValue;
+                                                let tw2totalPersentase2 = (tw2PersentaseBhasil + tw2PersentaseChasil)/2;
+                                              
 
                                                 
                                                 document.getElementById("tw2PersentaseBValue").innerText = tw2persentaseB;
                                                 document.getElementById("tw2PersentaseCValue").innerText = tw2persentaseC;
-                                                // document.getElementById("tw2PersentaseAValue").innerText = tw2PersentaseAValue;
-                                                // document.getElementById("tw2PersentaseDValue").innerText = tw2persentaseD;
-                                                // document.getElementById("PersentaseAhasil").innerText = PersentaseAhasil.toFixed(1);
+                                                
                                                 document.getElementById("tw2PersentaseBhasil").innerText = tw2PersentaseBhasil;
                                                 document.getElementById("tw2PersentaseChasil").innerText = tw2PersentaseChasil;
-                                                // document.getElementById("tw2PersentaseDhasil").innerText = tw2PersentaseDhasil.toFixed(1);
-                                                // document.getElementById("indeksA").innerText = indeksA;
-                                                // document.getElementById("indeksB").innerText = indeksB;
+                                                
                                                 document.getElementById("tw2totalPersentase2").innerText = tw2totalPersentase2;
                                                 document.getElementById("tw2indekscapaian2").innerText = tw2totalPersentase2;
                                             }

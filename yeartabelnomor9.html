@@ -340,13 +340,15 @@
                                         <br>
                                         <h3><b>Indeks Kualitas LPJ Bendahara Satker K/L</b></h3>
 
-                                        <label for="yearsept">LPJ Tepat Waktu: </label>
-                                        <input type="number" id="yearsept" min="1" max="100" value="0"
-                                            oninput="yearhitungIndex9()">
+                                        <label for="yearvlpj9a">LPJ Bendahara yang disampaikan ke KPPN tepat waktu: </label>
+                                        <input type="number" id="yearvlpj9a" min="0" value="0"oninput="yearhitungIndex9()">
+                                        <label for="yearvlpj9b">LPJ Bendahara yang seharusnya disampaikan ke KPPN lingkup Kanwil DJPb: </label>
+                                        <input type="number" id="yearvlpj9b" min="0" value="0"oninput="yearhitungIndex9()">
 
-                                        <label for="yearokt">LPJ Disampaikan ke KPPN: </label>
-                                        <input type="number" id="yearokt" min="1" max="100" value="0"
-                                            oninput="yearhitungIndex9()">
+                                        <label for="yearvlpj9c">LPJ Bendahara yang diverifikasi dan divalidasi KPPN tepat waktu: </label>
+                                        <input type="number" id="yearvlpj9c" min="0"  value="0"oninput="yearhitungIndex9()">
+                                        <label for="yearvlpj9d">LPJ Bendahara yang disampaikan ke KPPN lingkup Kanwil DJPb: </label>
+                                        <input type="number" id="yearvlpj9d" min="0"  value="0"oninput="yearhitungIndex9()">
 
                                             <label for="yearformula9">Masukkan Formula:</label>
                                             <textarea id="yearinputFormula9" class="form-control" rows="3"
@@ -391,117 +393,119 @@
                                             </tbody>
                                             <tbody>
                                                 <tr>
-                                                    <td rowspan="4" valign="top">9</td>
-                                                    <td rowspan="4" valign="top"> 5a-N </td>
-                                                    <td rowspan="4" valign="top" class="left-align">Indeks Kualitas LPJ Bendahara Satker K/L</td>
+                                                    <td rowspan="10" valign="top">9</td>
+                                                    <td rowspan="10" valign="top"> 5a-N </td>
+                                                    <td rowspan="10" valign="top" class="left-align">Indeks Kualitas LPJ Bendahara Satker K/L</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td><b>Nilai</b></td>
                                                     <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td>Formula</td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Indeks Penyampaian LPJ</td>
-                                                        <td><b>50%</b></td>
-                                                        <td id="yearvalueindeksSept">4</td>
-                                                    <td id="yearindeksSept">4</td>
-                                                    <td rowspan="3" valign="top" class="left-align" id="yearformula9">Tolong selalu enter agar tidak terlalu panjang</td>
-                                                    <td rowspan="3" valign="top" class="left-align" id="yearketerangan9">
-                                                        Tolong selalu enter agar tidak terlalu panjang
-                                                        Seluruh LPJ telah disampaikan tepat waktu dan telah
-                                                        divalidasi Indeks kualitas LPJ Bendahara K/L sebagai berikut:
-
-                                                        Indeks 4: Jika memperoleh nilai 99,5% < x ≤ 90% LPJ Bendahara
-                                                            yang divalidasi KPPN tepat waktu Indeks 3,5: Jika memperoleh
-                                                            nilai 99% < x ≤ 99,5% LPJ Bendahara yang divalidasi KPPN
-                                                            tepat waktu Indeks 3: Jika memperoleh nilai 98,5% ≤ x ≤ 99%
-                                                            LPJ Bendahara yang divalidasi KPPN tepat waktu Indeks 2,5:
-                                                            Jika memperoleh nilai 95% < x < 98,5% LPJ Bendahara yang
-                                                            divalidasi KPPN tepat waktu Indeks 2: Jika memperoleh nilai
-                                                            90% < x ≤ 95% LPJ Bendahara yang divalidasi KPPN tepat waktu
-                                                            Indeks 1: Jika memperoleh nilai ≤ 90% LPJ Bendahara yang
-                                                            divalidasi KPPN tepat waktu September: LPJ pengeluaran 63
-                                                            dari 63 wajib LPJ LPJ Penerimaan 18 dari 18 wajib LPJ
-                                                            Oktober: LPJ pengeluaran 63 dari 63 wajib LPJ LPJ Penerimaan
-                                                            17 dari 17 wajib LPJ November: LPJ pengeluaran 63 dari 63
-                                                            wajib LPJ LPJ Penerimaan 17 dari 17 wajib LPJ </td>
+                                                    <td class="left-align" colspan="4"><b>Indeks Penyampaian LPJ</b></td>
+                                                    
+                                                    <td rowspan="9" valign="top" class="left-align" id="yearformula9"></td>
+                                                    <td rowspan="9" valign="top" class="left-align" id="yearketerangan9">
+                                                         </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Indeks Validasi LPJ</td>
-                                                        <td><b>50%</b></td>
-                                                        <td id="yearvalueindeksOkt">4</td>
-                                                    <td id="yearindeksOkt">4</td>
+                                                    <td class="left-align">∑ LPJ Bendahara yang disampaikan ke KPPN tepat waktu</td>
+                                                    <td id="yearvaluelpj9a"></td>
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="yearindeksTotal9"><b>4</b></td>
+                                                    <td class="left-align">∑ LPJ Bendahara yang seharusnya disampaikan ke KPPN lingkup Kanwil DJPb</td>
+                                                    <td id="yearvaluelpj9b"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Penyampaian LPJ</b></td>
+                                                    <td id="yearvaluetotal9a"></td>
+                                                    <!-- <td id="yearindeksB8"></td> -->
+                                                    <td id="yearvalueindeks9a"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Indeks Validasi LPJ</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑ LPJ Bendahara yang diverifikasi dan divalidasi KPPN tepat waktu</td>
+                                                    <td id="yearvaluelpj9c"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑ LPJ Bendahara yang disampaikan ke KPPN lingkup Kanwil DJPb</td>
+                                                    <td id="yearvaluelpj9d"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Validasi LPJ</b></td>
+                                                    <td id="yearvaluetotal9b"></td>
+                                                    <!-- <td id="yearindeksB8"></td> -->
+                                                    <td id="yearvalueindeks9b"></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td colspan="3"><b>Nilai Capaian</b></td>
+                                                     <!-- <td id="yearindeksTotal9a"><b></b></td> -->
+                                                    <td id="yearindeksTotal9"><b></b></td>
                                                 </tr>
                                             </tbody>
                                         </table>
 
                                         <script>
                                             function yearhitungIndex9() {
-                                                let yearipLPJ = parseFloat(document.getElementById("yearsept").value) || 0;
-                                                let yearivLPJ = parseFloat(document.getElementById("yearokt").value) || 0;
-                                                // let VinputC8 = parseFloat(document.getElementById("inputC8").value) || 0;
-
-                                                function getIndeksIKI9(value) {
-                                                    if (value > 98.5) return 4;
-                                                    else if (value > 97) return 3.5;
-                                                    else if (value > 95) return 3;
-                                                    else if (value > 92.5) return 2.5;
-                                                    else if (value > 90) return 2;
-                                                    else return 1;
-                                                }
-
-
-                                                let yearindeksSept = (yearipLPJ * 0.5);
-                                                let yearindeksOkt = (yearivLPJ * 0.5);
-                                                // let yearindeksC8 = (VinputC8 * 100/3*100) /100/100;
-                                                let yearindeksTotal9 = yearindeksSept + yearindeksOkt;
-                                                let yearindeksIKI9 = getIndeksIKI9(yearindeksTotal9);
-
-                                                document.getElementById("yearvalueindeksSept").innerText = yearipLPJ;
-                                                document.getElementById("yearvalueindeksOkt").innerText = yearivLPJ ;
-                                                // document.getElementById("valueindeksC8").innerText = VinputC8 ;
-
-                                                document.getElementById("yearindeksSept").innerText = yearindeksSept.toFixed(2);
-                                                document.getElementById("yearindeksOkt").innerText = yearindeksOkt.toFixed(2);
-                                                // document.getElementById("yearindeksC8").innerText = yearindeksC8.toFixed(2);
-
-                                                document.getElementById("yearindeksTotal9").innerText = yearindeksIKI9.toFixed(0);
-                                            }
-                                            // function getIndeksIKI9(value) {
-                                            //     if (value <= 100 && value > 98.5 ) return 4;
-                                            //     else if (value <= 98.5 && value > 97) return 3.5;
-                                            //     else if (value <= 97 && value > 95) return 3;
-                                            //     else if (value <= 95 && value > 92.5) return 2.5;
-                                            //     else if (value <= 92.5 && value > 90) return 2;
-                                            //     else if (value <= 90) return 1;
+                                                let yearvlpj9a = parseFloat(document.getElementById("yearvlpj9a").value) || 0;
+                                                let yearvlpj9b = parseFloat(document.getElementById("yearvlpj9b").value) || 0;
+                                                let yearvlpj9c = parseFloat(document.getElementById("yearvlpj9c").value) || 0;
+                                                let yearvlpj9d = parseFloat(document.getElementById("yearvlpj9d").value) || 0;
                                                 
-                                            // }
+                                                let yearvaluetotal9a = (yearvlpj9a / yearvlpj9b) * 100;
+                                                let yearvalueindeks9a = getIndeksIKI9a(yearvaluetotal9a);
 
+                                                let yearvaluetotal9b = (yearvlpj9c / yearvlpj9d) * 100;
+                                                let yearvalueindeks9b = getIndeksIKI9b(yearvaluetotal9b);
 
-                                            // function hitungIndeks9() {
-                                            //     function getIndex9(value) {
-                                            //         if (value > 99.5 && value <= 90) return 4;
-                                            //         else if (value > 99 && value <= 99.5) return 3.5;
-                                            //         else if (value >= 98.5 && value <= 99) return 3;
-                                            //         else if (value > 95 && value < 98.5) return 2.5;
-                                            //         else if (value > 90 && value <= 95) return 2;
-                                            //         else return 1;
-                                            //     }
+                                                // let yearindeksTotal9a = (yearvaluetotal9a + yearvaluetotal9b)/2;
+                                                let yearindeksTotal9 = (yearvalueindeks9a + yearvalueindeks9b)/2;
 
-                                            //     let indeksSept = getIndex9(parseFloat(document.getElementById('sept').value));
-                                            //     let indeksOkt = getIndex9(parseFloat(document.getElementById('okt').value));
+                                                document.getElementById("yearvaluelpj9a").innerText = yearvlpj9a;
+                                                document.getElementById("yearvaluelpj9b").innerText = yearvlpj9b;
+                                                document.getElementById("yearvaluelpj9c").innerText = yearvlpj9c;
+                                                document.getElementById("yearvaluelpj9d").innerText = yearvlpj9d;
 
-                                            //     document.getElementById('indeksSept').innerText = indeksSept;
-                                            //     document.getElementById('indeksOkt').innerText = indeksOkt;
+                                                document.getElementById("yearvaluetotal9a").innerText = yearvaluetotal9a + "%" ;
+                                                document.getElementById("yearvaluetotal9b").innerText = yearvaluetotal9b + "%" ;
+                                                document.getElementById("yearvalueindeks9a").innerText = yearvalueindeks9a ;
+                                                document.getElementById("yearvalueindeks9b").innerText = yearvalueindeks9b ;
+                                                document.getElementById("yearindeksTotal9").innerText = yearindeksTotal9;
+                                            }
+                                            function getIndeksIKI9a(value) {
+                                                if (value > 98.5) return 4;
+                                                else if (value > 97 && value <= 98.5) return 3.5;
+                                                else if (value > 95 && value <= 97) return 3;
+                                                else if (value > 92.5 && value <= 95) return 2.5;
+                                                else if (value > 90 && value <= 92.5) return 2;
+                                                else if (value <= 90) return 1;
+                                                
+                                                return 1; // fallback (optional)
+                                            }
 
-                                            //     let indeksTotal9 = ((indeksSept + indeksOkt) / 2).toFixed(2);
-                                            //     document.getElementById('indeksTotal9').innerHTML = `<strong>${indeksTotal9}</strong>`;
-                                            // }
+                                            function getIndeksIKI9b(value) {
+                                                if (value > 99.5) return 4;
+                                                else if (value > 99 && value <= 99.5) return 3.5;
+                                                else if (value > 98.5 && value <= 99) return 3;
+                                                else if (value > 95 && value <= 98.5) return 2.5;
+                                                else if (value > 90 && value <= 95) return 2;
+                                                else if (value <= 90) return 1;
+
+                                                return 1; // fallback nilai jika di luar jangkauan
+                                            }
                                         </script>
                                         <script type="module">
                                             import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
@@ -531,14 +535,16 @@
                                             }
 
                                             const data = {
-                                                yearvalueindeksSept: document.getElementById("yearvalueindeksSept")?.innerText || "",
-                                                yearvalueindeksOkt: document.getElementById("yearvalueindeksOkt")?.innerText || "",
-                                                yearindeksSept: document.getElementById("yearindeksSept")?.innerText || "",
-                                                yearindeksOkt: document.getElementById("yearindeksOkt")?.innerText || "",
-                                                yearindeksTotal9: document.getElementById("yearindeksTotal9")?.innerText || "",
-                                                // indeksC8: document.getElementById("indeksC8")?.innerText || "",
-                                                // indeksTotal8: document.getElementById("indeksTotal8")?.innerText || "",        
-                                            
+                                                yearvaluelpj9a: document.getElementById("yearvaluelpj9a").innerText || "", 
+                                                yearvaluelpj9b: document.getElementById("yearvaluelpj9b").innerText || "", 
+                                                yearvaluelpj9c: document.getElementById("yearvaluelpj9c").innerText || "", 
+                                                yearvaluelpj9d: document.getElementById("yearvaluelpj9d").innerText || "", 
+                                                yearvaluetotal9a: document.getElementById("yearvaluetotal9a").innerText || "", 
+                                                yearvaluetotal9b: document.getElementById("yearvaluetotal9b").innerText || "", 
+                                                yearvalueindeks9a: document.getElementById("yearvalueindeks9a").innerText || "", 
+                                                yearvalueindeks9b: document.getElementById("yearvalueindeks9b").innerText || "", 
+                                                yearindeksTotal9: document.getElementById("yearindeksTotal9").innerText || "", 
+
                                                 yearformula9: document.getElementById("yearformula9")?.innerText || "",
                                                 yearketerangan9: document.getElementById("yearketerangan9")?.innerText || "",
                                                 

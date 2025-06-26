@@ -340,11 +340,11 @@
                                     <div id="7c-N" class="content">
                                         <br>
                                         <h3><b>Nilai Kinerja TIK KPPN</b></h3>
-                                        <label for="yearskoki">SK OKI:</label>
-                                        <input type="number" id="yearskoki" value="0" oninput="yearhitung16()">
+                                        <label for="yearnda">NDA:</label>
+                                        <input type="number" id="yearnda" value="0" oninput="yearhitung16()">
 
-                                        <label for="yearsosialisasi">Sosialisasi:</label>
-                                        <input type="number" id="yearsosialisasi" value="0" oninput="yearhitung16()">
+                                        <label for="yearpengaman">Pengaman Fisik area Kantor:</label>
+                                        <input type="number" id="yearpengaman" value="0" oninput="yearhitung16()">
 
                                         <label for="yearpublikasi">Publikasi:</label>
                                         <input type="number" id="yearpublikasi" value="0" oninput="yearhitung16()">
@@ -400,74 +400,77 @@
                                                     <td rowspan="6" valign="top"> 7c-N </td>
                                                     <td rowspan="6" valign="top" class="left-align">Nilai Kinerja TIK KPPN</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td><b>Nilai</b></td>
                                                     <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td>Formula</td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">SK OKI </td>
-                                                    <td>15%</td>
-                                                    <td  id="yearvaluehasilskoki">66</td>
-                                                    <td  id="yearnilaiskoki">66</td>
-                                                    <td rowspan="5" valign="top" class="left-align" id="yearformula15">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <td class="left-align">NDA </td>
+                                                    <!-- <td>15%</td> -->
+                                                    <td  id="yearvaluehasilnda"></td>
+                                                    <!-- <td  id="yearnilainda"></td> -->
+                                                     <td></td>
+                                                    <td></td>
+                                                    <td rowspan="5" valign="top" class="left-align" id="yearformula15"></td>
                                                     <td rowspan="5" valign="top" class="left-align" id="yearketerangan15">
-                                                        Tolong selalu enter agar tidak terlalu panjang
-                                                        Hasil Penilaian IPA dan ITKP
-                                                        Nota Dinas Sekretaris Ditjen Perbendaharaan nomor ND
-                                                        276/PB.1/2026 tanggal 17 Januari 2026
                                                         </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Sosialisasi</td>
-                                                    <td>35%</td>
-                                                    <td  id="yearvaluehasilsosialisasi">48</td>
-                                                    <td  id="yearnilaisosialisasi">48</td>
+                                                    <td class="left-align">Pengaman Fisik area Kantor</td>
+                                                    <!-- <td>35%</td> -->
+                                                    <td  id="yearvaluehasilpengaman"></td>
+                                                    <td></td>
+                                                    
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Publikasi</td>
-                                                    <td>15%</td>
-                                                    <td  id="yearvaluehasilpublikasi">48</td>
-                                                    <td  id="yearnilaipublikasi">48</td>
+                                                    <!-- <td>15%</td> -->
+                                                    <td  id="yearvaluehasilpublikasi"></td>
+                                                    <td></td>
+                                                    <!-- <td  id="yearnilaipublikasi"></td> -->
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Penguatan Keamanan Perangkat TIK</td>
-                                                    <td>35%</td>
-                                                    <td  id="yearvaluehasilpkpt">48</td>
-                                                    <td  id="yearnilaipkpt">48</td>
+                                                    <!-- <td>35%</td> -->
+                                                    <td  id="yearvaluehasilpkpt"></td>
+                                                    <!-- <td  id="yearnilaipkpt"></td> -->
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="yeartotalnilai16"><b>120</b></td>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                    <td id="yeartotalnilai16"><b></b></td>
+                                                     <td id="yeartotalnilai16a"><b></b></td>
                                                     <!-- <td></td> -->
                                                 </tr>
                                             </tbody>
                                         </table>
                                         <script>
                                             function yearhitung16() {
-                                                let yearskoki = parseFloat(document.getElementById("yearskoki").value) || 0;
-                                                let yearsosialisasi = parseFloat(document.getElementById("yearsosialisasi").value) || 0;
+                                                let yearnda = parseFloat(document.getElementById("yearnda").value) || 0;
+                                                let yearpengaman = parseFloat(document.getElementById("yearpengaman").value) || 0;
                                                 let yearpublikasi = parseFloat(document.getElementById("yearpublikasi").value) || 0;
                                                 let yearpkpt = parseFloat(document.getElementById("yearpkpt").value) || 0;
 
 
-                                                let yearnilaiskoki = 0.15 * yearskoki;
-                                                let yearnilaisosialisasi = 0.35 * yearsosialisasi;
-                                                let yearnilaipublikasi = 0.15 * yearpublikasi;
-                                                let yearnilaipkpt = 0.35 * yearpkpt;
-                                                let yeartotal16 = yearnilaiskoki + yearnilaisosialisasi + yearnilaipublikasi + yearnilaipkpt;
-                                                // let indeksCapaian16 = (yeartotal16 > 100) ? 120 : yeartotal16.toFixed(2);
+                                              
+                                                let yeartotal16 = yearnda + yearpengaman + yearpublikasi + yearpkpt;
+                                                let yeartotal16a =yeartotal16;
 
-                                                document.getElementById("yearvaluehasilskoki").innerText = yearskoki.toFixed(0);
-                                                document.getElementById("yearvaluehasilsosialisasi").innerText = yearsosialisasi.toFixed(0);
-                                                document.getElementById("yearvaluehasilpublikasi").innerText = yearpublikasi.toFixed(0);
-                                                document.getElementById("yearvaluehasilpkpt").innerText = yearpkpt.toFixed(0);
-                                                document.getElementById("yearnilaiskoki").innerText = yearnilaiskoki.toFixed(2);
-                                                document.getElementById("yearnilaisosialisasi").innerText = yearnilaisosialisasi.toFixed(2);
-                                                document.getElementById("yearnilaipublikasi").innerText = yearnilaipublikasi.toFixed(2);
-                                                document.getElementById("yearnilaipkpt").innerText = yearnilaipkpt.toFixed(2);
-                                                document.getElementById("yeartotalnilai16").innerText = yeartotal16.toFixed(0);
+                                                document.getElementById("yearvaluehasilnda").innerText = yearnda;
+                                                document.getElementById("yearvaluehasilpengaman").innerText = yearpengaman;
+                                                document.getElementById("yearvaluehasilpublikasi").innerText = yearpublikasi;
+                                                document.getElementById("yearvaluehasilpkpt").innerText = yearpkpt;
+                                                // document.getElementById("yearnilainda").innerText = yearnilainda.toFixed(2);
+                                                // document.getElementById("yearnilaipengaman").innerText = yearnilaipengaman.toFixed(2);
+                                                // document.getElementById("yearnilaipublikasi").innerText = yearnilaipublikasi.toFixed(2);
+                                                // document.getElementById("yearnilaipkpt").innerText = yearnilaipkpt.toFixed(2);
+                                                document.getElementById("yeartotalnilai16").innerText = yeartotal16;
+                                                document.getElementById("yeartotalnilai16a").innerText = yeartotal16a;
                                             }
 
                                             yearhitung16();
@@ -500,15 +503,16 @@
                                             }
 
                                             const data = {
-                                                yearvaluehasilskoki: document.getElementById("yearvaluehasilskoki")?.innerText || "",
-                                                yearvaluehasilsosialisasi: document.getElementById("yearvaluehasilsosialisasi")?.innerText || "",
+                                                yearvaluehasilnda: document.getElementById("yearvaluehasilnda")?.innerText || "",
+                                                yearvaluehasilpengaman: document.getElementById("yearvaluehasilpengaman")?.innerText || "",
                                                 yearvaluehasilpublikasi: document.getElementById("yearvaluehasilpublikasi")?.innerText || "",
                                                 yearvaluehasilpkpt: document.getElementById("yearvaluehasilpkpt")?.innerText || "",
-                                                yearnilaiskoki: document.getElementById("yearnilaiskoki")?.innerText || "",
-                                                yearnilaisosialisasi: document.getElementById("yearnilaisosialisasi")?.innerText || "",
-                                                yearnilaipublikasi: document.getElementById("yearnilaipublikasi")?.innerText || "",   
-                                                yearnilaipkpt: document.getElementById("yearnilaipkpt")?.innerText || "",
+                                                // yearnilainda: document.getElementById("yearnilainda")?.innerText || "",
+                                                // yearnilaipengaman: document.getElementById("yearnilaipengaman")?.innerText || "",
+                                                // yearnilaipublikasi: document.getElementById("yearnilaipublikasi")?.innerText || "",   
+                                                // yearnilaipkpt: document.getElementById("yearnilaipkpt")?.innerText || "",
                                                 yeartotalnilai16: document.getElementById("yeartotalnilai16")?.innerText || "",
+                                                yeartotalnilai16a: document.getElementById("yeartotalnilai16a")?.innerText || "",
                                                 // nilaipublikasi: document.getElementById("nilaipublikasi")?.innerText || "",        
                                             
                                                 yearformula15: document.getElementById("yearformula15")?.innerText || "",

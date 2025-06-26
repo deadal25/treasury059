@@ -538,11 +538,7 @@
                                                     <td colspan="3" align="right" id="tw2totalCapaian1all"><b></b>
                                                     </td>
                                                 </tr>
-                                                <!-- <tr>
-                                                    <td><b>Indeks Capaian</b></td>
-                                                    <td colspan="3" align="right" id="tw2Nilaislide1a"><b>95,16</b></td>
-                                                </tr> -->
-
+                                              
                                             </tbody>
                                         </table>
                                         <script>
@@ -557,7 +553,7 @@
                                                 let tw2ds = parseFloat(document.getElementById("tw2ds").value) || 0;
                                                 let pbaikco = parseFloat(document.getElementById("pbaikco").value) || 0;
                                                 let satkerds = parseFloat(document.getElementById("satkerds").value) || 0;
-                                                // let tw2jumlahsatker1 = parseFloat(document.getElementById("tw2jumlahsatker1").value) || 0;
+                                               
 
                                                 let tw2rdScore = (tw2rd * 10) / 100;
                                                 let tw2dhScore = (tw2dh * 15) / 100;
@@ -578,16 +574,7 @@
                                                 let tw2totalNilaiSpan1 = tw2totalCapaian1all;
                                                 let tw2Nilaislide1a = getIndeksIKI1(tw2totalCapaian1all);
 
-                                                // let nilaitotalslide1 = (totalCapaian1all >=  100) ? 120 : totalCapaian1all.toFixed(2);
-                                                // document.getElementById("tw2rdValue").innerText = tw2rd + "%";
-                                                // document.getElementById("tw2dhValue").innerText = tw2dh + "%";
-                                                // document.getElementById("paValue").innerText = pa + "%";
-                                                // document.getElementById("tw2bkValue").innerText = tw2bk + "%";
-                                                // document.getElementById("ptValue").innerText = pt + "%";
-                                                // document.getElementById("putValue").innerText = put + "%";
-                                                // document.getElementById("coValue").innerText = co + "%";
                                                 document.getElementById("tw2jumlahsatker1Value").innerText = tw2jumlahsatker1;
-
                                                 document.getElementById("tw2rdValue").innerText = tw2rd.toFixed(2);
                                                 document.getElementById("tw2dhValue").innerText = tw2dh.toFixed(2);
                                                 document.getElementById("tw2paValue").innerText = tw2pa.toFixed(2);
@@ -628,8 +615,7 @@
                                                 if (capaian >= 79 && capaian < 85) return 3;
                                                 if (capaian >= 70 && capaian < 79) return 2.75;
                                                 return 2.5;
-                                            }
-                                            
+                                            } 
 
                                         </script>
 
@@ -709,68 +695,12 @@
                                             set(dataRef, data)
                                                 .then(() => alert(`Data berhasil disimpan ke ${triwulan}/${tabel} dan memperbarui data lama!`))
                                                 .catch((error) => alert("Gagal menyimpan data: " + error.message));
-                                            // set(ref(database, "ikpaData/" + user.uid ), data)
-                                            //     .then(() => alert("Data berhasil disimpan dan data lama terset di Firebase!"))
-                                            //     .catch((error) => alert("Gagal menyimpan data: " + error.message));
+                                            
                                             }
 
                                             window.tw2submitData1 = tw2submitData1;
                                         </script>
-                                        <!-- <script>
-                                            function tw2submitData1() {
-                                                let tw2rdScore = document.getElementById("tw2rdScore").innerText;
-                                                let tw2dhScore = document.getElementById("tw2dhScore").innerText;
-                                                let tw2paScore = document.getElementById("tw2paScore").innerText;
-                                                let tw2bkScore = document.getElementById("tw2bkScore").innerText;
-                                                let tw2ptScore = document.getElementById("tw2ptScore").innerText;
-                                                let tw2putScore = document.getElementById("tw2putScore").innerText;
-                                                let tw2coScore = document.getElementById("tw2coScore").innerText;
-                                                let tw2dsScore = document.getElementById("tw2dsScore").innerText;
-                                                let tw2jumlahsatker1Value = document.getElementById("tw2jumlahsatker1Value").innerText;
-                                                let tw2jumlahsatker1Score = document.getElementById("tw2jumlahsatker1Score").innerText;
-                                                let tw2totalCapaian1 = document.getElementById("tw2totalCapaian1").innerText;
-                                                let tw2totalNilaiSpan1 = document.getElementById("tw2totalNilaiSpan1").innerText;
-                                                let tw2nilaiIkpa1Score = document.getElementById("tw2nilaiIkpa1Score").innerText;
-                                                let tw2totalCapaian1all = document.getElementById("tw2totalCapaian1all").innerText;
-                                                let tw2Nilaislide1a = document.getElementById("tw2Nilaislide1a").innerText;
-                                                let tw2keterangan1hasil = document.getElementById("tw2keterangan1").innerText;
-                                                let tw2formula1hasil = document.getElementById("tw2formula1").innerText;
-                                                // let nilaitotalslide1 = document.getElementById("nilaitotalslide1").innerText;
-
-
-                                                // Cek apakah ada data lama di localStorage
-                                                let storedData = localStorage.getItem("indeks_data");
-                                                let data = storedData ? JSON.parse(storedData) : {};
-
-                                                data.tw2rdScore = tw2rdScore;
-                                                data.tw2dhScore = tw2dhScore;
-                                                data.tw2paScore = tw2paScore;
-                                                data.tw2bkScore = tw2bkScore;
-                                                data.tw2ptScore = tw2ptScore;
-                                                data.tw2putScore = tw2putScore;
-                                                data.tw2coScore = tw2coScore;
-                                                data.tw2dsScore = tw2dsScore;
-                                                data.tw2jumlahsatker1Value = tw2jumlahsatker1Value;
-                                                data.tw2jumlahsatker1Score = tw2jumlahsatker1Score;
-                                                data.tw2totalCapaian1 = tw2totalCapaian1;
-                                                data.tw2totalCapaian1all = tw2totalCapaian1all;
-                                                data.tw2totalNilaiSpan1 = tw2totalNilaiSpan1;
-                                                data.tw2nilaiIkpa1Score = tw2nilaiIkpa1Score;
-                                                data.tw2Nilaislide1a = tw2Nilaislide1a;
-                                                data.tw2keterangan1 = tw2keterangan1hasil;
-                                                data.tw2formula1 = tw2formula1hasil;
-                                                // data.nilaitotalslide1 =nilaitotalslide1;
-
-                                                // Simpan kembali ke localStorage
-                                                localStorage.setItem("indeks_data", JSON.stringify(data));
-
-                                                alert("Data tw2 dari Indeks Kualitas Nilai IKPA K/L berhasil disimpan!");
-                                            }
-                                        </script> -->
-
-
-                                        <!-- <button class="btn-simpan" align-items="center" onclick="tw2submitData1()">
-                                            <img src="C:\Users\USER\Videos\login-project\images\savedata.png" alt="Save Icon">Simpan Data Halaman 1</button> -->
+                                       
                                     </div>
 
                                 </body>

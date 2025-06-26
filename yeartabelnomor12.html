@@ -341,20 +341,17 @@
                                         <br>
                                         <h3><b>Nilai Evaluasi Pelaksanaan Tugas Kepatuhan Internal </b></h3>
 
-                                        <!-- <label for="yearmanajemen_risiko">Hasil Penilaian pelaksanaan tugas KI pada KPPN:</label>
-                                        <input type="number" id="yearmanajemen_risiko" value="0" oninput="yearhitungNilai12()"> -->
-
-                                        <label for="yeartotalrealisasi12a">Masukkan Realisasi 1: </label>
+                                        <label for="yeartotalrealisasi12a">Penerapan MR: </label>
                                         <input type="number" id="yearinputrealisasi12a" class="form-control"
-                                            placeholder="Masukkan Realisasi 1..." oninput="yearhitungNilaislide12()">
+                                            placeholder="Masukkan Nilai Penerapan MR..." oninput="yearhitungNilaislide12()">
 
-                                        <label for="yeartotalrealisasi12b">Masukkan Realisasi 2: </label>
+                                        <label for="yeartotalrealisasi12b">Pelaksanaan PPINE: </label>
                                         <input type="number" id="yearinputrealisasi12b" class="form-control"
-                                            placeholder="Masukkan Realisasi 2..." oninput="yearhitungNilaislide12()">
+                                            placeholder="Masukkan Nilai Pelaksanaan PPINE..." oninput="yearhitungNilaislide12()">
 
-                                        <label for="yeartotalrealisasi12c">Masukkan Realisasi 3: </label>
+                                        <label for="yeartotalrealisasi12c">Masukkan Pengelolaan Pengaduan: </label>
                                         <input type="number" id="yearinputrealisasi12c" class="form-control"
-                                            placeholder="Masukkan Realisasi 3..." oninput="yearhitungNilaislide12()">
+                                            placeholder="Masukkan Nilai Pengelolaan Pengaduan..." oninput="yearhitungNilaislide12()">
 
                                             
 
@@ -405,31 +402,55 @@
                                                 </tr>
                                             </tbody>
                                             <tr>
-                                                <td rowspan="3" valign="top">12</td>
-                                                <td rowspan="3" valign="top"> 6c-N </td>
-                                                <td rowspan="3" valign="top" class="left-align">Nilai Evaluasi Pelaksanaan Tugas Kepatuhan Internal</td>
+                                                <td rowspan="6" valign="top">12</td>
+                                                <td rowspan="6" valign="top"> 6c-N </td>
+                                                <td rowspan="6" valign="top" class="left-align">Nilai Evaluasi Pelaksanaan Tugas Kepatuhan Internal</td>
                                                 <td><b>Komponen</b></td>
-                                                <td><b>Bobot</b></td>
                                                 <td ><b>Nilai</b></td>
                                                 <td ><b>Total</b></td>
+                                                <td><b>Indeks Capaian</b></td>
                                                 <td >Formula</td>
                                                 <td>Keterangan</td>
                                             </tr>
                                             <tr>
-                                                <td class="left-align">Hasil Penilaian pelaksanaan tugas KI pada KPPN</td>
-                                                <td><b>100%</b></td>
-                                                <td id="yearvaluenilaiMR">34,48</td>
-                                                <td id="yearnilaiMR">34,48</td>
-                                                <td rowspan="2" valign="top" class="left-align" id="yearformula12">Tolong selalu enter agar tidak terlalu panjang</td>
-                                                <td rowspan="2" valign="top" class="left-align" id="yearketerangan12">
-                                                    Tolong selalu enter agar tidak terlalu panjang
+                                                <td class="left-align" colspan="4"><b>Hasil Penilaian pelaksanaan tugas KI pada KPPN</b></td>
+                                                <!-- <td><b>100%</b></td>
+                                                <td id="tw2valuenilaiMR">34,48</td>
+                                                <td id="tw2nilaiMR">34,48</td>-->
+                                                <td rowspan="5" valign="top" class="left-align" id="yearformula12"></td> 
+                                                <td rowspan="5" valign="top" class="left-align" id="yearketerangan12">
+                                                    
                                                 </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Penerapan MR</td>
+                                                <!-- <td><b>100%</b></td> -->
+                                                <td id="yearvaluenilaiMR"></td>
+                                                <!-- <td></td> -->
+                                                <td id="yearnilaiMR"></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Pelaksanaan PPINE</td>
+                                                <!-- <td><b>100%</b></td> -->
+                                                <td id="yearvaluenilaiPPINE"></td>
+                                                <td id="yearnilaiPPINE"></td>
+                                                <!-- <td id="yearnilaiMR"></td> -->
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="left-align">Pengelolaan Pengaduan</td>
+                                                <!-- <td><b>100%</b></td> -->
+                                                <td id="yearvaluenilaiPP"></td>
+                                                <td id="yearnilaiPP"></td>
+                                                <!-- <td id="yearnilaiMR"></td> -->
+                                                <td></td>
                                             </tr>
                                     
                                             <tr>
-                                                <td><b>Nilai Capaian</b></td>
-                                                <td colspan="3" id="yeartotalrealisasi12d"><b>99,48</b></td>
-                                                
+                                                <td  colspan="2" ><b>Nilai Capaian</b></td>
+                                                <td id="yeartotalrealisasi12d"><b></b></td>
+                                                <td id="yeartotalrealisasi12dd"><b></b></td>
                                             </tr>
                                         </table>
 
@@ -444,30 +465,20 @@
                                                 // document.getElementById('yeartotalrealisasi12a').innerText = a;
                                                 // document.getElementById('yeartotalrealisasi12b').innerText = b;
                                                 // document.getElementById('yeartotalrealisasi12c').innerText = c;
+                                                
                                                 let yeartotal = yeara + yearb + yearc;
-                                                document.getElementById('yearvaluenilaiMR').innerText = yeartotal.toFixed(2);
-                                                document.getElementById('yearnilaiMR').innerText = yeartotal.toFixed(2);
+                                                let yeartotald =yeartotal;
+                                                document.getElementById('yearvaluenilaiMR').innerText = yeara.toFixed(2);
+                                                document.getElementById('yearvaluenilaiPPINE').innerText = yearb.toFixed(2);
+                                                document.getElementById('yearvaluenilaiPP').innerText = yearc.toFixed(2);
+                                                document.getElementById('yearnilaiMR').innerText = yeara.toFixed(2);
+                                                document.getElementById('yearnilaiPPINE').innerText = yearb.toFixed(2);
+                                                document.getElementById('yearnilaiPP').innerText = yearc.toFixed(2);
                                                 document.getElementById('yeartotalrealisasi12d').innerText = yeartotal.toFixed(2);
+                                                document.getElementById('yeartotalrealisasi12dd').innerText = yeartotald.toFixed(2);
                                             }
                                         
-                                            // function yearhitungNilai12() {
-                                            //     let yearMR = (parseFloat(document.getElementById('yearmanajemen_risiko').value));
-                                            //     // let PP = (parseFloat(document.getElementById('pemantauan').value));
-                                            //     // let PR = (parseFloat(document.getElementById('pengaduan').value));
-
-                                            //     let yearnilaiMR = (100/100 * yearMR);
-                                            //     // let nilaiPP = 0.55 * PP;
-                                            //     // let nilaiPR = 0.10 * PR;
-                                            //     let yeartotalNilai12 = yearnilaiMR;
-
-                                            //     document.getElementById('yearvaluenilaiMR').innerText = yearMR.toFixed(2);
-                                            //     document.getElementById('yearnilaiMR').innerText = yearnilaiMR.toFixed(2);
-                                            //     // document.getElementById('nilaiPP').innerText = nilaiPP.toFixed(2);
-                                            //     // document.getElementById('nilaiPR').innerText = nilaiPR.toFixed(2);
-                                            //     document.getElementById('yeartotalNilai12').innerText = yeartotalNilai12.toFixed(2);
-                                            // }
-
-                                            // yearhitungNilai12();
+                                            
                                         </script>
                                         <script type="module">
                                             import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
@@ -498,11 +509,16 @@
 
                                             const data = {
                                                 yearvaluenilaiMR: document.getElementById("yearvaluenilaiMR")?.innerText || "",
+                                                yearvaluenilaiPPINE: document.getElementById("yearvaluenilaiPPINE")?.innerText || "",
+                                                yearvaluenilaiPP: document.getElementById("yearvaluenilaiPP")?.innerText || "",
                                                 yearnilaiMR: document.getElementById("yearnilaiMR")?.innerText || "",
+                                                yearnilaiPPINE: document.getElementById("yearnilaiPPINE")?.innerText || "",
+                                                yearnilaiPP: document.getElementById("yearnilaiPP")?.innerText || "",
                                                 yearinputrealisasi12a: document.getElementById("yearinputrealisasi12a")?.value || "",
                                                 yearinputrealisasi12b: document.getElementById("yearinputrealisasi12b")?.value || "",
                                                 yearinputrealisasi12c: document.getElementById("yearinputrealisasi12c")?.value || "",
-                                                yeartotalrealisasi12d: document.getElementById("yeartotalrealisasi12d")?.innerText  || "",
+                                                yeartotalrealisasi12d: document.getElementById("yeartotalrealisasi12d")?.innerText || "",
+                                                yeartotalrealisasi12dd: document.getElementById("yeartotalrealisasi12dd")?.innerText || "",
                                                 // indeksTotal8: document.getElementById("indeksTotal8")?.innerText || "",        
                                             
                                                 yearformula12: document.getElementById("yearformula12")?.innerText || "",

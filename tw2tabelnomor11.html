@@ -351,33 +351,33 @@
                                         <input type="number" id="tw2learning" value="0" oninput="tw2hitungNilai11()"> -->
 
                                         <label>Masukkan Nilai Subkomponen Pengorganisasian dan Penyebarluasan:</label>
-                                        <input type="number" id="tw2vkompA" min="0" oninput="tw2hitungNilai11()">
+                                        <input type="number" id="tw2vkompA" min="0" value="0" oninput="tw2hitungNilai11()">
                                         <label>Masukkan Nilai Subkomponen Rencana Aksi Pembelajaran:</label>
-                                        <input type="number" id="tw2vkompB" min="0" oninput="tw2hitungNilai11()">
+                                        <input type="number" id="tw2vkompB" min="0" value="0" oninput="tw2hitungNilai11()">
                                         <label>Masukkan Nilai Subkomponen IDP:</label>
-                                        <input type="number" id="tw2vkompC" min="0" oninput="tw2hitungNilai11()">
+                                        <input type="number" id="tw2vkompC" min="0" value="0" oninput="tw2hitungNilai11()">
                                         <label>Masukkan Nilai Subkomponen Evaluasi Pembelajaran:</label>
-                                        <input type="number" id="tw2vkompD" min="0" oninput="tw2hitungNilai11()">
+                                        <input type="number" id="tw2vkompD" min="0" value="0" oninput="tw2hitungNilai11()">
                                         <label>Masukkan Nilai Subkomponen Hard Competency Pegawai:</label>
-                                        <input type="number" id="tw2vkompE" min="0" oninput="tw2hitungNilai11()">
+                                        <input type="number" id="tw2vkompE" min="0" value="0" oninput="tw2hitungNilai11()">
                                         <label>Masukkan Nilai Subkomponen Structured Learning:</label>
-                                        <input type="number" id="tw2vkompF" min="0" oninput="tw2hitungNilai11()">
+                                        <input type="number" id="tw2vkompF" min="0" value="0" oninput="tw2hitungNilai11()">
                                         <label>Masukkan Nilai Subkomponen Learning From Experience:</label>
-                                        <input type="number" id="tw2vkompG" min="0" oninput="tw2hitungNilai11()">
+                                        <input type="number" id="tw2vkompG" min="0" value="0" oninput="tw2hitungNilai11()">
                                         <label>Masukkan Nilai Subkomponen Pemenuhan Jam Pembelajaran:</label>
-                                        <input type="number" id="tw2vkompH" min="0" oninput="tw2hitungNilai11()">
+                                        <input type="number" id="tw2vkompH" min="0" value="0" oninput="tw2hitungNilai11()">
                                         <label>Masukkan Nilai Subkomponen Organizational Performance:</label>
-                                        <input type="number" id="tw2vkompI" min="0" oninput="tw2hitungNilai11()">
+                                        <input type="number" id="tw2vkompI" min="0" value="0" oninput="tw2hitungNilai11()">
                                         <label>Masukkan Nilai Subkomponen Leaders as teacher:</label>
-                                        <input type="number" id="tw2vkompJ" min="0" oninput="tw2hitungNilai11()">
+                                        <input type="number" id="tw2vkompJ" min="0" value="0" oninput="tw2hitungNilai11()">
                                         <label>Masukkan Nilai Subkomponen Leaders as role model:</label>
-                                        <input type="number" id="tw2vkompK" min="0" oninput="tw2hitungNilai11()">
+                                        <input type="number" id="tw2vkompK" min="0" value="0" oninput="tw2hitungNilai11()">
                                         <label>Masukkan Jumlah Peserta yang hadir:</label>
-                                        <input type="number" id="tw2vpeserta11a" min="0" oninput="tw2hitungNilai11()">
+                                        <input type="number" id="tw2vpeserta11a" min="0" value="0" oninput="tw2hitungNilai11()">
                                         <label>Masukkan Jumlah Peserta yang seharusnya:</label>
-                                        <input type="number" id="tw2vpeserta11b" min="0" oninput="tw2hitungNilai11()">
+                                        <input type="number" id="tw2vpeserta11b" min="0" value="0" oninput="tw2hitungNilai11()">
                                         <label>Jumlah Kegiatan yang telah dilaksanakan:</label>
-                                        <input type="number" id="tw2vkegiatan11a" min="0" oninput="tw2hitungNilai11()">
+                                        <input type="number" id="tw2vkegiatan11a" min="0" value="0" oninput="tw2hitungNilai11()">
 
                                        
 
@@ -577,9 +577,7 @@
 
                                         <script>
                                             function tw2hitungNilai11() {
-                                                // let tw2targetLO = parseFloat(document.getElementById('tw2triwulan').value);
-                                                // let tw2nilaiLearning = parseFloat(document.getElementById('tw2learning').value);
-                                                // let tw2nilaiPelaksanaan = parseFloat(document.getElementById('tw2pelaksanaan').value);
+                                                
                                                 let tw2vkompA = parseFloat(document.getElementById('tw2vkompA').value);
                                                 let tw2vkompB = parseFloat(document.getElementById('tw2vkompB').value);
                                                 let tw2vkompC = parseFloat(document.getElementById('tw2vkompC').value);
@@ -601,7 +599,8 @@
                                                 let tw2ValuenilaiLO = (tw2vnilaiLOAll > tw2targetLO) ? 120 : tw2vnilaiLOAll;
 
                                                 let tw2valuekompA11 = (tw2vpeserta11a / tw2vpeserta11b) * 100 ; 
-                                                let tw2indekskompA11 = (tw2valuekompA11 >= 75) ? 120 : tw2valuekompA11;
+                                                let tw2indekskompA11 = getIndeksKompA11(tw2valuekompA11);
+                                                // let tw2indekskompA11 = (tw2valuekompA11 >= 75) ? 120 : tw2valuekompA11;
                                                 // let tw2nilaiLO = (tw2ValuenilaiLO * 0.6)
                                                 let tw2valuekompB11 = hitungNilaiKegiatan(tw2vkegiatan11a);
                                                 let tw2indekskompB11 = tw2valuekompB11;
@@ -637,6 +636,14 @@
                                             }
 
                                             tw2hitungNilai11();
+
+                                            function getIndeksKompA11(persenPeserta) {
+                                                if (persenPeserta >= 75) {
+                                                    return 120;
+                                                } else if (persenPeserta < 75) {
+                                                    return 110;
+                                                }
+                                            }
 
                                             function hitungNilaiKegiatan(jumlahKegiatan) {
                                                 return (jumlahKegiatan >= 2) ? 120 : 100;

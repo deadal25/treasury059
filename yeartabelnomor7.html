@@ -346,13 +346,6 @@
                                         <input type="number" id="yearIndeviasiNilai7" min="0" max="100" oninput="yearhitungAkurasi7()">
                                         <label>Rasio Dispensasi RPD Harian:</label>
                                         <input type="number" id="yearIndispensasi7" min="1" max="30" oninput="yearhitungAkurasi7()">
-                                        <!-- <label>Pilih Periode:
-                                            <select id="yearperiode7" onchange="tampilkanInput7()">
-                                                <option value="bulan7">Bulanan</option>
-                                                <option value="triwulan7">Triwulanan</option>
-                                            </select>
-                                        </label>
-                                        <div id="yearinputsContainer7"></div> -->
 
                                         <label for="yearformula7">Masukkan Formula:</label>
                                         <textarea id="yearinputFormula7" class="form-control" rows="3"
@@ -401,9 +394,9 @@
                                                     <td rowspan="5" valign="top">4a-CP</td>
                                                     <td rowspan="5" valign="top" class="left-align">Persentase akurasi perencanaan kas</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td ><b>Nilai</b></td>
                                                     <td ><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td>Formula</td>
                                                     <td>Keterangan</td>
                                                 </tr>
@@ -411,61 +404,40 @@
                                                     <td class="left-align">Rata - Rata Deviasi Unit
                                                         RPD harian KPPN per
                                                         periode </td>
-                                                    <td>20%</td>
-                                                    <td  id="yeardeviasiUnit7">0</td>
-                                                    <td id="yearvalueDeviasiUnit7">0</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="yearformula7">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <!-- <td>20%</td> -->
+                                                    <td  id="yeardeviasiUnit7"></td>
+                                                    <td id="yearvalueDeviasiUnit7"></td>
+                                                    <td></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="yearformula7"> </td>
                                                     <td rowspan="4" valign="top" class="left-align" id="yearketerangan7">
-                                                        (100% - ((Rata - Rata Deviasi Unit RPD harian KPPN per
-                                                        periode*0,2) + ((Rata - Rata Deviasi Nilai RPD harian KPPN
-                                                        per periode*0,8))) - (Rasio Dispensasi RPD harian KPPN per
-                                                        periode))
-
-                                                        Keterangan :Tolong selalu enter agar tidak terlalu panjang </td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Rata - Rata Deviasi Nilai
                                                         RPD harian KPPN per
                                                         periode </td>
-                                                    <td>80%</td>
-                                                    <td id="yeardeviasiNilai7">0</td>
-                                                    <td id="yearvalueDeviasiNilai7">0</td>
+                                                    <!-- <td>80%</td> -->
+                                                    <td id="yeardeviasiNilai7"></td>
+                                                    <td id="yearvalueDeviasiNilai7"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Rasio Dispensasi RPD
                                                         harian KPPN per periode </td>
-                                                    <td></td>
-                                                    <td id="yeardispensasi7">0</td>
-                                                    <td id="yearvalueDispensasiNilai7">0</td>
+                                                        <td id="yeardispensasi7"></td>
+                                                        <td id="yearvalueDispensasiNilai7"></td>
+                                                        <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="yearhasil7">0</td>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                    <td id="yearhasil7"></td>
+                                                    <td id="yearhasil7a"></td>
                                                 </tr>
                                             </tbody>
                                         </table>
 
                                         <script>
-                                            // function tampilkanInput7() {
-                                            //     let periode7 = document.getElementById('periode7').value;
-                                            //     let container7 = document.getElementById('inputsContainer7');
-                                            //     container7.innerHTML = ''; // Memastikan container dikosongkan sebelum ditampilkan ulang
-                                            //     let jumlahInput = periode7 === 'triwulan7' ? 3 : 1;
-
-                                            //     ["deviasiUnit7", "deviasiNilai7", "dispensasi7"].forEach((komponen) => {
-                                            //         let labelText = komponen === "deviasiUnit7" ? "Rata - Rata Deviasi Unit" :
-                                            //             komponen === "deviasiNilai7" ? "Rata - Rata Deviasi Nilai" :
-                                            //                 "Rasio Dispensasi RPD Harian";
-
-                                            //         let div = document.createElement("div");
-                                            //         div.innerHTML = `<label>${labelText}:
-                                            //         ${Array.from({ length: jumlahInput }).map((_, i) =>
-                                            //             `<input type="number" class="${komponen}" step="0.01" oninput="yearhitungAkurasi7()">`)
-                                            //                 .join('')}
-                                            //     </label>`;
-                                            //         container7.appendChild(div);
-                                            //     });
-                                            // }
+                                            
                                             function yearhitungAkurasi7() {
                                                 let yeardeviasiUnit7 = parseFloat(document.getElementById("yearIndeviasiUnit7").value) || 0;
                                                 let yeardeviasiNilai7 = parseFloat(document.getElementById("yearIndeviasiNilai7").value) || 0;
@@ -473,17 +445,18 @@
 
                                                 let yearvalueDeviasiUnit7 = ((yeardeviasiUnit7 * 0.2).toFixed(2)) ;
                                                 let yearvalueDeviasiNilai7 = ((yeardeviasiNilai7 * 0.8 ).toFixed(2));
-                                                let yearvalueDispensasiNilai7 = yeardispensasi7;
+                                                let yearvalueDispensasiNilai7 = yeardispensasi7 / 3;
 
                                                 let yearhasil7 = (100 - yearvalueDeviasiUnit7 - yearvalueDeviasiNilai7 - yearvalueDispensasiNilai7).toFixed(2);
-
+                                                let yearhasil7a = yearhasil7;
                                                 document.getElementById("yeardeviasiUnit7").innerText = yeardeviasiUnit7;
                                                 document.getElementById("yeardeviasiNilai7").innerText = yeardeviasiNilai7;
                                                 document.getElementById("yeardispensasi7").innerText = yeardispensasi7;
                                                 document.getElementById("yearvalueDeviasiUnit7").innerText = yearvalueDeviasiUnit7;
                                                 document.getElementById("yearvalueDeviasiNilai7").innerText = yearvalueDeviasiNilai7;
-                                                document.getElementById("yearvalueDispensasiNilai7").innerText = yearvalueDispensasiNilai7;
+                                                document.getElementById("yearvalueDispensasiNilai7").innerText = yearvalueDispensasiNilai7.toFixed(2);
                                                 document.getElementById("yearhasil7").innerText = yearhasil7;
+                                                document.getElementById("yearhasil7a").innerText = yearhasil7a;
 
                                             }
 
@@ -518,13 +491,14 @@
                                             }
 
                                             const data = {
-                                                yeardeviasiUnit7: document.getElementById("yeardeviasiUnit7")?.innerText || "",
+                                               yeardeviasiUnit7: document.getElementById("yeardeviasiUnit7")?.innerText || "",
                                                 yeardeviasiNilai7: document.getElementById("yeardeviasiNilai7")?.innerText || "",
                                                 yeardispensasi7: document.getElementById("yeardispensasi7")?.innerText || "",
                                                 yearvalueDeviasiUnit7: document.getElementById("yearvalueDeviasiUnit7")?.innerText || "",
                                                 yearvalueDeviasiNilai7: document.getElementById("yearvalueDeviasiNilai7")?.innerText || "",
                                                 yearvalueDispensasiNilai7: document.getElementById("yearvalueDispensasiNilai7")?.innerText || "",
-                                                yearhasil7: document.getElementById("yearhasil7")?.innerText || "",        
+                                                yearhasil7: document.getElementById("yearhasil7")?.innerText || "",
+                                                yearhasil7a: document.getElementById("yearhasil7a")?.innerText || "",        
                                             
                                                 yearformula7: document.getElementById("yearformula7")?.innerText || "",
                                                 yearketerangan7: document.getElementById("yearketerangan7")?.innerText || "",

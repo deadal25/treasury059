@@ -344,14 +344,14 @@
                                         <input type="number" id="tw2lhps1" min="0" max="100" value="9.56"
                                             oninput="tw2hitungNilai10()"> -->
 
-                                         <label for="tw2vlhps10a">LPJ Bendahara yang disampaikan ke KPPN tepat waktu: </label>
+                                         <label for="tw2vlhps10a">Nilai LHPS Semester II: </label>
                                         <input type="number" id="tw2vlhps10a" min="0" value="0"oninput="tw2hitungNilai10()">
-                                        <label for="tw2vlhps10b">LPJ Bendahara yang seharusnya disampaikan ke KPPN lingkup Kanwil DJPb: </label>
+                                        <label for="tw2vlhps10b">Target Nilai LHPS Semester II: </label>
                                         <input type="number" id="tw2vlhps10b" min="0" value="0"oninput="tw2hitungNilai10()">
 
-                                        <label for="tw2vlhps10c">LPJ Bendahara yang diverifikasi dan divalidasi KPPN tepat waktu: </label>
+                                        <label for="tw2vlhps10c">% Dokumen dukung yang diunggah pada periode triwulan I tahun 2025: </label>
                                         <input type="number" id="tw2vlhps10c" min="0"  value="0"oninput="tw2hitungNilai10()">
-                                        <label for="tw2vlhps10d">LPJ Bendahara yang disampaikan ke KPPN lingkup Kanwil DJPb: </label>
+                                        <label for="tw2vlhps10d">Target Nilai SFO: </label>
                                         <input type="number" id="tw2vlhps10d" min="0"  value="0"oninput="tw2hitungNilai10()">
 
                                         <!-- <label for="tw2lhps2">Nilai SFO:</label>
@@ -411,7 +411,7 @@
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align" colspan="4"><b>Indeks Penyampaian LPJ</b></td>
+                                                    <td class="left-align" colspan="4"><b>Indeks capaian komponen nilai LHPS</b></td>
                                                    <td rowspan="9" valign="top" class="left-align" id="tw2formula10"></td>
                                                     <td rowspan="9" valign="top" class="left-align" id="tw2keterangan10"> </td>
                                                     
@@ -466,10 +466,9 @@
                                         </table>
                                         <script>
                                             function tw2hitungNilai10() {
-                                                
-                                                
-                                                
-                                                
+                                                let tw2vlhps10a = parseFloat(document.getElementById("tw2vlhps10a").value) || 0;
+                                                let tw2vlhps10b = parseFloat(document.getElementById("tw2vlhps10b").value) || 0;
+                                                let tw2vlhps10c = parseFloat(document.getElementById("tw2vlhps10c").value) || 0;
                                                 let tw2vlhps10d = parseFloat(document.getElementById("tw2vlhps10d").value) || 0;
 
                                                 let tw2valuenilaiLHPS1 = (tw2vlhps10a / tw2vlhps10b) * 100;

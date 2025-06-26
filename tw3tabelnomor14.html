@@ -397,45 +397,42 @@
                                                     <td rowspan="5" valign="top"> 7b-N </td>
                                                     <td rowspan="5" valign="top" class="left-align">Persentase Kualitas Pengelolaan BMN dan Pengadaan</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td><b>Nilai</b></td>
                                                     <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td>Formula</td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Indeks Pengelolaan Aset </td>
-                                                    <td>60%</td>
-                                                    <td  id="tw3valuenilaiAset">66</td>
-                                                    <td  id="tw3nilaiAset">66</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="tw3formula14">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <!-- <td>60%</td> -->
+                                                    <td  id="tw3valuenilaiAset"></td>
+                                                    <td  id="tw3nilaiAset"></td>
+                                                    <td></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="tw3formula14"></td>
                                                     <td rowspan="4" valign="top" class="left-align" id="tw3keterangan14">
-                                                        Tolong selalu enter agar tidak terlalu panjang
-                                                        Hasil Penilaian IPA dan ITKP
-                                                        Nota Dinas Sekretaris Ditjen Perbendaharaan nomor ND
-                                                        275/PB.1/2025 tanggal 17 Januari 2025
-                                                        Nilai Indeks Pengelolaan Aset sebesar 104
-                                                        Nilai Indeks Tata Kelola Pengadaan sebesar 120
-                                                        Capaian realisasi IKU : 60%*104 + 40%*120 = 111
-                                                        Indeks Capaian IKU = 111 / 84,10 = 120 </td>
+                                                       </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Indeks Tata Kelola
                                                         Pengadaan</td>
-                                                    <td>20%</td>
-                                                    <td  id="tw3valuenilaiPengadaan">48</td>
-                                                    <td  id="tw3nilaiPengadaan">48</td>
+                                                    <!-- <td>20%</td> -->
+                                                    <td  id="tw3valuenilaiPengadaan"></td>
+                                                    <td  id="tw3nilaiPengadaan"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Penggunaan Produk Dalam Negeri</td>
-                                                    <td>20%</td>
-                                                    <td  id="tw3valuenilaiProduk">48</td>
-                                                    <td  id="tw3nilaiProduk">48</td>
+                                                    <!-- <td>20%</td> -->
+                                                    <td  id="tw3valuenilaiProduk"></td>
+                                                    <td  id="tw3nilaiProduk"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="tw3indeksCapaian15"><b>120</b></td>
-                                                    <!-- <td></td> -->
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                    <td  id="tw3indeksCapaian15a"><b></b></td>
+                                                    <td  id="tw3indeksCapaian15"><b></b></td>
+                                                    
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -449,7 +446,8 @@
                                                 let tw3nilaiPengadaan = 0.2 * tw3pengadaan;
                                                 let tw3nilaiProduk = 0.2 * tw3produk;
                                                 let tw3total15 = tw3nilaiAset + tw3nilaiPengadaan + tw3nilaiProduk;
-                                                let tw3indeksCapaian15 = (tw3total15 > 100) ? 120 : tw3total15.toFixed(2);
+                                                let tw3target15 = 70;
+                                                let tw3indeksCapaian15 = (tw3total15 > tw3target15) ? 120 : tw3total15.toFixed(2);
 
                                                 document.getElementById("tw3valuenilaiAset").innerText = tw3aset.toFixed(2);
                                                 document.getElementById("tw3valuenilaiPengadaan").innerText = tw3pengadaan.toFixed(2);
@@ -457,6 +455,7 @@
                                                 document.getElementById("tw3nilaiAset").innerText = tw3nilaiAset.toFixed(2);
                                                 document.getElementById("tw3nilaiPengadaan").innerText = tw3nilaiPengadaan.toFixed(2);
                                                 document.getElementById("tw3nilaiProduk").innerText = tw3nilaiProduk.toFixed(2);
+                                                document.getElementById("tw3indeksCapaian15a").innerText = tw3total15;
                                                 document.getElementById("tw3indeksCapaian15").innerText = tw3indeksCapaian15;
                                             }
 
@@ -496,6 +495,7 @@
                                                 tw3nilaiAset: document.getElementById("tw3nilaiAset")?.innerText || "",
                                                 tw3nilaiPengadaan: document.getElementById("tw3nilaiPengadaan")?.innerText || "",
                                                 tw3nilaiProduk: document.getElementById("tw3nilaiProduk")?.innerText || "",
+                                                tw3indeksCapaian15a: document.getElementById("tw3indeksCapaian15a")?.innerText || "",   
                                                 tw3indeksCapaian15: document.getElementById("tw3indeksCapaian15")?.innerText || "",        
                                             
                                                 tw3formula14: document.getElementById("tw3formula14")?.innerText || "",

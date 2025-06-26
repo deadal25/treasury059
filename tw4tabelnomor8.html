@@ -341,12 +341,24 @@
                                         <br>
                                         <h3><b>Indeks kualitas penyelesaian SP2D</b></h3>
 
-                                        <label>Komponen A (Penyelesaian SP2D tepat waktu %):</label>
-                                        <input type="number" id="tw4inputA8" min="0" max="100" oninput="tw4updateIndex8()">
-                                        <label>Komponen B (Efektivitas Penyaluran Dana SP2D %):</label>
-                                        <input type="number" id="tw4inputB8" min="0" max="100" oninput="tw4updateIndex8()">
-                                        <label>Komponen C (Hari kerja penyelesaian retur SP2D):</label>
-                                        <input type="number" id="tw4inputC8" min="1" max="30" oninput="tw4updateIndex8()">
+                                        <label>∑ penerima pada SP2D yang diterbitkan - ∑ penerima pada SP2D yang diretur oleh BO:</label>
+                                        <input type="number" id="tw4vpsp2d8" min="0" oninput="tw4updateIndex8()">
+                                        <label>∑ penerima pada SP2D yang diterbitkan:</label>
+                                        <input type="number" id="tw4vterbitd8" min="0" oninput="tw4updateIndex8()">
+
+                                        <label>Jumlah SP2D Pengganti per penerima dengan kategori indeks 1:</label>
+                                        <input type="number" id="tw4vSp2d1d8" min="1" oninput="tw4updateIndex8()">
+                                        <label>Jumlah SP2D Pengganti per penerima dengan kategori indeks 2:</label>
+                                        <input type="number" id="tw4vSp2d2d8" min="1" oninput="tw4updateIndex8()">
+                                        <label>Jumlah SP2D Pengganti per penerima dengan kategori indeks 3:</label>
+                                        <input type="number" id="tw4vSp2d3d8" min="1" oninput="tw4updateIndex8()">
+                                        <label>Jumlah SP2D Pengganti per penerima dengan kategori indeks 4:</label>
+                                        <input type="number" id="tw4vSp2d4d8" min="1" oninput="tw4updateIndex8()">
+                                        <label>Jumlah SP2D Pengganti per penerima dengan kategori indeks 5:</label>
+                                        <input type="number" id="tw4vSp2d5d8" min="1" oninput="tw4updateIndex8()">
+
+                                        <label>Total jumlah SP2D Pengganti per penerima:</label>
+                                        <input type="number" id="tw4vgantid8" min="1" oninput="tw4updateIndex8()">
 
                                         <label for="tw4formula8">Masukkan Formula:</label>
                                         <textarea id="tw4inputFormula8" class="form-control" rows="3"
@@ -391,42 +403,145 @@
                                             </tbody>
                                             <tbody>
                                                 <tr>
-                                                    <td rowspan="5" valign="top">8</td>
-                                                    <td rowspan="5" valign="top"> 4b-N </td>
-                                                    <td rowspan="5" valign="top" class="left-align">Indeks kualitas penyelesaian SP2D</td>
+                                                    <td rowspan="15" valign="top">8</td>
+                                                    <td rowspan="15" valign="top"> 4b-N </td>
+                                                    <td rowspan="15" valign="top" class="left-align">Indeks kualitas penyelesaian SP2D</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td ><b>Nilai</b></td>
                                                     <td ><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
+                                                    <td>Formula</td>
+                                                    <td>Keterangan</td>
+                                                </tr>
+                                                <!-- <tr>
+                                                    <td rowspan="19" valign="top">8</td>
+                                                    <td rowspan="19" valign="top"> 4b-N </td>
+                                                    <td rowspan="19" valign="top" class="left-align">Indeks kualitas penyelesaian SP2D</td>
+                                                    <td><b>Komponen</b></td>
+                                                    <td ><b>Nilai</b></td>
+                                                    <td ><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td>Formula</td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Penyelesaian SP2D secara tepat waktu </td>
-                                                    <td>33%</td>
-                                                    <td id="tw4valueindeksA8">5,00</td>
-                                                    <td id="tw4indeksA8">5,00</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="tw4formula8"> Tolong selalu enter agar tidak terlalu panjang</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="tw4keterangan8">
-                                                        Tolong selalu enter agar tidak terlalu panjang (Indeks Penyelesaian SP2D secara tepat waktu + Indeks
-                                                        Efektivitas Penyaluran dana SP2D yang akurat + Indeks
-                                                        Efektivitas kecepatan penyelesaian retur SP2D) / 3 </td>
+                                                    <td class="left-align" colspan="4"><b>A. Penyelesaian SP2D secara tepat waktu</b></td>
+                                                    
+                                                    <td rowspan="18" valign="top" class="left-align" id="tw2formula8"></td>
+                                                    <td rowspan="18" valign="top" class="left-align" id="tw2keterangan8"> </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Efektivitas Penyaluran dana SP2D yang akurat </td>
-                                                    <td>33%</td>
-                                                    <td id="tw4valueindeksB8">5,00</td>
-                                                    <td id="tw4indeksB8">5,00</td>
+                                                    <td class="left-align">∑ SP2D sesuai kriteria yang diterbitkan tepat waktu oleh KPPN</td>
+                                                    
+                                                    <td id="tw2valuetewaktud8"></td>
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Efektivitas kecepatan penyelesaian retur SP2D </td>
-                                                    <td>33%</td>
-                                                    <td id="tw4valueindeksC8">5,00</td>
-                                                    <td id="tw4indeksC8">5,00</td>
+                                                    <td class="left-align">∑ SP2D yang seharusnya sesuai kriteria yang diterbitkan oleh KPPN</td>
+                                                    
+                                                    <td id="tw2valuekriteriad8"></td>
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="tw4indeksTotal8">5</td>
+                                                    <td class="left-align"><b>Total Komponen A</b></td>
+                                                    
+                                                    <td id="tw2valuetkompAd8"></td>
+                                                    <td id="tw2indeksA8"></td>
+                                                    <td id="tw2valueindeksA8"></td>
+                                                </tr> -->
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>B. Efektivitas Penyaluran dana SP2D yang akurat</b></td>
+                                                    
+                                                    <td rowspan="14" valign="top" class="left-align" id="tw4formula8"></td>
+                                                    <td rowspan="14" valign="top" class="left-align" id="tw4keterangan8"> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑ penerima pada SP2D yang diterbitkan  - ∑ penerima pada SP2D yang diretur oleh BO</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="tw4valuepsp2d8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑ penerima pada SP2D yang diterbitkan</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="tw4valueterbitd8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align"><b>Total Komponen B</b></td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="tw4valuetkompBd8"></td>
+                                                    <td id="tw4indeksB8"></td>
+                                                    <td id="tw4valueindeksB8"></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>C. Efektivitas kecepatan penyelesaian retur SP2D</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">n SP2D-P I1 = jumlah SP2D Pengganti per penerima dengan kategori indeks 1</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="tw4valueSp2d1d8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">n SP2D-P I2 = jumlah SP2D Pengganti per penerima dengan kategori indeks 2</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="tw4valueSp2d2d8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">n SP2D-P I1 = jumlah SP2D Pengganti per penerima dengan kategori indeks 3</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="tw4valueSp2d3d8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">n SP2D-P I2 = jumlah SP2D Pengganti per penerima dengan kategori indeks 4</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="tw4valueSp2d4d8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">n SP2D-P I2 = jumlah SP2D Pengganti per penerima dengan kategori indeks 5</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="tw4valueSp2d5d8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Jumlah SP2D Pengganti seluruh kategori</b></td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="tw4valueSp2dalld8"></td>
+                                                    <td></td>
+                                                    <!-- <td></td> -->
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑n SP2D-P  = total jumlah SP2D Pengganti per penerima</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="tw4valuegantid8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2" ><b>Total Komponen C</b></td>
+                                                    <td id="tw4valuetkompCd8"></td>
+                                                    <!-- <td id="tw4indeksC8">5,00</td> -->
+                                                    <td id="tw4valueindeksC8"></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td colspan="3" ><b>Nilai Capaian</b></td>
+                                                    <!-- <td id="tw4indeksTotal8a"><b></b></td> -->
+                                                    <td id="tw4indeksTotal8"><b></b></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -434,66 +549,69 @@
                                         <script>
 
                                                 function tw4updateIndex8() {
-                                                let tw4VinputA8 = parseFloat(document.getElementById("tw4inputA8").value) || 0;
-                                                let tw4VinputB8 = parseFloat(document.getElementById("tw4inputB8").value) || 0;
-                                                let tw4VinputC8 = parseFloat(document.getElementById("tw4inputC8").value) || 0;
+                                                let tw4vpsp2d8 = parseFloat(document.getElementById("tw4vpsp2d8").value) || 0;
+                                                let tw4vterbitd8 = parseFloat(document.getElementById("tw4vterbitd8").value) || 0;
+                                                let tw4vSp2d1d8 = parseFloat(document.getElementById("tw4vSp2d1d8").value) || 0;
+                                                let tw4vSp2d2d8 = parseFloat(document.getElementById("tw4vSp2d2d8").value) || 0;
+                                                let tw4vSp2d3d8 = parseFloat(document.getElementById("tw4vSp2d3d8").value) || 0;
+                                                let tw4vSp2d4d8 = parseFloat(document.getElementById("tw4vSp2d4d8").value) || 0;
+                                                let tw4vSp2d5d8 = parseFloat(document.getElementById("tw4vSp2d5d8").value) || 0;
+                                                let tw4vgantid8 = parseFloat(document.getElementById("tw4vgantid8").value) || 0;
 
-                                                let tw4indeksA8 = (tw4VinputA8 * 100/3*100)/100/100;
-                                                let tw4indeksB8 = (tw4VinputB8 * 100/3*100) /100/100;
-                                                let tw4indeksC8 = (tw4VinputC8 * 100/3*100) /100/100;
-                                                let tw4indeksTotal8 = tw4indeksA8 + tw4indeksB8 +tw4indeksC8;
+                                                // let tw4valuetkompAd8 = (tw4vtewaktud8/tw4vkriteriad8)*100;
+                                                // let tw4indeksA8 = getIndeksIKI8(tw4valuetkompAd8);
+                                                // let tw4valueindeksA8 = tw4indeksA8;
 
-                                                document.getElementById("tw4valueindeksA8").innerText = tw4VinputA8;
-                                                document.getElementById("tw4valueindeksB8").innerText = tw4VinputB8 ;
-                                                document.getElementById("tw4valueindeksC8").innerText = tw4VinputC8 ;
+                                                let tw4valuetkompBd8 = (tw4vpsp2d8/tw4vterbitd8)*100;
+                                                let tw4indeksB8 = getIndeksIKI8a(tw4valuetkompBd8);
+                                                let tw4valueindeksB8 = tw4indeksB8;
 
-                                                document.getElementById("tw4indeksA8").innerText = tw4indeksA8.toFixed(2);
-                                                document.getElementById("tw4indeksB8").innerText = tw4indeksB8.toFixed(2);
-                                                document.getElementById("tw4indeksC8").innerText = tw4indeksC8.toFixed(2);
+                                                let tw4valueSp2dalld8 = tw4vSp2d1d8 + tw4vSp2d2d8 +tw4vSp2d3d8 +tw4vSp2d4d8 +tw4vSp2d5d8;
+                                                let tw4valuetkompCd8 = (tw4valueSp2dalld8 / tw4vgantid8);
+                                                let tw4valueindeksC8 = tw4valuetkompCd8;
+                                                let tw4indeksTotal8 = (tw4valueindeksB8 + tw4valueindeksC8)/2;
+                                                // let tw4indeksTotal8 = (tw4valueindeksA8 + tw4valueindeksB8 +tw4valueindeksC8)/3;
 
-                                                document.getElementById("tw4indeksTotal8").innerText = tw4indeksTotal8.toFixed(2);
+                                                // document.getElementById("tw4valuetewaktud8").innerText = tw4vtewaktud8;
+                                                // document.getElementById("tw4valuekriteriad8").innerText = tw4vkriteriad8;    
+                                                // document.getElementById("tw4valuetkompAd8").innerText = tw4valuetkompAd8.toFixed(2)+"%";
+                                                // document.getElementById("tw4indeksA8").innerText = tw4indeksA8;
+                                                // document.getElementById("tw4valueindeksA8").innerText = tw4valueindeksA8;
+                                                
+                                                document.getElementById("tw4valuepsp2d8").innerText = tw4vpsp2d8;
+                                                document.getElementById("tw4valueterbitd8").innerText = tw4vterbitd8;
+                                                document.getElementById("tw4valuetkompBd8").innerText = tw4valuetkompBd8.toFixed(2)+"%";
+                                                document.getElementById("tw4indeksB8").innerText = tw4indeksB8;
+                                                document.getElementById("tw4valueindeksB8").innerText = tw4valueindeksB8;
+
+                                                document.getElementById("tw4valueSp2d1d8").innerText = tw4vSp2d1d8;                                                
+                                                document.getElementById("tw4valueSp2d2d8").innerText = tw4vSp2d2d8;
+                                                document.getElementById("tw4valueSp2d3d8").innerText = tw4vSp2d3d8;
+                                                document.getElementById("tw4valueSp2d4d8").innerText = tw4vSp2d4d8;
+                                                document.getElementById("tw4valueSp2d5d8").innerText = tw4vSp2d5d8;
+                                                document.getElementById("tw4valueSp2dalld8").innerText = tw4valueSp2dalld8;
+                                                document.getElementById("tw4valuegantid8").innerText = tw4vgantid8;
+                                                document.getElementById("tw4valuetkompCd8").innerText = tw4valuetkompCd8;
+                                                document.getElementById("tw4valueindeksC8").innerText = tw4valueindeksC8;
+
+                                                document.getElementById("tw4indeksTotal8").innerText = tw4indeksTotal8;
                                             }
 
-                                            // function getIndexA8(value) {
-                                            //     if (value >= 100) return 5;
-                                            //     if (value >= 98) return 4;
-                                            //     if (value >= 95) return 3;
-                                            //     if (value >= 90) return 2;
-                                            //     return 1;
-                                            // }
+                                            function getIndeksIKI8(persen) {
+                                                if (persen >= 100) return 5;
+                                                if (persen >= 98) return 4;
+                                                if (persen >= 95) return 3;
+                                                if (persen >= 90) return 2;
+                                                return 1; // Untuk < 90%
+                                            }
 
-                                            // function getIndexB8(value) {
-                                            //     if (value >= 96) return 5;
-                                            //     if (value >= 90) return 4;
-                                            //     if (value >= 80) return 3;
-                                            //     if (value >= 80) return 2;
-                                            //     return 1;
-                                            // }
-
-                                            // function getIndexC8(value) {
-                                            //     if (value >= 1 && value <= 8) return 5;
-                                            //     if (value >= 9 && value <= 12) return 4;
-                                            //     if (value >= 13 && value <= 21) return 3;
-                                            //     if (value === 22) return 2;
-                                            //     return 1;
-                                            // }
-
-                                            // function tw4updateIndex8() {
-                                            //     let inputA8 = parseFloat(document.getElementById("tw4inputA8").value) || 0;
-                                            //     let inputB8 = parseFloat(document.getElementById("inputB8").value) || 0;
-                                            //     let inputC8 = parseFloat(document.getElementById("inputC8").value) || 0;
-
-                                            //     let indeksA8 = getIndexA8(inputA8);
-                                            //     let indeksB8 = getIndexB8(inputB8);
-                                            //     let indeksC8 = getIndexC8(inputC8);
-
-                                            //     document.getElementById("indeksA8").innerText = indeksA8;
-                                            //     document.getElementById("indeksB8").innerText = indeksB8;
-                                            //     document.getElementById("indeksC8").innerText = indeksC8;
-
-                                            //     let average8 = ((indeksA8 + indeksB8 + indeksC8) / 3).toFixed(2);
-                                            //     document.getElementById("averageIndex8").innerText = isNaN(average8) ? "-" : average8;
-                                            // }
+                                            function getIndeksIKI8a(persentase) {
+                                                if (persentase >= 96 && persentase <= 100) return 5;
+                                                if (persentase >= 90) return 4;
+                                                if (persentase >= 80) return 3;
+                                                if (persentase >= 70) return 2;
+                                                return 1; // Jika persentase < 70
+                                            }
 
                                         </script>
                                         <script type="module">
@@ -524,13 +642,22 @@
                                             }
 
                                             const data = {
-                                                tw4valueindeksA8: document.getElementById("tw4valueindeksA8")?.innerText || "",
-                                                tw4valueindeksB8: document.getElementById("tw4valueindeksB8")?.innerText || "",
-                                                tw4valueindeksC8: document.getElementById("tw4valueindeksC8")?.innerText || "",
-                                                tw4indeksA8: document.getElementById("tw4indeksA8")?.innerText || "",
-                                                tw4indeksB8: document.getElementById("tw4indeksB8")?.innerText || "",
-                                                tw4indeksC8: document.getElementById("tw4indeksC8")?.innerText || "",
-                                                tw4indeksTotal8: document.getElementById("tw4indeksTotal8")?.innerText || "",        
+                                                tw4valuepsp2d8: document.getElementById("tw4valuepsp2d8").innerText || "",
+                                                tw4valueterbitd8: document.getElementById("tw4valueterbitd8").innerText || "",
+                                                tw4valuetkompBd8: document.getElementById("tw4valuetkompBd8").innerText || "",
+                                                tw4indeksB8: document.getElementById("tw4indeksB8").innerText || "",
+                                                tw4valueindeksB8: document.getElementById("tw4valueindeksB8").innerText || "",
+                                                tw4valueSp2d1d8: document.getElementById("tw4valueSp2d1d8").innerText || "",
+                                                tw4valueSp2d2d8: document.getElementById("tw4valueSp2d2d8").innerText || "",
+                                                tw4valueSp2d3d8: document.getElementById("tw4valueSp2d3d8").innerText || "",
+                                                tw4valueSp2d4d8: document.getElementById("tw4valueSp2d4d8").innerText || "",
+                                                tw4valueSp2d5d8: document.getElementById("tw4valueSp2d5d8").innerText || "",
+                                                tw4valueSp2dalld8: document.getElementById("tw4valueSp2dalld8").innerText || "",
+                                                tw4valuegantid8: document.getElementById("tw4valuegantid8").innerText || "",
+                                                tw4valuetkompCd8: document.getElementById("tw4valuetkompCd8").innerText || "",
+                                                tw4valueindeksC8: document.getElementById("tw4valueindeksC8").innerText || "",
+                                                tw4indeksTotal8: document.getElementById("tw4indeksTotal8").innerText || "",
+                                                
                                             
                                                 tw4formula8: document.getElementById("tw4formula8")?.innerText || "",
                                                 tw4keterangan8: document.getElementById("tw4keterangan8")?.innerText || "",

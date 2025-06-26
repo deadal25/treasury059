@@ -340,12 +340,18 @@
                                         <br>
                                         <h3><b>Indeks kepuasan terhadap layanan KPPN</b></h3>
 
-                                        <label for="ikpl3a">Indeks Kepuasan layanan:</label>
-                                        <input type="number" id="tw3ikpl3a" oninput="tw3updateNilai3()" step="0.01" min="0"max="100">
-                                        <label for="ikpl3b">Indeks Efektivitas Edukasi dan Komunikasi:</label>
-                                        <input type="number" id="tw3ikpl3b" oninput="tw3updateNilai3()" step="0.01" min="0"max="100">
-                                        <label for="ikpl3c">Indeks layanan HAI CSO:</label>
-                                        <input type="number" id="tw3ikpl3c" oninput="tw3updateNilai3()" step="0.01" min="0"max="100">
+                                        <label for="jrekomendasi3a">Jumlah Rekomendasi:</label>
+                                        <input type="number" id="tw3jrekomendasi3a" oninput="tw3updateNilai3()" step="0.01" min="0">
+                                        <label for="tlanjut3a">Jumlah Tindak Lanjut:</label>
+                                        <input type="number" id="tw3tlanjut3a" oninput="tw3updateNilai3()" step="0.01" min="0">
+                                        <!-- <label for="ikpl3b">Indeks Efektivitas Edukasi dan Komunikasi:</label>
+                                        <input type="number" id="tw3ikpl3b" oninput="tw3updateNilai3()" step="0.01" min="0"> -->
+                                        <label for="posttest3a">Hasil Post Test:</label>
+                                        <input type="number" id="tw3posttest3a" oninput="tw3updateNilai3()" step="0.01" min="0">
+                                        <label for="kuesioner3a">Hasil Kuesioner:</label>
+                                        <input type="number" id="tw3kuesioner3a" oninput="tw3updateNilai3()" step="0.01" min="0">
+                                        <label for="rcapaian3a">Realisasi Capaian pada OMSPAN:</label>
+                                        <input type="number" id="tw3rcapaian3a" oninput="tw3updateNilai3()" step="0.01" min="0">
 
                                         <label for="tw3formula3">Masukkan Formula:</label>
                                         <textarea id="tw3inputFormula3" class="form-control" rows="3"
@@ -391,65 +397,156 @@
                                             </tbody>
                                             <tbody>
                                                 <tr>
-                                                    <td rowspan="5" valign="top">3</td>
-                                                    <td rowspan="5" valign="top" width="50px"> 2a-N </td>
-                                                    <td rowspan="5" valign="top" class="left-align">Indeks kepuasan terhadap layanan KPPN</td>
+                                                    <td rowspan="13" valign="top">3</td>
+                                                    <td rowspan="13" valign="top" width="50px"> 2a-N </td>
+                                                    <td rowspan="13" valign="top" class="left-align">Indeks kepuasan terhadap layanan KPPN</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td colspan="3"><b>Nilai</b></td>
+                                                    <td><b>Nilai</b></td>
+                                                    <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td>Formula</td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Indeks kepuasan layanan</td>
-                                                        <td>33%</td>
-                                                        <td id="tw3ikplValue3a">4,91</td>
-                                                        <td id="tw3ikplHasil3a">4,91</td>
-                                                        <td rowspan="4" valign="top" class="left-align" id="tw3formula3">Tolong selalu enter agar tidak terlalu panjang</td>
-                                                        <td rowspan="4" valign="top" class="left-align" id="tw3keterangan3">
-                                                            Tolong selalu enter agar tidak terlalu panjang
+                                                    <td class="left-align" colspan="4"><b>Indeks kepuasan layanan</b></td>
+                                                        <td rowspan="12" valign="top" class="left-align" id="tw3formula3"></td>
+                                                        <td rowspan="12" valign="top" class="left-align" id="tw3keterangan3">
+                                                            
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Indeks Efektivitas Edukasi dan Komunikasi</td>
-                                                        <td>33%</td>
-                                                        <td id="tw3ikplValue3b">4,91</td>
-                                                        <td id="tw3ikplHasil3b">4,91</td>
+                                                    <td class="left-align">Jumlah Rekomendasi</td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="tw3jrekomendasiValue3a"></td>
+                                                        <td id="tw3jrekomendasiHasil3a"></td>
+                                                        <td></td>
                                                 </tr>
-                                                <tr><td class="left-align">Indeks layanan HAI CSO</td>
-                                                    <td>33%</td>
-                                                    <td id="tw3ikplValue3c">4,91</td>
-                                                    <td id="tw3ikplHasil3c">4,91</td></tr>
                                                 <tr>
+                                                    <td class="left-align">Jumlah Tindak Lanjut Rekomendasi Yang Dilaksanakan</td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="tw3tlanjutValue3a"></td>
+                                                        <td id="tw3tlanjutHasil3a"></td>
+                                                        <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Nilai SKPL</b></td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="tw3ikplValue3a"></td>
+                                                        <td id="tw3ikplHasil3a"></td>
+                                                        <!-- <td></td> -->
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Indeks Efektivitas Edukasi dan Komunikasi</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Hasil Post Test</td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="tw3posttestValue3b"></td>
+                                                        <td id="tw3posttestHasil3b"></td>
+                                                        <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Hasil Kuesioner</td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="tw3kuesionerValue3b"></td>
+                                                        <td id="tw3kuesionerHasil3b"></td>
+                                                        <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Nilai Edukom</b></td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="tw3ikplValue3b"></td>
+                                                        <td id="tw3ikplHasil3b"></td> 
+                                                </tr>
+                                                <tr><td class="left-align" colspan="4"><b>Indeks layanan HAI CSO</b></td>
+                                                </tr>
+                                                 <tr>
+                                                    <td class="left-align">Realisasi Capaian Pada OMSPAN</td>
+                                                    <td id="tw3rcapaianValue3c"></td>
+                                                    <td id="tw3rcapaianHasil3c"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Nilai HAI CSO</b></td>
+                                                    <td id="tw3ikplValue3c"></td>
+                                                    <td id="tw3ikplHasil3c"></td>
+                                                </tr>
+                                                <tr>
+
                                                     <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="tw3hasil3abc"><b>5</b></td>
+                                                    <td colspan="3" id="tw3hasil3abc"><b></b></td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                         <script>                                                                                
                                             function tw3updateNilai3() {
-                                                // let persentaseA = parseFloat(document.getElementById("persentaseA").value) || 0;
-                                                let tw3ikpl3a = parseFloat(document.getElementById("tw3ikpl3a").value) || 0;
-                                                let tw3ikpl3b = parseFloat(document.getElementById("tw3ikpl3b").value) || 0;
-                                                let tw3ikpl3c = parseFloat(document.getElementById("tw3ikpl3c").value) || 0;
+                                                let tw3jrekomendasi3a = parseFloat(document.getElementById("tw3jrekomendasi3a").value) || 0;
+                                                let tw3tlanjut3a = parseFloat(document.getElementById("tw3tlanjut3a").value) || 0;
+                                                let tw3posttest3a = parseFloat(document.getElementById("tw3posttest3a").value) || 0;
+                                                let tw3kuesioner3a = parseFloat(document.getElementById("tw3kuesioner3a").value) || 0;
+                                                let tw3rcapaian3a = parseFloat(document.getElementById("tw3rcapaian3a").value) || 0;
 
-                                                // let PersentaseAhasil = (persentaseA * 50) / 100;
-                                                let tw3ikplHasil3a = (tw3ikpl3a * 100/3*100)/100/100;
-                                                let tw3ikplHasil3b = (tw3ikpl3b * 100/3*100) /100/100;
-                                                let tw3ikplHasil3c = (tw3ikpl3c * 100/3*100) /100/100;
-                                                let tw3hasil3abc = tw3ikplHasil3a + tw3ikplHasil3b +tw3ikplHasil3c;
-                                                // let tw3hasil3abc = (tw3ikpl3a + tw3ikpl3b + tw3ikpl3c)/3;
+
+                                                let tw3ikplValue3a = (tw3jrekomendasi3a / tw3tlanjut3a)*100;
+                                                let tw3ikplHasil3a = getIndeksIKI3(tw3ikplValue3a);
+                                                let tw3ikplValue3b = ((tw3posttest3a *60/100) + (tw3kuesioner3a * 40/100) );
+                                                let tw3ikplHasil3b = getIndeksIKI3a(tw3ikplValue3b);
+                                                let tw3ikplValue3c = getIndeksIKI3b(tw3rcapaian3a);
+                                                let tw3ikplHasil3c = tw3ikplValue3c;
+                                                // let tw3hasil3abc = tw3ikplHasil3a + tw3ikplHasil3b +tw3ikplHasil3c;
+                                                let tw3hasil3abc = (tw3ikplHasil3a + tw3ikplHasil3b + tw3ikplHasil3c)/3;
     
-                                                document.getElementById("tw3ikplValue3a").innerText = tw3ikpl3a;
-                                                document.getElementById("tw3ikplValue3b").innerText = tw3ikpl3b;
-                                                document.getElementById("tw3ikplValue3c").innerText = tw3ikpl3c;
+                                                document.getElementById("tw3jrekomendasiValue3a").innerText = tw3jrekomendasi3a;
+                                                document.getElementById("tw3tlanjutValue3a").innerText = tw3tlanjut3a;
+                                                document.getElementById("tw3ikplValue3a").innerText = tw3ikplValue3a.toFixed(2) + "%";
+                                                document.getElementById("tw3posttestValue3b").innerText = tw3posttest3a;
+                                                document.getElementById("tw3kuesionerValue3b").innerText = tw3kuesioner3a;
+                                                document.getElementById("tw3ikplValue3b").innerText = tw3ikplValue3b.toFixed(2) ;
+                                                document.getElementById("tw3rcapaianValue3c").innerText = tw3rcapaian3a;
+                                                document.getElementById("tw3ikplValue3c").innerText = tw3ikplValue3c;
                                                 // document.getElementById("PersentaseDValue").innerText = persentaseD;
                                                 // document.getElementById("PersentaseAhasil").innerText = PersentaseAhasil.toFixed(1);
-                                                document.getElementById("tw3ikplHasil3a").innerText = tw3ikplHasil3a.toFixed(2);
-                                                document.getElementById("tw3ikplHasil3b").innerText = tw3ikplHasil3b.toFixed(2);
-                                                document.getElementById("tw3ikplHasil3c").innerText = tw3ikplHasil3c.toFixed(2);
+                                                document.getElementById("tw3ikplHasil3a").innerText = tw3ikplHasil3a;
+                                                document.getElementById("tw3ikplHasil3b").innerText = tw3ikplHasil3b;
+                                                document.getElementById("tw3ikplHasil3c").innerText = tw3ikplHasil3c;
                                                 // document.getElementById("indeksA").innerText = indeksA;
                                                 // document.getElementById("indeksB").innerText = indeksB;
                                                 document.getElementById("tw3hasil3abc").innerText = tw3hasil3abc.toFixed(0);
+                                            }
+
+                                            function getIndeksIKI3(capaian) {
+                                                if (capaian >= 100) return 5;
+                                                if (capaian >= 90 && capaian < 100) return 4.5;
+                                                if (capaian >= 80 && capaian < 90) return 4;
+                                                if (capaian >= 70 && capaian < 80) return 3.5;
+                                                if (capaian >= 60 && capaian < 70) return 3;
+                                                if (capaian >= 50 && capaian < 60) return 2.5;
+                                                if (capaian >= 40 && capaian < 50) return 2;
+                                                if (capaian < 40) return 1;
+                                                return 1;
+                                            }
+                                            function getIndeksIKI3a(capaian1) {
+                                                if (capaian1 > 95) return 5;
+                                                if (capaian1 > 85) return 4.5;
+                                                if (capaian1 > 80) return 4;
+                                                if (capaian1 > 70) return 3.5;
+                                                if (capaian1 > 60) return 3;
+                                                if (capaian1 > 50) return 2.5;
+                                                if (capaian1 > 40) return 2;
+                                                if (capaian1 >= 0) return 1;
+                                                return 1; // fallback jika negatif
+                                            }
+
+
+                                            function getIndeksIKI3b(capaian2) {
+                                                if (capaian2 >= 3.75) return 5;
+                                                if (capaian2 >= 3.50 && capaian2 < 3.75) return 4.5;
+                                                if (capaian2 >= 3.25 && capaian2 < 3.50) return 4;
+                                                if (capaian2 >= 3.00 && capaian2 < 3.25) return 3.5;
+                                                if (capaian2 >= 2.00 && capaian2 < 3.00) return 3;
+                                                if (capaian2 >= 1.00 && capaian2 < 2.00) return 2;
+                                                if (capaian2 >= 0.00 && capaian2 < 1.00) return 1;
+                                                return 1; // fallback untuk nilai tidak valid
                                             }
 
                                         </script>
@@ -481,14 +578,24 @@
                                             }
 
                                             const data = {
+                                                tw3jrekomendasiValue3a: document.getElementById("tw3jrekomendasiValue3a")?.innerText || "",
+                                                tw3tlanjutValue3a: document.getElementById("tw3tlanjutValue3a")?.innerText || "",
+                                                tw3posttestValue3b: document.getElementById("tw3posttestValue3b")?.innerText || "",
+                                                tw3kuesionerValue3b: document.getElementById("tw3kuesionerValue3b")?.innerText || "",
+                                                tw3rcapaianValue3c: document.getElementById("tw3rcapaianValue3c")?.innerText || "",
                                                 tw3ikplValue3a: document.getElementById("tw3ikplValue3a")?.innerText || "",
                                                 tw3ikplValue3b: document.getElementById("tw3ikplValue3b")?.innerText || "",
                                                 tw3ikplValue3c: document.getElementById("tw3ikplValue3c")?.innerText || "",
+                                                tw3jrekomendasiHasil3a: document.getElementById("tw3jrekomendasiHasil3a")?.innerText || "",
+                                                tw3tlanjutHasil3a: document.getElementById("tw3tlanjutHasil3a")?.innerText || "",
+                                                tw3posttestHasil3b: document.getElementById("tw3posttestHasil3b")?.innerText || "",
+                                                tw3kuesionerHasil3b: document.getElementById("tw3kuesionerHasil3b")?.innerText || "",
+                                                tw3rcapaianHasil3c: document.getElementById("tw3rcapaianHasil3c")?.innerText || "",
                                                 tw3ikplHasil3a: document.getElementById("tw3ikplHasil3a")?.innerText || "",
                                                 tw3ikplHasil3b: document.getElementById("tw3ikplHasil3b")?.innerText || "",
                                                 tw3ikplHasil3c: document.getElementById("tw3ikplHasil3c")?.innerText || "",
                                                 tw3hasil3abc: document.getElementById("tw3hasil3abc")?.innerText || "",
-                                                // totalPersentase2: document.getElementById("totalPersentase2")?.innerText || "",
+                                               
                                                 
                                                 tw3formula3: document.getElementById("tw3formula3")?.innerText || "",
                                                 tw3keterangan3: document.getElementById("tw3keterangan3")?.innerText || "",
@@ -509,42 +616,7 @@
 
                                             window.tw3submitData3 = tw3submitData3;
                                         </script>
-                                        <!-- <script>
-                                            function tw3submitData3() {
-                                                let tw3ikpl3a = document.getElementById("tw3ikplValue3a").innerText;
-                                                let tw3ikpl3b = document.getElementById("tw3ikplValue3b").innerText;
-                                                let tw3ikpl3c = document.getElementById("tw3ikplValue3c").innerText;
-                                                let tw3ikplHasil3a = document.getElementById("tw3ikplHasil3a").innerText;
-                                                let tw3ikplHasil3b = document.getElementById("tw3ikplHasil3b").innerText;
-                                                let tw3ikplHasil3c = document.getElementById("tw3ikplHasil3c").innerText;
-                                                let tw3hasil3abc = document.getElementById("tw3hasil3abc").innerText;
-
-                                                let tw3formula3hasil = document.getElementById("tw3formula3").innerText;
-                                                let tw3keterangan3hasil = document.getElementById("tw3keterangan3").innerText;
-
-                                                // Cek apakah ada data lama di localStorage
-                                                let storedData = localStorage.getItem("indeks_data");
-                                                let data = storedData ? JSON.parse(storedData) : {};
-
-                                                // Update hanya bagian halaman 3
-                                                data.tw3ikpl3a = tw3ikpl3a;
-                                                data.tw3ikpl3b = tw3ikpl3b;
-                                                data.tw3ikpl3c = tw3ikpl3c;
-                                                data.tw3ikplHasil3a = tw3ikplHasil3a;
-                                                data.tw3ikplHasil3b = tw3ikplHasil3b;
-                                                data.tw3ikplHasil3c = tw3ikplHasil3c;
-                                                data.tw3hasil3abc = tw3hasil3abc;
-
-                                                data.tw3keterangan3 = tw3keterangan3hasil;
-                                                data.tw3formula3 = tw3formula3hasil;
-                                                // Simpan kembali ke localStorage
-                                                localStorage.setItem("indeks_data", JSON.stringify(data));
-
-                                                alert("Data dari tw3 Indeks kepuasan terhadap layanan KPPNberhasil disimpan!");
-                                            }
-                                        </script> -->
-                                        <!-- <button onclick="tw3submitData3()">Simpan Data Halaman 3</button> -->
-
+                                       
                                     </div>
 
                                 </body>

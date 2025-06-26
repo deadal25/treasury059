@@ -143,11 +143,19 @@
                       <label class="form-label" for="email">Email</label>
                     </div>
 
-                    <div style="font-family: 'Noto Serif', serif;" data-mdb-input-init class="form-outline mb-4">
+                    <div style="font-family: 'Noto Serif', serif;" data-mdb-input-init class="form-outline mb-4 position-relative">
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required />
+                    <label class="form-label" for="password">Password</label>
+                    <i class="far fa-eye position-absolute" id="togglePassword"
+                        style="top: 50%; right: 15px; transform: translateY(-50%); cursor: pointer;"></i>
+                    </div>
+
+
+                    <!-- <div style="font-family: 'Noto Serif', serif;" data-mdb-input-init class="form-outline mb-4">
                       <input type="password" id="password" name="password" class="form-control" placeholder="Password"
                         required />
                       <label class="form-label" for="password">Password</label>
-                    </div>
+                    </div> -->
 
                     
                     <div style="font-family: 'Noto Serif', serif;" class="text-center pt-1 mb-5 pb-1">
@@ -216,6 +224,21 @@
     }
   });
 </script>
+<script>
+  const togglePassword = document.getElementById('togglePassword');
+  const passwordInput = document.getElementById('password');
+
+  togglePassword.addEventListener('click', function () {
+    // toggle tipe input
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+
+    // toggle ikon mata open/close
+    this.classList.toggle('fa-eye');
+    this.classList.toggle('fa-eye-slash');
+  });
+</script>
+
 
 </body>
 

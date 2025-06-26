@@ -341,17 +341,8 @@
                                         <br>
                                         <h3><b>Indeks kualitas pengelolaan keuangan KPPN </b></h3>
 
-                                        <!-- <label for="smart">Nilai SMART:</label>
-                                        <input type="number" id="smart" value="0" oninput="tw2hitungNilai13()"> -->
-
-                                        <!-- <label for="tw2ikpa">Nilai IKPA:</label>
-                                        <input type="number" id="tw2ikpa" value="0" oninput="tw2cekIKPA()"> -->
-
                                         <label for="tw2vikpa13a">Masukkan Nilai IKPA: </label>
                                         <input type="number" id="tw2vikpa13a" min="0" value="0"oninput="tw2hitungNilai13()">
-                                        <!-- <label for="tw2vlhps10b">LPJ Bendahara yang seharusnya disampaikan ke KPPN lingkup Kanwil DJPb: </label>
-                                        <input type="number" id="tw2vlhps10b" min="0" value="0"oninput="tw2hitungNilai13()"> -->
-
                                         <label for="tw2vikpa13b">Masukkan Nilai Indeks Ketepatan Waktu LK Audited: </label>
                                         <input type="number" id="tw2vikpa13b" min="0"  value="0"oninput="tw2hitungNilai13()">
                                         <label for="tw2vikpa13c">Masukkan Nilai Kepatuhan Pelaksanaan Anggaran: </label>
@@ -480,7 +471,7 @@
 
                                                 let tw2valuenilaiLK = (tw2vikpa13b + tw2vikpa13c) / 2;
 
-                                                let tw2totalNilai13 = ((0.6 *tw2valuenilaiNKA) + (0.4 *tw2valuenilaiLK ));                                            // let tw2nilaiIkpa = (0.6 * tw2valuenilaiNKA).toFixed(2);
+                                                let tw2totalNilai13 = ((0.6 *tw2valuenilaiNKA) + (0.4 *tw2valuenilaiLK ));
                                                 let tw2totalNilai13a = tw2totalNilai13;
                                                 document.getElementById('tw2valueikpa13a').innerText = tw2vikpa13a;
                                                 document.getElementById('tw2valueikpa13b').innerText = tw2vikpa13b;

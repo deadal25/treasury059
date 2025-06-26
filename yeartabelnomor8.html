@@ -341,12 +341,24 @@
                                         <br>
                                         <h3><b>Indeks kualitas penyelesaian SP2D</b></h3>
 
-                                        <label>Komponen A (Penyelesaian SP2D tepat waktu %):</label>
-                                        <input type="number" id="yearinputA8" min="0" max="100" oninput="yearupdateIndex8()">
-                                        <label>Komponen B (Efektivitas Penyaluran Dana SP2D %):</label>
-                                        <input type="number" id="yearinputB8" min="0" max="100" oninput="yearupdateIndex8()">
-                                        <label>Komponen C (Hari kerja penyelesaian retur SP2D):</label>
-                                        <input type="number" id="yearinputC8" min="1" max="30" oninput="yearupdateIndex8()">
+                                        <label>∑ penerima pada SP2D yang diterbitkan - ∑ penerima pada SP2D yang diretur oleh BO:</label>
+                                        <input type="number" id="yearvpsp2d8" min="0" oninput="yearupdateIndex8()">
+                                        <label>∑ penerima pada SP2D yang diterbitkan:</label>
+                                        <input type="number" id="yearvterbitd8" min="0" oninput="yearupdateIndex8()">
+
+                                        <label>Jumlah SP2D Pengganti per penerima dengan kategori indeks 1:</label>
+                                        <input type="number" id="yearvSp2d1d8" min="1" oninput="yearupdateIndex8()">
+                                        <label>Jumlah SP2D Pengganti per penerima dengan kategori indeks 2:</label>
+                                        <input type="number" id="yearvSp2d2d8" min="1" oninput="yearupdateIndex8()">
+                                        <label>Jumlah SP2D Pengganti per penerima dengan kategori indeks 3:</label>
+                                        <input type="number" id="yearvSp2d3d8" min="1" oninput="yearupdateIndex8()">
+                                        <label>Jumlah SP2D Pengganti per penerima dengan kategori indeks 4:</label>
+                                        <input type="number" id="yearvSp2d4d8" min="1" oninput="yearupdateIndex8()">
+                                        <label>Jumlah SP2D Pengganti per penerima dengan kategori indeks 5:</label>
+                                        <input type="number" id="yearvSp2d5d8" min="1" oninput="yearupdateIndex8()">
+
+                                        <label>Total jumlah SP2D Pengganti per penerima:</label>
+                                        <input type="number" id="yearvgantid8" min="1" oninput="yearupdateIndex8()">
 
                                         <label for="yearformula8">Masukkan Formula:</label>
                                         <textarea id="yearinputFormula8" class="form-control" rows="3"
@@ -391,42 +403,145 @@
                                             </tbody>
                                             <tbody>
                                                 <tr>
-                                                    <td rowspan="5" valign="top">8</td>
-                                                    <td rowspan="5" valign="top"> 4b-N </td>
-                                                    <td rowspan="5" valign="top" class="left-align">Indeks kualitas penyelesaian SP2D</td>
+                                                    <td rowspan="15" valign="top">8</td>
+                                                    <td rowspan="15" valign="top"> 4b-N </td>
+                                                    <td rowspan="15" valign="top" class="left-align">Indeks kualitas penyelesaian SP2D</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td ><b>Nilai</b></td>
                                                     <td ><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
+                                                    <td>Formula</td>
+                                                    <td>Keterangan</td>
+                                                </tr>
+                                                <!-- <tr>
+                                                    <td rowspan="19" valign="top">8</td>
+                                                    <td rowspan="19" valign="top"> 4b-N </td>
+                                                    <td rowspan="19" valign="top" class="left-align">Indeks kualitas penyelesaian SP2D</td>
+                                                    <td><b>Komponen</b></td>
+                                                    <td ><b>Nilai</b></td>
+                                                    <td ><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td>Formula</td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Penyelesaian SP2D secara tepat waktu </td>
-                                                    <td>33%</td>
-                                                    <td id="yearvalueindeksA8">5,00</td>
-                                                    <td id="yearindeksA8">5,00</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="yearformula8"> Tolong selalu enter agar tidak terlalu panjang</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="yearketerangan8">
-                                                        Tolong selalu enter agar tidak terlalu panjang (Indeks Penyelesaian SP2D secara tepat waktu + Indeks
-                                                        Efektivitas Penyaluran dana SP2D yang akurat + Indeks
-                                                        Efektivitas kecepatan penyelesaian retur SP2D) / 3 </td>
+                                                    <td class="left-align" colspan="4"><b>A. Penyelesaian SP2D secara tepat waktu</b></td>
+                                                    
+                                                    <td rowspan="18" valign="top" class="left-align" id="tw2formula8"></td>
+                                                    <td rowspan="18" valign="top" class="left-align" id="tw2keterangan8"> </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Efektivitas Penyaluran dana SP2D yang akurat </td>
-                                                    <td>33%</td>
-                                                    <td id="yearvalueindeksB8">5,00</td>
-                                                    <td id="yearindeksB8">5,00</td>
+                                                    <td class="left-align">∑ SP2D sesuai kriteria yang diterbitkan tepat waktu oleh KPPN</td>
+                                                    
+                                                    <td id="tw2valuetewaktud8"></td>
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Efektivitas kecepatan penyelesaian retur SP2D </td>
-                                                    <td>33%</td>
-                                                    <td id="yearvalueindeksC8">5,00</td>
-                                                    <td id="yearindeksC8">5,00</td>
+                                                    <td class="left-align">∑ SP2D yang seharusnya sesuai kriteria yang diterbitkan oleh KPPN</td>
+                                                    
+                                                    <td id="tw2valuekriteriad8"></td>
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="yearindeksTotal8">5</td>
+                                                    <td class="left-align"><b>Total Komponen A</b></td>
+                                                    
+                                                    <td id="tw2valuetkompAd8"></td>
+                                                    <td id="tw2indeksA8"></td>
+                                                    <td id="tw2valueindeksA8"></td>
+                                                </tr> -->
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>B. Efektivitas Penyaluran dana SP2D yang akurat</b></td>
+                                                    
+                                                    <td rowspan="14" valign="top" class="left-align" id="yearformula8"></td>
+                                                    <td rowspan="14" valign="top" class="left-align" id="yearketerangan8"> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑ penerima pada SP2D yang diterbitkan  - ∑ penerima pada SP2D yang diretur oleh BO</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvaluepsp2d8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑ penerima pada SP2D yang diterbitkan</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvalueterbitd8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align"><b>Total Komponen B</b></td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvaluetkompBd8"></td>
+                                                    <td id="yearindeksB8"></td>
+                                                    <td id="yearvalueindeksB8"></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>C. Efektivitas kecepatan penyelesaian retur SP2D</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">n SP2D-P I1 = jumlah SP2D Pengganti per penerima dengan kategori indeks 1</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvalueSp2d1d8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">n SP2D-P I2 = jumlah SP2D Pengganti per penerima dengan kategori indeks 2</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvalueSp2d2d8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">n SP2D-P I1 = jumlah SP2D Pengganti per penerima dengan kategori indeks 3</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvalueSp2d3d8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">n SP2D-P I2 = jumlah SP2D Pengganti per penerima dengan kategori indeks 4</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvalueSp2d4d8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">n SP2D-P I2 = jumlah SP2D Pengganti per penerima dengan kategori indeks 5</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvalueSp2d5d8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Jumlah SP2D Pengganti seluruh kategori</b></td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvalueSp2dalld8"></td>
+                                                    <td></td>
+                                                    <!-- <td></td> -->
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑n SP2D-P  = total jumlah SP2D Pengganti per penerima</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvaluegantid8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2" ><b>Total Komponen C</b></td>
+                                                    <td id="yearvaluetkompCd8"></td>
+                                                    <!-- <td id="yearindeksC8">5,00</td> -->
+                                                    <td id="yearvalueindeksC8"></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td colspan="3" ><b>Nilai Capaian</b></td>
+                                                    <!-- <td id="yearindeksTotal8a"><b></b></td> -->
+                                                    <td id="yearindeksTotal8"><b></b></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -434,66 +549,69 @@
                                         <script>
 
                                                 function yearupdateIndex8() {
-                                                let yearVinputA8 = parseFloat(document.getElementById("yearinputA8").value) || 0;
-                                                let yearVinputB8 = parseFloat(document.getElementById("yearinputB8").value) || 0;
-                                                let yearVinputC8 = parseFloat(document.getElementById("yearinputC8").value) || 0;
+                                                let yearvpsp2d8 = parseFloat(document.getElementById("yearvpsp2d8").value) || 0;
+                                                let yearvterbitd8 = parseFloat(document.getElementById("yearvterbitd8").value) || 0;
+                                                let yearvSp2d1d8 = parseFloat(document.getElementById("yearvSp2d1d8").value) || 0;
+                                                let yearvSp2d2d8 = parseFloat(document.getElementById("yearvSp2d2d8").value) || 0;
+                                                let yearvSp2d3d8 = parseFloat(document.getElementById("yearvSp2d3d8").value) || 0;
+                                                let yearvSp2d4d8 = parseFloat(document.getElementById("yearvSp2d4d8").value) || 0;
+                                                let yearvSp2d5d8 = parseFloat(document.getElementById("yearvSp2d5d8").value) || 0;
+                                                let yearvgantid8 = parseFloat(document.getElementById("yearvgantid8").value) || 0;
 
-                                                let yearindeksA8 = (yearVinputA8 * 100/3*100)/100/100;
-                                                let yearindeksB8 = (yearVinputB8 * 100/3*100) /100/100;
-                                                let yearindeksC8 = (yearVinputC8 * 100/3*100) /100/100;
-                                                let yearindeksTotal8 = yearindeksA8 + yearindeksB8 +yearindeksC8;
+                                                // let yearvaluetkompAd8 = (yearvtewaktud8/yearvkriteriad8)*100;
+                                                // let yearindeksA8 = getIndeksIKI8(yearvaluetkompAd8);
+                                                // let yearvalueindeksA8 = yearindeksA8;
 
-                                                document.getElementById("yearvalueindeksA8").innerText = yearVinputA8;
-                                                document.getElementById("yearvalueindeksB8").innerText = yearVinputB8 ;
-                                                document.getElementById("yearvalueindeksC8").innerText = yearVinputC8 ;
+                                                let yearvaluetkompBd8 = (yearvpsp2d8/yearvterbitd8)*100;
+                                                let yearindeksB8 = getIndeksIKI8a(yearvaluetkompBd8);
+                                                let yearvalueindeksB8 = yearindeksB8;
 
-                                                document.getElementById("yearindeksA8").innerText = yearindeksA8.toFixed(2);
-                                                document.getElementById("yearindeksB8").innerText = yearindeksB8.toFixed(2);
-                                                document.getElementById("yearindeksC8").innerText = yearindeksC8.toFixed(2);
+                                                let yearvalueSp2dalld8 = yearvSp2d1d8 + yearvSp2d2d8 +yearvSp2d3d8 +yearvSp2d4d8 +yearvSp2d5d8;
+                                                let yearvaluetkompCd8 = (yearvalueSp2dalld8 / yearvgantid8);
+                                                let yearvalueindeksC8 = yearvaluetkompCd8;
+                                                let yearindeksTotal8 = (yearvalueindeksB8 + yearvalueindeksC8)/2;
+                                                // let yearindeksTotal8 = (yearvalueindeksA8 + yearvalueindeksB8 +yearvalueindeksC8)/3;
 
-                                                document.getElementById("yearindeksTotal8").innerText = yearindeksTotal8.toFixed(2);
+                                                // document.getElementById("yearvaluetewaktud8").innerText = yearvtewaktud8;
+                                                // document.getElementById("yearvaluekriteriad8").innerText = yearvkriteriad8;    
+                                                // document.getElementById("yearvaluetkompAd8").innerText = yearvaluetkompAd8.toFixed(2)+"%";
+                                                // document.getElementById("yearindeksA8").innerText = yearindeksA8;
+                                                // document.getElementById("yearvalueindeksA8").innerText = yearvalueindeksA8;
+                                                
+                                                document.getElementById("yearvaluepsp2d8").innerText = yearvpsp2d8;
+                                                document.getElementById("yearvalueterbitd8").innerText = yearvterbitd8;
+                                                document.getElementById("yearvaluetkompBd8").innerText = yearvaluetkompBd8.toFixed(2)+"%";
+                                                document.getElementById("yearindeksB8").innerText = yearindeksB8;
+                                                document.getElementById("yearvalueindeksB8").innerText = yearvalueindeksB8;
+
+                                                document.getElementById("yearvalueSp2d1d8").innerText = yearvSp2d1d8;                                                
+                                                document.getElementById("yearvalueSp2d2d8").innerText = yearvSp2d2d8;
+                                                document.getElementById("yearvalueSp2d3d8").innerText = yearvSp2d3d8;
+                                                document.getElementById("yearvalueSp2d4d8").innerText = yearvSp2d4d8;
+                                                document.getElementById("yearvalueSp2d5d8").innerText = yearvSp2d5d8;
+                                                document.getElementById("yearvalueSp2dalld8").innerText = yearvalueSp2dalld8;
+                                                document.getElementById("yearvaluegantid8").innerText = yearvgantid8;
+                                                document.getElementById("yearvaluetkompCd8").innerText = yearvaluetkompCd8;
+                                                document.getElementById("yearvalueindeksC8").innerText = yearvalueindeksC8;
+
+                                                document.getElementById("yearindeksTotal8").innerText = yearindeksTotal8;
                                             }
 
-                                            // function getIndexA8(value) {
-                                            //     if (value >= 100) return 5;
-                                            //     if (value >= 98) return 4;
-                                            //     if (value >= 95) return 3;
-                                            //     if (value >= 90) return 2;
-                                            //     return 1;
-                                            // }
+                                            function getIndeksIKI8(persen) {
+                                                if (persen >= 100) return 5;
+                                                if (persen >= 98) return 4;
+                                                if (persen >= 95) return 3;
+                                                if (persen >= 90) return 2;
+                                                return 1; // Untuk < 90%
+                                            }
 
-                                            // function getIndexB8(value) {
-                                            //     if (value >= 96) return 5;
-                                            //     if (value >= 90) return 4;
-                                            //     if (value >= 80) return 3;
-                                            //     if (value >= 80) return 2;
-                                            //     return 1;
-                                            // }
-
-                                            // function getIndexC8(value) {
-                                            //     if (value >= 1 && value <= 8) return 5;
-                                            //     if (value >= 9 && value <= 12) return 4;
-                                            //     if (value >= 13 && value <= 21) return 3;
-                                            //     if (value === 22) return 2;
-                                            //     return 1;
-                                            // }
-
-                                            // function yearupdateIndex8() {
-                                            //     let inputA8 = parseFloat(document.getElementById("yearinputA8").value) || 0;
-                                            //     let inputB8 = parseFloat(document.getElementById("inputB8").value) || 0;
-                                            //     let inputC8 = parseFloat(document.getElementById("inputC8").value) || 0;
-
-                                            //     let indeksA8 = getIndexA8(inputA8);
-                                            //     let indeksB8 = getIndexB8(inputB8);
-                                            //     let indeksC8 = getIndexC8(inputC8);
-
-                                            //     document.getElementById("indeksA8").innerText = indeksA8;
-                                            //     document.getElementById("indeksB8").innerText = indeksB8;
-                                            //     document.getElementById("indeksC8").innerText = indeksC8;
-
-                                            //     let average8 = ((indeksA8 + indeksB8 + indeksC8) / 3).toFixed(2);
-                                            //     document.getElementById("averageIndex8").innerText = isNaN(average8) ? "-" : average8;
-                                            // }
+                                            function getIndeksIKI8a(persentase) {
+                                                if (persentase >= 96 && persentase <= 100) return 5;
+                                                if (persentase >= 90) return 4;
+                                                if (persentase >= 80) return 3;
+                                                if (persentase >= 70) return 2;
+                                                return 1; // Jika persentase < 70
+                                            }
 
                                         </script>
                                         <script type="module">
@@ -524,13 +642,22 @@
                                             }
 
                                             const data = {
-                                                yearvalueindeksA8: document.getElementById("yearvalueindeksA8")?.innerText || "",
-                                                yearvalueindeksB8: document.getElementById("yearvalueindeksB8")?.innerText || "",
-                                                yearvalueindeksC8: document.getElementById("yearvalueindeksC8")?.innerText || "",
-                                                yearindeksA8: document.getElementById("yearindeksA8")?.innerText || "",
-                                                yearindeksB8: document.getElementById("yearindeksB8")?.innerText || "",
-                                                yearindeksC8: document.getElementById("yearindeksC8")?.innerText || "",
-                                                yearindeksTotal8: document.getElementById("yearindeksTotal8")?.innerText || "",        
+                                                yearvaluepsp2d8: document.getElementById("yearvaluepsp2d8").innerText || "",
+                                                yearvalueterbitd8: document.getElementById("yearvalueterbitd8").innerText || "",
+                                                yearvaluetkompBd8: document.getElementById("yearvaluetkompBd8").innerText || "",
+                                                yearindeksB8: document.getElementById("yearindeksB8").innerText || "",
+                                                yearvalueindeksB8: document.getElementById("yearvalueindeksB8").innerText || "",
+                                                yearvalueSp2d1d8: document.getElementById("yearvalueSp2d1d8").innerText || "",
+                                                yearvalueSp2d2d8: document.getElementById("yearvalueSp2d2d8").innerText || "",
+                                                yearvalueSp2d3d8: document.getElementById("yearvalueSp2d3d8").innerText || "",
+                                                yearvalueSp2d4d8: document.getElementById("yearvalueSp2d4d8").innerText || "",
+                                                yearvalueSp2d5d8: document.getElementById("yearvalueSp2d5d8").innerText || "",
+                                                yearvalueSp2dalld8: document.getElementById("yearvalueSp2dalld8").innerText || "",
+                                                yearvaluegantid8: document.getElementById("yearvaluegantid8").innerText || "",
+                                                yearvaluetkompCd8: document.getElementById("yearvaluetkompCd8").innerText || "",
+                                                yearvalueindeksC8: document.getElementById("yearvalueindeksC8").innerText || "",
+                                                yearindeksTotal8: document.getElementById("yearindeksTotal8").innerText || "",
+                                                
                                             
                                                 yearformula8: document.getElementById("yearformula8")?.innerText || "",
                                                 yearketerangan8: document.getElementById("yearketerangan8")?.innerText || "",

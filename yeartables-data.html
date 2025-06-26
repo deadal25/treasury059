@@ -370,647 +370,1181 @@
                                         </tbody>
                                         <tbody valign="top">
                                             <tr>
-                                                <td rowspan="13" valign="top">1</td>
-                                                <td rowspan="13" valign="top"> 1a-CP </td>
-                                                <td rowspan="13" valign="top" class="left-align">Indeks Kualitas Nilai IKPA K/L</td>
-                                                <td><b>Komponen</b></td>
-                                                <td><b>Bobot</b></td>
-                                                <td><b>Nilai</b></td>
-                                                <td><b>Akhir</b></td>
-                                                <td>Formula</td>
-                                                <td>Keterangan</td>
-                                            </tr>
+                                                    <td rowspan="16" valign="top">1</td>
+                                                    <td rowspan="16" valign="top"> 1a-CP </td>
+                                                    <td rowspan="16" valign="top" class="left-align">Indeks Kualitas
+                                                        Nilai IKPA K/L</td>
+                                                    <td><b>Komponen</b></td>
+                                                    <td><b>Nilai</b></td>
+                                                    <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
+                                                    <td><b>Formula</b></td>
+                                                    <td>Keterangan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Nilai Ikpa sebagai BUN</b></td>
+                                                    <td rowspan="15" valign="top" class="left-align" id="yearformula1">
+                                                        
+                                                    </td>
+                                                    <td rowspan="15" valign="top" class="left-align" id="yearketerangan1">
+                                                        Hasil penilaian
+                                                        IKPA tingkat Nasional sebagai BUN pada Aplikasi OMSPAN = <span
+                                                            id="yeartotalNilaiSpan1">95.16</span></td>
+                                                   
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Revisi</td>
+                                                    <td id="yearrdValue"></td>
+                                                    <td id="yearrdScore"></td>
+                                                    <td></td>
+                                                    <!-- <td>10%</td> -->
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Halaman III DIPA</td>
+                                                    <!-- <td>15%</td> -->
+                                                    <td id="yeardhValue"></td>
+                                                    <td id="yeardhScore"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Realisasi</td>
+                                                    <!-- <td>20%</td> -->
+                                                    <td id="yearpaValue"></td>
+                                                    <td id="yearpaScore"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Kontrak</td>
+                                                    <!-- <td>10%</td> -->
+                                                    <td id="yearbkValue"></td>
+                                                    <td id="yearbkScore"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Tagihan</td>
+                                                    <!-- <td>10%</td> -->
+                                                    <td id="yearptValue"></td>
+                                                    <td id="yearptScore"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Pengelolaan UP dan TUP</td>
+                                                    <!-- <td>10%</td> -->
+                                                    <td id="yearputValue"></td>
+                                                    <td id="yearputScore"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Dispensasi</td>
+                                                    <!-- <td>0%</td> -->
+                                                    <td id="yeardsValue"></td>
+                                                    <td id="yeardsScore"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Capaian Output</td>
+                                                    <!-- <td>25%</td> -->
+                                                    <td id="yearcoValue"></td>
+                                                    <td id="yearcoScore"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Nilai Ikpa sebagai BUN</b></td>
+                                                    <!-- <td><b>70%</b></td> -->
+                                                    <td id="yeartotalCapaian1"><b></b></td>
+                                                    <td id="yearnilaiIkpa1Score"><b></b></td>
+                                                </tr>
+                                               <tr>
+                                                    <td class="left-align" colspan="4" style="white-space: nowrap; width: 100%;"><b>Nilai Jumlah Satker dengan Predikat Minimal Baik</b></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="left-align">Jumlah Satker dengan Predikat Minimal Baik</td>
+                                                    <!-- <td>25%</td> -->
+                                                    <td id="yearpbaikcoValue"></td>
+                                                    <td id="yearpbaikcoScore"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Jumlah satker KPPN</td>
+                                                    <!-- <td>0%</td> -->
+                                                    <td id="yearsatkerdsValue"></td>
+                                                    <td id="yearsatkerdsScore"></td>
+                                                    <td></td>
+                                                </tr>                    
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Nilai Jumlah Satker dengan Predikat
+                                                            Minimal Baik</b></td>
+                                                    <!-- <td><b>30%</b></td> -->
+                                                    <td id="yearjumlahsatker1Value"><b></b></td>
+                                                    <td id="yearjumlahsatker1Score"><b></b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><b>Nilai Capaian</b></td>
+                                                    <td colspan="3" align="right" id="yeartotalCapaian1all"><b></b>
+                                                    </td>
+                                                </tr>
                                             <tr>
-                                                <td class="left-align"><b>Nilai Ikpa sebagai BUN</b></td>
-                                                <td><b>70%</b></td>
-                                                <td id="yeartotalCapaian1"><b> 122,23%</b></td>
-                                                <td id="yearnilaiIkpa1Score"><b>48,89</b></td>
-                                                <td rowspan="12" valign="top" class="left-align" id="yearformula1">a
-                                                </td>
-                                                <td rowspan="12" valign="top" class="left-align" id="yearketerangan1">
-                                                    Hasil penilaian
-                                                    IKPA tingkat Nasional sebagai BUN pada Aplikasi OMSPAN = <span
-                                                        id="yeartotalNilaiSpan1">95.16</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Revisi DIPA</td>
-                                                <td>10%</td>
-                                                <td id="yearrdScore">48,89</td>
-                                                <td id="yearrdValue"></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Deviasi Hal. III DIPA</td>
-                                                <td>15%</td>
-                                                <td id="yeardhScore">56,5</td>
-                                                <td id="yeardhValue"></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Penyerapan Anggaran</td>
-                                                <td>20%</td>
-                                                <td id="yearpaScore">56,5</td>
-                                                <td id="yearpaValue"></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Belanja Kontraktual</td>
-                                                <td>10%</td>
-                                                <td id="yearbkScore">56,5</td>
-                                                <td id="yearbkValue"></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Penyelesaian Tagihan</td>
-                                                <td>10%</td>
-                                                <td id="yearptScore">56,5</td>
-                                                <td id="yearptValue"></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Pengelolaan UP dan TUP</td>
-                                                <td>10%</td>
-                                                <td id="yearputScore">56,5</td>
-                                                <td id="yearputValue"></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Capaian Output</td>
-                                                <td>25%</td>
-                                                <td id="yearcoScore">56,5</td>
-                                                <td id="yearcoValue"></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Dispensasi SPM</td>
-                                                <td>0%</td>
-                                                <td id="yeardsScore">56,5</td>
-                                                <td id="yeardsValue"></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align"><b>Nilai Jumlah Satker dengan Predikat
-                                                        Minimal Baik</b></td>
-                                                <td><b>30%</b></td>
-                                                <td id="yearjumlahsatker1Value"><b>0%</b></td>
-                                                <td id="yearjumlahsatker1Score"><b>56,5</b></td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>Nilai Capaian</b></td>
-                                                <td colspan="3" align="right" id="yeartotalCapaian1all"><b>95,16</b>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>Indeks Capaian</b></td>
-                                                <td colspan="3" align="right" id="yearNilaislide1a"><b>95,16</b></td>
-                                            </tr>
-                                            <tr>
-                                                <td rowspan="6" valign="top">2</td>
-                                                <td rowspan="6" valign="top" width="50px"> 1b-N </td>
-                                                <td rowspan="6" valign="top" class="left-align">Indeks Kualitas LK Kuasa BUN KPPN</td>
-                                                <td><b>Komponen</b></td>
-                                                <td><b>Bobot</b></td>
-                                                <td><b>Nilai</b></td>
-                                                <td><b>Total</b></td>
-                                                <td>Formula</td>
-                                                <td>Keterangan</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Indeks Kualitas Analisis Data SPAN</td>
-                                                    <td><b>50%</b></td>
-                                                    <td id="yearPersentaseAhasil"><b></b></td>
-                                                <td id="yearPersentaseAValue"><b>0</b></td>
-                                                <td rowspan="5" valign="top" class="left-align" id="yearformula2"></td>
-                                                <td rowspan="5" valign="top" class="left-align" id="yearketerangan2">A.
-                                                    bebas
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Ketepatan Waktu pengiriman KK analisis tepat waktu dilakukan bulanan</td>
-                                                    <td>50%</td>
-                                                    <td id="yearPersentaseBValue"><b>0</b></td>
-                                                    <td id="yearPersentaseBhasil"><b>0</b></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Penyelesaian matriks tindak lanjut</td>
-                                                    <td>50%</td>
-                                                    <td id="yearPersentaseCValue"><b>0</b></td>
-                                                    <td id="yearPersentaseChasil"><b>0</b></td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Indeks penilaian kualitas LKBUN KPPN yang dilakukan oleh Kanwil DJPb</td>
-                                                    <td><b>50%</b></td>
-                                                    <td id="yearPersentaseDValue"><b>0</b></td>
-                                                    <td id="yearPersentaseDhasil"><b>0</b></td>
-                                            </tr>
-                                            <tr>
-                                                
-                                                <td><b>Nilai Capaian</b></td>
-                                                <td colspan="3" id="yeartotalPersentase2"><b>5</b></td>
-                                            </tr>
+                                                    <td rowspan="5" valign="top">2</td>
+                                                    <td rowspan="5" valign="top" width="50px"> 1b-N </td>
+                                                    <td rowspan="5" valign="top" class="left-align">Indeks Kualitas LK Kuasa BUN KPPN</td>
+                                                    <td><b>Komponen</b></td>
+                                                    <td><b>Nilai</b></td>
+                                                    <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
+                                                    <td>Formula</td>
+                                                    <td>Keterangan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Indeks Kualitas Analisis Data SPAN</b></td>
+                                                    
+                                                    <td rowspan="4" valign="top" class="left-align" id="yearformula2"></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="yearketerangan2">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Ketepatan Waktu pengiriman KK analisis tepat waktu dilakukan bulanan</td>
+                                                        <!-- <td>50%</td> -->
+                                                        <td id="yearPersentaseBValue"><b>0</b></td>
+                                                        <td id="yearPersentaseBhasil"><b>0</b></td>
+                                                        <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Penyelesaian matriks tindak lanjut</td>
+                                                        <!-- <td>50%</td> -->
+                                                        <td id="yearPersentaseCValue"><b>0</b></td>
+                                                        <td id="yearPersentaseChasil"><b>0</b></td>
+                                                        <td></td>
+                                                </tr>
+                                                <!-- <tr>
+                                                    <td class="left-align">Indeks penilaian kualitas LKBUN KPPN yang dilakukan oleh Kanwil DJPb</td>
+                                                        <td><b>50%</b></td>
+                                                        <td id="yearPersentaseDValue"><b>0</b></td>
+                                                        <td id="yearPersentaseDhasil"><b>0</b></td>
+                                                </tr> -->
+                                                <tr>
+                                                    
+                                                    <td><b>Nilai Capaian</b></td>
+                                                    <td colspan="2" id="yeartotalPersentase2"><b></b></td>
+                                                    <td id="yearindekscapaian2" style="text-align: center; vertical-align: middle;"><b></b></td>
+                                                </tr>
 
                                             <tr>
-                                                <td rowspan="5" valign="top">3</td>
-                                                <td rowspan="5" valign="top" width="50px"> 2a-N </td>
-                                                <td rowspan="5" valign="top" class="left-align">Indeks kepuasan terhadap layanan KPPN</td>
+                                                    <td rowspan="16" valign="top">3</td>
+                                                    <td rowspan="16" valign="top" width="50px"> 2a-N </td>
+                                                    <td rowspan="16" valign="top" class="left-align">Indeks kepuasan terhadap layanan KPPN</td>
+                                                    <td><b>Komponen</b></td>
+                                                    <td><b>Nilai</b></td>
+                                                    <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
+                                                    <td>Formula</td>
+                                                    <td>Keterangan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Indeks kepuasan layanan</b></td>
+                                                        <td rowspan="15" valign="top" class="left-align" id="yearformula3"></td>
+                                                        <td rowspan="15" valign="top" class="left-align" id="yearketerangan3">
+                                                            
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Jumlah Rekomendasi</td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="yearjrekomendasiValue3a"></td>
+                                                        <td id="yearjrekomendasiHasil3a"></td>
+                                                        <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Jumlah Tindak Lanjut Rekomendasi Yang Dilaksanakan</td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="yeartlanjutValue3a"></td>
+                                                        <td id="yeartlanjutHasil3a"></td>
+                                                        <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Nilai SKPL</b></td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="yearrekomendasiValue3a"></td>
+                                                        <td id="yearrekomendasiHasil3a"></td>
+                                                        <!-- <td></td> -->
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Survei Kepuasan Pengguna Layanan</td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="yeartsurveiValue3a"></td>
+                                                        <td id="yeartsurveiHasil3a"></td>
+                                                        <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Nilai Survei Kepuasan Pengguna Layanan</b></td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="yearsurveiValue3b"></td>
+                                                        <td id="yearsurveiHasil3b"></td>
+                                                        <!-- <td></td> -->
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="3"><b>Total Indeks kepuasan layanan</b></td>
+                                                        <!-- <td>33%</td> -->
+                                                        <!-- <td id="yearikplValue3a"></td> -->
+                                                        <td id="yearikplHasil3a"></td>
+                                                        <!-- <td></td> -->
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Indeks Efektivitas Edukasi dan Komunikasi</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Hasil Post Test</td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="yearposttestValue3b"></td>
+                                                        <td id="yearposttestHasil3b"></td>
+                                                        <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Hasil Kuesioner</td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="yearkuesionerValue3b"></td>
+                                                        <td id="yearkuesionerHasil3b"></td>
+                                                        <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Nilai Edukom</b></td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="yearikplValue3b"></td>
+                                                        <td id="yearikplHasil3b"></td> 
+                                                </tr>
+                                                <tr><td class="left-align" colspan="4"><b>Indeks layanan HAI CSO</b></td>
+                                                </tr>
+                                                 <tr>
+                                                    <td class="left-align">Realisasi Capaian Pada OMSPAN</td>
+                                                    <td id="yearrcapaianValue3c"></td>
+                                                    <td id="yearrcapaianHasil3c"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Nilai HAI CSO</b></td>
+                                                    <td id="yearikplValue3c"></td>
+                                                    <td id="yearikplHasil3c"></td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td colspan="3"><b>Nilai Capaian</b></td>
+                                                    <td id="yearhasil3abc"><b></b></td>
+                                                </tr>
+
+                                            <tr>
+                                                    <td rowspan="5" valign="top">4</td>
+                                                    <td rowspan="5" valign="top"> 2b-N </td>
+                                                    <td rowspan="5" valign="top" class="left-align">Tingkat implementasi penajaman tugas
+                                                        <i>Financial Advisory</i>
+                                                    </td>
+                                                    <td><b>Komponen</b></td>
+                                                    <td><b>Nilai</b></td>
+                                                    <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
+                                                    <td>Formula</td>
+                                                    <td>Keterangan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Implementasi Central
+                                                        Government Advisory </td>
+                                                    <!-- <td>50%</td> -->
+                                                    <td  id="yearvalueCG"></td>
+                                                    <td  id="yearnilaiCG"></td>
+                                                    <td></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="yearformula4"></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="yearketerangan4">
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Implementasi Local
+                                                        Government </td>
+                                                    <!-- <td>30%</td> -->
+                                                    <td id="yearvalueLG"></td>
+                                                    <td  id="yearnilaiLG"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Implementasi Special
+                                                        Mission Advisory </td>
+                                                    <!-- <td>20%</td> -->
+                                                    <td  id="yearvalueSM"></td>
+                                                    <td  id="yearnilaiSM"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                     <td id="yeartotalNilai4a"><b></b></td>
+                                                    <td id="yeartotalNilai4"><b></b></td>
+                                                </tr>
+
+                                            <tr>
+                                                    <td rowspan="8" valign="top">5</td>
+                                                    <td rowspan="8" valign="top"> 3a-CP </td>
+                                                    <td rowspan="8" valign="top" class="left-align">Indeks kinerja penyaluran Dana Transfer ke Daerah pada KPPN</td>
+                                                    <td><b>Komponen</b></td>
+                                                    <td ><b>Nilai</b></td>
+                                                    <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
+                                                    <td><b>Formula</b></td>
+                                                    <td>Keterangan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Syarat </td>
+                                                    <!-- <td>15%</td> -->
+                                                    <td  id="yearsyaratValue"></td>
+                                                    <td  id="yearsyaratScore"></td>
+                                                    <td></td>
+                                                    <td rowspan="7" valign="top" class="left-align" id="yearformula5"></td>
+                                                    <td rowspan="7" valign="top" class="left-align" id="yearketerangan5">
+                                                       </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Proyeksi</td>
+                                                    <!-- <td>15%</td> -->
+                                                    <td  id="yearproyeksiValue"></td>
+                                                    <td  id="yearproyeksiScore"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Akurasi</td>
+                                                    <!-- <td>20%</td> -->
+                                                    <td  id="yearakurasiValue"></td>
+                                                    <td  id="yearakurasiScore"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Monev</td>
+                                                    <!-- <td>10%</td> -->
+                                                    <td id="yearmonevValue"></td>
+                                                    <td id="yearmonevScore"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">LK-UAKPA</td>
+                                                    <!-- <td>20%</td> -->
+                                                    <td  id="yearlkuakpaValue"></td>
+                                                    <td  id="yearlkuakpaScore"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Realisasi</td>
+                                                    <!-- <td>20%</td> -->
+                                                    <td  id="yearrealisasiValue"></td>
+                                                    <td  id="yearrealisasiScore"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                    <td  id="yeartotalCapaian5"> <b></b></td>
+                                                    <td  id="yeartotalIndeksCp5"> <b></b></td>
+                                                </tr>
+                                            <tr>
+                                                    <td rowspan="20" valign="top">6</td>
+                                                    <td rowspan="20" valign="top"> 3b-N </td>
+                                                    <td rowspan="20" valign="top" class="left-align">Indeks Digitalisasi Pengelolaan Keuangan</td>
+                                                    <td><b>Komponen</b></td>
+                                                    <td><b>Nilai</b></td>
+                                                    <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
+                                                    <td><b>Formula</b></td>
+                                                    <td>Keterangan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Implementasi Digipay</b></td>
+                                                    <td rowspan="19" valign="top" class="left-align" id="yearformula6"></td>
+                                                    <td rowspan="19" valign="top" class="left-align" id="yearketerangan6"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="3"><b>Komponen A</b></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Jumlah Transaksi pada Aplikasi Digipay Satu per Triwulan</td>
+                                                    <td id="yearjtdigipayvalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Jumlah Satker UP Mitra KPPN</td>
+                                                    <td id="yearjskppnvalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Komponen A</b></td>
+                                                    <td id="yearkomponenAvalue"></td>
+                                                    <td></td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="3"><b>Komponen B</b></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Satker yang bertransaksi pada Aplikasi Digipay Satu</td>
+                                                    <td id="yeartrsdigipayvalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Target Satker yang bertransaksi pada Aplikasi Digipay Satu</td>
+                                                    <td id="yeartsatkervalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Komponen B</b></td>
+                                                    <td id="yearkomponenBvalue"></td>
+                                                    <td></td>  
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Implementasi Digipay</b></td>
+                                                    <td id="yearindigipayvalue"></td>
+                                                    <td id="yearindeksindigipay"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Implementasi CMS</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Jumlah (Transaksi Melalui CMS) s.d. Triwulan Berkenaan</td>
+                                                    <td id="yearonetrsvalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Jumlah ∑ (Transaksi Melalui CMS, Kartu Debit, Teller) s.d. Triwulan Berkenaan</td>
+                                                    <td id="yearalltrsvalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align"><b>Total Implementasi CMS</b></td>
+                                                    <td id="yearincmsvalue"></td>
+                                                    <td id="yearpersenincms"></td>
+                                                    <td id="yearindeksincms"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Implementasi KKP</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑ Transaksi KKP s.d. Triwulan ke-n</td>
+                                                    <td id="yeartrkkpvalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">n x ∑ Satker Lingkup KPPN yang mempunyai UP KKP</td>
+                                                    <td id="yearupkkpvalue"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2" ><b>Total Implementasi KKP</b></td>
+                                                    <td id="yearinkkpvalue"></td>
+                                                    <td id="yearindeksinkkp"></td>
+                                                </tr> 
+                                                
+                                                <tr>
+                                                    <td colspan="3"><b>Nilai Capaian</b></td>
+                                                    <td id="yearindeksTotal6"> <b></b></td>
+                                                </tr>
+
+
+                                            <tr>
+                                                    <td rowspan="5" valign="top">7</td>
+                                                    <td rowspan="5" valign="top">4a-CP</td>
+                                                    <td rowspan="5" valign="top" class="left-align">Persentase akurasi perencanaan kas</td>
+                                                    <td><b>Komponen</b></td>
+                                                    <td ><b>Nilai</b></td>
+                                                    <td ><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
+                                                    <td>Formula</td>
+                                                    <td>Keterangan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Rata - Rata Deviasi Unit
+                                                        RPD harian KPPN per
+                                                        periode </td>
+                                                    <!-- <td>20%</td> -->
+                                                    <td  id="yeardeviasiUnit7"></td>
+                                                    <td id="yearvalueDeviasiUnit7"></td>
+                                                    <td></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="yearformula7"> </td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="yearketerangan7">
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Rata - Rata Deviasi Nilai
+                                                        RPD harian KPPN per
+                                                        periode </td>
+                                                    <!-- <td>80%</td> -->
+                                                    <td id="yeardeviasiNilai7"></td>
+                                                    <td id="yearvalueDeviasiNilai7"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Rasio Dispensasi RPD
+                                                        harian KPPN per periode </td>
+                                                        <td id="yeardispensasi7"></td>
+                                                        <td id="yearvalueDispensasiNilai7"></td>
+                                                        <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                    <td id="yearhasil7"></td>
+                                                    <td id="yearhasil7a"></td>
+                                                </tr>
+
+                                            <tr>
+                                                    <td rowspan="15" valign="top">8</td>
+                                                    <td rowspan="15" valign="top"> 4b-N </td>
+                                                    <td rowspan="15" valign="top" class="left-align">Indeks kualitas penyelesaian SP2D</td>
+                                                    <td><b>Komponen</b></td>
+                                                    <td ><b>Nilai</b></td>
+                                                    <td ><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
+                                                    <td>Formula</td>
+                                                    <td>Keterangan</td>
+                                                </tr>
+                                                <!-- <tr>
+                                                    <td rowspan="19" valign="top">8</td>
+                                                    <td rowspan="19" valign="top"> 4b-N </td>
+                                                    <td rowspan="19" valign="top" class="left-align">Indeks kualitas penyelesaian SP2D</td>
+                                                    <td><b>Komponen</b></td>
+                                                    <td ><b>Nilai</b></td>
+                                                    <td ><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
+                                                    <td>Formula</td>
+                                                    <td>Keterangan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>A. Penyelesaian SP2D secara tepat waktu</b></td>
+                                                    
+                                                    <td rowspan="18" valign="top" class="left-align" id="tw2formula8"></td>
+                                                    <td rowspan="18" valign="top" class="left-align" id="tw2keterangan8"> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑ SP2D sesuai kriteria yang diterbitkan tepat waktu oleh KPPN</td>
+                                                    
+                                                    <td id="tw2valuetewaktud8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑ SP2D yang seharusnya sesuai kriteria yang diterbitkan oleh KPPN</td>
+                                                    
+                                                    <td id="tw2valuekriteriad8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align"><b>Total Komponen A</b></td>
+                                                    
+                                                    <td id="tw2valuetkompAd8"></td>
+                                                    <td id="tw2indeksA8"></td>
+                                                    <td id="tw2valueindeksA8"></td>
+                                                </tr> -->
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>B. Efektivitas Penyaluran dana SP2D yang akurat</b></td>
+                                                    
+                                                    <td rowspan="14" valign="top" class="left-align" id="yearformula8"></td>
+                                                    <td rowspan="14" valign="top" class="left-align" id="yearketerangan8"> </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑ penerima pada SP2D yang diterbitkan  - ∑ penerima pada SP2D yang diretur oleh BO</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvaluepsp2d8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑ penerima pada SP2D yang diterbitkan</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvalueterbitd8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align"><b>Total Komponen B</b></td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvaluetkompBd8"></td>
+                                                    <td id="yearindeksB8"></td>
+                                                    <td id="yearvalueindeksB8"></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>C. Efektivitas kecepatan penyelesaian retur SP2D</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">n SP2D-P I1 = jumlah SP2D Pengganti per penerima dengan kategori indeks 1</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvalueSp2d1d8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">n SP2D-P I2 = jumlah SP2D Pengganti per penerima dengan kategori indeks 2</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvalueSp2d2d8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">n SP2D-P I1 = jumlah SP2D Pengganti per penerima dengan kategori indeks 3</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvalueSp2d3d8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">n SP2D-P I2 = jumlah SP2D Pengganti per penerima dengan kategori indeks 4</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvalueSp2d4d8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">n SP2D-P I2 = jumlah SP2D Pengganti per penerima dengan kategori indeks 5</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvalueSp2d5d8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Jumlah SP2D Pengganti seluruh kategori</b></td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvalueSp2dalld8"></td>
+                                                    <td></td>
+                                                    <!-- <td></td> -->
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑n SP2D-P  = total jumlah SP2D Pengganti per penerima</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvaluegantid8"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2" ><b>Total Komponen C</b></td>
+                                                    <td id="yearvaluetkompCd8"></td>
+                                                    <!-- <td id="yearindeksC8">5,00</td> -->
+                                                    <td id="yearvalueindeksC8"></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td colspan="3" ><b>Nilai Capaian</b></td>
+                                                    <!-- <td id="yearindeksTotal8a"><b></b></td> -->
+                                                    <td id="yearindeksTotal8"><b></b></td>
+                                                </tr>
+
+                                            <tr>
+                                                    <td rowspan="10" valign="top">9</td>
+                                                    <td rowspan="10" valign="top"> 5a-N </td>
+                                                    <td rowspan="10" valign="top" class="left-align">Indeks Kualitas LPJ Bendahara Satker K/L</td>
+                                                    <td><b>Komponen</b></td>
+                                                    <td><b>Nilai</b></td>
+                                                    <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
+                                                    <td>Formula</td>
+                                                    <td>Keterangan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Indeks Penyampaian LPJ</b></td>
+                                                    
+                                                    <td rowspan="9" valign="top" class="left-align" id="yearformula9"></td>
+                                                    <td rowspan="9" valign="top" class="left-align" id="yearketerangan9">
+                                                         </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑ LPJ Bendahara yang disampaikan ke KPPN tepat waktu</td>
+                                                    <td id="yearvaluelpj9a"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑ LPJ Bendahara yang seharusnya disampaikan ke KPPN lingkup Kanwil DJPb</td>
+                                                    <td id="yearvaluelpj9b"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Penyampaian LPJ</b></td>
+                                                    <td id="yearvaluetotal9a"></td>
+                                                    <!-- <td id="yearindeksB8"></td> -->
+                                                    <td id="yearvalueindeks9a"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Indeks Validasi LPJ</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑ LPJ Bendahara yang diverifikasi dan divalidasi KPPN tepat waktu</td>
+                                                    <td id="yearvaluelpj9c"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">∑ LPJ Bendahara yang disampaikan ke KPPN lingkup Kanwil DJPb</td>
+                                                    <td id="yearvaluelpj9d"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Validasi LPJ</b></td>
+                                                    <td id="yearvaluetotal9b"></td>
+                                                    <!-- <td id="yearindeksB8"></td> -->
+                                                    <td id="yearvalueindeks9b"></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td colspan="3"><b>Nilai Capaian</b></td>
+                                                     <!-- <td id="yearindeksTotal9a"><b></b></td> -->
+                                                    <td id="yearindeksTotal9"><b></b></td>
+                                                </tr>
+
+                                            <tr>
+                                                    <td rowspan="10" valign="top">10</td>
+                                                    <td rowspan="10" valign="top"> 6a-N </td>
+                                                    <td rowspan="10" valign="top" class="left-align">Tingkat kualitas kinerja organisasi</td>
+                                                    <td><b>Komponen</b></td>
+                                                    <td ><b>Nilai</b></td>
+                                                    <td ><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
+                                                    <td ><b>Formula</b></td>
+                                                    <td>Keterangan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Indeks capaian komponen nilai LHPS</b></td>
+                                                   <td rowspan="9" valign="top" class="left-align" id="yearformula10"></td>
+                                                    <td rowspan="9" valign="top" class="left-align" id="yearketerangan10"> </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Nilai LHPS Semester 2 2024</td>
+                                                    <td id="yearvaluelhps10a"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Nilai LHPS Semester 1 2025</td>
+                                                    <td id="yearvaluelhps10b"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Indeks capaian komponen nilai LHPS</b></td>
+                                                    <td id="yearvaluenilaiLHPS1"></td>
+                                                    <td></td>
+                                                    <!-- <td id="yearvalueindeks9a"></td> -->
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Nilai SFO</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">% Dokumen dukung yang diunggah pada periode triwulan I tahun 2025</td>
+                                                    <td id="yearvaluelhps10c"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Target Nilai SFO</td>
+                                                    <td id="yearvaluelhps10d"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Capaian SFO</b></td>
+                                                    <td id="yearvaluenilaiLHPS2"></td>
+                                                    <!-- <td id="yearindeksB8"></td> -->
+                                                    <td></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                     <td id="yeartotalIKU10"><b></b></td>
+                                                    <td id="yeartotalIKU10a"><b></b></td>
+                                                </tr>
+                                            <tr>
+                                                    <td rowspan="27 valign="top">11</td>
+                                                    <td rowspan="27 valign="top"> 6b-N </td>
+                                                    <td rowspan="27 valign="top" class="left-align">Nilai kualitas pengelolaan SDM</td>
+                                                    <td><b>Komponen</b></td>
+                                                    <td ><b>Nilai</b></td>
+                                                    <td ><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
+                                                    <td ><b>Formula</b></td>
+                                                    <td>Keterangan</td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Implementasi Learning Organization</b></td>
+                                                    <td rowspan="26" valign="top" class="left-align" id="yearformula11"></td>
+                                                    <td rowspan="26" valign="top" class="left-align" id="yearketerangan11">
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Pengorganisasian dan Penyebarluasan</td>
+                                                    <td id="yearvaluekomponenA"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Rencana Aksi Pembelajaran</td>
+                                                    <td id="yearvaluekomponenB"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen IDP</td>
+                                                    <td id="yearvaluekomponenC"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Evaluasi Pembelajaran</td>
+                                                    <td id="yearvaluekomponenD"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Hard Competency Pegawai</td>
+                                                    <td id="yearvaluekomponenE"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Structured Learning</td>
+                                                    <td id="yearvaluekomponenF"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Learning From Experience</td>
+                                                    <td id="yearvaluekomponenG"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Pemenuhan Jam Pembelajaran</td>
+                                                    <td id="yearvaluekomponenH"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Organizational Performance</td>
+                                                    <td id="yearvaluekomponenI"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Leaders as teacher</td>
+                                                    <td id="yearvaluekomponenJ"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Leaders as role model</td>
+                                                    <td id="yearvaluekomponenK"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align"><b>Total Capaian LO</b></td>
+                                                    
+                                                    <td id="yearnilaiLO"></td>
+                                                    <td id="yearvaluenilaiLO"></td>
+                                                    <td ></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Tingkat Penguatan Budaya dan Bintal Pejabat Administrator/Pejabat Fungsional Setara di Lingkungan Kementerian Keuangan</b></td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>A. Tingkat kualitas pelaksanaan kegiatan/program kebintalan</b></td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Jumlah Peserta yang hadir</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvaluepeserta11a"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Jumlah Peserta yang seharusnya</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvaluepeserta11b"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align"><b>Nilai Pelaksanaan Kegiatan</b></td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvaluepesertaA11"></td>
+                                                    <td id="yearindekspesertaA11"></td>
+                                                    <td ></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Feedback Peserta</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvaluepeserta11c"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align"><b>Nilai Feedback Peserta</b></td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvaluepesertaB11"></td>
+                                                    <td id="yearindekspesertaB11"></td>
+                                                    <td ></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Komponen A</b></td>
+                                                    <!-- <td>33%</td> -->
+                                                    <!-- <td id="yearvaluekompA11"></td> -->
+                                                    <td id="yearindekskompA11"></td>
+                                                    <td ></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>B. Tingkat Sinergi Antar Generasi</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Jumlah Kegiatan yang telah dilaksanakan</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvaluekegiatan11a"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" ><b>Total Komponen B</b></td>
+                                                    <td id="yearvaluekompB11"></td>
+                                                    <td id="yearindekskompB11"></td>
+                                                    <td ></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Capaian Bintal</b></td>
+                                                    
+                                                    <td id="yearvaluenilaiPK"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                    <td id="yeartotalNilai11a"><b></b></td>
+                                                    <td id="yeartotalNilai11"><b></b></td>
+                                                </tr>
+
+                                            <tr>
+                                                <td rowspan="6" valign="top">12</td>
+                                                <td rowspan="6" valign="top"> 6c-N </td>
+                                                <td rowspan="6" valign="top" class="left-align">Nilai Evaluasi Pelaksanaan Tugas Kepatuhan Internal</td>
                                                 <td><b>Komponen</b></td>
-                                                <td colspan="3"><b>Nilai</b></td>
-                                                <td>Formula</td>
+                                                <td ><b>Nilai</b></td>
+                                                <td ><b>Total</b></td>
+                                                <td><b>Indeks Capaian</b></td>
+                                                <td >Formula</td>
                                                 <td>Keterangan</td>
                                             </tr>
                                             <tr>
-                                                <td class="left-align">Indeks kepuasan layanan</td>
-                                                    <td><b>33%</b></td>
-                                                    <td id="yearikplValue3a">4,91</td>
-                                                    <td id="yearikplHasil3a">4,91</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="yearformula3"></td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="yearketerangan3">
-                                                        bebas
+                                                <td class="left-align" colspan="4"><b>Hasil Penilaian pelaksanaan tugas KI pada KPPN</b></td>
+                                                <!-- <td><b>100%</b></td>
+                                                <td id="tw2valuenilaiMR">34,48</td>
+                                                <td id="tw2nilaiMR">34,48</td>-->
+                                                <td rowspan="5" valign="top" class="left-align" id="yearformula12"></td> 
+                                                <td rowspan="5" valign="top" class="left-align" id="yearketerangan12">
                                                     
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="left-align">Indeks Efektivitas Edukasi dan Komunikasi</td>
-                                                    <td><b>33%</b></td>
-                                                    <td id="yearikplValue3b">4,91</td>
-                                                    <td id="yearikplHasil3b">4,91</td>
-                                            </tr>
-                                            <tr><td class="left-align">Indeks layanan HAI CSO</td>
-                                                <td><b>33%</b></td>
-                                                <td id="yearikplValue3c">4,91</td>
-                                                <td id="yearikplHasil3c">4,91</td></tr>
-                                            <tr>
-                                                <td><b>Nilai Capaian</b></td>
-                                                <td colspan="3" id="yearhasil3abc"><b>5</b></td>
-                                            </tr>
-
-                                            <tr>
-                                                <td rowspan="5" valign="top">4</td>
-                                                <td rowspan="5" valign="top"> 2b-N </td>
-                                                <td rowspan="5" valign="top" class="left-align">Tingkat implementasi penajaman tugas
-                                                    <i>Financial Advisory</i>
-                                                </td>
-                                                <td><b>Komponen</b></td>
-                                                <td><b>Bobot</b></td>
-                                                <td><b>Nilai</b></td>
-                                                <td ><b>Total</b></td>
-                                                <td>Formula</td>
-                                                <td>Keterangan</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Implementasi Central
-                                                    Government Advisory </td>
-                                                <td><b>50%</b></td>
-                                                <td  id="yearvalueCG">50,00</td>
-                                                <td  id="yearnilaiCG">50,00</td>
-                                                <td rowspan="4" valign="top" class="left-align" id="yearformula4"></td>
-                                                <td rowspan="4" valign="top" class="left-align" id="yearketerangan4">
-                                                    FORMULA = (Nilai rata2 CG x 50%) + (Nilai rata2 LG x 30%)
-                                                    + (Implementasi SM x 20%)
-
-                                                    *Formula bagi KPPN yang tidak melakukan penyaluran TKD
-                                                    (tidak melakukan LG)
-                                                    =((Nilai rata2 CG x 50%) + (Implementasi SM x 20%)):70 x
-                                                    100
-
-                                                     </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Implementasi Local
-                                                    Government </td>
-                                                <td><b>30%</b></td>
-                                                <td id="yearvalueLG">30,00</td>
-                                                <td  id="yearnilaiLG">30,00</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Implementasi Special
-                                                    Mission Advisory </td>
-                                                <td><b>20%</b></td>
-                                                <td  id="yearvalueSM">20,00</td>
-                                                <td  id="yearnilaiSM">20,00</td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>Nilai Capaian</b></td>
-                                                <td colspan="3" id="yeartotalNilai4"><b>100</b></td>
-                                            </tr>
-
-                                            <tr>
-                                                <td rowspan="9" valign="top">5</td>
-                                                <td rowspan="9" valign="top"> 3a-CP </td>
-                                                <td rowspan="9" valign="top" class="left-align">Indeks kinerja penyaluran Dana Transfer ke Daerah pada KPPN</td>
-                                                <td><b>Komponen</b></td>
-                                                <td><b>Bobot</b></td>
-                                                <td ><b>Nilai</b></td>
-                                                <td><b>Total</b></td>
-                                                <td>Formula</td>
-                                                <td>Keterangan</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Syarat </td>
-                                                <td><b>15%</b></td>
-                                                <td  id="yearsyaratValue">14,50</td>
-                                                <td  id="yearsyaratScore">14,50</td>
-                                                <td rowspan="8" valign="top" class="left-align" id="yearformula5"></td>
-                                                <td rowspan="8" valign="top" class="left-align" id="yearketerangan5">
-                                                    Hasil Penilaian dari Kantor Pusat (Nota Dinas Direktorat
-                                                    Pelaksanaan Anggaran nomor ND-35/PB.2/2025 tanggal
-                                                    10 Januari 2025) </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Proyeksi</td>
-                                                <td><b>15%</b></td>
-                                                <td  id="yearproyeksiValue">15,00</td>
-                                                <td  id="yearproyeksiScore">15,00</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Akurasi</td>
-                                                <td><b>20%</b></td>
-                                                <td  id="yearakurasiValue">20,00</td>
-                                                <td  id="yearakurasiScore">20,00</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Monev</td>
-                                                <td><b>10%</b></td>
-                                                <td id="yearmonevValue">10,00</td>
-                                                <td id="yearmonevScore">10,00</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">LK-UAKPA</td>
-                                                <td><b>20%</b></td>
-                                                <td  id="yearlkuakpaValue">20,00</td>
-                                                <td  id="yearlkuakpaScore">20,00</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Realisasi</td>
-                                                <td><b>20%</b></td>
-                                                <td  id="yearrealisasiValue">20,00</td>
-                                                <td  id="yearrealisasiScore">20,00</td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>Nilai Capaian</b></td>
-                                                <td colspan="3" id="yeartotalCapaian5"> <b>135,39</b></td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>Indeks Capaian</b></td>
-                                                <td colspan="3" id="yeartotalIndeksCp5"> <b>135,39</b></td>
-                                            </tr>
-                                            <tr>
-                                                <td rowspan="5" valign="top">6</td>
-                                                <td rowspan="5" valign="top"> 3b-N </td>
-                                                <td rowspan="5" valign="top" class="left-align">Indeks Digitalisasi Pengelolaan Keuangan</td>
-                                                <td><b>Komponen</b></td>
-                                                <td><b>Bobot</b></td>
-                                                <td><b>Nilai</b></td>
-                                                <td><b>Total</b></td>
-                                                <td>Formula</td>
-                                                <td>Keterangan</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Implementasi Digipay </td>
-                                                <td><b>33%</b></td>
-                                                <td id="yearindigipayvalue">5</td>
-                                                <td id="yearindeksindigipay">5</td>
-                                                <td rowspan="4" valign="top" class="left-align" id="yearformula6"></td>
-                                                <td rowspan="4" valign="top" class="left-align" id="yearketerangan6">IKU
-                                                    terdiri dari 3 komponen yaitu:
-                                                    A. Implementasi Digipay
-                                                    B. Implementasi CMS
-                                                    C. Implementasi KKP </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Implementasi CMS</td>
-                                                    <td ><b>33%</b></td>
-                                                <td id="yearincmsvalue">5</td>
-                                                <td id="yearindeksincms">55</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Implementasi KKP</td>
-                                                <td ><b>33%</b></td>
-                                                <td id="yearinkkpvalue">5</td>
-                                                <td id="yearindeksinkkp">5</td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>Nilai Capaian</b></td>
-                                                <td colspan="3" id="yearindeksTotal6"> <b>5</b></td>
-                                            </tr>
-
-
-                                            <tr>
-                                                <td rowspan="5" valign="top">7</td>
-                                                <td rowspan="5" valign="top">4a-CP</td>
-                                                <td rowspan="5" valign="top" class="left-align">Persentase akurasi perencanaan kas</td>
-                                                <td><b>Komponen</b></td>
-                                                <td><b>Bobot</b></td>
-                                                <td ><b>Nilai</b></td>
-                                                <td ><b>Total</b></td>
-                                                <td>Formula</td>
-                                                <td>Keterangan</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Rata - Rata Deviasi Unit
-                                                    RPD harian KPPN per
-                                                    periode </td>
-                                                <td><b>20%</b></td>
-                                                <td  id="yeardeviasiUnit7">0</td>
-                                                <td id="yearvalueDeviasiUnit7">0</td>
-                                                <td rowspan="4" valign="top" class="left-align" id="yearformula7"></td>
-                                                <td rowspan="4" valign="top" class="left-align" id="yearketerangan7">
-                                                    (100% - ((Rata - Rata Deviasi Unit RPD harian KPPN per
-                                                    periode*0,2) + ((Rata - Rata Deviasi Nilai RPD harian KPPN
-                                                    per periode*0,8))) - (Rasio Dispensasi RPD harian KPPN per
-                                                    periode)) </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Rata - Rata Deviasi Nilai
-                                                    RPD harian KPPN per
-                                                    periode </td>
-                                                <td><b>80%</b></td>
-                                                <td id="yeardeviasiNilai7">0</td>
-                                                <td id="yearvalueDeviasiNilai7">0</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Rasio Dispensasi RPD
-                                                    harian KPPN per periode </td>
-                                                <td></td>
-                                                <td id="yeardispensasi7">0</td>
-                                                <td id="yearvalueDispensasiNilai7">0</td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>Nilai Capaian</b></td>
-                                                <td colspan="3" id="yearhasil7">0</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td rowspan="5" valign="top">8</td>
-                                                <td rowspan="5" valign="top"> 4b-N </td>
-                                                <td rowspan="5" valign="top" class="left-align">Indeks kualitas penyelesaian SP2D</td>
-                                                <td><b>Komponen</b></td>
-                                                <td><b>Bobot</b></td>
-                                                <td ><b>Nilai</b></td>
-                                                <td ><b>Total</b></td>
-                                                <td>Formula</td>
-                                                <td>Keterangan</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Penyelesaian SP2D secara tepat waktu </td>
-                                                <td><b>33%</b></td>
-                                                <td id="yearvalueindeksA8">5,00</td>
-                                                <td id="yearindeksA8">5,00</td>
-                                                <td rowspan="4" valign="top" class="left-align" id="yearformula8"></td>
-                                                <td rowspan="4" valign="top" class="left-align" id="yearketerangan8">
-                                                    (Indeks Penyelesaian SP2D secara tepat waktu + Indeks
-                                                    Efektivitas Penyaluran dana SP2D yang akurat + Indeks
-                                                    Efektivitas kecepatan penyelesaian retur SP2D) / 3 </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Efektivitas Penyaluran dana SP2D yang akurat </td>
-                                                <td><b>33%</b></td>
-                                                <td id="yearvalueindeksB8">5,00</td>
-                                                <td id="yearindeksB8">5,00</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Efektivitas kecepatan penyelesaian retur SP2D </td>
-                                                <td><b>33%</b></td>
-                                                <td id="yearvalueindeksC8">5,00</td>
-                                                <td id="yearindeksC8">5,00</td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>Nilai Capaian</b></td>
-                                                <td colspan="3" id="yearindeksTotal8">5</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td rowspan="4" valign="top">9</td>
-                                                <td rowspan="4" valign="top"> 5a-N </td>
-                                                <td rowspan="4" valign="top" class="left-align">Indeks Kualitas LPJ Bendahara Satker K/L</td>
-                                                <td><b>Komponen</b></td>
-                                                <td><b>Bobot</b></td>
-                                                <td><b>Nilai</b></td>
-                                                <td><b>Total</b></td>
-                                                <td>Formula</td>
-                                                <td>Keterangan</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Indeks Penyampaian LPJ</td>
-                                                    <td><b>50%</b></td>
-                                                    <td id="yearvalueindeksSept">4</td>
-                                                <td id="yearindeksSept">4</td>
-                                                <td rowspan="3" valign="top" class="left-align" id="yearformula9"></td>
-                                                <td rowspan="3" valign="top" class="left-align" id="yearketerangan9">
-                                                    Seluruh bebas </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Indeks Validasi LPJ</td>
-                                                    <td><b>50%</b></td>
-                                                    <td id="yearvalueindeksOkt">4</td>
-                                                <td id="yearindeksOkt">4</td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>Nilai Capaian</b></td>
-                                                <td colspan="3" id="yearindeksTotal9"><b>4</b></td>
-                                            </tr>
-
-                                            <tr>
-                                                <td rowspan="4" valign="top">10</td>
-                                                <td rowspan="4" valign="top"> 6a-N </td>
-                                                <td rowspan="4" valign="top" class="left-align">Tingkat kualitas kinerja organisasi</td>
-                                                <td><b>Komponen</b></td>
-                                                <td><b>Bobot</b></td>
-                                                <td ><b>Nilai</b></td>
-                                                <td ><b>Total</b></td>
-                                                <td >Formula</td>
-                                                <td>Keterangan</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">indeks capaian komponen nilai LHPS </td>
-                                                <td><b>50%</b></td>
-                                                <td  id="yearvaluenilaiLHPS1">54,16%</td>
-                                                <td  id="yearnilaiLHPS1">54,16%</td>
-                                                <td rowspan="3" valign="top" class="left-align" id="yearformula10"></td>
-                                                <td rowspan="3" valign="top" class="left-align" id="yearketerangan10">
-                                                isi bebas</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Nilai SFO</td>
-                                                <td><b>50%</b></td>
-                                                <td  id="yearvaluenilaiLHPS2">52,98</td>
-                                                <td  id="yearnilaiLHPS2">52,98</td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>Nilai Capaian</b></td>
-                                                <td colspan="3" id="yeartotalIKU10"><b>108,26%</b></td>
+                                                <td class="left-align">Penerapan MR</td>
+                                                <!-- <td><b>100%</b></td> -->
+                                                <td id="yearvaluenilaiMR"></td>
                                                 <!-- <td></td> -->
-                                            </tr>
-                                            <tr>
-                                                <td rowspan="4" valign="top">11</td>
-                                                <td rowspan="4" valign="top"> 6b-N </td>
-                                                <td rowspan="4" valign="top" class="left-align">Nilai kualitas pengelolaan SDM</td>
-                                                <td><b>Komponen</b></td>
-                                                <td><b>Bobot</b></td>
-                                                <td ><b>Nilai</b></td>
-                                                <td ><b>Total</b></td>
-                                                <td >Formula</td>
-                                                <td>Keterangan</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Implementasi Learning Organization </td>
-                                                <td><b>60%</b></td>
-                                                <td id="yearvaluenilaiLO">58,1%</td>
-                                                <td id="yearnilaiLO">58,1%</td>
-                                                <td rowspan="2" valign="top" class="left-align" id="yearformula11"></td>
-                                                <td rowspan="2" valign="top" class="left-align" id="yearketerangan11">
-                                                    bebas</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Tingkat Penguatan Budaya dan Bintal
-                                                    Pejabat Administrator/Pejabat Fungsional Setara
-                                                    Di Lingkungan Kementerian Keuangan
-                                                </td>
-                                                <td><b>40%</b></td>
-                                                <td id="yearvaluenilaiPK">58,50</td>
-                                                <td id="yearnilaiPK">58,50</td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>Nilai Capaian</b></td>
-                                                <td colspan="3" id="yeartotalNilai11"><b>116,60</b></td>
-                                                <td></td>
+                                                <td id="yearnilaiMR"></td>
                                                 <td></td>
                                             </tr>
-
                                             <tr>
-                                                <td rowspan="3" valign="top">12</td>
-                                                <td rowspan="3" valign="top"> 6c-N </td>
-                                                <td rowspan="3" valign="top" class="left-align">Nilai Evaluasi Pelaksanaan Tugas Kepatuhan Internal</td>
-                                                <td><b>Komponen</b></td>
-                                                <td><b>Bobot</b></td>
-                                                <td ><b>Nilai</b></td>
-                                                <td ><b>Total</b></td>
-                                                <td >Formula</td>
-                                                <td>Keterangan</td>
+                                                <td class="left-align">Pelaksanaan PPINE</td>
+                                                <!-- <td><b>100%</b></td> -->
+                                                <td id="yearvaluenilaiPPINE"></td>
+                                                <td id="yearnilaiPPINE"></td>
+                                                <!-- <td id="yearnilaiMR"></td> -->
+                                                <td></td>
                                             </tr>
                                             <tr>
-                                                <td class="left-align">Hasil Penilaian pelaksanaan tugas KI pada KPPN</td>
-                                                <td><b>100%</b></td>
-                                                <td id="yearvaluenilaiMR">34,48</td>
-                                                <td id="yearnilaiMR">34,48</td>
-                                                <td rowspan="2" valign="top" class="left-align" id="yearformula12"></td>
-                                                <td rowspan="2" valign="top" class="left-align" id="yearketerangan12">
-                                                    bebas
-                                                </td>
+                                                <td class="left-align">Pengelolaan Pengaduan</td>
+                                                <!-- <td><b>100%</b></td> -->
+                                                <td id="yearvaluenilaiPP"></td>
+                                                <td id="yearnilaiPP"></td>
+                                                <!-- <td id="yearnilaiMR"></td> -->
+                                                <td></td>
                                             </tr>
                                     
                                             <tr>
-                                                <td><b>Nilai Capaian</b></td>
-                                                <td colspan="3" id="yeartotalrealisasi12d"><b>99,48</b></td>
-                                                
+                                                <td  colspan="2" ><b>Nilai Capaian</b></td>
+                                                <td id="yeartotalrealisasi12d"><b></b></td>
+                                                <td id="yeartotalrealisasi12dd"><b></b></td>
                                             </tr>
 
                                             <tr>
-                                                <td rowspan="4" valign="top">13</td>
-                                                <td rowspan="4" valign="top"> 7a-CP </td>
-                                                <td rowspan="4" valign="top" class="left-align">Indeks kualitas pengelolaan keuangan KPPN</td>
-                                                <td><b>Komponen</b></td>
-                                                <td><b>Bobot</b></td>
-                                                <td><b>Nilai</b></td>
-                                                <td><b>Total</b></td>
-                                                <td>Formula</td>
-                                                <td>Keterangan</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">IKPA</td>
-                                                <td><b>60%</b></td>
-                                                <td id="yearvaluenilaiNKA">47,94</td>
-                                                <td id="yearnilaiNKA">47,94</td>
-                                                <td rowspan="3" valign="top" class="left-align" id="yearformula13"></td>
-                                                <td rowspan="3" valign="top" class="left-align" id="yearketerangan13">
-                                                    bebas</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">LK UAKPA UAKPB </td>
-                                                <td><b>40%</b></td>
-                                                <td id="yearvaluenilaiLK">43</td>
-                                                <td id="yearnilaiLK">43</td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>Nilai Capaian</b></td>
-                                                <td colspan="3" id="yeartotalNilai13"><b>90,76</b></td>
-                                                <!-- <td></td> -->
-                                            </tr>
+                                                    <td rowspan="10" valign="top">13</td>
+                                                    <td rowspan="10" valign="top"> 7a-CP </td>
+                                                    <td rowspan="10" valign="top" class="left-align">Indeks kualitas pengelolaan keuangan KPPN</td>
+                                                    <td><b>Komponen</b></td>
+                                                    <td><b>Nilai</b></td>
+                                                    <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
+                                                    <td>Formula</td>
+                                                    <td>Keterangan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>IKPA</b></td>
+                                                    <td rowspan="9" valign="top" class="left-align" id="yearformula13"></td>
+                                                    <td rowspan="9" valign="top" class="left-align" id="yearketerangan13"></td>
+                                                
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">IKPA</td>
+                                                    <td id="yearvalueikpa13a"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">SMART</td>
+                                                    <td id="yearvaluesmart13a"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Nilai IKPA</b></td>
+                                                    <td id="yearvaluenilaiNKA"></td>
+                                                    <td></td>
+                                                    <!-- <td id="yearvalueindeks9a"></td> -->
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>LK UAKPA UAKPB</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Nilai Laporan Keuangan Audited</td>
+                                                    <td id="yearvalueikpa13b"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Kepatuhan Pelaksanaan Anggaran</td>
+                                                    <td id="yearvalueikpa13c"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Nilai UAKPA UAKPB</b></td>
+                                                    <td id="yearvaluenilaiLK"></td>
+                                                    <!-- <td id="yearindeksB8"></td> -->
+                                                    <td></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                     <td id="yeartotalNilai13"><b></b></td>
+                                                    <td id="yeartotalNilai13a"><b></b></td>
+                                                </tr>
 
                                             <tr>
                                                 <td rowspan="5" valign="top">14</td>
                                                 <td rowspan="5" valign="top"> 7b-N </td>
                                                 <td rowspan="5" valign="top" class="left-align">Persentase Kualitas Pengelolaan BMN dan Pengadaan</td>
                                                 <td><b>Komponen</b></td>
-                                                <td><b>Bobot</b></td>
                                                 <td><b>Nilai</b></td>
                                                 <td><b>Total</b></td>
+                                                <td><b>Indeks Capaian</b></td>
                                                 <td>Formula</td>
                                                 <td>Keterangan</td>
                                             </tr>
-                                            <tr>
-                                                <td class="left-align">Indeks Pengelolaan Aset </td>
-                                                <td><b>60%</b></td>
-                                                <td  id="yearvaluenilaiAset">66</td>
-                                                <td  id="yearnilaiAset">66</td>
-                                                <td rowspan="4" valign="top" class="left-align" id="yearformula14">
-                                                <td rowspan="4" valign="top" class="left-align" id="yearketerangan14">
-                                                    bebas </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Indeks Tata Kelola
-                                                    Pengadaan</td>
-                                                <td><b>20%</b></td>
-                                                <td  id="yearvaluenilaiPengadaan">48</td>
-                                                <td  id="yearnilaiPengadaan">48</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Penggunaan Produk Dalam Negeri</td>
-                                                <td><b>20%</b></td>
-                                                <td  id="yearvaluenilaiProduk">48</td>
-                                                <td  id="yearnilaiProduk">48</td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>Nilai Capaian</b></td>
-                                                <td colspan="3" id="yearindeksCapaian15"><b>120</b></td>
-                                                <!-- <td></td> -->
-                                            </tr>
+                                            
+                                                <tr>
+                                                    <td class="left-align">Indeks Pengelolaan Aset </td>
+                                                    <!-- <td>60%</td> -->
+                                                    <td  id="yearvaluenilaiAset"></td>
+                                                    <td  id="yearnilaiAset"></td>
+                                                    <td></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="yearformula14"></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="yearketerangan14">
+                                                       </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Indeks Tata Kelola
+                                                        Pengadaan</td>
+                                                    <!-- <td>20%</td> -->
+                                                    <td  id="yearvaluenilaiPengadaan"></td>
+                                                    <td  id="yearnilaiPengadaan"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Penggunaan Produk Dalam Negeri</td>
+                                                    <!-- <td>20%</td> -->
+                                                    <td  id="yearvaluenilaiProduk"></td>
+                                                    <td  id="yearnilaiProduk"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                    <td  id="yearindeksCapaian15a"><b></b></td>
+                                                    <td  id="yearindeksCapaian15"><b></b></td>
+                                                    <!-- <td></td> -->
+                                                </tr>
 
                                             <tr>
                                                 <td rowspan="6" valign="top">15</td>
                                                 <td rowspan="6" valign="top"> 7c-N </td>
                                                 <td rowspan="6" valign="top" class="left-align">Nilai Kinerja TIK KPPN</td>
                                                 <td><b>Komponen</b></td>
-                                                <td><b>Bobot</b></td>
                                                 <td><b>Nilai</b></td>
                                                 <td><b>Total</b></td>
+                                                <td><b>Indeks Capaian</b></td>
                                                 <td>Formula</td>
                                                 <td>Keterangan</td>
                                             </tr>
-                                            <tr>
-                                                <td class="left-align">SK OKI </td>
-                                                <td><b>15%</b></td>
-                                                <td  id="yearvaluehasilskoki">66</td>
-                                                <td  id="yearnilaiskoki">66</td>
-                                                <td rowspan="5" valign="top" class="left-align" id="yearformula15">
-                                                <td rowspan="5" valign="top" class="left-align" id="yearketerangan15">
-                                                    bebas </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Sosialisasi</td>
-                                                <td><b>35%</b></td>
-                                                <td  id="yearvaluehasilsosialisasi">48</td>
-                                                <td  id="yearnilaisosialisasi">48</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Publikasi</td>
-                                                <td><b>15%</b></td>
-                                                <td  id="yearvaluehasilpublikasi">48</td>
-                                                <td  id="yearnilaipublikasi">48</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="left-align">Penguatan Keamanan Perangkat TIK</td>
-                                                <td><b>35%</b></td>
-                                                <td  id="yearvaluehasilpkpt">48</td>
-                                                <td  id="yearnilaipkpt">48</td>
-                                            </tr>
-                                            <tr>
-                                                <td><b>Nilai Capaian</b></td>
-                                                <td colspan="3" id="yeartotalnilai16"><b>120</b></td>
-                                                <!-- <td></td> -->
-                                            </tr>
+                                             <tr>
+                                                    <td class="left-align">NDA </td>
+                                                    <!-- <td>15%</td> -->
+                                                    <td  id="yearvaluehasilnda"></td>
+                                                    <td></td>
+                                                    <!-- <td  id="yearnilainda"></td> -->
+                                                    <td></td>
+                                                    <td rowspan="5" valign="top" class="left-align" id="yearformula15"></td>
+                                                    <td rowspan="5" valign="top" class="left-align" id="yearketerangan15">
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Pengaman Fisik area Kantor</td>
+                                                    <!-- <td>35%</td> -->
+                                                    <td  id="yearvaluehasilpengaman"></td>
+                                                    <td></td>
+                                                    <!-- <td  id="yearnilaipengaman"></td> -->
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Publikasi</td>
+                                                    <!-- <td>15%</td> -->
+                                                    <td  id="yearvaluehasilpublikasi"></td>
+                                                    <td></td>
+                                                    <!-- <td  id="yearnilaipublikasi"></td> -->
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Penguatan Keamanan Perangkat TIK</td>
+                                                    <!-- <td>35%</td> -->
+                                                    <td  id="yearvaluehasilpkpt"></td>
+                                                    <td></td>
+                                                    <!-- <td  id="yearnilaipkpt"></td> -->
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                    <td id="yeartotalnilai16"><b></b></td>
+                                                     <td id="yeartotalnilai16a"><b></b></td>
+                                                    <!-- <td></td> -->
+                                                </tr>
                                         </tbody>
 
                                     </table>
@@ -1069,8 +1603,9 @@
                                                 const data = snapshot.val();
                                                 // Set data ke masing-masing elemen tabel
                                                 const fields = [
-                                                "yearrdScore", "yeardhScore", "yearpaScore", "yearbkScore", "yearptScore", "yearputScore",
-                                                "yearcoScore", "yeardsScore", "yearjumlahsatker1Value", "yearjumlahsatker1Score",
+                                               "yearrdValue", "yeardhValue", "yearpaValue", "yearbkValue", "yearptValue", "yearputValue",
+                                                "yearcoValue", "yeardsValue","yearpbaikcoValue", "yearsatkerdsValue","yearrdScore", "yeardhScore", "yearpaScore", "yearbkScore", "yearptScore", "yearputScore",
+                                                "yearcoScore", "yeardsScore","yearpbaikcoScore", "yearsatkerdsScore", "yearjumlahsatker1Value", "yearjumlahsatker1Score",
                                                 "yeartotalCapaian1", "yearnilaiIkpa1Score", "yearformula1", "yearketerangan1",
                                                 "yeartotalCapaian1all", "yearNilaislide1a"
                                                 ];
@@ -1094,7 +1629,7 @@
                                                 const data = snapshot.val();
                                                 const fields = [
                                                     "yearPersentaseAValue", "yearPersentaseBValue", "yearPersentaseCValue", "yearPersentaseDValue",
-                                                    "yearPersentaseBhasil", "yearPersentaseChasil", "yearPersentaseDhasil", "yeartotalPersentase2",
+                                                    "yearPersentaseBhasil", "yearPersentaseChasil", "yearPersentaseDhasil", "yeartotalPersentase2","yearindekscapaian2",
                                                     "yearformula2", "yearketerangan2"
                                                 ];
                                                 fields.forEach(id => {
@@ -1116,9 +1651,12 @@
                                             if (snapshot.exists()) {
                                                 const data = snapshot.val();
                                                 const fields = [
-                                                    "yearikplValue3a", "yearikplValue3b", "yearikplValue3c", "yearikplHasil3a",
-                                                    "yearikplHasil3b", "yearikplHasil3c", "yearhasil3abc",
-                                                    "yearformula3", "yearketerangan3"
+                                                      "yearjrekomendasiValue3a", "yearposttestValue3b", "yearrcapaianValue3c",  
+                                                 "yeartlanjutValue3a", "yearkuesionerValue3b","yearjrekomendasiHasil3a", "yearposttestHasil3b", "yearrcapaianHasil3c",  
+                                                 "yeartlanjutHasil3a", "yearkuesionerHasil3b",     
+                                                "yearikplValue3a", "yearikplValue3b", "yearikplValue3c", "yearikplHasil3a","yeartsurveiValue3a",
+                                                    "yearikplHasil3b", "yearikplHasil3c", "yearhasil3abc",,"yeartsurveiHasil3a","yearsurveiValue3b",
+                                                    "yearformula3", "yearketerangan3","yearrekomendasiHasil3a","yearrekomendasiValue3a","yearsurveiHasil3b"
                                                 ];
                                                
                                                 fields.forEach(id => {
@@ -1141,7 +1679,7 @@
                                                 const data = snapshot.val();
                                                 const fields = [
                                                     "yearnilaiCG", "yearnilaiLG", "yearnilaiSM", "yearvalueCG",
-                                                    "yearvalueLG", "yearvalueSM", "yeartotalNilai4",
+                                                    "yearvalueLG", "yearvalueSM", "yeartotalNilai4","yeartotalNilai4a",
                                                     "yearformula4", "yearketerangan4"
                                                 ];
                                                
@@ -1193,8 +1731,8 @@
                                             if (snapshot.exists()) {
                                                 const data = snapshot.val();
                                                 const fields = [
-                                                    "yearindigipayvalue", "yearincmsvalue", "yearinkkpvalue", "yearindeksindigipay",
-                                                    "yearindeksincms", "yearindeksinkkp", "yearindeksTotal6", 
+                                                     "yearjtdigipayvalue","yearjskppnvalue","yearkomponenAvalue","yeartsatkervalue","yeartrsdigipayvalue","yearkomponenBvalue","yearindigipayvalue","yearindeksindigipay","yearonetrsvalue","yearalltrsvalue"
+                                                    ,"yearincmsvalue","yearindeksincms","yeartrkkpvalue","yearupkkpvalue","yearinkkpvalue","yearindeksinkkp","yearindeksTotal6",
                                                     "yearformula6", "yearketerangan6"
                                                 ];
                                                 
@@ -1219,7 +1757,7 @@
                                                 const data = snapshot.val();
                                                 const fields = [
                                                     "yeardeviasiUnit7", "yeardeviasiNilai7", "yeardispensasi7", "yearvalueDeviasiUnit7",
-                                                    "yearvalueDeviasiNilai7", "yearvalueDispensasiNilai7", "yearhasil7", 
+                                                    "yearvalueDeviasiNilai7", "yearvalueDispensasiNilai7", "yearhasil7", "yearhasil7a",
                                                     "yearformula7", "yearketerangan7"
                                                 ];
                                                
@@ -1242,8 +1780,10 @@
                                             if (snapshot.exists()) {
                                                 const data = snapshot.val();
                                                 const fields = [
-                                                    "yearvalueindeksA8", "yearvalueindeksB8", "yearvalueindeksC8", "yearindeksA8",
-                                                    "yearindeksB8", "yearindeksC8", "yearindeksTotal8", 
+                                                     "yearvaluepsp2d8","yearvalueterbitd8","yearvaluetkompBd8",
+                                                "yearindeksB8","yearvalueindeksB8","yearvalueSp2d1d8","yearvalueSp2d2d8",
+                                                "yearvalueSp2d3d8","yearvalueSp2d4d8","yearvalueSp2d5d8","yearvalueSp2dalld8","yearvaluegantid8","yearvaluetkompCd8"
+                                                ,"yearvalueindeksC8","yearindeksTotal8",
                                                     "yearformula8", "yearketerangan8"
                                                 ];
                                                  
@@ -1267,8 +1807,8 @@
                                             if (snapshot.exists()) {
                                                 const data = snapshot.val();
                                                 const fields = [
-                                                    "yearvalueindeksSept", "yearvalueindeksOkt", "yearindeksSept", "yearindeksOkt",
-                                                    "yearindeksTotal9", 
+                                                     "yearvaluelpj9a","yearvaluelpj9b","yearvaluelpj9c","yearvaluelpj9d",
+                                                    "yearvaluetotal9a","yearvaluetotal9b","yearvalueindeks9a","yearvalueindeks9b","yearindeksTotal9",
                                                     "yearformula9", "yearketerangan9"
                                                 ];
                                                
@@ -1292,8 +1832,8 @@
                                             if (snapshot.exists()) {
                                                 const data = snapshot.val();
                                                 const fields = [
-                                                    "yearvaluenilaiLHPS1", "yearvaluenilaiLHPS2", "yearnilaiLHPS1", "yearnilaiLHPS2",
-                                                    "yeartotalIKU10", 
+                                                    "yearvaluenilaiLHPS1", "yearvaluenilaiLHPS2", "yearvaluelhps10a", "yearvaluelhps10b",
+                                                    "yeartotalIKU10", "yearvaluelhps10c", "yearvaluelhps10d","yeartotalIKU10a",
                                                     "yearformula10", "yearketerangan10"
                                                 ];
                                                
@@ -1316,8 +1856,9 @@
                                             if (snapshot.exists()) {
                                                 const data = snapshot.val();
                                                 const fields = [
-                                                    "yearvaluenilaiLO", "yearvaluenilaiPK", "yearnilaiLO", "yearnilaiPK",
-                                                    "yeartotalNilai11", 
+                                                     "yearvaluekomponenA","yearvaluekomponenB","yearvaluekomponenC","yearvaluekomponenD","yearvaluekomponenE","yearvaluekomponenF","yearvaluepesertaA11","yearindekspesertaA11","yearvaluepesertaB11","yearindekspesertaB11",
+                                                "yearvaluekomponenG","yearvaluekomponenH","yearvaluekomponenI","yearvaluekomponenJ","yearvaluekomponenK","yearvaluepeserta11a","yearvaluepeserta11b","yearvaluepeserta11c"
+                                                ,"yearvaluekegiatan11a","yearnilaiLO","yearvaluenilaiLO","yearvaluekompA11","yearindekskompA11","yearvaluekompB11","yearindekskompB11","yearvaluenilaiPK","yeartotalNilai11","yeartotalNilai11a", 
                                                     "yearformula11", "yearketerangan11"
                                                 ];
                                                
@@ -1342,7 +1883,7 @@
                                                 const data = snapshot.val();
                                                 const fields = [
                                                     "yearvaluenilaiMR", "yearnilaiMR", "yearinputrealisasi12a", "yearinputrealisasi12b","yearinputrealisasi12c",
-                                                    "yeartotalrealisasi12d",
+                                                    "yeartotalrealisasi12d", "yearnilaiPPINE", "yearnilaiPP", "yeartotalrealisasi12dd","yearvaluenilaiPPINE","yearvaluenilaiPP",
                                                     "yearformula12", "yearketerangan12"
                                                 ];
                                                
@@ -1366,8 +1907,8 @@
                                             if (snapshot.exists()) {
                                                 const data = snapshot.val();
                                                 const fields = [
-                                                    "yearvaluenilaiNKA", "yearnilaiNKA", "yearnilaiLK", "yearvaluenilaiLK",
-                                                    "yeartotalNilai13",
+                                                   "yearvaluenilaiNKA", "yearvalueikpa13a", "yearvalueikpa13b", "yearvaluenilaiLK",
+                                                    "yeartotalNilai13","yeartotalNilai13a","yearvalueikpa13c","yearvaluesmart13a",
                                                     "yearformula13", "yearketerangan13"
                                                 ];
                                                
@@ -1391,8 +1932,8 @@
                                             if (snapshot.exists()) {
                                                 const data = snapshot.val();
                                                 const fields = [
-                                                    "yearvaluenilaiAset", "yearvaluenilaiPengadaan", "yearvaluenilaiProduk", "yearnilaiAset",
-                                                    "yearindeksCapaian15","yearnilaiPengadaan","yearnilaiProduk",
+                                                   "yearvaluenilaiAset", "yearvaluenilaiPengadaan", "yearvaluenilaiProduk", "yearnilaiAset",
+                                                    "yearindeksCapaian15","yearnilaiPengadaan","yearnilaiProduk","yearindeksCapaian15a",
                                                     "yearformula14", "yearketerangan14"
                                                 ];
                                                
@@ -1415,8 +1956,8 @@
                                             if (snapshot.exists()) {
                                                 const data = snapshot.val();
                                                 const fields = [
-                                                    "yearvaluehasilskoki", "yearvaluehasilpublikasi", "yearvaluehasilsosialisasi", "yearvaluehasilpkpt",
-                                                    "yearnilaiskoki","yearnilaisosialisasi","yearnilaipublikasi","yearnilaipkpt","yeartotalnilai16",
+                                                     "yearvaluehasilnda", "yearvaluehasilpublikasi", "yearvaluehasilpengaman", "yearvaluehasilpkpt",
+                                                    "yearnilainda","yearnilaipengaman","yearnilaipublikasi","yearnilaipkpt","yeartotalnilai16","yeartotalnilai16a",
                                                     "yearformula15", "yearketerangan15"
                                                 ];
                                                

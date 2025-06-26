@@ -340,15 +340,15 @@
                                         <br>
                                         <h3><b>Tingkat Implementasi penajaman tugas Financial Advisory</b></h3>
                                         <label for="tw3cg">Nilai CG (Central Government Advisory):</label>
-                                        <input type="number" id="tw3cg" min="0" max="100" value="100"
+                                        <input type="number" id="tw3cg" min="0" value="100"
                                             oninput="tw3hitungNilai4()">
 
                                         <label for="tw3lg">Nilai LG (Local Government Advisory):</label>
-                                        <input type="number" id="tw3lg" min="0" max="100" value="100"
+                                        <input type="number" id="tw3lg" min="0" value="100"
                                             oninput="tw3hitungNilai4()">
 
                                         <label for="tw3sm">Nilai SM (Special Mission Advisory):</label>
-                                        <input type="number" id="tw3sm" min="0" max="100" value="100"
+                                        <input type="number" id="tw3sm" min="0" value="100"
                                             oninput="tw3hitungNilai4()">
 
                                             <label for="tw3formula4">Masukkan Formula:</label>
@@ -400,54 +400,50 @@
                                                         <i>Financial Advisory</i>
                                                     </td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td><b>Nilai</b></td>
-                                                    <td ><b>Total</b></td>
+                                                    <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td>Formula</td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Implementasi Central
                                                         Government Advisory </td>
-                                                    <td>50%</td>
-                                                    <td  id="tw3valueCG">50,00</td>
-                                                    <td  id="tw3nilaiCG">50,00</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="tw3formula4">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <!-- <td>50%</td> -->
+                                                    <td  id="tw3valueCG"></td>
+                                                    <td  id="tw3nilaiCG"></td>
+                                                    <td></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="tw3formula4"></td>
                                                     <td rowspan="4" valign="top" class="left-align" id="tw3keterangan4">
-                                                        FORMULA = (Nilai rata2 CG x 50%) + (Nilai rata2 LG x 30%)
-                                                        + (Implementasi SM x 20%)
-
-                                                        *Formula bagi KPPN yang tidak melakukan penyaluran TKD
-                                                        (tidak melakukan LG)
-                                                        =((Nilai rata2 CG x 50%) + (Implementasi SM x 20%)):70 x
-                                                        100
-
-                                                        Tolong selalu enter agar tidak terlalu panjang </td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Implementasi Local
                                                         Government </td>
-                                                    <td>30%</td>
-                                                    <td id="tw3valueLG">30,00</td>
-                                                    <td  id="tw3nilaiLG">30,00</td>
+                                                    <!-- <td>30%</td> -->
+                                                    <td id="tw3valueLG"></td>
+                                                    <td  id="tw3nilaiLG"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Implementasi Special
                                                         Mission Advisory </td>
-                                                    <td>20%</td>
-                                                    <td  id="tw3valueSM">20,00</td>
-                                                    <td  id="tw3nilaiSM">20,00</td>
+                                                    <!-- <td>20%</td> -->
+                                                    <td  id="tw3valueSM"></td>
+                                                    <td  id="tw3nilaiSM"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="tw3totalNilai4"><b>100</b></td>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                     <td id="tw3totalNilai4a"><b></b></td>
+                                                    <td id="tw3totalNilai4"><b></b></td>
                                                 </tr>
                                             </tbody>
                                         </table>
 
                                         <script>
                                             function tw3hitungNilai4() {
-                                                let tw3nilaiCG = parseFloat(document.getElementById('tw3cg').value) || 0;
+                                               let tw3nilaiCG = parseFloat(document.getElementById('tw3cg').value) || 0;
                                                 let tw3nilaiLG = parseFloat(document.getElementById('tw3lg').value) || 0;
                                                 let tw3nilaiSM = parseFloat(document.getElementById('tw3sm').value) || 0;
 
@@ -457,6 +453,7 @@
                                                 let tw3nilaiTertimbangSM = (tw3nilaiSM * 20) / 100;
 
                                                 let tw3totalNilai4 = tw3nilaiTertimbangCG + tw3nilaiTertimbangLG + tw3nilaiTertimbangSM;
+                                                let tw3totalNilai4a = tw3totalNilai4;
 
                                                 document.getElementById('tw3valueCG').innerText = tw3nilaiCG.toFixed(0);
                                                 document.getElementById('tw3valueLG').innerText = tw3nilaiLG.toFixed(0);
@@ -466,6 +463,7 @@
                                                 document.getElementById('tw3nilaiLG').innerText = tw3nilaiTertimbangLG.toFixed(0);
                                                 document.getElementById('tw3nilaiSM').innerText = tw3nilaiTertimbangSM.toFixed(0);
                                                 document.getElementById('tw3totalNilai4').innerText = tw3totalNilai4.toFixed(0);
+                                                document.getElementById('tw3totalNilai4a').innerText = tw3totalNilai4a.toFixed(0);
                                                 // document.getElementById('hasilAkhir').innerText = totalNilai.toFixed(0);
                                             }
 
@@ -507,6 +505,7 @@
                                                 tw3valueLG: document.getElementById("tw3valueLG")?.innerText || "",
                                                 tw3valueSM: document.getElementById("tw3valueSM")?.innerText || "",
                                                 tw3totalNilai4: document.getElementById("tw3totalNilai4")?.innerText || "",
+                                                tw3totalNilai4a: document.getElementById("tw3totalNilai4a")?.innerText || "",
                                                 // totalPersentase2: document.getElementById("totalPersentase2")?.innerText || "",
                                                 
                                                 tw3formula4: document.getElementById("tw3formula4")?.innerText || "",

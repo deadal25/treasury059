@@ -340,7 +340,7 @@
                                     <div id="7b-N" class="content">
                                         <br>
                                         <h3><b>Persentase kualitas pengelolaan BMN dan Pengadaan</b></h3>
-                                        <label for="yearaset">Nilai Indeks Pengelolaan Aset:</label>
+                                         <label for="yearaset">Nilai Indeks Pengelolaan Aset:</label>
                                         <input type="number" id="yearaset" value="0" oninput="yearhitung15()">
 
                                         <label for="yearpengadaan">Nilai Indeks Tata Kelola Pengadaan:</label>
@@ -397,45 +397,42 @@
                                                     <td rowspan="5" valign="top"> 7b-N </td>
                                                     <td rowspan="5" valign="top" class="left-align">Persentase Kualitas Pengelolaan BMN dan Pengadaan</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td><b>Nilai</b></td>
                                                     <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td>Formula</td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Indeks Pengelolaan Aset </td>
-                                                    <td>60%</td>
-                                                    <td  id="yearvaluenilaiAset">66</td>
-                                                    <td  id="yearnilaiAset">66</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="yearformula14">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <!-- <td>60%</td> -->
+                                                    <td  id="yearvaluenilaiAset"></td>
+                                                    <td  id="yearnilaiAset"></td>
+                                                    <td></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="yearformula14"></td>
                                                     <td rowspan="4" valign="top" class="left-align" id="yearketerangan14">
-                                                        Tolong selalu enter agar tidak terlalu panjang
-                                                        Hasil Penilaian IPA dan ITKP
-                                                        Nota Dinas Sekretaris Ditjen Perbendaharaan nomor ND
-                                                        275/PB.1/2025 tanggal 17 Januari 2025
-                                                        Nilai Indeks Pengelolaan Aset sebesar 104
-                                                        Nilai Indeks Tata Kelola Pengadaan sebesar 120
-                                                        Capaian realisasi IKU : 60%*104 + 40%*120 = 111
-                                                        Indeks Capaian IKU = 111 / 84,10 = 120 </td>
+                                                       </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Indeks Tata Kelola
                                                         Pengadaan</td>
-                                                    <td>20%</td>
-                                                    <td  id="yearvaluenilaiPengadaan">48</td>
-                                                    <td  id="yearnilaiPengadaan">48</td>
+                                                    <!-- <td>20%</td> -->
+                                                    <td  id="yearvaluenilaiPengadaan"></td>
+                                                    <td  id="yearnilaiPengadaan"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Penggunaan Produk Dalam Negeri</td>
-                                                    <td>20%</td>
-                                                    <td  id="yearvaluenilaiProduk">48</td>
-                                                    <td  id="yearnilaiProduk">48</td>
+                                                    <!-- <td>20%</td> -->
+                                                    <td  id="yearvaluenilaiProduk"></td>
+                                                    <td  id="yearnilaiProduk"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="yearindeksCapaian15"><b>120</b></td>
-                                                    <!-- <td></td> -->
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                    <td  id="yearindeksCapaian15a"><b></b></td>
+                                                    <td  id="yearindeksCapaian15"><b></b></td>
+                                                    
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -449,7 +446,8 @@
                                                 let yearnilaiPengadaan = 0.2 * yearpengadaan;
                                                 let yearnilaiProduk = 0.2 * yearproduk;
                                                 let yeartotal15 = yearnilaiAset + yearnilaiPengadaan + yearnilaiProduk;
-                                                let yearindeksCapaian15 = (yeartotal15 > 100) ? 120 : yeartotal15.toFixed(2);
+                                                let yeartarget15 = 84.10;
+                                                let yearindeksCapaian15 = (yeartotal15 > yeartarget15) ? 120 : yeartotal15.toFixed(2);
 
                                                 document.getElementById("yearvaluenilaiAset").innerText = yearaset.toFixed(2);
                                                 document.getElementById("yearvaluenilaiPengadaan").innerText = yearpengadaan.toFixed(2);
@@ -457,6 +455,7 @@
                                                 document.getElementById("yearnilaiAset").innerText = yearnilaiAset.toFixed(2);
                                                 document.getElementById("yearnilaiPengadaan").innerText = yearnilaiPengadaan.toFixed(2);
                                                 document.getElementById("yearnilaiProduk").innerText = yearnilaiProduk.toFixed(2);
+                                                document.getElementById("yearindeksCapaian15a").innerText = yeartotal15;
                                                 document.getElementById("yearindeksCapaian15").innerText = yearindeksCapaian15;
                                             }
 
@@ -496,6 +495,7 @@
                                                 yearnilaiAset: document.getElementById("yearnilaiAset")?.innerText || "",
                                                 yearnilaiPengadaan: document.getElementById("yearnilaiPengadaan")?.innerText || "",
                                                 yearnilaiProduk: document.getElementById("yearnilaiProduk")?.innerText || "",
+                                                yearindeksCapaian15a: document.getElementById("yearindeksCapaian15a")?.innerText || "",   
                                                 yearindeksCapaian15: document.getElementById("yearindeksCapaian15")?.innerText || "",        
                                             
                                                 yearformula14: document.getElementById("yearformula14")?.innerText || "",

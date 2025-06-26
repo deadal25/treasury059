@@ -346,13 +346,7 @@
                                         <input type="number" id="tw4IndeviasiNilai7" min="0" max="100" oninput="tw4hitungAkurasi7()">
                                         <label>Rasio Dispensasi RPD Harian:</label>
                                         <input type="number" id="tw4Indispensasi7" min="1" max="30" oninput="tw4hitungAkurasi7()">
-                                        <!-- <label>Pilih Periode:
-                                            <select id="tw4periode7" onchange="tampilkanInput7()">
-                                                <option value="bulan7">Bulanan</option>
-                                                <option value="triwulan7">Triwulanan</option>
-                                            </select>
-                                        </label>
-                                        <div id="tw4inputsContainer7"></div> -->
+
 
                                         <label for="tw4formula7">Masukkan Formula:</label>
                                         <textarea id="tw4inputFormula7" class="form-control" rows="3"
@@ -401,9 +395,9 @@
                                                     <td rowspan="5" valign="top">4a-CP</td>
                                                     <td rowspan="5" valign="top" class="left-align">Persentase akurasi perencanaan kas</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td ><b>Nilai</b></td>
                                                     <td ><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td>Formula</td>
                                                     <td>Keterangan</td>
                                                 </tr>
@@ -411,36 +405,34 @@
                                                     <td class="left-align">Rata - Rata Deviasi Unit
                                                         RPD harian KPPN per
                                                         periode </td>
-                                                    <td>20%</td>
-                                                    <td  id="tw4deviasiUnit7">0</td>
-                                                    <td id="tw4valueDeviasiUnit7">0</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="tw4formula7">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <!-- <td>20%</td> -->
+                                                    <td  id="tw4deviasiUnit7"></td>
+                                                    <td id="tw4valueDeviasiUnit7"></td>
+                                                    <td></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="tw4formula7"> </td>
                                                     <td rowspan="4" valign="top" class="left-align" id="tw4keterangan7">
-                                                        (100% - ((Rata - Rata Deviasi Unit RPD harian KPPN per
-                                                        periode*0,2) + ((Rata - Rata Deviasi Nilai RPD harian KPPN
-                                                        per periode*0,8))) - (Rasio Dispensasi RPD harian KPPN per
-                                                        periode))
-
-                                                        Keterangan :Tolong selalu enter agar tidak terlalu panjang </td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Rata - Rata Deviasi Nilai
                                                         RPD harian KPPN per
                                                         periode </td>
-                                                    <td>80%</td>
-                                                    <td id="tw4deviasiNilai7">0</td>
-                                                    <td id="tw4valueDeviasiNilai7">0</td>
+                                                    <!-- <td>80%</td> -->
+                                                    <td id="tw4deviasiNilai7"></td>
+                                                    <td id="tw4valueDeviasiNilai7"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Rasio Dispensasi RPD
                                                         harian KPPN per periode </td>
-                                                    <td></td>
-                                                    <td id="tw4dispensasi7">0</td>
-                                                    <td id="tw4valueDispensasiNilai7">0</td>
+                                                        <td id="tw4dispensasi7"></td>
+                                                        <td id="tw4valueDispensasiNilai7"></td>
+                                                        <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="tw4hasil7">0</td>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                    <td id="tw4hasil7"></td>
+                                                    <td id="tw4hasil7a"></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -473,18 +465,18 @@
 
                                                 let tw4valueDeviasiUnit7 = ((tw4deviasiUnit7 * 0.2).toFixed(2)) ;
                                                 let tw4valueDeviasiNilai7 = ((tw4deviasiNilai7 * 0.8 ).toFixed(2));
-                                                let tw4valueDispensasiNilai7 = tw4dispensasi7;
+                                                let tw4valueDispensasiNilai7 = tw4dispensasi7 / 3;
 
                                                 let tw4hasil7 = (100 - tw4valueDeviasiUnit7 - tw4valueDeviasiNilai7 - tw4valueDispensasiNilai7).toFixed(2);
-
+                                                let tw4hasil7a = tw4hasil7;
                                                 document.getElementById("tw4deviasiUnit7").innerText = tw4deviasiUnit7;
                                                 document.getElementById("tw4deviasiNilai7").innerText = tw4deviasiNilai7;
                                                 document.getElementById("tw4dispensasi7").innerText = tw4dispensasi7;
                                                 document.getElementById("tw4valueDeviasiUnit7").innerText = tw4valueDeviasiUnit7;
                                                 document.getElementById("tw4valueDeviasiNilai7").innerText = tw4valueDeviasiNilai7;
-                                                document.getElementById("tw4valueDispensasiNilai7").innerText = tw4valueDispensasiNilai7;
+                                                document.getElementById("tw4valueDispensasiNilai7").innerText = tw4valueDispensasiNilai7.toFixed(2);
                                                 document.getElementById("tw4hasil7").innerText = tw4hasil7;
-
+                                                document.getElementById("tw4hasil7a").innerText = tw4hasil7a;
                                             }
 
                                             
@@ -524,7 +516,8 @@
                                                 tw4valueDeviasiUnit7: document.getElementById("tw4valueDeviasiUnit7")?.innerText || "",
                                                 tw4valueDeviasiNilai7: document.getElementById("tw4valueDeviasiNilai7")?.innerText || "",
                                                 tw4valueDispensasiNilai7: document.getElementById("tw4valueDispensasiNilai7")?.innerText || "",
-                                                tw4hasil7: document.getElementById("tw4hasil7")?.innerText || "",        
+                                                tw4hasil7: document.getElementById("tw4hasil7")?.innerText || "",
+                                                tw4hasil7a: document.getElementById("tw4hasil7a")?.innerText || "",        
                                             
                                                 tw4formula7: document.getElementById("tw4formula7")?.innerText || "",
                                                 tw4keterangan7: document.getElementById("tw4keterangan7")?.innerText || "",

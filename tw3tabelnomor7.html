@@ -340,19 +340,12 @@
                                         <br>
                                         <h3><b>Persentase akurasi perencanaan kas </b></h3>
 
-                                        <label>Rata - Rata Deviasi Unit:</label>
+                                       <label>Rata - Rata Deviasi Unit:</label>
                                         <input type="number" id="tw3IndeviasiUnit7" min="0" max="100" oninput="tw3hitungAkurasi7()">
                                         <label>Rata - Rata Deviasi Nilai:</label>
                                         <input type="number" id="tw3IndeviasiNilai7" min="0" max="100" oninput="tw3hitungAkurasi7()">
                                         <label>Rasio Dispensasi RPD Harian:</label>
                                         <input type="number" id="tw3Indispensasi7" min="1" max="30" oninput="tw3hitungAkurasi7()">
-                                        <!-- <label>Pilih Periode:
-                                            <select id="tw3periode7" onchange="tampilkanInput7()">
-                                                <option value="bulan7">Bulanan</option>
-                                                <option value="triwulan7">Triwulanan</option>
-                                            </select>
-                                        </label>
-                                        <div id="tw3inputsContainer7"></div> -->
 
                                         <label for="tw3formula7">Masukkan Formula:</label>
                                         <textarea id="tw3inputFormula7" class="form-control" rows="3"
@@ -401,9 +394,9 @@
                                                     <td rowspan="5" valign="top">4a-CP</td>
                                                     <td rowspan="5" valign="top" class="left-align">Persentase akurasi perencanaan kas</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td ><b>Nilai</b></td>
                                                     <td ><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td>Formula</td>
                                                     <td>Keterangan</td>
                                                 </tr>
@@ -411,36 +404,34 @@
                                                     <td class="left-align">Rata - Rata Deviasi Unit
                                                         RPD harian KPPN per
                                                         periode </td>
-                                                    <td>20%</td>
-                                                    <td  id="tw3deviasiUnit7">0</td>
-                                                    <td id="tw3valueDeviasiUnit7">0</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="tw3formula7">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <!-- <td>20%</td> -->
+                                                    <td  id="tw3deviasiUnit7"></td>
+                                                    <td id="tw3valueDeviasiUnit7"></td>
+                                                    <td></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="tw3formula7"> </td>
                                                     <td rowspan="4" valign="top" class="left-align" id="tw3keterangan7">
-                                                        (100% - ((Rata - Rata Deviasi Unit RPD harian KPPN per
-                                                        periode*0,2) + ((Rata - Rata Deviasi Nilai RPD harian KPPN
-                                                        per periode*0,8))) - (Rasio Dispensasi RPD harian KPPN per
-                                                        periode))
-
-                                                        Keterangan :Tolong selalu enter agar tidak terlalu panjang </td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Rata - Rata Deviasi Nilai
                                                         RPD harian KPPN per
                                                         periode </td>
-                                                    <td>80%</td>
-                                                    <td id="tw3deviasiNilai7">0</td>
-                                                    <td id="tw3valueDeviasiNilai7">0</td>
+                                                    <!-- <td>80%</td> -->
+                                                    <td id="tw3deviasiNilai7"></td>
+                                                    <td id="tw3valueDeviasiNilai7"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Rasio Dispensasi RPD
                                                         harian KPPN per periode </td>
-                                                    <td></td>
-                                                    <td id="tw3dispensasi7">0</td>
-                                                    <td id="tw3valueDispensasiNilai7">0</td>
+                                                        <td id="tw3dispensasi7"></td>
+                                                        <td id="tw3valueDispensasiNilai7"></td>
+                                                        <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="tw3hasil7">0</td>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                    <td id="tw3hasil7"></td>
+                                                    <td id="tw3hasil7a"></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -473,17 +464,18 @@
 
                                                 let tw3valueDeviasiUnit7 = ((tw3deviasiUnit7 * 0.2).toFixed(2)) ;
                                                 let tw3valueDeviasiNilai7 = ((tw3deviasiNilai7 * 0.8 ).toFixed(2));
-                                                let tw3valueDispensasiNilai7 = tw3dispensasi7;
+                                                let tw3valueDispensasiNilai7 = tw3dispensasi7 / 3;
 
                                                 let tw3hasil7 = (100 - tw3valueDeviasiUnit7 - tw3valueDeviasiNilai7 - tw3valueDispensasiNilai7).toFixed(2);
-
+                                                let tw3hasil7a = tw3hasil7;
                                                 document.getElementById("tw3deviasiUnit7").innerText = tw3deviasiUnit7;
                                                 document.getElementById("tw3deviasiNilai7").innerText = tw3deviasiNilai7;
                                                 document.getElementById("tw3dispensasi7").innerText = tw3dispensasi7;
                                                 document.getElementById("tw3valueDeviasiUnit7").innerText = tw3valueDeviasiUnit7;
                                                 document.getElementById("tw3valueDeviasiNilai7").innerText = tw3valueDeviasiNilai7;
-                                                document.getElementById("tw3valueDispensasiNilai7").innerText = tw3valueDispensasiNilai7;
+                                                document.getElementById("tw3valueDispensasiNilai7").innerText = tw3valueDispensasiNilai7.toFixed(2);
                                                 document.getElementById("tw3hasil7").innerText = tw3hasil7;
+                                                document.getElementById("tw3hasil7a").innerText = tw3hasil7a;
 
                                             }
 
@@ -524,7 +516,8 @@
                                                 tw3valueDeviasiUnit7: document.getElementById("tw3valueDeviasiUnit7")?.innerText || "",
                                                 tw3valueDeviasiNilai7: document.getElementById("tw3valueDeviasiNilai7")?.innerText || "",
                                                 tw3valueDispensasiNilai7: document.getElementById("tw3valueDispensasiNilai7")?.innerText || "",
-                                                tw3hasil7: document.getElementById("tw3hasil7")?.innerText || "",        
+                                                tw3hasil7: document.getElementById("tw3hasil7")?.innerText || "",
+                                                tw3hasil7a: document.getElementById("tw3hasil7a")?.innerText || "",        
                                             
                                                 tw3formula7: document.getElementById("tw3formula7")?.innerText || "",
                                                 tw3keterangan7: document.getElementById("tw3keterangan7")?.innerText || "",

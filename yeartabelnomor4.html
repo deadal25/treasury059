@@ -340,16 +340,17 @@
                                         <br>
                                         <h3><b>Tingkat Implementasi penajaman tugas Financial Advisory</b></h3>
                                         <label for="yearcg">Nilai CG (Central Government Advisory):</label>
-                                        <input type="number" id="yearcg" min="0" max="100" value="100"
+                                        <input type="number" id="yearcg" min="0" value="100"
                                             oninput="yearhitungNilai4()">
 
                                         <label for="yearlg">Nilai LG (Local Government Advisory):</label>
-                                        <input type="number" id="yearlg" min="0" max="100" value="100"
+                                        <input type="number" id="yearlg" min="0" value="100"
                                             oninput="yearhitungNilai4()">
 
                                         <label for="yearsm">Nilai SM (Special Mission Advisory):</label>
-                                        <input type="number" id="yearsm" min="0" max="100" value="100"
+                                        <input type="number" id="yearsm" min="0" value="100"
                                             oninput="yearhitungNilai4()">
+
 
                                             <label for="yearformula4">Masukkan Formula:</label>
                                             <textarea id="yearinputFormula4" class="form-control" rows="3"
@@ -400,47 +401,43 @@
                                                         <i>Financial Advisory</i>
                                                     </td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td><b>Nilai</b></td>
-                                                    <td ><b>Total</b></td>
+                                                    <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td>Formula</td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Implementasi Central
                                                         Government Advisory </td>
-                                                    <td>50%</td>
-                                                    <td  id="yearvalueCG">50,00</td>
-                                                    <td  id="yearnilaiCG">50,00</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="yearformula4">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <!-- <td>50%</td> -->
+                                                    <td  id="yearvalueCG"></td>
+                                                    <td  id="yearnilaiCG"></td>
+                                                    <td></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="yearformula4"></td>
                                                     <td rowspan="4" valign="top" class="left-align" id="yearketerangan4">
-                                                        FORMULA = (Nilai rata2 CG x 50%) + (Nilai rata2 LG x 30%)
-                                                        + (Implementasi SM x 20%)
-
-                                                        *Formula bagi KPPN yang tidak melakukan penyaluran TKD
-                                                        (tidak melakukan LG)
-                                                        =((Nilai rata2 CG x 50%) + (Implementasi SM x 20%)):70 x
-                                                        100
-
-                                                        Tolong selalu enter agar tidak terlalu panjang </td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Implementasi Local
                                                         Government </td>
-                                                    <td>30%</td>
-                                                    <td id="yearvalueLG">30,00</td>
-                                                    <td  id="yearnilaiLG">30,00</td>
+                                                    <!-- <td>30%</td> -->
+                                                    <td id="yearvalueLG"></td>
+                                                    <td  id="yearnilaiLG"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Implementasi Special
                                                         Mission Advisory </td>
-                                                    <td>20%</td>
-                                                    <td  id="yearvalueSM">20,00</td>
-                                                    <td  id="yearnilaiSM">20,00</td>
+                                                    <!-- <td>20%</td> -->
+                                                    <td  id="yearvalueSM"></td>
+                                                    <td  id="yearnilaiSM"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="yeartotalNilai4"><b>100</b></td>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                     <td id="yeartotalNilai4a"><b></b></td>
+                                                    <td id="yeartotalNilai4"><b></b></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -457,6 +454,7 @@
                                                 let yearnilaiTertimbangSM = (yearnilaiSM * 20) / 100;
 
                                                 let yeartotalNilai4 = yearnilaiTertimbangCG + yearnilaiTertimbangLG + yearnilaiTertimbangSM;
+                                                let yeartotalNilai4a = yeartotalNilai4;
 
                                                 document.getElementById('yearvalueCG').innerText = yearnilaiCG.toFixed(0);
                                                 document.getElementById('yearvalueLG').innerText = yearnilaiLG.toFixed(0);
@@ -466,7 +464,7 @@
                                                 document.getElementById('yearnilaiLG').innerText = yearnilaiTertimbangLG.toFixed(0);
                                                 document.getElementById('yearnilaiSM').innerText = yearnilaiTertimbangSM.toFixed(0);
                                                 document.getElementById('yeartotalNilai4').innerText = yeartotalNilai4.toFixed(0);
-                                                // document.getElementById('hasilAkhir').innerText = totalNilai.toFixed(0);
+                                                document.getElementById('yeartotalNilai4a').innerText = yeartotalNilai4a.toFixed(0);
                                             }
 
                                             // Jalankan saat halaman pertama kali dimuat
@@ -507,6 +505,7 @@
                                                 yearvalueLG: document.getElementById("yearvalueLG")?.innerText || "",
                                                 yearvalueSM: document.getElementById("yearvalueSM")?.innerText || "",
                                                 yeartotalNilai4: document.getElementById("yeartotalNilai4")?.innerText || "",
+                                                yeartotalNilai4a: document.getElementById("yeartotalNilai4a")?.innerText || "",
                                                 // totalPersentase2: document.getElementById("totalPersentase2")?.innerText || "",
                                                 
                                                 yearformula4: document.getElementById("yearformula4")?.innerText || "",

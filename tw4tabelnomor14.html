@@ -397,45 +397,42 @@
                                                     <td rowspan="5" valign="top"> 7b-N </td>
                                                     <td rowspan="5" valign="top" class="left-align">Persentase Kualitas Pengelolaan BMN dan Pengadaan</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td><b>Nilai</b></td>
                                                     <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td>Formula</td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Indeks Pengelolaan Aset </td>
-                                                    <td>60%</td>
-                                                    <td  id="tw4valuenilaiAset">66</td>
-                                                    <td  id="tw4nilaiAset">66</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="tw4formula14">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <!-- <td>60%</td> -->
+                                                    <td  id="tw4valuenilaiAset"></td>
+                                                    <td  id="tw4nilaiAset"></td>
+                                                    <td></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="tw4formula14"></td>
                                                     <td rowspan="4" valign="top" class="left-align" id="tw4keterangan14">
-                                                        Tolong selalu enter agar tidak terlalu panjang
-                                                        Hasil Penilaian IPA dan ITKP
-                                                        Nota Dinas Sekretaris Ditjen Perbendaharaan nomor ND
-                                                        275/PB.1/2025 tanggal 17 Januari 2025
-                                                        Nilai Indeks Pengelolaan Aset sebesar 104
-                                                        Nilai Indeks Tata Kelola Pengadaan sebesar 120
-                                                        Capaian realisasi IKU : 60%*104 + 40%*120 = 111
-                                                        Indeks Capaian IKU = 111 / 84,10 = 120 </td>
+                                                       </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Indeks Tata Kelola
                                                         Pengadaan</td>
-                                                    <td>20%</td>
-                                                    <td  id="tw4valuenilaiPengadaan">48</td>
-                                                    <td  id="tw4nilaiPengadaan">48</td>
+                                                    <!-- <td>20%</td> -->
+                                                    <td  id="tw4valuenilaiPengadaan"></td>
+                                                    <td  id="tw4nilaiPengadaan"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Penggunaan Produk Dalam Negeri</td>
-                                                    <td>20%</td>
-                                                    <td  id="tw4valuenilaiProduk">48</td>
-                                                    <td  id="tw4nilaiProduk">48</td>
+                                                    <!-- <td>20%</td> -->
+                                                    <td  id="tw4valuenilaiProduk"></td>
+                                                    <td  id="tw4nilaiProduk"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="tw4indeksCapaian15"><b>120</b></td>
-                                                    <!-- <td></td> -->
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                    <td  id="tw4indeksCapaian15a"><b></b></td>
+                                                    <td  id="tw4indeksCapaian15"><b></b></td>
+                                                    
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -449,7 +446,8 @@
                                                 let tw4nilaiPengadaan = 0.2 * tw4pengadaan;
                                                 let tw4nilaiProduk = 0.2 * tw4produk;
                                                 let tw4total15 = tw4nilaiAset + tw4nilaiPengadaan + tw4nilaiProduk;
-                                                let tw4indeksCapaian15 = (tw4total15 > 100) ? 120 : tw4total15.toFixed(2);
+                                                let tw4target15 = 84.10;
+                                                let tw4indeksCapaian15 = (tw4total15 > tw4target15) ? 120 : tw4total15.toFixed(2);
 
                                                 document.getElementById("tw4valuenilaiAset").innerText = tw4aset.toFixed(2);
                                                 document.getElementById("tw4valuenilaiPengadaan").innerText = tw4pengadaan.toFixed(2);
@@ -457,6 +455,7 @@
                                                 document.getElementById("tw4nilaiAset").innerText = tw4nilaiAset.toFixed(2);
                                                 document.getElementById("tw4nilaiPengadaan").innerText = tw4nilaiPengadaan.toFixed(2);
                                                 document.getElementById("tw4nilaiProduk").innerText = tw4nilaiProduk.toFixed(2);
+                                                document.getElementById("tw4indeksCapaian15a").innerText = tw4total15;
                                                 document.getElementById("tw4indeksCapaian15").innerText = tw4indeksCapaian15;
                                             }
 
@@ -496,6 +495,7 @@
                                                 tw4nilaiAset: document.getElementById("tw4nilaiAset")?.innerText || "",
                                                 tw4nilaiPengadaan: document.getElementById("tw4nilaiPengadaan")?.innerText || "",
                                                 tw4nilaiProduk: document.getElementById("tw4nilaiProduk")?.innerText || "",
+                                                tw4indeksCapaian15a: document.getElementById("tw4indeksCapaian15a")?.innerText || "",   
                                                 tw4indeksCapaian15: document.getElementById("tw4indeksCapaian15")?.innerText || "",        
                                             
                                                 tw4formula14: document.getElementById("tw4formula14")?.innerText || "",
@@ -517,38 +517,7 @@
 
                                             window.tw4submitData14 = tw4submitData14;
                                         </script>
-                                        <!-- <script>
-                                            function tw4submitData14() {
-                                                let tw4valuenilaiAset = document.getElementById("tw4valuenilaiAset").innerText;
-                                                let tw4valuenilaiPengadaan = document.getElementById("tw4valuenilaiPengadaan").innerText;
-                                                let tw4valuenilaiProduk = document.getElementById("tw4valuenilaiProduk").innerText;
-                                                let tw4nilaiAset = document.getElementById("tw4nilaiAset").innerText;
-                                                let tw4nilaiPengadaan = document.getElementById("tw4nilaiPengadaan").innerText;
-                                                let tw4nilaiProduk = document.getElementById("tw4nilaiProduk").innerText;
-                                                let tw4indeksCapaian15 = document.getElementById("tw4indeksCapaian15").innerText;
-                                                let tw4keterangan14hasil = document.getElementById("tw4keterangan14").innerText;
-                                                let tw4formula14hasil = document.getElementById("tw4formula14").innerText;
-                                                // Cek apakah ada data lama di localStorage
-                                                let storedData = localStorage.getItem("indeks_data");
-                                                let data = storedData ? JSON.parse(storedData) : {};
-
-                                                // Update hanya bagian halaman 15
-                                                data.tw4valueaset = tw4valuenilaiAset;
-                                                data.tw4valuepengadaan = tw4valuenilaiPengadaan;
-                                                data.tw4valueproduk = tw4valuenilaiProduk;
-                                                data.tw4aset = tw4nilaiAset;
-                                                data.tw4pengadaan = tw4nilaiPengadaan;
-                                                data.tw4produk = tw4nilaiProduk;
-                                                data.tw4indeks = tw4indeksCapaian15;
-                                                data.tw4keterangan14 = tw4keterangan14hasil;
-                                                data.tw4formula14 = tw4formula14hasil;
-                                                // Simpan kembali ke localStorage
-                                                localStorage.setItem("indeks_data", JSON.stringify(data));
-
-                                                alert("Data dari tw4 Persentase kualitas pengelolaan BMN dan Pengadaan berhasil disimpan!");
-                                            }
-                                        </script> -->
-                                        <!-- <button onclick="tw4submitData14()">Simpan Data Halaman 15</button> -->
+                                        
 
                                     </div>
 

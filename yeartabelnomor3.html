@@ -340,12 +340,20 @@
                                         <br>
                                         <h3><b>Indeks kepuasan terhadap layanan KPPN</b></h3>
 
-                                        <label for="ikpl3a">Indeks Kepuasan layanan:</label>
-                                        <input type="number" id="yearikpl3a" oninput="yearupdateNilai3()" step="0.01" min="0"max="100">
-                                        <label for="ikpl3b">Indeks Efektivitas Edukasi dan Komunikasi:</label>
-                                        <input type="number" id="yearikpl3b" oninput="yearupdateNilai3()" step="0.01" min="0"max="100">
-                                        <label for="ikpl3c">Indeks layanan HAI CSO:</label>
-                                        <input type="number" id="yearikpl3c" oninput="yearupdateNilai3()" step="0.01" min="0"max="100">
+                                        <label for="jrekomendasi3a">Jumlah Rekomendasi:</label>
+                                        <input type="number" id="yearjrekomendasi3a" oninput="yearupdateNilai3()" step="0.01" min="0">
+                                        <label for="tlanjut3a">Jumlah Tindak Lanjut:</label>
+                                        <input type="number" id="yeartlanjut3a" oninput="yearupdateNilai3()" step="0.01" min="0">
+                                        <label for="tsurvei3a">Survei Kepuasan Pengguna Layanan:</label>
+                                        <input type="number" id="yeartsurvei3a" oninput="yearupdateNilai3()" step="0.01" min="0">
+                                        <!-- <label for="ikpl3b">Indeks Efektivitas Edukasi dan Komunikasi:</label>
+                                        <input type="number" id="yearikpl3b" oninput="yearupdateNilai3()" step="0.01" min="0"> -->
+                                        <label for="posttest3a">Hasil Post Test:</label>
+                                        <input type="number" id="yearposttest3a" oninput="yearupdateNilai3()" step="0.01" min="0">
+                                        <label for="kuesioner3a">Hasil Kuesioner:</label>
+                                        <input type="number" id="yearkuesioner3a" oninput="yearupdateNilai3()" step="0.01" min="0">
+                                        <label for="rcapaian3a">Realisasi Capaian pada OMSPAN:</label>
+                                        <input type="number" id="yearrcapaian3a" oninput="yearupdateNilai3()" step="0.01" min="0">
 
                                         <label for="yearformula3">Masukkan Formula:</label>
                                         <textarea id="yearinputFormula3" class="form-control" rows="3"
@@ -391,65 +399,214 @@
                                             </tbody>
                                             <tbody>
                                                 <tr>
-                                                    <td rowspan="5" valign="top">3</td>
-                                                    <td rowspan="5" valign="top" width="50px"> 2a-N </td>
-                                                    <td rowspan="5" valign="top" class="left-align">Indeks kepuasan terhadap layanan KPPN</td>
+                                                    <td rowspan="16" valign="top">3</td>
+                                                    <td rowspan="16" valign="top" width="50px"> 2a-N </td>
+                                                    <td rowspan="16" valign="top" class="left-align">Indeks kepuasan terhadap layanan KPPN</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td colspan="3"><b>Nilai</b></td>
+                                                    <td><b>Nilai</b></td>
+                                                    <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td>Formula</td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Indeks kepuasan layanan</td>
-                                                        <td>33%</td>
-                                                        <td id="yearikplValue3a">4,91</td>
-                                                        <td id="yearikplHasil3a">4,91</td>
-                                                        <td rowspan="4" valign="top" class="left-align" id="yearformula3">Tolong selalu enter agar tidak terlalu panjang</td>
-                                                        <td rowspan="4" valign="top" class="left-align" id="yearketerangan3">
-                                                            Tolong selalu enter agar tidak terlalu panjang
+                                                    <td class="left-align" colspan="4"><b>Indeks kepuasan layanan</b></td>
+                                                        <td rowspan="15" valign="top" class="left-align" id="yearformula3"></td>
+                                                        <td rowspan="15" valign="top" class="left-align" id="yearketerangan3">
+                                                            
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Indeks Efektivitas Edukasi dan Komunikasi</td>
-                                                        <td>33%</td>
-                                                        <td id="yearikplValue3b">4,91</td>
-                                                        <td id="yearikplHasil3b">4,91</td>
+                                                    <td class="left-align">Jumlah Rekomendasi</td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="yearjrekomendasiValue3a"></td>
+                                                        <td id="yearjrekomendasiHasil3a"></td>
+                                                        <td></td>
                                                 </tr>
-                                                <tr><td class="left-align">Indeks layanan HAI CSO</td>
-                                                    <td>33%</td>
-                                                    <td id="yearikplValue3c">4,91</td>
-                                                    <td id="yearikplHasil3c">4,91</td></tr>
                                                 <tr>
+                                                    <td class="left-align">Jumlah Tindak Lanjut Rekomendasi Yang Dilaksanakan</td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="yeartlanjutValue3a"></td>
+                                                        <td id="yeartlanjutHasil3a"></td>
+                                                        <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Nilai SKPL</b></td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="yearrekomendasiValue3a"></td>
+                                                        <td id="yearrekomendasiHasil3a"></td>
+                                                        <!-- <td></td> -->
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Survei Kepuasan Pengguna Layanan</td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="yeartsurveiValue3a"></td>
+                                                        <td id="yeartsurveiHasil3a"></td>
+                                                        <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Nilai Survei Kepuasan Pengguna Layanan</b></td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="yearsurveiValue3b"></td>
+                                                        <td id="yearsurveiHasil3b"></td>
+                                                        <!-- <td></td> -->
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="3"><b>Total Indeks kepuasan layanan</b></td>
+                                                        <!-- <td>33%</td> -->
+                                                        <!-- <td id="yearikplValue3a"></td> -->
+                                                        <td id="yearikplHasil3a"></td>
+                                                        <!-- <td></td> -->
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Indeks Efektivitas Edukasi dan Komunikasi</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Hasil Post Test</td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="yearposttestValue3b"></td>
+                                                        <td id="yearposttestHasil3b"></td>
+                                                        <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Hasil Kuesioner</td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="yearkuesionerValue3b"></td>
+                                                        <td id="yearkuesionerHasil3b"></td>
+                                                        <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Nilai Edukom</b></td>
+                                                        <!-- <td>33%</td> -->
+                                                        <td id="yearikplValue3b"></td>
+                                                        <td id="yearikplHasil3b"></td> 
+                                                </tr>
+                                                <tr><td class="left-align" colspan="4"><b>Indeks layanan HAI CSO</b></td>
+                                                </tr>
+                                                 <tr>
+                                                    <td class="left-align">Realisasi Capaian Pada OMSPAN</td>
+                                                    <td id="yearrcapaianValue3c"></td>
+                                                    <td id="yearrcapaianHasil3c"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Nilai HAI CSO</b></td>
+                                                    <td id="yearikplValue3c"></td>
+                                                    <td id="yearikplHasil3c"></td>
+                                                </tr>
+                                                <tr>
+
                                                     <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="yearhasil3abc"><b>5</b></td>
+                                                    <td colspan="3" id="yearhasil3abc"><b></b></td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                         <script>                                                                                
                                             function yearupdateNilai3() {
-                                                // let persentaseA = parseFloat(document.getElementById("persentaseA").value) || 0;
-                                                let yearikpl3a = parseFloat(document.getElementById("yearikpl3a").value) || 0;
-                                                let yearikpl3b = parseFloat(document.getElementById("yearikpl3b").value) || 0;
-                                                let yearikpl3c = parseFloat(document.getElementById("yearikpl3c").value) || 0;
+                                                let yearjrekomendasi3a = parseFloat(document.getElementById("yearjrekomendasi3a").value) || 0;
+                                                let yeartlanjut3a = parseFloat(document.getElementById("yeartlanjut3a").value) || 0;
+                                                let yeartsurvei3a = parseFloat(document.getElementById("yeartsurvei3a").value) || 0;
+                                                let yearposttest3a = parseFloat(document.getElementById("yearposttest3a").value) || 0;
+                                                let yearkuesioner3a = parseFloat(document.getElementById("yearkuesioner3a").value) || 0;
+                                                let yearrcapaian3a = parseFloat(document.getElementById("yearrcapaian3a").value) || 0;
 
-                                                // let PersentaseAhasil = (persentaseA * 50) / 100;
-                                                let yearikplHasil3a = (yearikpl3a * 100/3*100)/100/100;
-                                                let yearikplHasil3b = (yearikpl3b * 100/3*100) /100/100;
-                                                let yearikplHasil3c = (yearikpl3c * 100/3*100) /100/100;
-                                                let yearhasil3abc = yearikplHasil3a + yearikplHasil3b +yearikplHasil3c;
-                                                // let yearhasil3abc = (yearikpl3a + yearikpl3b + yearikpl3c)/3;
+
+                                                let yearrekomendasiValue3a = (yearjrekomendasi3a / yeartlanjut3a)*100;
+                                                let yearrekomendasiHasil3a = getIndeksIKI3(yearrekomendasiValue3a);
+                                                let yearsurveiValue3b = getIndeksSurvei(yeartsurvei3a);
+                                                let yearsurveiHasil3b = yearsurveiValue3b;
+                                                
+                                                
+                                                
+                                                let yearikplHasil3a = (yearrekomendasiHasil3a * 0.2 )+(yearsurveiHasil3b * 0.8 );
+                                                // let yearikplHasil3a = getIndeksIKI3(yearikplValue3a);
+                                                let yearikplValue3b = ((yearposttest3a *60/100) + (yearkuesioner3a * 40/100) );
+                                                let yearikplHasil3b = getIndeksIKI3a(yearikplValue3b);
+                                                let yearikplValue3c = getIndeksIKI3b(yearrcapaian3a);
+                                                let yearikplHasil3c = yearikplValue3c;
+                                                // let yearhasil3abc = yearikplHasil3a + yearikplHasil3b +yearikplHasil3c;
+                                                let yearhasil3abc = (yearikplHasil3a + yearikplHasil3b + yearikplHasil3c)/3;
     
-                                                document.getElementById("yearikplValue3a").innerText = yearikpl3a;
-                                                document.getElementById("yearikplValue3b").innerText = yearikpl3b;
-                                                document.getElementById("yearikplValue3c").innerText = yearikpl3c;
+                                                document.getElementById("yearjrekomendasiValue3a").innerText = yearjrekomendasi3a;
+                                                document.getElementById("yeartlanjutValue3a").innerText = yeartlanjut3a;
+                                                document.getElementById("yeartsurveiValue3a").innerText = yeartsurvei3a;
+                                                document.getElementById("yearrekomendasiValue3a").innerText = yearrekomendasiValue3a.toFixed(2) + "%";
+                                                document.getElementById("yearrekomendasiHasil3a").innerText = yearrekomendasiHasil3a;
+                                                document.getElementById("yearsurveiValue3b").innerText = yearsurveiValue3b;
+                                                document.getElementById("yearsurveiHasil3b").innerText = yearsurveiHasil3b;
+
+                                                // document.getElementById("yearikplValue3a").innerText = yearikplValue3a.toFixed(2) + "%";
+                                                document.getElementById("yearposttestValue3b").innerText = yearposttest3a;
+                                                document.getElementById("yearkuesionerValue3b").innerText = yearkuesioner3a;
+                                                document.getElementById("yearikplValue3b").innerText = yearikplValue3b.toFixed(2) ;
+                                                document.getElementById("yearrcapaianValue3c").innerText = yearrcapaian3a;
+                                                document.getElementById("yearikplValue3c").innerText = yearikplValue3c;
                                                 // document.getElementById("PersentaseDValue").innerText = persentaseD;
                                                 // document.getElementById("PersentaseAhasil").innerText = PersentaseAhasil.toFixed(1);
-                                                document.getElementById("yearikplHasil3a").innerText = yearikplHasil3a.toFixed(2);
-                                                document.getElementById("yearikplHasil3b").innerText = yearikplHasil3b.toFixed(2);
-                                                document.getElementById("yearikplHasil3c").innerText = yearikplHasil3c.toFixed(2);
+                                                document.getElementById("yearikplHasil3a").innerText = yearikplHasil3a;
+                                                document.getElementById("yearikplHasil3b").innerText = yearikplHasil3b;
+                                                document.getElementById("yearikplHasil3c").innerText = yearikplHasil3c;
                                                 // document.getElementById("indeksA").innerText = indeksA;
                                                 // document.getElementById("indeksB").innerText = indeksB;
-                                                document.getElementById("yearhasil3abc").innerText = yearhasil3abc.toFixed(0);
+                                                document.getElementById("yearhasil3abc").innerText = yearhasil3abc.toFixed(1);
+                                            }
+
+                                            function getIndeksSurvei(ikpl) {
+                                                if (ikpl > 4.85) {
+                                                    return 5;
+                                                } else if (ikpl > 4.75 && ikpl <= 4.85) {
+                                                    return 4.5;
+                                                } else if (ikpl > 4.66 && ikpl <= 4.75) {
+                                                    return 4;
+                                                } else if (ikpl > 4.35 && ikpl <= 4.66) {
+                                                    return 3.5;
+                                                } else if (ikpl > 4 && ikpl <= 4.35) {
+                                                    return 3;
+                                                } else if (ikpl > 3 && ikpl <= 4) {
+                                                    return 2.5;
+                                                } else if (ikpl > 2 && ikpl <= 3) {
+                                                    return 2;
+                                                } else if (ikpl <= 2) {
+                                                    return 1;
+                                                } else {
+                                                    return 0; // jika nilai di luar 0-5
+                                                }
+                                            }
+
+
+                                            function getIndeksIKI3(capaian) {
+                                                if (capaian >= 100) return 5;
+                                                if (capaian >= 90 && capaian < 100) return 4.5;
+                                                if (capaian >= 80 && capaian < 90) return 4;
+                                                if (capaian >= 70 && capaian < 80) return 3.5;
+                                                if (capaian >= 60 && capaian < 70) return 3;
+                                                if (capaian >= 50 && capaian < 60) return 2.5;
+                                                if (capaian >= 40 && capaian < 50) return 2;
+                                                if (capaian < 40) return 1;
+                                                return 1;
+                                            }
+                                            function getIndeksIKI3a(capaian1) {
+                                                if (capaian1 > 95) return 5;
+                                                if (capaian1 > 85) return 4.5;
+                                                if (capaian1 > 80) return 4;
+                                                if (capaian1 > 70) return 3.5;
+                                                if (capaian1 > 60) return 3;
+                                                if (capaian1 > 50) return 2.5;
+                                                if (capaian1 > 40) return 2;
+                                                if (capaian1 >= 0) return 1;
+                                                return 1; // fallback jika negatif
+                                            }
+
+
+                                            function getIndeksIKI3b(capaian2) {
+                                                if (capaian2 >= 3.75) return 5;
+                                                if (capaian2 >= 3.50 && capaian2 < 3.75) return 4.5;
+                                                if (capaian2 >= 3.25 && capaian2 < 3.50) return 4;
+                                                if (capaian2 >= 3.00 && capaian2 < 3.25) return 3.5;
+                                                if (capaian2 >= 2.00 && capaian2 < 3.00) return 3;
+                                                if (capaian2 >= 1.00 && capaian2 < 2.00) return 2;
+                                                if (capaian2 >= 0.00 && capaian2 < 1.00) return 1;
+                                                return 1; // fallback untuk nilai tidak valid
                                             }
 
                                         </script>
@@ -481,14 +638,29 @@
                                             }
 
                                             const data = {
-                                                yearikplValue3a: document.getElementById("yearikplValue3a")?.innerText || "",
+                                                yearjrekomendasiValue3a: document.getElementById("yearjrekomendasiValue3a")?.innerText || "",
+                                                yeartlanjutValue3a: document.getElementById("yeartlanjutValue3a")?.innerText || "",
+                                                yeartsurveiValue3a: document.getElementById("yeartsurveiValue3a")?.innerText || "",
+                                                yearrekomendasiValue3a: document.getElementById("yearrekomendasiValue3a")?.innerText || "",
+                                                yearrekomendasiHasil3a: document.getElementById("yearrekomendasiHasil3a")?.innerText || "",
+                                                yearsurveiValue3b: document.getElementById("yearsurveiValue3b")?.innerText || "",
+                                                yearsurveiHasil3b: document.getElementById("yearsurveiHasil3b")?.innerText || "",
+                                                yearposttestValue3b: document.getElementById("yearposttestValue3b")?.innerText || "",
+                                                yearkuesionerValue3b: document.getElementById("yearkuesionerValue3b")?.innerText || "",
+                                                yearrcapaianValue3c: document.getElementById("yearrcapaianValue3c")?.innerText || "",
+                                                // yearikplValue3a: document.getElementById("yearikplValue3a")?.innerText || "",
                                                 yearikplValue3b: document.getElementById("yearikplValue3b")?.innerText || "",
                                                 yearikplValue3c: document.getElementById("yearikplValue3c")?.innerText || "",
+                                                yearjrekomendasiHasil3a: document.getElementById("yearjrekomendasiHasil3a")?.innerText || "",
+                                                yeartlanjutHasil3a: document.getElementById("yeartlanjutHasil3a")?.innerText || "",
+                                                yearposttestHasil3b: document.getElementById("yearposttestHasil3b")?.innerText || "",
+                                                yearkuesionerHasil3b: document.getElementById("yearkuesionerHasil3b")?.innerText || "",
+                                                yearrcapaianHasil3c: document.getElementById("yearrcapaianHasil3c")?.innerText || "",
                                                 yearikplHasil3a: document.getElementById("yearikplHasil3a")?.innerText || "",
                                                 yearikplHasil3b: document.getElementById("yearikplHasil3b")?.innerText || "",
                                                 yearikplHasil3c: document.getElementById("yearikplHasil3c")?.innerText || "",
                                                 yearhasil3abc: document.getElementById("yearhasil3abc")?.innerText || "",
-                                                // totalPersentase2: document.getElementById("totalPersentase2")?.innerText || "",
+                                               
                                                 
                                                 yearformula3: document.getElementById("yearformula3")?.innerText || "",
                                                 yearketerangan3: document.getElementById("yearketerangan3")?.innerText || "",

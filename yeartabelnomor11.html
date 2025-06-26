@@ -339,19 +339,36 @@
                                     <div id="6b-N" class="content">
                                         <br>
                                         <h3><b>Nilai kualitas pengelolaan SDM</b> </h3>
-                                        <label for="yeartriwulan">Pilih Triwulan:</label>
-                                        <select id="yeartriwulan" onchange="yearhitungNilai13()">
-                                            <option value="30">Triwulan 1</option>
-                                            <option value="50">Triwulan 2</option>
-                                            <option value="70">Triwulan 3</option>
-                                            <option value="90">Triwulan 4</option>
-                                        </select>
-
-                                        <label for="yearlearning">Indeks Capaian Learning Organization:</label>
-                                        <input type="number" id="yearlearning" value="0" oninput="yearhitungNilai11()">
-
-                                        <label for="yearpelaksanaan">Indeks Capaian Pelaksanaan Kebintalan:</label>
-                                        <input type="number" id="yearpelaksanaan" value="0" oninput="yearhitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen Pengorganisasian dan Penyebarluasan:</label>
+                                        <input type="number" id="yearvkompA" min="0" value="0" oninput="yearhitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen Rencana Aksi Pembelajaran:</label>
+                                        <input type="number" id="yearvkompB" min="0" value="0" oninput="yearhitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen IDP:</label>
+                                        <input type="number" id="yearvkompC" min="0" value="0" oninput="yearhitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen Evaluasi Pembelajaran:</label>
+                                        <input type="number" id="yearvkompD" min="0" value="0" oninput="yearhitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen Hard Competency Pegawai:</label>
+                                        <input type="number" id="yearvkompE" min="0" value="0" oninput="yearhitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen Structured Learning:</label>
+                                        <input type="number" id="yearvkompF" min="0" value="0" oninput="yearhitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen Learning From Experience:</label>
+                                        <input type="number" id="yearvkompG" min="0" value="0" oninput="yearhitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen Pemenuhan Jam Pembelajaran:</label>
+                                        <input type="number" id="yearvkompH" min="0" value="0" oninput="yearhitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen Organizational Performance:</label>
+                                        <input type="number" id="yearvkompI" min="0" value="0" oninput="yearhitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen Leaders as teacher:</label>
+                                        <input type="number" id="yearvkompJ" min="0" value="0" oninput="yearhitungNilai11()">
+                                        <label>Masukkan Nilai Subkomponen Leaders as role model:</label>
+                                        <input type="number" id="yearvkompK" min="0" value="0" oninput="yearhitungNilai11()">
+                                        <label>Masukkan Jumlah Peserta yang hadir:</label>
+                                        <input type="number" id="yearvpeserta11a" min="0" value="0" oninput="yearhitungNilai11()">
+                                        <label>Masukkan Jumlah Peserta yang seharusnya:</label>
+                                        <input type="number" id="yearvpeserta11b" min="0" value="0" oninput="yearhitungNilai11()">
+                                        <label>Masukkan Nilai Feedback Peserta:</label>
+                                        <input type="number" id="yearvpeserta11c" min="0" value="0" oninput="yearhitungNilai11()">
+                                        <label>Jumlah Kegiatan yang telah dilaksanakan:</label>
+                                        <input type="number" id="yearvkegiatan11a" min="0" value="0" oninput="yearhitungNilai11()">
 
                                         <label for="yearformula11">Masukkan Formula:</label>
                                         <textarea id="yearinputFormula11" class="form-control" rows="3"
@@ -396,66 +413,275 @@
                                             </tbody>
                                             <tbody>
                                                 <tr>
-                                                    <td rowspan="4" valign="top">11</td>
-                                                    <td rowspan="4" valign="top"> 6b-N </td>
-                                                    <td rowspan="4" valign="top" class="left-align">Nilai kualitas pengelolaan SDM</td>
+                                                    <td rowspan="27 valign="top">11</td>
+                                                    <td rowspan="27 valign="top"> 6b-N </td>
+                                                    <td rowspan="27 valign="top" class="left-align">Nilai kualitas pengelolaan SDM</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td ><b>Nilai</b></td>
                                                     <td ><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td ><b>Formula</b></td>
                                                     <td>Keterangan</td>
                                                 </tr>
+                                                
                                                 <tr>
-                                                    <td class="left-align">Implementasi Learning Organization </td>
-                                                    <td>60%</td>
-                                                    <td id="yearvaluenilaiLO">58,1%</td>
-                                                    <td id="yearnilaiLO">58,1%</td>
-                                                    <td rowspan="2" valign="top" class="left-align" id="yearformula11">Tolong selalu enter agar tidak terlalu panjang</td>
-                                                    <td rowspan="2" valign="top" class="left-align" id="yearketerangan11">
-                                                        Capaian = (50% x Indeks Capaian Implementasi LO) + (50%
-                                                        x Indeks Capaian Pelaksanaan Kebintalan) 
-                                                        Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <td class="left-align" colspan="4"><b>Implementasi Learning Organization</b></td>
+                                                    <td rowspan="26" valign="top" class="left-align" id="yearformula11"></td>
+                                                    <td rowspan="26" valign="top" class="left-align" id="yearketerangan11">
+                                                        </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Tingkat Penguatan Budaya dan Bintal
-                                                        Pejabat Administrator/Pejabat Fungsional Setara
-                                                        Di Lingkungan Kementerian Keuangan
-                                                    </td>
-                                                    <td>40%</td>
-                                                    <td id="yearvaluenilaiPK">58,50</td>
-                                                    <td id="yearnilaiPK">58,50</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="yeartotalNilai11"><b>116,60</b></td>
+                                                    <td class="left-align">Subkomponen Pengorganisasian dan Penyebarluasan</td>
+                                                    <td id="yearvaluekomponenA"></td>
                                                     <td></td>
                                                     <td></td>
                                                 </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Rencana Aksi Pembelajaran</td>
+                                                    <td id="yearvaluekomponenB"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen IDP</td>
+                                                    <td id="yearvaluekomponenC"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Evaluasi Pembelajaran</td>
+                                                    <td id="yearvaluekomponenD"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Hard Competency Pegawai</td>
+                                                    <td id="yearvaluekomponenE"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Structured Learning</td>
+                                                    <td id="yearvaluekomponenF"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Learning From Experience</td>
+                                                    <td id="yearvaluekomponenG"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Pemenuhan Jam Pembelajaran</td>
+                                                    <td id="yearvaluekomponenH"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Organizational Performance</td>
+                                                    <td id="yearvaluekomponenI"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Leaders as teacher</td>
+                                                    <td id="yearvaluekomponenJ"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Subkomponen Leaders as role model</td>
+                                                    <td id="yearvaluekomponenK"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align"><b>Total Capaian LO</b></td>
+                                                    
+                                                    <td id="yearnilaiLO"></td>
+                                                    <td id="yearvaluenilaiLO"></td>
+                                                    <td ></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Tingkat Penguatan Budaya dan Bintal Pejabat Administrator/Pejabat Fungsional Setara di Lingkungan Kementerian Keuangan</b></td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>A. Tingkat kualitas pelaksanaan kegiatan/program kebintalan</b></td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Jumlah Peserta yang hadir</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvaluepeserta11a"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Jumlah Peserta yang seharusnya</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvaluepeserta11b"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align"><b>Nilai Pelaksanaan Kegiatan</b></td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvaluepesertaA11"></td>
+                                                    <td id="yearindekspesertaA11"></td>
+                                                    <td ></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Feedback Peserta</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvaluepeserta11c"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align"><b>Nilai Feedback Peserta</b></td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvaluepesertaB11"></td>
+                                                    <td id="yearindekspesertaB11"></td>
+                                                    <td ></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Komponen A</b></td>
+                                                    <!-- <td>33%</td> -->
+                                                    <!-- <td id="yearvaluekompA11"></td> -->
+                                                    <td id="yearindekskompA11"></td>
+                                                    <td ></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>B. Tingkat Sinergi Antar Generasi</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Jumlah Kegiatan yang telah dilaksanakan</td>
+                                                    <!-- <td>33%</td> -->
+                                                    <td id="yearvaluekegiatan11a"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" ><b>Total Komponen B</b></td>
+                                                    <td id="yearvaluekompB11"></td>
+                                                    <td id="yearindekskompB11"></td>
+                                                    <td ></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Capaian Bintal</b></td>
+                                                    
+                                                    <td id="yearvaluenilaiPK"></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                    <td id="yeartotalNilai11a"><b></b></td>
+                                                    <td id="yeartotalNilai11"><b></b></td>
+                                                </tr>
+                                                
                                             </tbody>
                                         </table>
 
                                         <script>
                                             function yearhitungNilai11() {
-                                                let yeartargetLO = parseFloat(document.getElementById('yeartriwulan').value);
-                                                let yearnilaiLearning = parseFloat(document.getElementById('yearlearning').value);
-                                                let yearnilaiPelaksanaan = parseFloat(document.getElementById('yearpelaksanaan').value);
+                                                let yearvkompA = parseFloat(document.getElementById('yearvkompA').value);
+                                                let yearvkompB = parseFloat(document.getElementById('yearvkompB').value);
+                                                let yearvkompC = parseFloat(document.getElementById('yearvkompC').value);
+                                                let yearvkompD = parseFloat(document.getElementById('yearvkompD').value);
+                                                let yearvkompE = parseFloat(document.getElementById('yearvkompE').value);
+                                                let yearvkompF = parseFloat(document.getElementById('yearvkompF').value);
+                                                let yearvkompG = parseFloat(document.getElementById('yearvkompG').value);
+                                                let yearvkompH = parseFloat(document.getElementById('yearvkompH').value);
+                                                let yearvkompI = parseFloat(document.getElementById('yearvkompI').value);
+                                                let yearvkompJ = parseFloat(document.getElementById('yearvkompJ').value);
+                                                let yearvkompK = parseFloat(document.getElementById('yearvkompK').value);
+                                                let yearvpeserta11a = parseFloat(document.getElementById('yearvpeserta11a').value);
+                                                let yearvpeserta11b = parseFloat(document.getElementById('yearvpeserta11b').value);
+                                                let yearvpeserta11c = parseFloat(document.getElementById('yearvpeserta11c').value);
+                                                let yearvkegiatan11a = parseFloat(document.getElementById('yearvkegiatan11a').value);
 
-                                                let yearvnilaiLO = ((yearnilaiLearning / yeartargetLO) * 100) ;
-                                                let yearValuenilaiLO = (yearvnilaiLO > 100) ? 120 : yearvnilaiLO;
+                                                let yeartargetLO = 90;
+                                                let yearvnilaiLO = (((yearvkompA + yearvkompB + yearvkompC + yearvkompD + yearvkompE + yearvkompF + yearvkompG + yearvkompH + yearvkompI + yearvkompJ + yearvkompK ) / 11)) ;
+                                                let yearvnilaiLOAll = (yearvnilaiLO /yeartargetLO) * 100;
+                                                let yearValuenilaiLO = (yearvnilaiLOAll > yeartargetLO) ? 120 : yearvnilaiLOAll;
 
-                                                let yearnilaiLO = (yearValuenilaiLO * 0.6)
-                                                let yearnilaiPK = (yearnilaiPelaksanaan * 0.4);
-                                                let yeartotalNilai11 = yearnilaiLO + yearnilaiPK;
+                                                let yearvaluepesertaA11 = (yearvpeserta11a / yearvpeserta11b) * 100 ; 
+                                                let yearindekspesertaA11 = getIndeksKompA11(yearvaluepesertaA11);
+                                                let yearindekspesertaB11 = getIndeksNilai(yearvpeserta11c);
 
+                                                let yearindekskompA11 = (yearindekspesertaA11* 0.8)+ (yearindekspesertaB11 * 0.2); 
+                                                // let yearindekskompA11 = getIndeksKompA11(yearvaluekompA11);
+                                                // let yearindekskompA11 = (yearvaluekompA11 >= 75) ? 120 : yearvaluekompA11;
+                                                // let yearnilaiLO = (yearValuenilaiLO * 0.6)
+                                                let yearvaluekompB11 = hitungNilaiKegiatan(yearvkegiatan11a);
+                                                let yearindekskompB11 = yearvaluekompB11;
+                                                let yearvaluenilaiPK = ((0.5 * yearindekskompA11)+(0.5 * yearindekskompB11));
+                                                let yeartotalNilai11 = ((0.6 * yearValuenilaiLO) + (0.4 * yearvaluenilaiPK));
+                                                let yeartotalNilai11a = yeartotalNilai11;
+
+                                                document.getElementById('yearvaluekomponenA').innerText = yearvkompA;
+                                                document.getElementById('yearvaluekomponenB').innerText = yearvkompB;
+                                                document.getElementById('yearvaluekomponenC').innerText = yearvkompC;
+                                                document.getElementById('yearvaluekomponenD').innerText = yearvkompD;
+                                                document.getElementById('yearvaluekomponenE').innerText = yearvkompE;
+                                                document.getElementById('yearvaluekomponenF').innerText = yearvkompF;
+                                                document.getElementById('yearvaluekomponenG').innerText = yearvkompG;
+                                                document.getElementById('yearvaluekomponenH').innerText = yearvkompH;
+                                                document.getElementById('yearvaluekomponenI').innerText = yearvkompI;
+                                                document.getElementById('yearvaluekomponenJ').innerText = yearvkompJ;
+                                                document.getElementById('yearvaluekomponenK').innerText = yearvkompK;
+                                                document.getElementById('yearvaluepeserta11a').innerText = yearvpeserta11a;
+                                                document.getElementById('yearvaluepeserta11b').innerText = yearvpeserta11b;
+                                                document.getElementById('yearvaluepeserta11c').innerText = yearvpeserta11c;
+                                                document.getElementById('yearvaluekegiatan11a').innerText = yearvkegiatan11a;
+                                                
+                                                document.getElementById('yearnilaiLO').innerText = yearvnilaiLO.toFixed(2);
                                                 document.getElementById('yearvaluenilaiLO').innerText = yearValuenilaiLO.toFixed(2);
-                                                document.getElementById('yearvaluenilaiPK').innerText = yearnilaiPelaksanaan.toFixed(2);
-                                                document.getElementById('yearnilaiLO').innerText = yearnilaiLO.toFixed(2);
-                                                document.getElementById('yearnilaiPK').innerText = yearnilaiPK.toFixed(2);
-                                                document.getElementById('yeartotalNilai11').innerText = yeartotalNilai11.toFixed(0);
+                                                document.getElementById('yearvaluepesertaA11').innerText = yearvaluepesertaA11.toFixed(2);
+                                                document.getElementById('yearindekspesertaA11').innerText = yearindekspesertaA11;
+                                                document.getElementById('yearvaluepesertaB11').innerText = yearvpeserta11c;
+                                                document.getElementById('yearindekspesertaB11').innerText = yearindekspesertaB11;
+                                                // document.getElementById('yearvaluekompA11').innerText = yearvaluekompA11.toFixed(2);
+                                                document.getElementById('yearindekskompA11').innerText = yearindekskompA11;
+                                                document.getElementById('yearvaluekompB11').innerText = yearvaluekompB11;
+                                                document.getElementById('yearindekskompB11').innerText = yearindekskompB11;
+                                                document.getElementById('yearvaluenilaiPK').innerText = yearvaluenilaiPK;
+                                                document.getElementById('yeartotalNilai11').innerText = yeartotalNilai11;
+                                                document.getElementById('yeartotalNilai11a').innerText = yeartotalNilai11a;
                                             }
 
                                             yearhitungNilai11();
+
+                                            function getIndeksKompA11(persenPeserta) {
+                                                if (persenPeserta >= 75) {
+                                                    return 120;
+                                                } else if (persenPeserta < 75) {
+                                                    return 110;
+                                                }
+                                            }
+                                            function getIndeksNilai(indeks) {
+                                                if (indeks >= 3.76) {
+                                                    return 120;
+                                                } else if (indeks >= 3.0 && indeks < 3.76) {
+                                                    return 100;
+                                                } else if (indeks >= 2.26 && indeks < 3.0) {
+                                                    return 75;
+                                                } else if (indeks < 2.26) {
+                                                    return 50;
+                                                } else {
+                                                    return 0; // jika nilai indeks di luar range
+                                                }
+                                            }
+
+
+                                            function hitungNilaiKegiatan(jumlahKegiatan) {
+                                                return (jumlahKegiatan >= 2) ? 120 : 100;
+                                            }
+
+                                            
                                         </script>
                                         <script type="module">
                                             import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
@@ -485,14 +711,35 @@
                                             }
 
                                             const data = {
-                                                yearvaluenilaiLO: document.getElementById("yearvaluenilaiLO")?.innerText || "",
-                                                yearvaluenilaiPK: document.getElementById("yearvaluenilaiPK")?.innerText || "",
-                                                yearnilaiLO: document.getElementById("yearnilaiLO")?.innerText || "",
-                                                yearnilaiPK: document.getElementById("yearnilaiPK")?.innerText || "",
-                                                yeartotalNilai11: document.getElementById("yeartotalNilai11")?.innerText || "",
-                                                // indeksC8: document.getElementById("indeksC8")?.innerText || "",
-                                                // indeksTotal8: document.getElementById("indeksTotal8")?.innerText || "",        
-                                            
+                                                yearvaluekomponenA: document.getElementById('yearvaluekomponenA').innerText || "",
+                                                yearvaluekomponenB: document.getElementById('yearvaluekomponenB').innerText || "",
+                                                yearvaluekomponenC: document.getElementById('yearvaluekomponenC').innerText || "",
+                                                yearvaluekomponenD: document.getElementById('yearvaluekomponenD').innerText || "",
+                                                yearvaluekomponenE: document.getElementById('yearvaluekomponenE').innerText || "",
+                                                yearvaluekomponenF: document.getElementById('yearvaluekomponenF').innerText || "",
+                                                yearvaluekomponenG: document.getElementById('yearvaluekomponenG').innerText || "",
+                                                yearvaluekomponenH: document.getElementById('yearvaluekomponenH').innerText || "",
+                                                yearvaluekomponenI: document.getElementById('yearvaluekomponenI').innerText || "",
+                                                yearvaluekomponenJ: document.getElementById('yearvaluekomponenJ').innerText || "",
+                                                yearvaluekomponenK: document.getElementById('yearvaluekomponenK').innerText || "",
+                                                yearvaluepeserta11a:document.getElementById('yearvaluepeserta11a').innerText || "",
+                                                yearvaluepeserta11b: document.getElementById('yearvaluepeserta11b').innerText || "",
+                                                yearvaluepeserta11c: document.getElementById('yearvaluepeserta11c').innerText || "",
+                                                yearvaluekegiatan11a:document.getElementById('yearvaluekegiatan11a').innerText || "",
+                                                yearnilaiLO: document.getElementById('yearnilaiLO').innerText || "",
+                                                yearvaluenilaiLO: document.getElementById('yearvaluenilaiLO').innerText || "",
+                                                yearvaluepesertaA11:  document.getElementById('yearvaluepesertaA11').innerText || "",
+                                                yearindekspesertaA11: document.getElementById('yearindekspesertaA11').innerText || "",
+                                                yearvaluepesertaB11:  document.getElementById('yearvaluepesertaB11').innerText || "",
+                                                yearindekspesertaB11: document.getElementById('yearindekspesertaB11').innerText || "",
+                                                // yearvaluekompA11:  document.getElementById('yearvaluekompA11').innerText || "",
+                                                yearindekskompA11: document.getElementById('yearindekskompA11').innerText || "",
+                                                yearvaluekompB11: document.getElementById('yearvaluekompB11').innerText || "",
+                                                yearindekskompB11: document.getElementById('yearindekskompB11').innerText || "",
+                                                yearvaluenilaiPK: document.getElementById('yearvaluenilaiPK').innerText || "",
+                                                yeartotalNilai11: document.getElementById('yeartotalNilai11').innerText || "",
+                                                yeartotalNilai11a: document.getElementById('yeartotalNilai11a').innerText || "",
+
                                                 yearformula11: document.getElementById("yearformula11")?.innerText || "",
                                                 yearketerangan11: document.getElementById("yearketerangan11")?.innerText || "",
                                                 

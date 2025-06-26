@@ -340,13 +340,15 @@
                                     <div id="6a-N" class="content">
                                         <br>
                                         <h3><b>Tingkat kualitas kinerja organisasi </b></h3>
-                                        <label for="yearlhps1">Indeks Capaian komponen Nilai LHPS:</label>
-                                        <input type="number" id="yearlhps1" min="0" max="100" value="9.56"
-                                            oninput="yearhitungNilai10()">
+                                        <label for="yearvlhps10a">Nilai LHPS Semester 2 2024: </label>
+                                        <input type="number" id="yearvlhps10a" min="0" value="0"oninput="yearhitungNilai10()">
+                                        <label for="yearvlhps10b">Nilai LHPS Semester 1 2025: </label>
+                                        <input type="number" id="yearvlhps10b" min="0" value="0"oninput="yearhitungNilai10()">
 
-                                        <label for="yearlhps2">Nilai SFO:</label>
-                                        <input type="number" id="yearlhps2" min="0" max="100" value="9.71"
-                                            oninput="yearhitungNilai10()">
+                                        <label for="yearvlhps10c">Nilai KPPN: </label>
+                                        <input type="number" id="yearvlhps10c" min="0"  value="0"oninput="yearhitungNilai10()">
+                                        <label for="yearvlhps10d">Target Nilai SFO: </label>
+                                        <input type="number" id="yearvlhps10d" min="0"  value="0"oninput="yearhitungNilai10()">
 
                                         <label for="yearformula10">Masukkan Formula:</label>
                                         <textarea id="yearinputFormula10" class="form-control" rows="3"
@@ -390,61 +392,93 @@
                                             </tbody>
                                             <tbody>
                                                 <tr>
-                                                    <td rowspan="4" valign="top">10</td>
-                                                    <td rowspan="4" valign="top"> 6a-N </td>
-                                                    <td rowspan="4" valign="top" class="left-align">Tingkat kualitas kinerja organisasi</td>
+                                                    <td rowspan="10" valign="top">10</td>
+                                                    <td rowspan="10" valign="top"> 6a-N </td>
+                                                    <td rowspan="10" valign="top" class="left-align">Tingkat kualitas kinerja organisasi</td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td ><b>Nilai</b></td>
                                                     <td ><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td ><b>Formula</b></td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">indeks capaian komponen nilai LHPS </td>
-                                                    <td>50%</td>
-                                                    <td  id="yearvaluenilaiLHPS1">54,16%</td>
-                                                    <td  id="yearnilaiLHPS1">54,16%</td>
-                                                    <td rowspan="3" valign="top" class="left-align" id="yearformula10">Tolong selalu enter agar tidak terlalu panjang</td>
-                                                    <td rowspan="3" valign="top" class="left-align" id="yearketerangan10">
-                                                        Triwulan IV = (50% x indeks capaian komponen SFO) + (50%
-                                                        x indeks capaian komponen nilai LHPS)
-                                                        Tolong selalu enter agar tidak terlalu panjang   
-                                                   
-                                                    </td>
+                                                    <td class="left-align" colspan="4"><b>Indeks capaian komponen nilai LHPS </b></td>
+                                                   <td rowspan="9" valign="top" class="left-align" id="yearformula10"></td>
+                                                    <td rowspan="9" valign="top" class="left-align" id="yearketerangan10"> </td>
+                                                    
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Nilai SFO</td>
-                                                    <td>50%</td>
-                                                    <td  id="yearvaluenilaiLHPS2">52,98</td>
-                                                    <td  id="yearnilaiLHPS2">52,98</td>
+                                                    <td class="left-align">Nilai LHPS Semester 2 2024</td>
+                                                    <td id="yearvaluelhps10a"></td>
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="yeartotalIKU10"><b>108,26%</b></td>
-                                                    <!-- <td></td> -->
+                                                    <td class="left-align">Nilai LHPS Semester 1 2025</td>
+                                                    <td id="yearvaluelhps10b"></td>
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Indeks capaian komponen nilai LHPS</b></td>
+                                                    <td id="yearvaluenilaiLHPS1"></td>
+                                                    <td></td>
+                                                    <!-- <td id="yearvalueindeks9a"></td> -->
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="4"><b>Nilai SFO</b></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">% Dokumen dukung yang diunggah pada periode triwulan I tahun 2025</td>
+                                                    <td id="yearvaluelhps10c"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align">Target Nilai SFO</td>
+                                                    <td id="yearvaluelhps10d"></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="left-align" colspan="2"><b>Total Capaian SFO</b></td>
+                                                    <td id="yearvaluenilaiLHPS2"></td>
+                                                    <!-- <td id="yearindeksB8"></td> -->
+                                                    <td></td>
+                                                </tr>
+                                                
+                                                <tr>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                     <td id="yeartotalIKU10"><b></b></td>
+                                                    <td id="yeartotalIKU10a"><b></b></td>
+                                                </tr>
+                                               
                                             </tbody>
                                         </table>
                                         <script>
                                             function yearhitungNilai10() {
-                                                let yearlhps1 = parseFloat(document.getElementById('yearlhps1').value) || 0;
-                                                let yearlhps2 = parseFloat(document.getElementById('yearlhps2').value) || 0;
-                                                let yeartarget = 8.9;
+                                                let yearvlhps10a = parseFloat(document.getElementById("yearvlhps10a").value) || 0;
+                                                let yearvlhps10b = parseFloat(document.getElementById("yearvlhps10b").value) || 0;
+                                                let yearvlhps10c = parseFloat(document.getElementById("yearvlhps10c").value) || 0;
+                                                let yearvlhps10d = parseFloat(document.getElementById("yearvlhps10d").value) || 0;
 
-                                                let yearnilaiTertimbang1 = (yearlhps1 * 50) / 100;
-                                                let yearnilaiTertimbang2 = (yearlhps2 * 50) / 100;
-                                                let yearnilaiTab1 = (yearlhps1 * 50) / 8.9;
-                                                let yearnilaiTab2 = (yearlhps2 * 50) / 8.9;
-                                                // let totalIKU10 = ((yearnilaiTertimbang1 + yearnilaiTertimbang2) / target) * 100;
-                                                let yeartotalIKU10 = (yearnilaiTertimbang1 + yearnilaiTertimbang2);
-                                                document.getElementById('yearvaluenilaiLHPS1').innerText = yearlhps1.toFixed(2);
-                                                document.getElementById('yearvaluenilaiLHPS2').innerText = yearlhps2.toFixed(2);
-                                                document.getElementById('yearnilaiLHPS1').innerText = yearnilaiTertimbang1.toFixed(2);
-                                                document.getElementById('yearnilaiLHPS2').innerText = yearnilaiTertimbang2.toFixed(2);
-                                                // document.getElementById('yearnilaiLHPS1').innerText = yearnilaiTab1.toFixed(2);
-                                                // document.getElementById('yearnilaiLHPS2').innerText = yearnilaiTab2.toFixed(2);
-                                                document.getElementById('yeartotalIKU10').innerText = yeartotalIKU10.toFixed(2);
+                                                // let yearvaluenilaiLHPS1 = (yearvlhps10a / yearvlhps10b) * 100;
+                                                let yearvaluenilaiLHPS1 = (yearvlhps10a * 0.5 ) + (yearvlhps10b * 0.5);
+                                                let yearvaluenilaiLHPS2 = (yearvlhps10c / yearvlhps10d) * 100;
+                                                let yeartotalIKU10 = (yearvaluenilaiLHPS1 + yearvaluenilaiLHPS2) / 2;
+                                                let yeartotalIKU10a =yeartotalIKU10;
+                                                
+                                                document.getElementById('yearvaluelhps10a').innerText = yearvlhps10a;
+                                                document.getElementById('yearvaluelhps10b').innerText = yearvlhps10b;
+                                                document.getElementById('yearvaluelhps10c').innerText = yearvlhps10c;
+                                                document.getElementById('yearvaluelhps10d').innerText = yearvlhps10d;
+
+                                                document.getElementById('yearvaluenilaiLHPS1').innerText = yearvaluenilaiLHPS1.toFixed(2) + "%";
+                                                document.getElementById('yearvaluenilaiLHPS2').innerText = yearvaluenilaiLHPS2.toFixed(2) + "%";
+                                                
+                                                document.getElementById('yeartotalIKU10a').innerText = yeartotalIKU10a.toFixed(2)+ "%";
+                                                document.getElementById('yeartotalIKU10').innerText = yeartotalIKU10.toFixed(2) + "%";
                                             }
 
                                             yearhitungNilai10();
@@ -479,9 +513,12 @@
                                             const data = {
                                                 yearvaluenilaiLHPS1: document.getElementById("yearvaluenilaiLHPS1")?.innerText || "",
                                                 yearvaluenilaiLHPS2: document.getElementById("yearvaluenilaiLHPS2")?.innerText || "",
-                                                yearnilaiLHPS1: document.getElementById("yearnilaiLHPS1")?.innerText || "",
-                                                yearnilaiLHPS2: document.getElementById("yearnilaiLHPS2")?.innerText || "",
+                                                yearvaluelhps10a: document.getElementById("yearvaluelhps10a")?.innerText || "",
+                                                yearvaluelhps10b: document.getElementById("yearvaluelhps10b")?.innerText || "",
+                                                yearvaluelhps10c: document.getElementById("yearvaluelhps10c")?.innerText || "",
+                                                yearvaluelhps10d: document.getElementById("yearvaluelhps10d")?.innerText || "",
                                                 yeartotalIKU10: document.getElementById("yeartotalIKU10")?.innerText || "",
+                                                yeartotalIKU10a: document.getElementById("yeartotalIKU10a")?.innerText || "",
                                                 // indeksC8: document.getElementById("indeksC8")?.innerText || "",
                                                 // indeksTotal8: document.getElementById("indeksTotal8")?.innerText || "",        
                                             

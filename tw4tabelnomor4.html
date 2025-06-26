@@ -340,16 +340,17 @@
                                         <br>
                                         <h3><b>Tingkat Implementasi penajaman tugas Financial Advisory</b></h3>
                                         <label for="tw4cg">Nilai CG (Central Government Advisory):</label>
-                                        <input type="number" id="tw4cg" min="0" max="100" value="100"
+                                        <input type="number" id="tw4cg" min="0" value="100"
                                             oninput="tw4hitungNilai4()">
 
                                         <label for="tw4lg">Nilai LG (Local Government Advisory):</label>
-                                        <input type="number" id="tw4lg" min="0" max="100" value="100"
+                                        <input type="number" id="tw4lg" min="0" value="100"
                                             oninput="tw4hitungNilai4()">
 
                                         <label for="tw4sm">Nilai SM (Special Mission Advisory):</label>
-                                        <input type="number" id="tw4sm" min="0" max="100" value="100"
+                                        <input type="number" id="tw4sm" min="0" value="100"
                                             oninput="tw4hitungNilai4()">
+
 
                                             <label for="tw4formula4">Masukkan Formula:</label>
                                             <textarea id="tw4inputFormula4" class="form-control" rows="3"
@@ -400,47 +401,43 @@
                                                         <i>Financial Advisory</i>
                                                     </td>
                                                     <td><b>Komponen</b></td>
-                                                    <td><b>Bobot</b></td>
                                                     <td><b>Nilai</b></td>
-                                                    <td ><b>Total</b></td>
+                                                    <td><b>Total</b></td>
+                                                    <td><b>Indeks Capaian</b></td>
                                                     <td>Formula</td>
                                                     <td>Keterangan</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Implementasi Central
                                                         Government Advisory </td>
-                                                    <td>50%</td>
-                                                    <td  id="tw4valueCG">50,00</td>
-                                                    <td  id="tw4nilaiCG">50,00</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="tw4formula4">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <!-- <td>50%</td> -->
+                                                    <td  id="tw4valueCG"></td>
+                                                    <td  id="tw4nilaiCG"></td>
+                                                    <td></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="tw4formula4"></td>
                                                     <td rowspan="4" valign="top" class="left-align" id="tw4keterangan4">
-                                                        FORMULA = (Nilai rata2 CG x 50%) + (Nilai rata2 LG x 30%)
-                                                        + (Implementasi SM x 20%)
-
-                                                        *Formula bagi KPPN yang tidak melakukan penyaluran TKD
-                                                        (tidak melakukan LG)
-                                                        =((Nilai rata2 CG x 50%) + (Implementasi SM x 20%)):70 x
-                                                        100
-
-                                                        Tolong selalu enter agar tidak terlalu panjang </td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Implementasi Local
                                                         Government </td>
-                                                    <td>30%</td>
-                                                    <td id="tw4valueLG">30,00</td>
-                                                    <td  id="tw4nilaiLG">30,00</td>
+                                                    <!-- <td>30%</td> -->
+                                                    <td id="tw4valueLG"></td>
+                                                    <td  id="tw4nilaiLG"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Implementasi Special
                                                         Mission Advisory </td>
-                                                    <td>20%</td>
-                                                    <td  id="tw4valueSM">20,00</td>
-                                                    <td  id="tw4nilaiSM">20,00</td>
+                                                    <!-- <td>20%</td> -->
+                                                    <td  id="tw4valueSM"></td>
+                                                    <td  id="tw4nilaiSM"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="tw4totalNilai4"><b>100</b></td>
+                                                    <td colspan="2"><b>Nilai Capaian</b></td>
+                                                     <td id="tw4totalNilai4a"><b></b></td>
+                                                    <td id="tw4totalNilai4"><b></b></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -457,6 +454,7 @@
                                                 let tw4nilaiTertimbangSM = (tw4nilaiSM * 20) / 100;
 
                                                 let tw4totalNilai4 = tw4nilaiTertimbangCG + tw4nilaiTertimbangLG + tw4nilaiTertimbangSM;
+                                                let tw4totalNilai4a = tw4totalNilai4;
 
                                                 document.getElementById('tw4valueCG').innerText = tw4nilaiCG.toFixed(0);
                                                 document.getElementById('tw4valueLG').innerText = tw4nilaiLG.toFixed(0);
@@ -466,7 +464,7 @@
                                                 document.getElementById('tw4nilaiLG').innerText = tw4nilaiTertimbangLG.toFixed(0);
                                                 document.getElementById('tw4nilaiSM').innerText = tw4nilaiTertimbangSM.toFixed(0);
                                                 document.getElementById('tw4totalNilai4').innerText = tw4totalNilai4.toFixed(0);
-                                                // document.getElementById('hasilAkhir').innerText = totalNilai.toFixed(0);
+                                                document.getElementById('tw4totalNilai4a').innerText = tw4totalNilai4a.toFixed(0);
                                             }
 
                                             // Jalankan saat halaman pertama kali dimuat
@@ -507,6 +505,7 @@
                                                 tw4valueLG: document.getElementById("tw4valueLG")?.innerText || "",
                                                 tw4valueSM: document.getElementById("tw4valueSM")?.innerText || "",
                                                 tw4totalNilai4: document.getElementById("tw4totalNilai4")?.innerText || "",
+                                                tw4totalNilai4a: document.getElementById("tw4totalNilai4a")?.innerText || "",
                                                 // totalPersentase2: document.getElementById("totalPersentase2")?.innerText || "",
                                                 
                                                 tw4formula4: document.getElementById("tw4formula4")?.innerText || "",
