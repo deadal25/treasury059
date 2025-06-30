@@ -341,22 +341,22 @@
                                         <h3><b>Indeks Kualitas LPJ Bendahara Satker K/L</b></h3>
 
                                         <label for="sept">LPJ Tepat Waktu: </label>
-                                        <input type="number" id="sept" min="1" max="100" value="0"
+                                        <input type="number" id="sept"  value="5"
                                             oninput="hitungIndex9()">
 
                                         <label for="okt">LPJ Disampaikan ke KPPN: </label>
-                                        <input type="number" id="okt" min="1" max="100" value="0"
+                                        <input type="number" id="okt"  value="5"
                                             oninput="hitungIndex9()">
 
                                             <label for="formula9">Masukkan Formula:</label>
                                             <textarea id="inputFormula9" class="form-control" rows="3"
-                                                placeholder="Masukkan teks Formula...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                                oninput="updateFormula9()"></textarea>
+                                                placeholder=""
+                                                oninput="updateFormula9()">Capaian IKU = (Indeks Penyampaian LPJ + Indeks Validasi LPJ) / 2</textarea>
 
                                             <label for="keterangan9">Masukkan Keterangan:</label>
                                         <textarea id="inputArea9" class="form-control" rows="3"
-                                            placeholder="Masukkan teks keterangan...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                            oninput="updateKeterangan9()"></textarea>
+                                            placeholder=""
+                                            oninput="updateKeterangan9()">ND-87/KPN.2602/2025 hal Penyampaian Daftar LPJ Bendahara Tingkat KPPN Bulan Desember 2024, ND-142/KPN.2602/2025 hal Penyampaian Daftar LPJ Bendahara Tingkat KPPN Bulan Januari 2025, ND-155/KPN.2602/2025 hal Penyampaian Daftar LPJ Bendahara Tingkat KPPN Bulan Februari 2025  </textarea>
 
                                             <script>
                                                 function updateFormula9() {
@@ -404,38 +404,21 @@
                                                 <tr>
                                                     <td class="left-align">Indeks Penyampaian LPJ</td>
                                                         <td><b>50%</b></td>
-                                                        <td id="valueindeksSept">4</td>
-                                                    <td id="indeksSept">4</td>
-                                                    <td rowspan="3" valign="top" class="left-align" id="formula9">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                        <td id="valueindeksSept"></td>
+                                                    <td id="indeksSept"></td>
+                                                    <td rowspan="3" valign="top" class="left-align" id="formula9"></td>
                                                     <td rowspan="3" valign="top" class="left-align" id="keterangan9">
-                                                        Tolong selalu enter agar tidak terlalu panjang
-                                                        Seluruh LPJ telah disampaikan tepat waktu dan telah
-                                                        divalidasi Indeks kualitas LPJ Bendahara K/L sebagai berikut:
-
-                                                        Indeks 4: Jika memperoleh nilai 99,5% < x ≤ 90% LPJ Bendahara
-                                                            yang divalidasi KPPN tepat waktu Indeks 3,5: Jika memperoleh
-                                                            nilai 99% < x ≤ 99,5% LPJ Bendahara yang divalidasi KPPN
-                                                            tepat waktu Indeks 3: Jika memperoleh nilai 98,5% ≤ x ≤ 99%
-                                                            LPJ Bendahara yang divalidasi KPPN tepat waktu Indeks 2,5:
-                                                            Jika memperoleh nilai 95% < x < 98,5% LPJ Bendahara yang
-                                                            divalidasi KPPN tepat waktu Indeks 2: Jika memperoleh nilai
-                                                            90% < x ≤ 95% LPJ Bendahara yang divalidasi KPPN tepat waktu
-                                                            Indeks 1: Jika memperoleh nilai ≤ 90% LPJ Bendahara yang
-                                                            divalidasi KPPN tepat waktu September: LPJ pengeluaran 63
-                                                            dari 63 wajib LPJ LPJ Penerimaan 18 dari 18 wajib LPJ
-                                                            Oktober: LPJ pengeluaran 63 dari 63 wajib LPJ LPJ Penerimaan
-                                                            17 dari 17 wajib LPJ November: LPJ pengeluaran 63 dari 63
-                                                            wajib LPJ LPJ Penerimaan 17 dari 17 wajib LPJ </td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Indeks Validasi LPJ</td>
                                                         <td><b>50%</b></td>
-                                                        <td id="valueindeksOkt">4</td>
-                                                    <td id="indeksOkt">4</td>
+                                                        <td id="valueindeksOkt"></td>
+                                                    <td id="indeksOkt"></td>
                                                 </tr>
                                                 <tr>
                                                     <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="indeksTotal9"><b>4</b></td>
+                                                    <td colspan="3" id="indeksTotal9"><b></b></td>
                                                 </tr>
                                             </tbody>
                                         </table>

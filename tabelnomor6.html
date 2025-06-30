@@ -343,23 +343,23 @@
 
                                         <label for="indigipay">Implementasi Digipay :</label>
                                         <input type="number" id="indigipay" oninput="updateCapaian6()" step="0.01"
-                                            min="0">
+                                            value="5">
 
                                         <label for="incms">Implementasi CMS :</label>
-                                        <input type="number" id="incms" oninput="updateCapaian6()" step="0.01" min="0">
+                                        <input type="number" id="incms" oninput="updateCapaian6()" step="0.01" value="0">
 
                                         <label for="inkkp">Implementasi KKP :</label>
-                                        <input type="number" id="inkkp" oninput="updateCapaian6()" step="0.01" min="0">
+                                        <input type="number" id="inkkp" oninput="updateCapaian6()" step="0.01" value="0">
 
                                         <label for="formula6">Masukkan Formula:</label>
                                         <textarea id="inputFormula6" class="form-control" rows="3"
-                                            placeholder="Masukkan teks formula...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                            oninput="updateFormula6()"></textarea>
+                                            placeholder=""
+                                            oninput="updateFormula6()">Capaian IKU = (Indeks Digipay + Indeks CMS + Indeks KKP) / 3</textarea>
 
                                         <label for="keterangan6">Masukkan Keterangan:</label>
                                         <textarea id="inputArea6" class="form-control" rows="3"
-                                            placeholder="Masukkan teks keterangan...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                            oninput="updateKeterangan6()"></textarea>
+                                            placeholder=""
+                                            oninput="updateKeterangan6()">Jumlah Satker: </textarea>
 
                                         <script>
                                             function updateFormula6() {
@@ -407,32 +407,26 @@
                                                 <tr>
                                                     <td class="left-align">Implementasi Digipay </td>
                                                     <td >33%</td>
-                                                    <td id="indigipayvalue">5</td>
-                                                    <td id="indeksindigipay">5</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="formula6">Tolong selalu enter agar tidak terlalu panjang</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="keterangan6">IKU
-                                                        terdiri dari 3 komponen yaitu:
-                                                        A. Implementasi Digipay
-                                                        B. Implementasi CMS
-                                                        C. Implementasi KKP
-
-                                                        Tolong selalu enter agar tidak terlalu panjang </td>
+                                                    <td id="indigipayvalue"></td>
+                                                    <td id="indeksindigipay"></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="formula6"></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="keterangan6"></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Implementasi CMS</td>
                                                         <td >33%</td>
-                                                    <td id="incmsvalue">5</td>
-                                                    <td id="indeksincms">55</td>
+                                                    <td id="incmsvalue"></td>
+                                                    <td id="indeksincms"></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Implementasi KKP</td>
                                                     <td >33%</td>
-                                                    <td id="inkkpvalue">5</td>
-                                                    <td id="indeksinkkp">5</td>
+                                                    <td id="inkkpvalue"></td>
+                                                    <td id="indeksinkkp"></td>
                                                 </tr>
                                                 <tr>
                                                     <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="indeksTotal6"> <b>5</b></td>
+                                                    <td colspan="3" id="indeksTotal6"> <b></b></td>
                                                 </tr>
 
                                             </tbody>

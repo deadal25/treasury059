@@ -348,20 +348,20 @@
                                         </select>
 
                                         <label for="learning">Indeks Capaian Learning Organization:</label>
-                                        <input type="number" id="learning" value="0" oninput="hitungNilai11()">
+                                        <input type="number" id="learning" value="120" oninput="hitungNilai11()">
 
                                         <label for="pelaksanaan">Indeks Capaian Pelaksanaan Kebintalan:</label>
-                                        <input type="number" id="pelaksanaan" value="0" oninput="hitungNilai11()">
+                                        <input type="number" id="pelaksanaan" value="120" oninput="hitungNilai11()">
 
                                         <label for="formula11">Masukkan Formula:</label>
                                         <textarea id="inputFormula11" class="form-control" rows="3"
-                                            placeholder="Masukkan teks Formula...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                            oninput="updateFormula11()"></textarea>
+                                            placeholder=""
+                                            oninput="updateFormula11()">Capaian = (60% x Indeks Capaian Implementasi LO) + (40% x Indeks Capaian Pelaksanaan Kebintalan)</textarea>
 
                                             <label for="keterangan11">Masukkan Keterangan:</label>
                                             <textarea id="inputArea11" class="form-control" rows="3"
-                                                placeholder="Masukkan teks keterangan...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                                oninput="updateKeterangan11()"></textarea>
+                                                placeholder=""
+                                                oninput="updateKeterangan11()">Nilai LO : 40,61 Capaian : 40,61/30 : 135% (120%),Nilai Bintal : 120 Dilaporkan kurang dari 5 hari kerja tanggal 17 Maret 2025 Dihadiri 12 pegawai (92,3%)</textarea>
     
                                             <script>
                                                 function updateFormula11() {
@@ -409,13 +409,11 @@
                                                 <tr>
                                                     <td class="left-align">Implementasi Learning Organization </td>
                                                     <td>60%</td>
-                                                    <td id="valuenilaiLO">58,1%</td>
-                                                    <td id="nilaiLO">58,1%</td>
-                                                    <td rowspan="2" valign="top" class="left-align" id="formula11">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <td id="valuenilaiLO"></td>
+                                                    <td id="nilaiLO"></td>
+                                                    <td rowspan="2" valign="top" class="left-align" id="formula11"></td>
                                                     <td rowspan="2" valign="top" class="left-align" id="keterangan11">
-                                                        Capaian = (50% x Indeks Capaian Implementasi LO) + (50%
-                                                        x Indeks Capaian Pelaksanaan Kebintalan) 
-                                                        Tolong selalu enter agar tidak terlalu panjang</td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Tingkat Penguatan Budaya dan Bintal
@@ -423,12 +421,12 @@
                                                         Di Lingkungan Kementerian Keuangan
                                                     </td>
                                                     <td>40%</td>
-                                                    <td id="valuenilaiPK">58,50</td>
-                                                    <td id="nilaiPK">58,50</td>
+                                                    <td id="valuenilaiPK"></td>
+                                                    <td id="nilaiPK"></td>
                                                 </tr>
                                                 <tr>
                                                     <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="totalNilai11"><b>116,60</b></td>
+                                                    <td colspan="3" id="totalNilai11"><b></b></td>
                                                     <td></td>
                                                     <td></td>
                                                 </tr>

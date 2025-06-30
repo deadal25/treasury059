@@ -345,10 +345,10 @@
                                         <input type="number" id="smart" value="0" oninput="hitungNilai13()"> -->
 
                                         <label for="ikpa">Nilai IKPA:</label>
-                                        <input type="number" id="ikpa" value="0" oninput="cekIKPA()">
+                                        <input type="number" id="ikpa" value="120" oninput="cekIKPA()">
 
                                         <label for="lk">Nilai LK UAKPA UAKPB:</label>
-                                        <input type="number" id="lk" value="0" oninput="hitungNilai13()">
+                                        <input type="number" id="lk" value="120" oninput="hitungNilai13()">
 
                                         <!-- <label for="tg">Target:</label>
                                         <input type="number" id="tg" value="83" oninput="hitungNilai13()"> -->
@@ -356,12 +356,13 @@
                                         <label for="formula13">Masukkan Formula:</label>
                                         <textarea id="inputFormula13" class="form-control" rows="3"
                                             placeholder="Masukkan teks Formula...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                            oninput="updateFormula13()"></textarea>
+                                            oninput="updateFormula13()">(60% x IKKPA) + (40% x LK UAKPA dan UAKPB)</textarea>
 
                                         <label for="keterangan13">Masukkan Keterangan:</label>
                                         <textarea id="inputArea13" class="form-control" rows="3"
-                                            placeholder="Masukkan teks keterangan...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                            oninput="updateKeterangan13()"></textarea>
+                                            placeholder=""
+                                            oninput="updateKeterangan13()">Realisasi IKPA : 100 (Karena dinamika pelaksanaan anggaran pada awal tahun anggaran, serta dalam rangka menerapkan prinsip fairness treatment dalam penilaian IKPA (ND-163/PB.2/2025)
+Nilai IKPA lbh dri 98 -> 120 Nilai Capaian 120 disampaikan 6 hari sebelum batas waktu (ND-101/KPN.2602/2025 tanggal 12 Februari 2025 dri batas waktu 18 Februari 2025)</textarea>
 
                                         <script>
                                             function updateFormula13() {
@@ -411,32 +412,21 @@
                                                 <tr>
                                                     <td class="left-align">IKPA</td>
                                                     <td>60%</td>
-                                                    <td id="valuenilaiNKA">47,94</td>
-                                                    <td id="nilaiNKA">47,94</td>
-                                                    <td rowspan="3" valign="top" class="left-align" id="formula13">Formula: (60% x IKKPA) + (40% x LK tingkat UAPPA-W dan
-                                                        UAPPB-W) Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <td id="valuenilaiNKA"></td>
+                                                    <td id="nilaiNKA"></td>
+                                                    <td rowspan="3" valign="top" class="left-align" id="formula13"></td>
                                                     <td rowspan="3" valign="top" class="left-align" id="keterangan13">
-                                                        Tolong selalu enter agar tidak terlalu panjang
-                                                        Formula: (60% x IKKPA) + (40% x LK tingkat UAPPA-W dan
-                                                        UAPPB-W)
-                                                        a.IKKPA
-                                                        Nilai capaian berasal dari nilai SMART sebesar 80,37, nilai
-                                                        IKPA sebesar 68,6
-                                                        NKA =30%*Nilai SMART + 30%*Nilai IKKPA
-                                                        = 30%*80,37 + 30%*68,6*= 74,4
-                                                        (NKA < 80 dikonversi menjadi 79,9) b. LK UAKPA UAKPB Nilai LK
-                                                            UAKPA UAKPB=91=91/83=107,06 Capaian IKU Persentase Kualitas
-                                                            Pengelolaan Keuangan KPPN=60%*79,9 + 40%*107,06=90,76</td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">LK UAKPA UAKPB </td>
                                                     <td>40%</td>
-                                                    <td id="valuenilaiLK">43</td>
-                                                    <td id="nilaiLK">43</td>
+                                                    <td id="valuenilaiLK"></td>
+                                                    <td id="nilaiLK"></td>
                                                 </tr>
                                                 <tr>
                                                     <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="totalNilai13"><b>90,76</b></td>
+                                                    <td colspan="3" id="totalNilai13"><b></b></td>
                                                     <!-- <td></td> -->
                                                 </tr>
                                             </tbody>

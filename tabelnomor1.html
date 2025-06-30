@@ -341,35 +341,35 @@
                                         <br>
                                         <h3><b>Indeks Kualitas Nilai IKPA K/L</b></h3>
                                         <label for="rd">Revisi DIPA (%) :</label>
-                                        <input type="number" id="rd" oninput="updateCapaian1()" step="0.01" min="0">
+                                        <input type="number" id="rd" oninput="updateCapaian1()" step="0.01" value="100">
                                         <label for="dh">Deviasi Hal. III DIPA (%) :</label>
-                                        <input type="number" id="dh" oninput="updateCapaian1()" step="0.01" min="0">
+                                        <input type="number" id="dh" oninput="updateCapaian1()" step="0.01" value="100">
                                         <label for="pa">Penyerapan Anggaran (%) :</label>
-                                        <input type="number" id="pa" oninput="updateCapaian1()" step="0.01" min="0">
+                                        <input type="number" id="pa" oninput="updateCapaian1()" step="0.01" value="100">
                                         <label for="bk">Belanja Kontraktual (%) :</label>
-                                        <input type="number" id="bk" oninput="updateCapaian1()" step="0.01" min="0">
+                                        <input type="number" id="bk" oninput="updateCapaian1()" step="0.01" value="100">
                                         <label for="pt">Penyelesaian Tagihan (%) :</label>
-                                        <input type="number" id="pt" oninput="updateCapaian1()" step="0.01" min="0">
+                                        <input type="number" id="pt" oninput="updateCapaian1()" step="0.01" value="100">
                                         <label for="put">Pengelolaan UP dan TUP (%) :</label>
-                                        <input type="number" id="put" oninput="updateCapaian1()" step="0.01" min="0">
+                                        <input type="number" id="put" oninput="updateCapaian1()" step="0.01" value="100">
                                         <label for="co">Capaian Output (%) :</label>
-                                        <input type="number" id="co" oninput="updateCapaian1()" step="0.01" min="0">
+                                        <input type="number" id="co" oninput="updateCapaian1()" step="0.01" value="100">
                                         <label for="ds">Dispensasi SPM (%) :</label>
-                                        <input type="number" id="ds" oninput="updateCapaian1()" step="0.01" min="0">
+                                        <input type="number" id="ds" oninput="updateCapaian1()" step="0.01" value="100">
                                         <label for="jumlahsatker1">Nilai Jumlah Satker dengan predikat Minimal Baik (%)
                                             :</label>
                                         <input type="number" id="jumlahsatker1" oninput="updateCapaian1()" step="0.01"
-                                            min="0">
+                                            value="100">
 
                                         <label for="formula1">Masukkan Formula: </label>
-                                        <textarea id="inputFormula1" class="form-control" rows="3" placeholder="Masukkan teks Formula...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                            oninput="updateFormula1()"></textarea>
+                                        <textarea id="inputFormula1" class="form-control" rows="3" placeholder=""
+                                            oninput="updateFormula1()">Indeks Kualitas IKU Nilai IKPA K/L = (70% x Nilai IKPA sebagai BUN (target 91)) + (30% x Nilai Jumlah Satker dengan Predikat Minimal Baik (≥ 89))</textarea>
 
                                         <label for="keterangan1">Masukkan Keterangan: </label>
                                         <textarea id="inputArea1" class="form-control" rows="3"
-                                            placeholder="Masukkan teks keterangan...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
+                                            placeholder=""
                                     
-                                            oninput="updateKeterangan1()"></textarea>
+                                            oninput="updateKeterangan1()">Realisasi IKPA : 100 (Karena dinamika pelaksanaan anggaran pada awal tahun anggaran, serta dalam rangka menerapkan prinsip fairness treatment dalam penilaian IKPA (ND-163/PB.2/2025), Berdasarkan Surat Dit PA nomor S-50/PB.2/2025 memberikan nilai 100 untuk seluruh indikator penilaian IKPA selama Triwulan I TA 2025 kepada satuan kerja</textarea>
 
                                         <script>
                                             function updateFormula1() {
@@ -434,80 +434,77 @@
                                                 <tr>
                                                     <td class="left-align"><b>Nilai Ikpa sebagai BUN</b></td>
                                                     <td><b>70%</b></td>
-                                                    <td id="totalCapaian1"><b> 122,23%</b></td>
-                                                    <td id="nilaiIkpa1Score"><b>48,89</b></td>
+                                                    <td id="totalCapaian1"><b> </b></td>
+                                                    <td id="nilaiIkpa1Score"><b></b></td>
                                                     <td rowspan="12" valign="top" class="left-align" id="formula1">
-                                                        Tolong selalu enter agar tidak terlalu panjang
+                                                        
                                                     </td>
                                                     <td rowspan="12" valign="top" class="left-align" id="keterangan1">
-                                                        Tolong selalu enter agar tidak terlalu panjang
-                                                        Hasil penilaian
-                                                        IKPA tingkat Nasional sebagai BUN pada Aplikasi OMSPAN = <span
-                                                            id="totalNilaiSpan1">95.16</span></td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Revisi DIPA</td>
                                                     <td>10%</td>
-                                                    <td id="rdScore">48,89</td>
+                                                    <td id="rdScore"></td>
                                                     <td id="rdValue"></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Deviasi Hal. III DIPA</td>
                                                     <td>15%</td>
-                                                    <td id="dhScore">56,5</td>
+                                                    <td id="dhScore"></td>
                                                     <td id="dhValue"></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Penyerapan Anggaran</td>
                                                     <td>20%</td>
-                                                    <td id="paScore">56,5</td>
+                                                    <td id="paScore"></td>
                                                     <td id="paValue"></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Belanja Kontraktual</td>
                                                     <td>10%</td>
-                                                    <td id="bkScore">56,5</td>
+                                                    <td id="bkScore"></td>
                                                     <td id="bkValue"></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Penyelesaian Tagihan</td>
                                                     <td>10%</td>
-                                                    <td id="ptScore">56,5</td>
+                                                    <td id="ptScore"></td>
                                                     <td id="ptValue"></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Pengelolaan UP dan TUP</td>
                                                     <td>10%</td>
-                                                    <td id="putScore">56,5</td>
+                                                    <td id="putScore"></td>
                                                     <td id="putValue"></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Capaian Output</td>
                                                     <td>25%</td>
-                                                    <td id="coScore">56,5</td>
+                                                    <td id="coScore"></td>
                                                     <td id="coValue"></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Dispensasi SPM</td>
                                                     <td>0%</td>
-                                                    <td id="dsScore">56,5</td>
+                                                    <td id="dsScore"></td>
                                                     <td id="dsValue"></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align"><b>Nilai Jumlah Satker dengan Predikat
                                                             Minimal Baik</b></td>
                                                     <td><b>30%</b></td>
-                                                    <td id="jumlahsatker1Value"><b>0%</b></td>
-                                                    <td id="jumlahsatker1Score"><b>56,5</b></td>
+                                                    <td id="jumlahsatker1Value"><b></b></td>
+                                                    <td id="jumlahsatker1Score"><b></b></td>
                                                 </tr>
                                                 <tr>
                                                     <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" align="right" id="totalCapaian1all"><b>95,16</b>
+                                                    <td colspan="3" align="right" id="totalCapaian1all"><b></b>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td><b>Indeks Capaian</b></td>
-                                                    <td colspan="3" align="right" id="Nilaislide1a"><b>95,16</b></td>
+                                                    <td colspan="3" align="right" id="Nilaislide1a"><b></b></td>
                                                 </tr>
 
                                             </tbody>

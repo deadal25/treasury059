@@ -341,11 +341,11 @@
                                         <h3><b>Persentase akurasi perencanaan kas </b></h3>
 
                                         <label>Rata - Rata Deviasi Unit:</label>
-                                        <input type="number" id="IndeviasiUnit7" min="0" max="100" oninput="hitungAkurasi7()">
+                                        <input type="number" id="IndeviasiUnit7" value="4.98"  oninput="hitungAkurasi7()">
                                         <label>Rata - Rata Deviasi Nilai:</label>
-                                        <input type="number" id="IndeviasiNilai7" min="0" max="100" oninput="hitungAkurasi7()">
+                                        <input type="number" id="IndeviasiNilai7" value="4.79"  oninput="hitungAkurasi7()">
                                         <label>Rasio Dispensasi RPD Harian:</label>
-                                        <input type="number" id="Indispensasi7" min="1" max="30" oninput="hitungAkurasi7()">
+                                        <input type="number" id="Indispensasi7" value="0"  oninput="hitungAkurasi7()">
                                         <!-- <label>Pilih Periode:
                                             <select id="periode7" onchange="tampilkanInput7()">
                                                 <option value="bulan7">Bulanan</option>
@@ -356,13 +356,13 @@
 
                                         <label for="formula7">Masukkan Formula:</label>
                                         <textarea id="inputFormula7" class="form-control" rows="3"
-                                            placeholder="Masukkan teks formula...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                            oninput="updateFormula7()"></textarea>
+                                            placeholder=""
+                                            oninput="updateFormula7()">(((100% - ((Rata - Rata Deviasi Unit RPD harian KPPN per periode*0,2) + ((Rata - Rata Deviasi Nilai RPD harian KPPN per periode*0,8))) - (Rasio Dispensasi RPD harian KPPN per periode))))</textarea>
 
                                         <label for="keterangan7">Masukkan Keterangan:</label>
                                         <textarea id="inputArea7" class="form-control" rows="3"
-                                            placeholder="Masukkan teks keterangan...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                            oninput="updateKeterangan7()"></textarea>
+                                            placeholder=""
+                                            oninput="updateKeterangan7()">masih dengan persentase 30% dan 70% pada aplikasi MonSAKTI</textarea>
 
                                             <script>
                                                 function updateFormula7() {
@@ -412,35 +412,30 @@
                                                         RPD harian KPPN per
                                                         periode </td>
                                                     <td>20%</td>
-                                                    <td  id="deviasiUnit7">0</td>
-                                                    <td id="valueDeviasiUnit7">0</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="formula7">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <td  id="deviasiUnit7"></td>
+                                                    <td id="valueDeviasiUnit7"></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="formula7"></td>
                                                     <td rowspan="4" valign="top" class="left-align" id="keterangan7">
-                                                        (100% - ((Rata - Rata Deviasi Unit RPD harian KPPN per
-                                                        periode*0,2) + ((Rata - Rata Deviasi Nilai RPD harian KPPN
-                                                        per periode*0,8))) - (Rasio Dispensasi RPD harian KPPN per
-                                                        periode))
-
-                                                        Keterangan :Tolong selalu enter agar tidak terlalu panjang </td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Rata - Rata Deviasi Nilai
                                                         RPD harian KPPN per
                                                         periode </td>
                                                     <td>80%</td>
-                                                    <td id="deviasiNilai7">0</td>
-                                                    <td id="valueDeviasiNilai7">0</td>
+                                                    <td id="deviasiNilai7"></td>
+                                                    <td id="valueDeviasiNilai7"></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Rasio Dispensasi RPD
                                                         harian KPPN per periode </td>
                                                     <td></td>
-                                                    <td id="dispensasi7">0</td>
-                                                    <td id="valueDispensasiNilai7">0</td>
+                                                    <td id="dispensasi7"></td>
+                                                    <td id="valueDispensasiNilai7"></td>
                                                 </tr>
                                                 <tr>
                                                     <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="hasil7">0</td>
+                                                    <td colspan="3" id="hasil7"></td>
                                                 </tr>
                                             </tbody>
                                         </table>

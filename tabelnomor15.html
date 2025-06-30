@@ -341,26 +341,24 @@
                                         <br>
                                         <h3><b>Nilai Kinerja TIK KPPN</b></h3>
                                         <label for="skoki">SK OKI:</label>
-                                        <input type="number" id="skoki" value="0" oninput="hitung16()">
+                                        <input type="number" id="skoki" value="100" oninput="hitung16()">
 
                                         <label for="sosialisasi">Sosialisasi:</label>
                                         <input type="number" id="sosialisasi" value="0" oninput="hitung16()">
 
                                         <label for="publikasi">Publikasi:</label>
-                                        <input type="number" id="publikasi" value="0" oninput="hitung16()">
+                                        <input type="number" id="publikasi" value="10" oninput="hitung16()">
 
                                         <label for="pkpt">Penguatan keamanan perangkat TIK:</label>
                                         <input type="number" id="pkpt" value="0" oninput="hitung16()">
 
                                         <label for="formula15">Masukkan Formula:</label>
                                         <textarea id="inputFormula15" class="form-control" rows="3"
-                                            placeholder="Masukkan teks Formula...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                            oninput="updateFormula15()"></textarea>
+                                            oninput="updateFormula15()">Laporan Pelaksanaan Implementasi SMKI dan Kertas Kerja Pelaksanaan SMKI</textarea>
 
                                             <label for="keterangan15">Masukkan Keterangan:</label>
                                             <textarea id="inputArea16" class="form-control" rows="3"
-                                                placeholder="Masukkan teks keterangan...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                                oninput="updateKeterangan15()"></textarea>
+                                            oninput="updateKeterangan15()">KEP-10/WPB.26/2025 tentang Pembentukan Organisasi Kemanan Informasi di Kanwil DJPb Provinsi Sulawesi Barat,Rencana dilaksanakan pada GKM,2 Kali publikasi, menunggu publikasi 1 kali Mudik Lebaran</textarea>
     
                                             <script>
                                                 function updateFormula15() {
@@ -409,37 +407,34 @@
                                                 <tr>
                                                     <td class="left-align">SK OKI </td>
                                                     <td>15%</td>
-                                                    <td  id="valuehasilskoki">66</td>
-                                                    <td  id="nilaiskoki">66</td>
-                                                    <td rowspan="5" valign="top" class="left-align" id="formula15">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <td  id="valuehasilskoki"></td>
+                                                    <td  id="nilaiskoki"></td>
+                                                    <td rowspan="5" valign="top" class="left-align" id="formula15"></td>
                                                     <td rowspan="5" valign="top" class="left-align" id="keterangan15">
-                                                        Tolong selalu enter agar tidak terlalu panjang
-                                                        Hasil Penilaian IPA dan ITKP
-                                                        Nota Dinas Sekretaris Ditjen Perbendaharaan nomor ND
-                                                        276/PB.1/2026 tanggal 17 Januari 2026
+                                                        
                                                         </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Sosialisasi</td>
                                                     <td>35%</td>
-                                                    <td  id="valuehasilsosialisasi">48</td>
-                                                    <td  id="nilaisosialisasi">48</td>
+                                                    <td  id="valuehasilsosialisasi"></td>
+                                                    <td  id="nilaisosialisasi"></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Publikasi</td>
                                                     <td>15%</td>
-                                                    <td  id="valuehasilpublikasi">48</td>
-                                                    <td  id="nilaipublikasi">48</td>
+                                                    <td  id="valuehasilpublikasi"></td>
+                                                    <td  id="nilaipublikasi"></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Penguatan Keamanan Perangkat TIK</td>
                                                     <td>35%</td>
-                                                    <td  id="valuehasilpkpt">48</td>
-                                                    <td  id="nilaipkpt">48</td>
+                                                    <td  id="valuehasilpkpt"></td>
+                                                    <td  id="nilaipkpt"></td>
                                                 </tr>
                                                 <tr>
                                                     <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="totalnilai16"><b>120</b></td>
+                                                    <td colspan="3" id="totalnilai16"><b></b></td>
                                                     <!-- <td></td> -->
                                                 </tr>
                                             </tbody>
@@ -467,7 +462,7 @@
                                                 document.getElementById("nilaisosialisasi").innerText = nilaisosialisasi.toFixed(2);
                                                 document.getElementById("nilaipublikasi").innerText = nilaipublikasi.toFixed(2);
                                                 document.getElementById("nilaipkpt").innerText = nilaipkpt.toFixed(2);
-                                                document.getElementById("totalnilai16").innerText = total16.toFixed(0);
+                                                document.getElementById("totalnilai16").innerText = total16.toFixed(1);
                                             }
 
                                             hitung16();

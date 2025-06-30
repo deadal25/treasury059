@@ -424,7 +424,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Proyeksi</td>
-                                                    <!-- <td>15%</td> -->
+                                                    
                                                     <td  id="tw3proyeksiValue"></td>
                                                     <td  id="tw3proyeksiScore"></td>
                                                     <td></td>
@@ -504,6 +504,7 @@
                                                 document.getElementById("tw3totalIndeksCp5").innerText = tw3totalIndeksCp5;
                                                 
                                                 function getIndeksIKI5(capaian) {
+                                                if (capaian === 0) return 0;    
                                                 if (capaian > 97.5) return 5;
                                                 if (capaian <= 97.5 && capaian > 95) return 4.75;
                                                 if (capaian <= 95 && capaian > 92.5) return 4.5;

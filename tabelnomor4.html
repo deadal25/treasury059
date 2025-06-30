@@ -340,26 +340,26 @@
                                         <br>
                                         <h3><b>Tingkat Implementasi penajaman tugas Financial Advisory</b></h3>
                                         <label for="cg">Nilai CG (Central Government Advisory):</label>
-                                        <input type="number" id="cg" min="0" max="100" value="100"
+                                        <input type="number" id="cg" min="0" value="100"
                                             oninput="hitungNilai4()">
 
                                         <label for="lg">Nilai LG (Local Government Advisory):</label>
-                                        <input type="number" id="lg" min="0" max="100" value="100"
+                                        <input type="number" id="lg" min="0" value="100"
                                             oninput="hitungNilai4()">
 
                                         <label for="sm">Nilai SM (Special Mission Advisory):</label>
-                                        <input type="number" id="sm" min="0" max="100" value="100"
+                                        <input type="number" id="sm" min="0" value="100"
                                             oninput="hitungNilai4()">
 
                                             <label for="formula4">Masukkan Formula:</label>
                                             <textarea id="inputFormula4" class="form-control" rows="3"
-                                                placeholder="Masukkan teks formula...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                                oninput="updateFormula4()"></textarea>
+                                                placeholder=""
+                                                oninput="updateFormula4()">FORMULA = (Nilai rata2 CG x 50%) + (Nilai rata2 LG x 30%) + (Implementasi SM x 20%)</textarea>
 
                                             <label for="keterangan4">Masukkan Keterangan:</label>
                                         <textarea id="inputArea4" class="form-control" rows="3"
-                                            placeholder="Masukkan teks keterangan...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                            oninput="updateKeterangan4()"></textarea>
+                                            placeholder=""
+                                            oninput="updateKeterangan4()">Surat Keputusan Kepala KPPN Majene nomor KEP-7/KPN.2602/2025 tentang Tim Kerja Implementasi Financial Advisor Pada Kantor Pelayanan Perbendaharaan Negara Tipe A2 Majene Tahun 2025 (tanggal 1 Januari 2025)</textarea>
 
                                             <script>
                                                 function updateFormula4() {
@@ -410,37 +410,29 @@
                                                     <td class="left-align">Implementasi Central
                                                         Government Advisory </td>
                                                     <td>50%</td>
-                                                    <td  id="valueCG">50,00</td>
-                                                    <td  id="nilaiCG">50,00</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="formula4">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <td  id="valueCG"></td>
+                                                    <td  id="nilaiCG"></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="formula4"></td>
                                                     <td rowspan="4" valign="top" class="left-align" id="keterangan4">
-                                                        FORMULA = (Nilai rata2 CG x 50%) + (Nilai rata2 LG x 30%)
-                                                        + (Implementasi SM x 20%)
-
-                                                        *Formula bagi KPPN yang tidak melakukan penyaluran TKD
-                                                        (tidak melakukan LG)
-                                                        =((Nilai rata2 CG x 50%) + (Implementasi SM x 20%)):70 x
-                                                        100
-
-                                                        Tolong selalu enter agar tidak terlalu panjang </td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Implementasi Local
                                                         Government </td>
                                                     <td>30%</td>
-                                                    <td id="valueLG">30,00</td>
-                                                    <td  id="nilaiLG">30,00</td>
+                                                    <td id="valueLG"></td>
+                                                    <td  id="nilaiLG"></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Implementasi Special
                                                         Mission Advisory </td>
                                                     <td>20%</td>
-                                                    <td  id="valueSM">20,00</td>
-                                                    <td  id="nilaiSM">20,00</td>
+                                                    <td  id="valueSM"></td>
+                                                    <td  id="nilaiSM"></td>
                                                 </tr>
                                                 <tr>
                                                     <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="totalNilai4"><b>100</b></td>
+                                                    <td colspan="3" id="totalNilai4"><b></b></td>
                                                 </tr>
                                             </tbody>
                                         </table>

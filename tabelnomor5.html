@@ -342,31 +342,31 @@
                                         <h3><b>Indeks kinerja penyaluran Dana Transfer ke Daerah pada KPPN</b></h3>
 
                                         <label for="syarat">Syarat (%) :</label>
-                                        <input type="number" id="syarat" oninput="updateCapaian5()" step="0.01" min="0">
+                                        <input type="number" id="syarat" oninput="updateCapaian5()" step="0.01" min="0" value="0">
                                         <label for="proyeksi">Proyeksi (%) :</label>
                                         <input type="number" id="proyeksi" oninput="updateCapaian5()" step="0.01"
-                                            min="0">
+                                            min="0" value="0">
                                         <label for="akurasi">Akurasi (%) :</label>
                                         <input type="number" id="akurasi" oninput="updateCapaian5()" step="0.01"
-                                            min="0">
+                                            min="0" value="0">
                                         <label for="monev">Monev (%) :</label>
-                                        <input type="number" id="monev" oninput="updateCapaian5()" step="0.01" min="0">
+                                        <input type="number" id="monev" oninput="updateCapaian5()" step="0.01" min="0" value="0">
                                         <label for="lkuakpa">LK-UAKPA (%) :</label>
                                         <input type="number" id="lkuakpa" oninput="updateCapaian5()" step="0.01"
-                                            min="0">
+                                            min="0" value="0">
                                         <label for="realisasi">Realisasi (%) :</label>
                                         <input type="number" id="realisasi" oninput="updateCapaian5()" step="0.01"
-                                            min="0">
+                                            min="0" value="0">
 
                                             <label for="formula5">Masukkan formula:</label>
                                             <textarea id="inputFormula5" class="form-control" rows="3"
-                                                placeholder="Masukkan teks formula...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                                oninput="updateFormula5()"></textarea>
+                                                placeholder=""
+                                                oninput="updateFormula5()">NKP TKDD = [0,15 (SYARAT) + (0,15 (PROYEKSI) + 0,20 (AKURASI) + 0,10 (MONEV) + 0,20 (LK-UAKPA) + 0,20 (REAL)] x 100</textarea>
 
                                         <label for="keterangan5">Masukkan Keterangan:</label>
                                         <textarea id="inputArea5" class="form-control" rows="3"
-                                            placeholder="Masukkan teks keterangan...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                            oninput="updateKeterangan5()"></textarea>
+                                            placeholder=""
+                                            oninput="updateKeterangan5()">Belum ada ND dari kantor pusat</textarea>
 
                                             <script>
                                                 function updateFormula5() {
@@ -415,53 +415,49 @@
                                                 <tr>
                                                     <td class="left-align">Syarat </td>
                                                     <td>15%</td>
-                                                    <td  id="syaratValue">14,50</td>
-                                                    <td  id="syaratScore">14,50</td>
-                                                    <td rowspan="8" valign="top" class="left-align" id="formula5">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <td  id="syaratValue"></td>
+                                                    <td  id="syaratScore"></td>
+                                                    <td rowspan="8" valign="top" class="left-align" id="formula5"></td>
                                                     <td rowspan="8" valign="top" class="left-align" id="keterangan5">
-                                                        Hasil Penilaian dari Kantor Pusat (Nota Dinas Direktorat
-                                                        Pelaksanaan Anggaran nomor ND-35/PB.2/2025 tanggal
-                                                        10 Januari 2025)
-
-                                                        Tolong selalu enter agar tidak terlalu panjang</td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Proyeksi</td>
                                                     <td>15%</td>
-                                                    <td  id="proyeksiValue">15,00</td>
-                                                    <td  id="proyeksiScore">15,00</td>
+                                                    <td  id="proyeksiValue"></td>
+                                                    <td  id="proyeksiScore"></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Akurasi</td>
                                                     <td>20%</td>
-                                                    <td  id="akurasiValue">20,00</td>
-                                                    <td  id="akurasiScore">20,00</td>
+                                                    <td  id="akurasiValue"></td>
+                                                    <td  id="akurasiScore"></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Monev</td>
                                                     <td>10%</td>
-                                                    <td id="monevValue">10,00</td>
-                                                    <td id="monevScore">10,00</td>
+                                                    <td id="monevValue"></td>
+                                                    <td id="monevScore"></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">LK-UAKPA</td>
                                                     <td>20%</td>
-                                                    <td  id="lkuakpaValue">20,00</td>
-                                                    <td  id="lkuakpaScore">20,00</td>
+                                                    <td  id="lkuakpaValue"></td>
+                                                    <td  id="lkuakpaScore"></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Realisasi</td>
                                                     <td>20%</td>
-                                                    <td  id="realisasiValue">20,00</td>
-                                                    <td  id="realisasiScore">20,00</td>
+                                                    <td  id="realisasiValue"></td>
+                                                    <td  id="realisasiScore"></td>
                                                 </tr>
                                                 <tr>
                                                     <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="totalCapaian5"> <b>135,39</b></td>
+                                                    <td colspan="3" id="totalCapaian5"> <b></b></td>
                                                 </tr>
                                                 <tr>
                                                     <td><b>Indeks Capaian</b></td>
-                                                    <td colspan="3" id="totalIndeksCp5"> <b>135,39</b></td>
+                                                    <td colspan="3" id="totalIndeksCp5"> <b></b></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -504,6 +500,7 @@
                                                 document.getElementById("totalIndeksCp5").innerText = totalIndeksCp5;
                                                 
                                                 function getIndeksIKI5(capaian) {
+                                                if (capaian === 0) return 0;
                                                 if (capaian > 97.5) return 5;
                                                 if (capaian <= 97.5 && capaian > 95) return 4.75;
                                                 if (capaian <= 95 && capaian > 92.5) return 4.5;
@@ -514,6 +511,7 @@
                                                 if (capaian <= 60 && capaian > 40) return 2;
                                                 if (capaian <= 40 && capaian > 20) return 1.5;
                                                 if (capaian <= 20) return 1;
+                                                
                                                
                                             }
                                             

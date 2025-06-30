@@ -341,22 +341,22 @@
                                         <br>
                                         <h3><b>Persentase kualitas pengelolaan BMN dan Pengadaan</b></h3>
                                         <label for="aset">Nilai Indeks Pengelolaan Aset:</label>
-                                        <input type="number" id="aset" value="0" oninput="hitung15()">
+                                        <input type="number" id="aset" value="106.67" oninput="hitung15()">
 
                                         <label for="pengadaan">Nilai Indeks Tata Kelola Pengadaan:</label>
-                                        <input type="number" id="pengadaan" value="0" oninput="hitung15()">
+                                        <input type="number" id="pengadaan" value="120" oninput="hitung15()">
 
                                         <label for="negeri">Penggunaan Produk dalam Negeri:</label>
-                                        <input type="number" id="negeri" value="0" oninput="hitung15()">
+                                        <input type="number" id="negeri" value="120" oninput="hitung15()">
 
                                         <label for="formula14">Masukkan Formula:</label>
                                         <textarea id="inputFormula14" class="form-control" rows="3"
-                                            placeholder="Masukkan teks Formula...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                            oninput="updateFormula14()"></textarea>
+                                            placeholder=""
+                                            oninput="updateFormula14()">Realisasi = ( Komponen A x 60%) + (Komponen B x 20%) + (Komponen C x 20%)</textarea>
 
                                             <label for="keterangan14">Masukkan Keterangan:</label>
                                             <textarea id="inputArea15" class="form-control" rows="3"
-                                                placeholder="Masukkan teks keterangan...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
+                                                placeholder="Note: ENTER Saja biar terbaca dibatal"
                                                 oninput="updateKeterangan14()"></textarea>
     
                                             <script>
@@ -406,31 +406,23 @@
                                                 <tr>
                                                     <td class="left-align">Indeks Pengelolaan Aset </td>
                                                     <td>60%</td>
-                                                    <td  id="valuenilaiAset">66</td>
-                                                    <td  id="nilaiAset">66</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="formula14">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <td  id="valuenilaiAset"></td>
+                                                    <td  id="nilaiAset"></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="formula14"></td>
                                                     <td rowspan="4" valign="top" class="left-align" id="keterangan14">
-                                                        Tolong selalu enter agar tidak terlalu panjang
-                                                        Hasil Penilaian IPA dan ITKP
-                                                        Nota Dinas Sekretaris Ditjen Perbendaharaan nomor ND
-                                                        275/PB.1/2025 tanggal 17 Januari 2025
-                                                        Nilai Indeks Pengelolaan Aset sebesar 104
-                                                        Nilai Indeks Tata Kelola Pengadaan sebesar 120
-                                                        Capaian realisasi IKU : 60%*104 + 40%*120 = 111
-                                                        Indeks Capaian IKU = 111 / 84,10 = 120 </td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="left-align">Indeks Tata Kelola
-                                                        Pengadaan</td>
+                                                    <td class="left-align"></td>
                                                     <td>20%</td>
-                                                    <td  id="valuenilaiPengadaan">48</td>
-                                                    <td  id="nilaiPengadaan">48</td>
+                                                    <td  id="valuenilaiPengadaan"></td>
+                                                    <td  id="nilaiPengadaan"></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Penggunaan Produk Dalam Negeri</td>
                                                     <td>20%</td>
-                                                    <td  id="valuenilaiProduk">48</td>
-                                                    <td  id="nilaiProduk">48</td>
+                                                    <td  id="valuenilaiProduk"></td>
+                                                    <td  id="nilaiProduk"></td>
                                                 </tr>
                                                 <tr>
                                                     <td><b>Nilai Capaian</b></td>

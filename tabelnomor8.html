@@ -342,21 +342,21 @@
                                         <h3><b>Indeks kualitas penyelesaian SP2D</b></h3>
 
                                         <label>Komponen A (Penyelesaian SP2D tepat waktu %):</label>
-                                        <input type="number" id="inputA8" min="0" max="100" oninput="updateIndex8()">
+                                        <input type="number" id="inputA8" min="0" value="5" oninput="updateIndex8()">
                                         <label>Komponen B (Efektivitas Penyaluran Dana SP2D %):</label>
-                                        <input type="number" id="inputB8" min="0" max="100" oninput="updateIndex8()">
+                                        <input type="number" id="inputB8" min="0" value="5" oninput="updateIndex8()">
                                         <label>Komponen C (Hari kerja penyelesaian retur SP2D):</label>
-                                        <input type="number" id="inputC8" min="1" max="30" oninput="updateIndex8()">
+                                        <input type="number" id="inputC8" min="0" value="4.333" oninput="updateIndex8()">
 
                                         <label for="formula8">Masukkan Formula:</label>
                                         <textarea id="inputFormula8" class="form-control" rows="3"
-                                            placeholder="Masukkan teks formula...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                            oninput="updateFormula8()"></textarea>
+                                            placeholder=""
+                                            oninput="updateFormula8()">(Indeks Komponen A + Indeks Komponen B + Indeks Komponen C)/3</textarea>
 
                                         <label for="keterangan8">Masukkan Keterangan:</label>
                                         <textarea id="inputArea8" class="form-control" rows="3"
-                                            placeholder="Masukkan teks keterangan...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                            oninput="updateKeterangan8()"></textarea>
+                                            placeholder=""
+                                            oninput="updateKeterangan8()">Jml. penerima pada SP2D yg diterbitkan: 45.458, Jml. penerima yang diretur oleh BO 1, capaian: [(45.458-1)/45.458]x100% = 99.99% ,SP2DP yang diterbitkan 1 s.d. 8 HK sejak tgl interface SPAN EXT: 1, Jml. SP2DP: 1, capaian: 100% </textarea>
 
                                             <script>
                                                 function updateFormula8() {
@@ -404,25 +404,23 @@
                                                 <tr>
                                                     <td class="left-align">Penyelesaian SP2D secara tepat waktu </td>
                                                     <td>33%</td>
-                                                    <td id="valueindeksA8">5,00</td>
-                                                    <td id="indeksA8">5,00</td>
-                                                    <td rowspan="4" valign="top" class="left-align" id="formula8"> Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <td id="valueindeksA8"></td>
+                                                    <td id="indeksA8"></td>
+                                                    <td rowspan="4" valign="top" class="left-align" id="formula8"></td>
                                                     <td rowspan="4" valign="top" class="left-align" id="keterangan8">
-                                                        Tolong selalu enter agar tidak terlalu panjang (Indeks Penyelesaian SP2D secara tepat waktu + Indeks
-                                                        Efektivitas Penyaluran dana SP2D yang akurat + Indeks
-                                                        Efektivitas kecepatan penyelesaian retur SP2D) / 3 </td>
+                                                        </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Efektivitas Penyaluran dana SP2D yang akurat </td>
                                                     <td>33%</td>
-                                                    <td id="valueindeksB8">5,00</td>
-                                                    <td id="indeksB8">5,00</td>
+                                                    <td id="valueindeksB8"></td>
+                                                    <td id="indeksB8"></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Efektivitas kecepatan penyelesaian retur SP2D </td>
                                                     <td>33%</td>
-                                                    <td id="valueindeksC8">5,00</td>
-                                                    <td id="indeksC8">5,00</td>
+                                                    <td id="valueindeksC8"></td>
+                                                    <td id="indeksC8"></td>
                                                 </tr>
                                                 <tr>
                                                     <td><b>Nilai Capaian</b></td>
@@ -451,7 +449,7 @@
                                                 document.getElementById("indeksB8").innerText = indeksB8.toFixed(2);
                                                 document.getElementById("indeksC8").innerText = indeksC8.toFixed(2);
 
-                                                document.getElementById("indeksTotal8").innerText = indeksTotal8.toFixed(0);
+                                                document.getElementById("indeksTotal8").innerText = indeksTotal8.toFixed(2);
                                             }
 
                                             // function getIndexA8(value) {

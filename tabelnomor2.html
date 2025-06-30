@@ -344,21 +344,21 @@
                                         <!-- <label for="persentaseA">Indeks Kualitas Analisis Data SPAN:</label>
                                         <input type="number" id="persentaseA" oninput="updateNilai2()" min="0" max="100"> -->
                                         <label for="persentaseB">Ketepatan Waktu pengiriman KK analisis tepat waktu dilakukan bulanan:</label>
-                                        <input type="number" id="persentaseB" oninput="updateNilai2()" min="0" max="100">
+                                        <input type="number" id="persentaseB" oninput="updateNilai2()" value="5" >
                                         <label for="persentaseC">Penyelesaian matriks tindak lanjut:</label>
-                                        <input type="number" id="persentaseC" oninput="updateNilai2()" min="0" max="100">
+                                        <input type="number" id="persentaseC" oninput="updateNilai2()" value="5" >
                                         <label for="persentaseD">Indeks penilaian kualitas LKBUN KPPN yang dilakukan oleh Kanwil DJPb:</label>
-                                        <input type="number" id="persentaseD" oninput="updateNilai2()" min="0" max="100">
+                                        <input type="number" id="persentaseD" oninput="updateNilai2()" value="0" >
 
                                         <label for="formula2">Masukkan Formula:</label>
                                         <textarea id="inputFormula2" class="form-control" rows="3"
-                                            placeholder="Masukkan teks Formula...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                            oninput="updateFormula2()"></textarea>
+                                            placeholder=""
+                                            oninput="updateFormula2()">Capaian IKU Triwulan 1 sd 3 = Indeks kualitas analisis data SPAN Capaian IKU Triwulan 4 = (Indeks kualitas analisis data SPAN*50%)+(Indeks Kualitas LK BUN tingkat KPPN*50%)</textarea>
 
                                         <label for="keterangan2">Masukkan Keterangan:</label>
                                         <textarea id="inputArea2" class="form-control" rows="3"
-                                            placeholder="Masukkan teks keterangan...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"                                            
-                                            oninput="updateKeterangan2()"></textarea>
+                                            placeholder=""                                            
+                                            oninput="updateKeterangan2()">Nota Dinas Kepala KPPN Majene nomor ND-174/KPN.2602/2025 tanggal 18 Maret 2025 , Terdapat 2 permasalahan yang telah ditindaklanjuti sehingga capaian 100% atau indeks 5</textarea>
 
                                             <script>
                                                 function updateFormula2() {
@@ -410,52 +410,35 @@
                                                 <tr>
                                                     <td class="left-align">Indeks Kualitas Analisis Data SPAN</td>
                                                         <td><b>50%</b></td>
-                                                        <td id="PersentaseAhasil"><b>0</b></td>
-                                                    <td id="PersentaseAValue"><b>0</b></td>
-                                                    <td rowspan="5" valign="top" class="left-align" id="formula2"> Tolong selalu enter agar tidak terlalu panjang</td>
-                                                    <td rowspan="5" valign="top" class="left-align" id="keterangan2">Tolong selalu enter agar tidak terlalu panjang
-                                                        A.
-                                                        Indeks kualitas pelaksanaan Rekonsilias tingkat UAKPA
-                                                        diperoleh dari persentase jumlah satker aktif yang diterbitkan
-                                                        SHR (Surat Hasil Rekonsiliasi) tepat waktu dibandingkan
-                                                        jumlah satker aktif yang wajib rekonsiliasi.
-                                                        September: 64/64*100 = 99,4
-                                                        Oktober : 64/64*100 = 100
-                                                        November: 64/64*100 = 100
-                                                        100 = Indeks 5 (91-100%)
-
-                                                        B. Indeks penilaian kualitas LKBUN KPPN yang dilakukan
-                                                        oleh Kanwil DJPb
-                                                        Kualitas LKBUN KPPN ( Rekonsiliasi, To do List, Tutup
-                                                        Permanen)
-                                                        September: 64/64*100 = 99,4
-                                                        Oktober : 64/64*100 = 100
-                                                        November: 64/64*100 = 100
-                                                        100 = Indeks 5 (91-100%)
+                                                        <td id="PersentaseAhasil"><b></b></td>
+                                                    <td id="PersentaseAValue"><b></b></td>
+                                                    <td rowspan="5" valign="top" class="left-align" id="formula2"> </td>
+                                                    <td rowspan="5" valign="top" class="left-align" id="keterangan2">
+                                                        
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Ketepatan Waktu pengiriman KK analisis tepat waktu dilakukan bulanan</td>
                                                         <td>50%</td>
-                                                        <td id="PersentaseBValue"><b>0</b></td>
-                                                        <td id="PersentaseBhasil"><b>0</b></td>
+                                                        <td id="PersentaseBValue"><b></b></td>
+                                                        <td id="PersentaseBhasil"><b></b></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Penyelesaian matriks tindak lanjut</td>
                                                         <td>50%</td>
-                                                        <td id="PersentaseCValue"><b>0</b></td>
-                                                        <td id="PersentaseChasil"><b>0</b></td>
+                                                        <td id="PersentaseCValue"><b></b></td>
+                                                        <td id="PersentaseChasil"><b></b></td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Indeks penilaian kualitas LKBUN KPPN yang dilakukan oleh Kanwil DJPb</td>
                                                         <td><b>50%</b></td>
-                                                        <td id="PersentaseDValue"><b>0</b></td>
-                                                        <td id="PersentaseDhasil"><b>0</b></td>
+                                                        <td id="PersentaseDValue"><b></b></td>
+                                                        <td id="PersentaseDhasil"><b></b></td>
                                                 </tr>
                                                 <tr>
                                                     
                                                     <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="totalPersentase2"><b>5</b></td>
+                                                    <td colspan="3" id="totalPersentase2"><b></b></td>
                                                 </tr>
                                             </tbody>
                                         </table>

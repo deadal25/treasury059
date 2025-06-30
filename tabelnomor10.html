@@ -341,21 +341,21 @@
                                         <br>
                                         <h3><b>Tingkat kualitas kinerja organisasi </b></h3>
                                         <label for="lhps1">Indeks Capaian komponen Nilai LHPS:</label>
-                                        <input type="number" id="lhps1" min="0" max="100" value="9.56"
+                                        <input type="number" id="lhps1" min="0"  value="100"
                                             oninput="hitungNilai10()">
 
                                         <label for="lhps2">Nilai SFO:</label>
-                                        <input type="number" id="lhps2" min="0" max="100" value="9.71"
+                                        <input type="number" id="lhps2" min="0"  value="100"
                                             oninput="hitungNilai10()">
 
                                         <label for="formula10">Masukkan Formula:</label>
                                         <textarea id="inputFormula10" class="form-control" rows="3"
-                                            placeholder="Masukkan teks Formula...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                            oninput="updateFormula10()"></textarea>
+                                            placeholder=""
+                                            oninput="updateFormula10()">Capaian IKU : 50%*Penyelesaian rekomendasi + 50%*SFO</textarea>
                                             <label for="keterangan10">Masukkan Keterangan:</label>
                                             <textarea id="inputArea10" class="form-control" rows="3"
-                                                placeholder="Masukkan teks keterangan...(Selalu gunakan enter kebawah agar teks tidak terlau panjang kesamping)"
-                                                oninput="updateKeterangan10()"></textarea>
+                                                placeholder=""
+                                                oninput="updateKeterangan10()">Realisasi yg ditindaklanjuti : 5 rekomendasi, Jumlah rekomendasi pembinaan : 5 rekomendasi, Nilai capaian : 5/5*100% : 100% , Persentase  Dokumen dukung yang diunggah pada periode triwulan IV tahun 2024 sebesar 100%</textarea>
     
                                             <script>
                                                 function updateFormula10() {
@@ -403,25 +403,23 @@
                                                 <tr>
                                                     <td class="left-align">indeks capaian komponen nilai LHPS </td>
                                                     <td>50%</td>
-                                                    <td  id="valuenilaiLHPS1">54,16%</td>
-                                                    <td  id="nilaiLHPS1">54,16%</td>
-                                                    <td rowspan="3" valign="top" class="left-align" id="formula10">Tolong selalu enter agar tidak terlalu panjang</td>
+                                                    <td  id="valuenilaiLHPS1"></td>
+                                                    <td  id="nilaiLHPS1"></td>
+                                                    <td rowspan="3" valign="top" class="left-align" id="formula10"></td>
                                                     <td rowspan="3" valign="top" class="left-align" id="keterangan10">
-                                                        Triwulan IV = (50% x indeks capaian komponen SFO) + (50%
-                                                        x indeks capaian komponen nilai LHPS)
-                                                        Tolong selalu enter agar tidak terlalu panjang   
+                                                        
                                                    
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="left-align">Nilai SFO</td>
                                                     <td>50%</td>
-                                                    <td  id="valuenilaiLHPS2">52,98</td>
-                                                    <td  id="nilaiLHPS2">52,98</td>
+                                                    <td  id="valuenilaiLHPS2"></td>
+                                                    <td  id="nilaiLHPS2"></td>
                                                 </tr>
                                                 <tr>
                                                     <td><b>Nilai Capaian</b></td>
-                                                    <td colspan="3" id="totalIKU10"><b>108,26%</b></td>
+                                                    <td colspan="3" id="totalIKU10"><b></b></td>
                                                     <!-- <td></td> -->
                                                 </tr>
                                             </tbody>
